@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC05_Register_Missing_FullName</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>80c60a6b-2e7c-4c1b-9d43-c6462d9607be</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Registration_Message</name>
+   <tag></tag>
+   <elementGuidId>251f0692-90bd-47f2-9001-7861928b6285</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='root']/div/div[2]/div[2]/div/div/div[3]/div</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:text=&quot;Registration successful. Redirecting in 1 seconds...&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>367d4afd-673b-4471-9028-46af708013e2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>rounded-lg border border-brand-purple/40 bg-brand-purple/10 px-3 py-2 text-sm text-foreground</value>
+      <webElementGuid>442a4781-f13c-4543-9b77-0a547c250258</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>role</name>
+      <type>Main</type>
+      <value>alert</value>
+      <webElementGuid>843e78b0-f8fb-4fb7-8048-a81e98b90152</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Registration successful. Redirecting in 1 seconds...</value>
+      <webElementGuid>ff85eb00-a65b-436d-a931-1423f60dc76b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;relative min-h-screen bg-white text-text-primary dark:bg-[hsl(var(--background))]&quot;]/div[@class=&quot;grid min-h-screen lg:grid-cols-2&quot;]/div[@class=&quot;relative flex flex-col&quot;]/div[@class=&quot;flex flex-1 items-center justify-center px-4 py-10 sm:px-8&quot;]/div[@class=&quot;w-full max-w-md&quot;]/div[3]/div[@class=&quot;rounded-lg border border-brand-purple/40 bg-brand-purple/10 px-3 py-2 text-sm text-foreground&quot;]</value>
+      <webElementGuid>16a7d499-86f3-4823-baa0-f57cf5dc2fcc</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div[2]/div[2]/div/div/div[3]/div</value>
+      <webElementGuid>5cbb9829-f515-48ae-b3bd-2a623ec6b554</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Login'])[1]/following::div[2]</value>
+      <webElementGuid>4a3ccd84-205d-4068-ad2d-10e133108cae</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Create your account'])[1]/following::div[2]</value>
+      <webElementGuid>a7563332-25fe-4926-a3d6-f6cc77cff064</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Full name'])[1]/preceding::div[1]</value>
+      <webElementGuid>d3cc84bd-16c0-42cc-8b89-3b45b38bc1e7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Username (optional)'])[1]/preceding::div[3]</value>
+      <webElementGuid>c9a1b0b8-35e1-4915-a746-36ad972a180d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Registration successful. Redirecting in 1 seconds...']/parent::*</value>
+      <webElementGuid>85c1378c-4751-40fc-ab5a-55500363033d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/div[3]/div</value>
+      <webElementGuid>0177a415-8e0c-4713-baef-db8a1801f7a6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Registration successful. Redirecting in 1 seconds...' or . = 'Registration successful. Redirecting in 1 seconds...')]</value>
+      <webElementGuid>e24cffcf-f104-49f5-ab96-09f905c3124f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

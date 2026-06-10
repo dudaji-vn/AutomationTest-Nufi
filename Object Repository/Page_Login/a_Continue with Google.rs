@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Continue with Google</name>
+   <tag></tag>
+   <elementGuidId>c046025d-681e-40fa-b046-225ea05d293c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='root']/div/div[2]/div[2]/div/div/div[3]/div[2]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>[data-testid=&quot;google&quot;]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>67da3d2d-ab6e-4e60-8108-97183b96dc1f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-label</name>
+      <type>Main</type>
+      <value>Continue with Google</value>
+      <webElementGuid>c8076373-c0ad-48a1-8a57-83d0a9efb594</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex w-full items-center justify-center gap-3 rounded-xl border border-border bg-card/40 px-4 py-2.5 text-sm font-medium text-foreground shadow-sm transition-all duration-200 hover:border-brand-purple/50 hover:bg-card/70</value>
+      <webElementGuid>7e922116-8a5d-4ce2-ac06-180db0ed1c19</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://chat.nufi.me/oauth/google</value>
+      <webElementGuid>1641839f-925d-4beb-8f18-7fee2485e5a9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-testid</name>
+      <type>Main</type>
+      <value>google</value>
+      <webElementGuid>6e7e2e0e-cccb-48ca-9f09-5a56b0afae51</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Continue with Google</value>
+      <webElementGuid>111f9cb5-0503-4e59-8f38-a439dbdc77b6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;relative min-h-screen bg-white text-text-primary dark:bg-[hsl(var(--background))]&quot;]/div[@class=&quot;grid min-h-screen lg:grid-cols-2&quot;]/div[@class=&quot;relative flex flex-col&quot;]/div[@class=&quot;flex flex-1 items-center justify-center px-4 py-10 sm:px-8&quot;]/div[@class=&quot;w-full max-w-md&quot;]/div[3]/div[@class=&quot;space-y-2&quot;]/a[@class=&quot;flex w-full items-center justify-center gap-3 rounded-xl border border-border bg-card/40 px-4 py-2.5 text-sm font-medium text-foreground shadow-sm transition-all duration-200 hover:border-brand-purple/50 hover:bg-card/70&quot;]</value>
+      <webElementGuid>112e97ea-aa17-4103-94b4-e39c6cf94485</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div[2]/div[2]/div/div/div[3]/div[2]/a</value>
+      <webElementGuid>0cc7f3fe-9809-4189-896c-56b0b0433300</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='OR'])[1]/following::a[1]</value>
+      <webElementGuid>1c81a1cc-1bef-4e99-9a3f-d119029959c9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Continue'])[1]/following::a[1]</value>
+      <webElementGuid>6afa9466-e5f5-4be3-80d4-1a53e33f4539</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://chat.nufi.me/oauth/google')]</value>
+      <webElementGuid>f10e4cea-61a1-45e8-a115-b8db5d861cef</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/a</value>
+      <webElementGuid>9cb6d1da-1991-457d-80e5-3e041e0c3160</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://chat.nufi.me/oauth/google' and (text() = 'Continue with Google' or . = 'Continue with Google')]</value>
+      <webElementGuid>d5a2ed62-c0e8-4125-bd6d-c25b2e8659f6</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC06_Register_Invalid_Email_Format</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d99b6eaa-2ec6-44d0-8ee1-c2369d282bc4</testCaseGuid>
+</TestCaseEntity>
