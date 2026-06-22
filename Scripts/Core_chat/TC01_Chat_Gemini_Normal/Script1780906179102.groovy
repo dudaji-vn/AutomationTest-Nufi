@@ -1,47 +1,12 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import internal.GlobalVariable as GlobalVariable
+import keywords.ChatKeywords
 
-// 1. Setup - Login
-WebUI.callTestCase(findTestCase('Test Cases/Setup/Login'), [:])
+// Core Chat Setup - Login + Navigate + Select Gemini
+ChatKeywords.coreChateSetup()
 WebUI.delay(2)
-
-// 2. Navigate to Base URL - system will auto redirect to /c/new if token exists
-WebUI.navigateToUrl(GlobalVariable.Base_URL)
-WebUI.delay(3)
-
-// 3. Check current agent in span_Agents
-WebUI.waitForElementPresent(
-    findTestObject('Core Chat/span_Agents'), 
-    10, FailureHandling.STOP_ON_FAILURE)
-
-String currentAgent = WebUI.getText(findTestObject('Core Chat/span_Agents')).toLowerCase()
-WebUI.comment('Current Agent: ' + currentAgent)
-
-// 4. If not Gemini, select Gemini
-if (!currentAgent.contains('gemini')) {
-    WebUI.comment('Current agent is not Gemini, selecting Gemini...')
-    
-    // Click on "My Agents" button
-    WebUI.click(findTestObject('Core Chat/button_My Agents'))
-    WebUI.delay(2)
-    
-    // Select Gemini option
-    WebUI.click(findTestObject('Core Chat/Sellect_Gemini'))
-    WebUI.delay(2)
-    
-    // Select Gemini (1)
-    WebUI.click(findTestObject('Core Chat/sellect_gemini (1)'))
-    WebUI.delay(2)
-    
-    WebUI.comment('Gemini endpoint selected')
-} else {
-    WebUI.comment('Gemini endpoint is already selected')
-}
 
 // 5. Start normal chat - prepare test message
 String testMessage = 'Hello Gemini, how are you?'

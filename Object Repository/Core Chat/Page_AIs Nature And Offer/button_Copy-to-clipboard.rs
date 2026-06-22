@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Copy-to-clipboard</name>
+   <tag></tag>
+   <elementGuidId>5ed36a14-7450-4b5a-981e-1da05f597581</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[25]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:label=&quot;Message 2&quot;i >> internal:role=button[name=&quot;Copy to clipboard&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>ebb0b9ba-d554-446f-90fc-e237bf76983e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>hover-button rounded-lg p-1.5 text-text-secondary-alt hover:text-text-primary hover:bg-surface-hover md:group-hover:visible md:group-focus-within:visible md:group-[.final-completion]:visible focus-visible:ring-2 focus-visible:ring-black dark:focus-visible:ring-white focus-visible:outline-none ml-0 flex items-center gap-1.5 text-xs</value>
+      <webElementGuid>b6f23da3-1d20-4234-9e57-75f319e8b5f0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>b5130ef3-2bf5-484e-bc32-b705d54adbeb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>title</name>
+      <type>Main</type>
+      <value>Copy to clipboard</value>
+      <webElementGuid>a7ea3169-25f0-4a68-b004-088bc73e8353</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;7b395f9a-69d8-418e-948c-7320bc9c967e&quot;)/div[@class=&quot;relative flex flex-col w-11/12 agent-turn&quot;]/div[@class=&quot;flex flex-col gap-1&quot;]/div[@class=&quot;mt-1 flex justify-start gap-3 empty:hidden lg:flex text-xs&quot;]/div[@class=&quot;group visible flex justify-center gap-0.5 self-end focus-within:outline-none lg:justify-start&quot;]/button[@class=&quot;hover-button rounded-lg p-1.5 text-text-secondary-alt hover:text-text-primary hover:bg-surface-hover md:group-hover:visible md:group-focus-within:visible md:group-[.final-completion]:visible focus-visible:ring-2 focus-visible:ring-black dark:focus-visible:ring-white focus-visible:outline-none ml-0 flex items-center gap-1.5 text-xs&quot;]</value>
+      <webElementGuid>3a22ffb7-09e1-466b-9edc-18b6da7ed973</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[25]</value>
+      <webElementGuid>9a5bc981-4954-473b-9aa2-d515ad21e9e4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='7b395f9a-69d8-418e-948c-7320bc9c967e']/div[2]/div/div[2]/div/button[2]</value>
+      <webElementGuid>77d8fbdd-0edf-4db2-9862-40e72059d7c2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Response 2:'])[1]/following::button[2]</value>
+      <webElementGuid>90288b40-99b6-4b02-9f11-dbbbf1c035fa</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='NUFI v0.8.6-rc1'])[1]/preceding::button[10]</value>
+      <webElementGuid>e88e1a70-6700-4d3c-ac7a-d28cf696e833</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Upload files'])[1]/preceding::button[10]</value>
+      <webElementGuid>e3eb2961-35ad-47ab-a707-da44b3c2c371</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div[2]/div/div[2]/div/button[2]</value>
+      <webElementGuid>69ba4f2d-90d1-4517-aa35-afe34f5b4a55</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button' and @title = 'Copy to clipboard']</value>
+      <webElementGuid>0d442f7d-c4a6-4d05-b22c-e92be6404c71</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

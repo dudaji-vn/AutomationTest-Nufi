@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test the copy-to-clipboard action for a Core Chat response.</description>
+   <name>TC02_CopyToClipboard</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fcd90b8e-3d62-4d86-9a4a-9a5f10b7a8f1</testCaseGuid>
+</TestCaseEntity>
