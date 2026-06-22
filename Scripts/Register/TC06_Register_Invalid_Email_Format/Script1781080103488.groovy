@@ -58,5 +58,8 @@ if (isStillOnRegisterPage) {
     WebUI.comment('FAILED: User was redirected to: ' + currentUrl)
 }
 
+boolean overallPassed = isExpectedError && isStillOnRegisterPage
+assert overallPassed : 'TC06 failed - expected invalid email error and stay on register page, actual message: ' + errorMessage + ', actual URL: ' + currentUrl + '\n'
+
 WebUI.delay(2)
 WebUI.closeBrowser()

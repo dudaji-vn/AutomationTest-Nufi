@@ -6,7 +6,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import internal.GlobalVariable as GlobalVariable
 
-// ========== TẠO DỮ LIỆU NGẪU NHIÊN ==========
+// ========== GENERATE RANDOM DATA ==========
 long timestamp = System.currentTimeMillis()
 Random random = new Random()
 
@@ -14,13 +14,13 @@ String randomName = "Test User " + timestamp
 String randomUsername = "user_" + timestamp
 String randomEmail = "test_" + timestamp + "@example.com"
 String randomPassword = "Abc@123456"
-String wrongConfirmPassword = "Abc@123457"  // Khác với password
+String wrongConfirmPassword = "Abc@123457"  // Different from password
 
 WebUI.comment('=== TC04: Đăng ký thất bại - Password và Confirm không khớp ===')
 WebUI.comment('Password: ' + randomPassword)
 WebUI.comment('Confirm Password: ' + wrongConfirmPassword)
 
-// ========== MỞ TRÌNH DUYỆT ==========
+// ========== OPEN BROWSER ==========
 WebUI.openBrowser('')
 WebUI.navigateToUrl(GlobalVariable.Base_URL + '/login')
 WebUI.delay(3)
@@ -29,21 +29,21 @@ WebUI.delay(3)
 WebUI.click(findTestObject('Object Repository/Page_Login/a_Sign up'))
 WebUI.delay(2)
 
-// ========== NHẬP DỮ LIỆU ĐĂNG KÝ ==========
+// ========== FILL REGISTRATION DATA ==========
 WebUI.setText(findTestObject('Page_Signup/input_name'), randomName)
 WebUI.setText(findTestObject('Page_Signup/input_username'), randomUsername)
 WebUI.setText(findTestObject('Page_Signup/input_email'), randomEmail)
 WebUI.setText(findTestObject('Page_Signup/input_password'), randomPassword)
 WebUI.setText(findTestObject('Page_Signup/input_Password_confirm_password'), wrongConfirmPassword)
 
-// Chụp ảnh trước khi submit
+// Take screenshot before submit
 WebUI.takeScreenshot('TC04_Before_Submit.png')
 
 // ========== CLICK CONTINUE ==========
 //WebUI.click(findTestObject('Page_Signup/button_Continue'))
 WebUI.delay(3)
 
-// ========== KIỂM TRA ERROR MESSAGE "Passwords do not match" ==========
+// ========== CHECK ERROR MESSAGE "Passwords do not match" ==========
 boolean isErrorDisplayed = WebUI.verifyElementPresent(
     findTestObject('Page_Signup/Message_error_Confirm_Passwords'), 
     5, FailureHandling.OPTIONAL)
@@ -58,7 +58,7 @@ if (isErrorDisplayed) {
         WebUI.comment('✗ FAILED: Error message sai nội dung')
     }
 } else {
-    // Thử tìm message error tổng quát
+    // Try to find a general error message
     boolean generalError = WebUI.verifyElementPresent(
         findTestObject('Page_Signup/Message_error'), 
         3, FailureHandling.OPTIONAL)
@@ -74,7 +74,7 @@ if (isErrorDisplayed) {
     }
 }
 
-// ========== KIỂM TRA VẪN Ở TRANG REGISTER ==========
+// ========== CHECK STILL ON REGISTER PAGE ==========
 String currentUrl = WebUI.getUrl()
 boolean isStillOnRegisterPage = currentUrl.contains('/register') || currentUrl.contains('/signup')
 
@@ -84,7 +84,7 @@ if (isStillOnRegisterPage) {
     WebUI.comment('✗ FAILED: Đã bị redirect đến: ' + currentUrl)
 }
 
-// ========== KIỂM TRA KHÔNG CÓ MESSAGE THÀNH CÔNG ==========
+// ========== CHECK NO SUCCESS MESSAGE ==========
 boolean hasSuccessMessage = WebUI.verifyElementPresent(
     findTestObject('Page_Signup/Registration_Message'), 
     3, FailureHandling.OPTIONAL)
@@ -95,14 +95,16 @@ if (!hasSuccessMessage) {
     WebUI.comment('✗ FAILED: Vẫn hiển thị message thành công')
 }
 
-// ========== KẾT LUẬN ==========
-if (isErrorDisplayed && isStillOnRegisterPage && !hasSuccessMessage) {
+// ========== CONCLUSION ==========
+boolean overallPassed = isErrorDisplayed && isStillOnRegisterPage && !hasSuccessMessage
+if (overallPassed) {
     WebUI.comment('=== TC04 PASSED - Password không khớp bị từ chối đúng cách ===')
     WebUI.takeScreenshot('TC04_Passed.png')
 } else {
     WebUI.comment('=== TC04 FAILED ===')
     WebUI.takeScreenshot('TC04_Failed.png')
 }
+assert overallPassed : 'TC04 failed - expected password mismatch error, stay on register page, no success message. isErrorDisplayed=' + isErrorDisplayed + ', isStillOnRegisterPage=' + isStillOnRegisterPage + ', hasSuccessMessage=' + hasSuccessMessage + ', URL=' + currentUrl + '\n'
 
 WebUI.delay(3)
 WebUI.closeBrowser()

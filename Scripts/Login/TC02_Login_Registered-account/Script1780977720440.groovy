@@ -29,21 +29,22 @@ WebUI.setText(findTestObject('Page_Login/input_Sign in_email'), 'sun@dudaji.com'
 WebUI.setText(findTestObject('Page_Login/input_Signin_password'), '12345678')
 
 WebUI.click(findTestObject('Page_Login/button_Continue'))
+WebUI.waitForPageLoad(10)
+WebUI.delay(3)
 
 String currentUrl = WebUI.getUrl()
 
-WebUI.comment('URL hiện tại: ' + currentUrl)
+WebUI.comment('Current Url after login attempt: ' + currentUrl)
 
-// Kiểm tra đã quay lại chat.nufi.me chưa
-if (currentUrl.contains('/c/new')) {
-    WebUI.comment('Đăng nhập thành công!')
-
+boolean loginSuccess = currentUrl.contains('/c/new') || currentUrl.contains('/chat')
+if (loginSuccess) {
+    WebUI.comment('TC02 PASSED - Login tài khoản đăng ký thành công')
     WebUI.takeScreenshot('Login_Success.png')
 } else {
-    WebUI.comment('Đang ở trang: ' + currentUrl)
-
+    WebUI.comment('TC02 FAILED - Không quay về trang chat, actual URL: ' + currentUrl)
     WebUI.takeScreenshot('Current_Page.png')
 }
+assert loginSuccess : 'TC02 failed - expected login success, actual URL: ' + currentUrl
 
 WebUI.delay(3)
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>thinking</name>
+   <tag></tag>
+   <elementGuidId>aadedeed-d22a-4bac-8718-cc19a454ccd6</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>span.result-thinking</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//span[contains(@class, 'result-thinking')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:label=&quot;Message 4&quot;i >> internal:role=paragraph >> span</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>2fcc018c-bb66-4c42-ae5e-b0da3b6b56be</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>result-thinking</value>
+      <webElementGuid>e89bd9f3-cfd6-401a-b91f-c89d3b6af562</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;d34619b3-0674-47f5-a03f-bba0d1f3d3b5_&quot;)/div[@class=&quot;relative flex flex-col w-11/12 agent-turn&quot;]/div[@class=&quot;flex flex-col gap-1&quot;]/div[@class=&quot;flex min-h-[20px] max-w-full flex-grow flex-col gap-0&quot;]/div[@class=&quot;text-message flex min-h-[20px] flex-col items-start gap-3 overflow-visible [.text-message+&amp;]:mt-5&quot;]/div[@class=&quot;text-message flex min-h-[20px] flex-col items-start gap-3 overflow-visible&quot;]/div[@class=&quot;markdown prose dark:prose-invert light w-full break-words dark:text-gray-100&quot;]/div[@class=&quot;absolute&quot;]/p[@class=&quot;submitting relative&quot;]/span[@class=&quot;result-thinking&quot;]</value>
+      <webElementGuid>90440833-afc3-478f-a39e-22c4847ebfc4</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='d34619b3-0674-47f5-a03f-bba0d1f3d3b5_']/div[2]/div/div/div/div/div/div/p/span</value>
+      <webElementGuid>e7ac5643-49bf-467d-8bf3-48c8f2524f03</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//p/span</value>
+      <webElementGuid>731fd7d5-f01e-4c59-8f03-53ca0921a3bb</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

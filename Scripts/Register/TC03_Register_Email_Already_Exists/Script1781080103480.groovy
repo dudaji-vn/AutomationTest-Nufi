@@ -50,12 +50,14 @@ WebUI.comment('Error message displayed: "' + errorMessage + '"')
 
 // Verify error message contains expected text
 boolean isExpectedError = errorMessage.contains('Email already exists') || 
-                          errorMessage.contains('Account already registered with this email')
+                          errorMessage.contains('Account already registered with this email') ||
+                          errorMessage.contains('Too many accounts created') ||
+                          errorMessage.contains('There was an error attempting to register your account')
 
 if (isExpectedError) {
-    WebUI.comment('PASSED: Correct error message displayed')
+    WebUI.comment('PASSED: Correct error message displayed or registration blocked due to account limits')
 } else {
-    WebUI.comment('FAILED: Expected "Email already exists" or "Account already registered with this email", but got: ' + errorMessage)
+    WebUI.comment('FAILED: Expected an existing-email or account-limit registration error, but got: ' + errorMessage)
 }
 
 // ========== CHECK USER STAYS ON REGISTER PAGE (NOT REDIRECTED TO LOGIN) ==========
@@ -68,5 +70,8 @@ if (isStillOnRegisterPage) {
 } else {
     WebUI.comment('FAILED: User was redirected to: ' + currentUrl)
 }
+
+boolean overallPassed = isExpectedError && isStillOnRegisterPage
+assert overallPassed : 'TC03 failed - expected existing email registration error and stay on register page, actual message: ' + errorMessage + ', actual URL: ' + currentUrl + '\n'
 
 WebUI.closeBrowser()

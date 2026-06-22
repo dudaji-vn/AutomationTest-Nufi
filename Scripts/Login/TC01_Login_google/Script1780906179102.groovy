@@ -33,14 +33,14 @@ WebUI.delay(5)
 
 
 String currentUrl = WebUI.getUrl()
-WebUI.comment('URL hiện tại: ' + currentUrl)
+WebUI.comment('Current Url: ' + currentUrl)
 
-// Kiểm tra đã quay lại chat.nufi.me chưa
+// Check if returned to chat.nufi.me
 if (currentUrl.contains('/c/new')) {
-    WebUI.comment('Đăng nhập thành công!')
+    WebUI.comment('Login Success')
     WebUI.takeScreenshot('Login_Success.png')
 } else {
-    WebUI.comment('Đang ở trang: ' + currentUrl)
+    WebUI.comment('Current Page: ' + currentUrl)
     WebUI.takeScreenshot('Current_Page.png')
 }
 

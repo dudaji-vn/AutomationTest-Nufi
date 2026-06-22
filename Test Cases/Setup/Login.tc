@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Login to prepare for test req auth</description>
+   <name>Login</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>80caafd8-e628-43db-b9a7-020fc48a1121</testCaseGuid>
+</TestCaseEntity>

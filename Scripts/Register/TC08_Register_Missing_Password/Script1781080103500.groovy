@@ -57,5 +57,8 @@ if (isStillOnRegisterPage) {
     WebUI.comment('FAILED: User was redirected to: ' + currentUrl)
 }
 
+boolean overallPassed = isExpectedError && isStillOnRegisterPage
+assert overallPassed : 'TC08 failed - expected missing password error and stay on register page, actual message: ' + errorMessage + ', actual URL: ' + currentUrl + '\n'
+
 WebUI.delay(2)
 WebUI.closeBrowser()

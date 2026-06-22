@@ -6,14 +6,14 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import internal.GlobalVariable as GlobalVariable
 
-// ========== TẠO MULTIPLE TÀI KHOẢN NGẪU NHIÊN ==========
-int numberOfAccounts = 1  // Số lượng tài khoản cần đăng ký
+// ========== CREATE MULTIPLE RANDOM ACCOUNTS ==========
+int numberOfAccounts = 1  // Number of accounts to register
 List<Map<String, String>> registeredAccounts = []
 
 for (int i = 1; i <= numberOfAccounts; i++) {
     WebUI.comment('========== ĐANG ĐĂNG KÝ TÀI KHOẢN THỨ ' + i + ' ==========')
     
-    // Tạo dữ liệu ngẫu nhiên cho mỗi tài khoản
+    // Generate random data for each account
     long timestamp = System.currentTimeMillis() + i
     Random random = new Random()
     
@@ -22,7 +22,7 @@ for (int i = 1; i <= numberOfAccounts; i++) {
     String randomEmail = "test_" + timestamp + random.nextInt(10000) + "@example.com"
     String randomPassword = "Test@" + timestamp + "!aB"
     
-    // Lưu lại để kiểm tra sau
+    // Save for verification later
     Map<String, String> account = new HashMap<>()
     account.put("name", randomName)
     account.put("username", "")
@@ -30,12 +30,12 @@ for (int i = 1; i <= numberOfAccounts; i++) {
     account.put("password", randomPassword)
     registeredAccounts.add(account)
     
-    // Mở trình duyệt cho mỗi lần đăng ký
+    // Open browser for each registration
     WebUI.openBrowser('')
     WebUI.navigateToUrl(GlobalVariable.Base_URL + '/register')
     WebUI.delay(2)
     
-    // Nhập thông tin
+    // Enter information
     WebUI.setText(findTestObject('Page_Signup/input_name'), randomName)
     WebUI.setText(findTestObject('Page_Signup/input_username'), randomUsername)
     WebUI.setText(findTestObject('Page_Signup/input_email'), randomEmail)
@@ -46,8 +46,8 @@ for (int i = 1; i <= numberOfAccounts; i++) {
     WebUI.click(findTestObject('Page_Signup/button_Continue'))
     WebUI.delay(3)
     
-    // Kiểm tra kết quả
-	// Lấy text từ element message
+    // Check results
+	// Get text from message element
 //	String actualMessage = WebUI.getText(findTestObject('Page_Signup/Registration_Message'))
 //	
 //	// Kiểm tra có chứa "Registration successful" không
@@ -70,14 +70,15 @@ for (int i = 1; i <= numberOfAccounts; i++) {
     } else {
         WebUI.comment('✗ Tài khoản ' + i + ' đăng ký thất bại')
         WebUI.takeScreenshot('Signup_Failed_' + i + '.png')
+        assert false : 'TC02 failed - expected successful registration and redirect to login for account ' + randomEmail + ', actual URL: ' + currentUrl
     }
     
     WebUI.closeBrowser()
     WebUI.delay(1)
 }
 //
-//// ========== IN KẾT QUẢ ==========
-//WebUI.comment('========== DANH SÁCH TÀI KHOẢN ĐÃ ĐĂNG KÝ ==========')
+//// ========== PRINT RESULTS ==========
+//WebUI.comment('========== LIST OF REGISTERED ACCOUNTS ==========')
 //for (int i = 0; i < registeredAccounts.size(); i++) {
 //    Map<String, String> acc = registeredAccounts.get(i)
 //    WebUI.comment((i+1) + '. Email: ' + acc.get("email") + ' | Password: ' + acc.get("password"))

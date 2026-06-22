@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>btn_Pause</name>
+   <tag></tag>
+   <elementGuidId>44402bd5-3bd4-4cff-b656-dfeb2e0a2364</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>svg.icon-lg.text-surface-primary</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Bài văn: Người Thầy Kính Yêu Của Em'])[1]/following::*[name()='svg'][6]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:label=&quot;Stop generating&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>svg</value>
+      <webElementGuid>832ffa9d-9591-4cc5-b9b1-ff1f5b8ad99f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>width</name>
+      <type>Main</type>
+      <value>24</value>
+      <webElementGuid>1219b7f5-1e4a-492c-a19a-05acabd7bfd1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>height</name>
+      <type>Main</type>
+      <value>24</value>
+      <webElementGuid>b79e401c-42f4-4d04-b219-a8c7a622336e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>viewBox</name>
+      <type>Main</type>
+      <value>0 0 24 24</value>
+      <webElementGuid>52170d06-7e1a-47a3-b1ad-b5180dac57f9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>fill</name>
+      <type>Main</type>
+      <value>none</value>
+      <webElementGuid>b5c4436f-7314-43f7-9a12-e9db5f693f10</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xmlns</name>
+      <type>Main</type>
+      <value>http://www.w3.org/2000/svg</value>
+      <webElementGuid>0797fa5b-cd9a-418c-b968-e25e4007875c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>icon-lg text-surface-primary</value>
+      <webElementGuid>7e6bc850-c08e-4b81-92fa-7991c76f8c63</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;messages-view&quot;)/div[1]/main[@class=&quot;flex h-full flex-col overflow-y-auto&quot;]/div[@class=&quot;relative flex h-full w-full flex-col&quot;]/div[@class=&quot;flex flex-col h-full overflow-y-auto&quot;]/div[@class=&quot;w-full&quot;]/form[@class=&quot;mx-auto flex w-full flex-row gap-3 transition-[max-width] duration-300 sm:px-2 md:max-w-3xl xl:max-w-4xl sm:mb-10&quot;]/div[@class=&quot;relative flex h-full flex-1 items-stretch md:flex-col&quot;]/div[@class=&quot;flex w-full items-center&quot;]/div[@class=&quot;relative flex w-full flex-grow flex-col overflow-hidden rounded-t-3xl border pb-4 text-text-primary transition-all duration-200 sm:rounded-3xl sm:pb-0 shadow-md border-border-light bg-surface-chat&quot;]/div[@class=&quot;@container items-between flex gap-2 pb-2 flex-row&quot;]/div[@class=&quot;mr-2&quot;]/button[@class=&quot;cursor-pointer rounded-full bg-text-primary p-1.5 text-text-primary outline-offset-4 transition-all duration-200 disabled:cursor-not-allowed disabled:text-text-secondary disabled:opacity-10&quot;]/svg[@class=&quot;icon-lg text-surface-primary&quot;]</value>
+      <webElementGuid>19ed5819-c5d9-4f02-ad23-2f6399203f56</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Bài văn: Người Thầy Kính Yêu Của Em'])[1]/following::*[name()='svg'][6]</value>
+      <webElementGuid>d0bb2381-f3a0-409c-8739-6ef227d3d00e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Response 6:'])[1]/following::*[name()='svg'][6]</value>
+      <webElementGuid>759b66f5-21a5-400b-afef-d3d9d9dbc578</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='NUFI v0.8.6-rc1'])[1]/preceding::*[name()='svg'][1]</value>
+      <webElementGuid>35e7710e-572c-4fbf-ae69-c760d884105f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Upload files'])[1]/preceding::*[name()='svg'][2]</value>
+      <webElementGuid>ff87ed42-3d86-4d47-9531-65804cdc7485</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -16,15 +16,15 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import org.openqa.selenium.Keys as Keys
 
-// ========== TẠO MULTIPLE TÀI KHOẢN NGẪU NHIÊN ==========
-int numberOfAccounts = 1 // Số lượng tài khoản cần đăng ký
+// ========== CREATE MULTIPLE RANDOM ACCOUNTS ==========
+int numberOfAccounts = 1 // Number of accounts to register
 
 List<Map> registeredAccounts = []
 
 for (int i = 1; i <= numberOfAccounts; i++) {
     WebUI.comment(('========== ĐANG ĐĂNG KÝ TÀI KHOẢN THỨ ' + i) + ' ==========')
 
-    // Tạo dữ liệu ngẫu nhiên cho mỗi tài khoản
+    // Generate random data for each account
     long timestamp = System.currentTimeMillis() + i
 
     Random random = new Random()
@@ -37,7 +37,7 @@ for (int i = 1; i <= numberOfAccounts; i++) {
 
     String randomPassword = ('Test@' + timestamp) + '!aB'
 
-    // Lưu lại để kiểm tra sau
+    // Save for verification later
     Map<String, String> account = new HashMap()
 
     account.put('name', randomName)
@@ -50,14 +50,14 @@ for (int i = 1; i <= numberOfAccounts; i++) {
 
     registeredAccounts.add(account)
 
-    // Mở trình duyệt cho mỗi lần đăng ký
+    // Open browser for each registration
     WebUI.openBrowser('')
 
     WebUI.navigateToUrl(GlobalVariable.Base_URL + '/register')
 
     WebUI.delay(2)
 
-    // Nhập thông tin
+    // Enter information
     WebUI.setText(findTestObject('Page_Signup/input_name'), randomName)
 
     WebUI.setText(findTestObject('Page_Signup/input_username'), randomUsername)
@@ -73,8 +73,8 @@ for (int i = 1; i <= numberOfAccounts; i++) {
 
     WebUI.delay(3)
 
-    // Kiểm tra kết quả
-    // Lấy text từ element message
+    // Check results
+    // Get text from message element
     //	String actualMessage = WebUI.getText(findTestObject('Page_Signup/Registration_Message'))
     //	
     //	// Kiểm tra có chứa "Registration successful" không
@@ -95,8 +95,8 @@ for (int i = 1; i <= numberOfAccounts; i++) {
         WebUI.comment((('✓ Tài khoản ' + i) + ' đăng ký thành công: ') + randomEmail)
     } else {
         WebUI.comment(('✗ Tài khoản ' + i) + ' đăng ký thất bại')
-
         WebUI.takeScreenshot(('Signup_Failed_' + i) + '.png')
+        assert false : 'TC01 failed - expected successful registration and redirect to login for account ' + randomEmail + ', actual URL: ' + currentUrl
     }
     
     WebUI.closeBrowser()

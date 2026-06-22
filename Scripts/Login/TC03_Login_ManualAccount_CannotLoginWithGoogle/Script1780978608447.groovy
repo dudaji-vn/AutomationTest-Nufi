@@ -10,39 +10,52 @@ WebUI.openBrowser('')
 WebUI.navigateToUrl(GlobalVariable.Base_URL + '/login')
 WebUI.delay(3)
 
-String manualEmail = "sun@dudaji.com"  
-String manualPassword = "12345678"
+String googleEmail = "sun@dudaji.com"  
+String googlePassword = "12345678"
 
-WebUI.setText(findTestObject('Page_Login/input_Sign in_email'), manualEmail)
-WebUI.setText(findTestObject('Page_Login/input_Signin_password'), manualPassword)
-WebUI.click(findTestObject('Page_Login/button_Continue'))
-//WebUI.delay(5)
-
-String currentUrl = WebUI.getUrl()
-if (currentUrl.contains('/c/new')) {
-    WebUI.comment('Bước 1: Đăng nhập thủ công thành công')
-} else {
-    WebUI.comment('Bước 1: Đăng nhập thủ công thất bại')
-}
-
-WebUI.click(findTestObject('Object Repository/Page_Nufi Chat/Side_bar/img_avatar'))  // Click avatar
-//WebUI.delay(2)
-WebUI.click(findTestObject('Object Repository/Page_Nufi Chat/Side_bar/btn_Log out'))
+WebUI.comment('TC03 Step 1: Attempt Google OAuth login for manual account')
+WebUI.click(findTestObject('Page_Login/a_Continue with Google'))
+WebUI.waitForPageLoad(15)
 WebUI.delay(3)
 
-WebUI.click(findTestObject('Page_Login/a_Continue with Google'))
-WebUI.delay(2)
+boolean emailPagePresent = WebUI.verifyElementPresent(findTestObject('Object Repository/GG/Page_Sign in/txt_Email'), 10, FailureHandling.OPTIONAL)
+boolean accountChooserPresent = WebUI.verifyElementPresent(findTestObject('Object Repository/GG/Page_Sign in/account_ByEmail', 
+    [('email') : googleEmail]), 10, FailureHandling.OPTIONAL)
 
-// Nếu cần nhập email
-if (WebUI.verifyElementPresent(findTestObject('Object Repository/GG/Page_Sign in/txt_Email'), 5, FailureHandling.OPTIONAL)) {
-    WebUI.setText(findTestObject('Object Repository/GG/Page_Sign in/txt_Email'), manualEmail)
+if (emailPagePresent) {
+    WebUI.comment('TC03: Google login email page displayed')
+    WebUI.setText(findTestObject('Object Repository/GG/Page_Sign in/txt_Email'), googleEmail)
     WebUI.click(findTestObject('Object Repository/GG/Page_Sign in/btn_Next'))
-//    WebUI.delay(3)
-    
-    WebUI.setText(findTestObject('Object Repository/GG/Page_Welcome/txt_Password'), manualPassword)
+    WebUI.waitForPageLoad(15)
+    WebUI.delay(3)
+} else if (accountChooserPresent) {
+    WebUI.comment('TC03: Google account chooser displayed')
+    WebUI.click(findTestObject('Object Repository/GG/Page_Sign in/account_ByEmail', 
+        [('email') : googleEmail]))
+    WebUI.waitForPageLoad(15)
+    WebUI.delay(3)
+} else {
+    WebUI.comment('TC03 WARNING: Google email field or account chooser not found')
+    WebUI.delay(3)
+}
+
+boolean passwordPagePresent = WebUI.verifyElementPresent(findTestObject('Object Repository/GG/Page_Welcome/txt_Password'), 10, FailureHandling.OPTIONAL)
+if (passwordPagePresent) {
+    WebUI.comment('TC03: Google password page displayed')
+    WebUI.setText(findTestObject('Object Repository/GG/Page_Welcome/txt_Password'), googlePassword)
     WebUI.click(findTestObject('Object Repository/GG/Page_Welcome/btn_Next'))
-//    WebUI.delay(5)
-} 
+    WebUI.waitForPageLoad(15)
+    WebUI.delay(3)
+} else {
+    WebUI.comment('TC03: Google password page not shown, continuing')
+}
+
+if (WebUI.verifyElementPresent(findTestObject('Object Repository/GG/Page_Sign in/btn_Allow'), 10, FailureHandling.OPTIONAL)) {
+    WebUI.comment('TC03: Google consent Allow button displayed')
+    WebUI.click(findTestObject('Object Repository/GG/Page_Sign in/btn_Allow'))
+    WebUI.waitForPageLoad(15)
+    WebUI.delay(3)
+}
 //else {
 //    // Nếu tài khoản đã hiển thị trong danh sách
 //    WebUI.click(findTestObject('Object Repository/GG/Page_Sign in/account_ByEmail', 
@@ -50,7 +63,7 @@ if (WebUI.verifyElementPresent(findTestObject('Object Repository/GG/Page_Sign in
 ////    WebUI.delay(3)
 //}
 //
-//// Xử lý Allow permissions nếu được yêu cầu
+//// Handle Allow permissions if requested
 //if (WebUI.verifyElementPresent(
 //    findTestObject('Object Repository/GG/Page_Sign in/btn_Allow'), 
 //    2, FailureHandling.OPTIONAL)) {
@@ -59,23 +72,23 @@ if (WebUI.verifyElementPresent(findTestObject('Object Repository/GG/Page_Sign in
 //}
 
 
-// Kiểm tra xem có thông báo lỗi xuất hiện không
+// Check whether an error message is displayed
 currentUrl = WebUI.getUrl()
 boolean isErrorMessageDisplayed = WebUI.verifyElementPresent(
     findTestObject('Page_Login/error_Message'), 
     10, FailureHandling.OPTIONAL)
 
 boolean isStillOnLoginPage = currentUrl.contains('/login') || currentUrl.contains('chat.nufi.me') && !currentUrl.contains('/c/new')
+boolean isPassed = !currentUrl.contains('/c/new') && (isErrorMessageDisplayed || isStillOnLoginPage)
 
-if (isErrorMessageDisplayed || isStillOnLoginPage) {
+if (isPassed) {
     WebUI.comment('TC03 PASSED: User đăng ký thủ công KHÔNG thể đăng nhập bằng Google OAuth')
     WebUI.takeScreenshot('TC03_Passed.png')
-} else if (currentUrl.contains('/c/new')) {
-    WebUI.comment('TC03 FAILED: User đã đăng nhập được bằng Google OAuth dù đã đăng ký thủ công')
-    WebUI.takeScreenshot('TC03_Failed.png')
 } else {
-    WebUI.comment('TC03 - Cần kiểm tra thêm: URL = ' + currentUrl)
+    WebUI.comment('TC03 FAILED: User đã đăng nhập được bằng Google OAuth dù đã đăng ký thủ công hoặc không có thông báo lỗi đúng')
+    WebUI.takeScreenshot('TC03_Failed.png')
 }
+assert isPassed : 'TC03 failed - expected no Google OAuth login for manual account, actual URL: ' + currentUrl + ', isErrorMessageDisplayed=' + isErrorMessageDisplayed + ', isStillOnLoginPage=' + isStillOnLoginPage + '\n'
 
 WebUI.delay(3)
 WebUI.closeBrowser()

@@ -6,30 +6,30 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import internal.GlobalVariable as GlobalVariable
 
-// Danh sách password ít hơn 8 ký tự (mỗi case đều < 8 chars)
+// List of passwords shorter than 8 characters (each case < 8 chars)
 List<String> shortPasswords = ['Abc@12', '123', 'a', 'P@ss', '1234567']
 
 WebUI.openBrowser('')
 WebUI.navigateToUrl(GlobalVariable.Base_URL + '/login')
 WebUI.delay(3)
 
-// Email hợp lệ nhưng không cần tồn tại trong hệ thống vì validation xảy ra trước
+// Valid email but does not need to exist in the system because validation happens client-side
 String validEmail = "test@example.com"
 
 for (String shortPassword in shortPasswords) {
     WebUI.comment('=== Đang test với password: "' + shortPassword + '" (độ dài: ' + shortPassword.length() + ') ===')
     
-    // Nhập email hợp lệ
+    // Enter a valid email
     WebUI.setText(findTestObject('Page_Login/input_Sign in_email'), validEmail)
     
-    // Nhập password ngắn
+    // Enter short password
     WebUI.setText(findTestObject('Page_Login/input_Signin_password'), shortPassword)
     
     // Click Continue
     WebUI.click(findTestObject('Page_Login/button_Continue'))
     WebUI.delay(2)
     
-    // Kiểm tra error message
+    // Check error message
     String expectedError = "Password must be at least 8 characters"
     boolean isErrorDisplayed = WebUI.verifyElementPresent(
         findTestObject('Page_Login/error_Message_pass', [('text') : expectedError]), 
@@ -40,9 +40,10 @@ for (String shortPassword in shortPasswords) {
     } else {
         WebUI.comment('TC06 FAILED - Password: "' + shortPassword + '" - Không hiển thị error message')
         WebUI.takeScreenshot('TC06_Failed_pw_' + shortPassword + '.png')
+        assert isErrorDisplayed : 'TC06 failed - Password: "' + shortPassword + '" - Không hiển thị error message'
     }
     
-    // Clear form trước khi test tiếp (không reload để giữ email)
+    // Clear form before next test (do not reload to keep email)
     WebUI.setText(findTestObject('Page_Login/input_Signin_password'), '')
     WebUI.delay(1)
 }

@@ -12,34 +12,37 @@ WebUI.delay(3)
 
 String anyPassword = "Test@123456"
 
-WebUI.comment('=== Đang test: Để trống email ===')
+WebUI.comment('=== Testing: Leave email empty ===')
 
-// Để trống email (không set text)
+// Leave email empty (do not set text)
 WebUI.setText(findTestObject('Page_Login/input_Sign in_email'), '')
 
-// Nhập password bất kỳ
+// Enter any password
 WebUI.setText(findTestObject('Page_Login/input_Signin_password'), anyPassword)
 
 // Click Continue
 WebUI.click(findTestObject('Page_Login/button_Continue'))
 WebUI.delay(2)
 
-// Kiểm tra error message
+// Check error message
 String expectedError = "Email is required"
 boolean isErrorDisplayed = WebUI.verifyElementPresent(
     findTestObject('Page_Login/error_Message_email', [('text') : expectedError]), 
     5, FailureHandling.OPTIONAL)
 
-// Kiểm tra vẫn ở trang login
+// Check still on login page
 String currentUrl = WebUI.getUrl()
 boolean isStillOnLoginPage = currentUrl.contains('/login') || 
     (currentUrl.contains('chat.nufi.me') && !currentUrl.contains('/c/new'))
 
-if (isErrorDisplayed && isStillOnLoginPage) {
+boolean isPassed = isErrorDisplayed && isStillOnLoginPage
+
+if (isPassed) {
     WebUI.comment('TC09 PASSED - Để trống email bị từ chối đúng cách')
     WebUI.takeScreenshot('TC09_Passed.png')
 } else if (isErrorDisplayed) {
-    WebUI.comment('TC09 PASSED - Hiển thị error message')
+    WebUI.comment('TC09 FAILED - Hiển thị error message nhưng không ở trang login: ' + currentUrl)
+    WebUI.takeScreenshot('TC09_Failed_UnexpectedUrl.png')
 } else if (isStillOnLoginPage) {
     WebUI.comment('TC09 FAILED - Không hiển thị error message dù để trống email')
     WebUI.takeScreenshot('TC09_Failed_NoError.png')
@@ -47,6 +50,7 @@ if (isErrorDisplayed && isStillOnLoginPage) {
     WebUI.comment('TC09 FAILED - Redirect dù để trống email: ' + currentUrl)
     WebUI.takeScreenshot('TC09_Failed_Redirect.png')
 }
+assert isPassed : 'TC09 failed - expected error message and stay on login page, actual URL: ' + currentUrl
 
 WebUI.delay(2)
 WebUI.closeBrowser()
