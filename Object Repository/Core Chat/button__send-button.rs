@@ -13,8 +13,12 @@
          <key>XPATH</key>
          <value>//button[@id='send-button']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@aria-label = 'Send message' and @id = 'send-button' and @type = 'submit']</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
@@ -29,15 +33,15 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>171b7345-d5e4-495c-9d99-49f39dfbafa9</webElementGuid>
+      <webElementGuid>bef3fec3-1e5b-4375-8096-87034b58cbbc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>aria-label</name>
       <type>Main</type>
       <value>Send message</value>
-      <webElementGuid>44962069-5e69-4446-9cdc-3ae3489965a5</webElementGuid>
+      <webElementGuid>5f186863-c767-47d4-967b-4474a793413a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -45,7 +49,7 @@
       <name>id</name>
       <type>Main</type>
       <value>send-button</value>
-      <webElementGuid>f1f8b4cc-46d3-4321-8c0b-8782d9c4d673</webElementGuid>
+      <webElementGuid>b05e481f-8f39-4e4d-959e-cd7cd0a1eda5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -53,7 +57,7 @@
       <name>class</name>
       <type>Main</type>
       <value>cursor-pointer rounded-full bg-text-primary p-1.5 text-text-primary outline-offset-4 transition-all duration-200 disabled:cursor-not-allowed disabled:text-text-secondary disabled:opacity-10</value>
-      <webElementGuid>3f78612b-464b-46bf-a9d3-f80a0ffe6376</webElementGuid>
+      <webElementGuid>87270ff3-0bdb-4454-9384-eb62d452f0a1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -61,7 +65,7 @@
       <name>data-testid</name>
       <type>Main</type>
       <value>send-button</value>
-      <webElementGuid>a44efcce-8fa0-4eeb-82b8-827e98e640e6</webElementGuid>
+      <webElementGuid>ea44ab4a-2a74-4c4d-9101-68142f08023b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -69,7 +73,7 @@
       <name>type</name>
       <type>Main</type>
       <value>submit</value>
-      <webElementGuid>a9579f60-670a-4e69-bb6f-35903356d48e</webElementGuid>
+      <webElementGuid>28bc00de-1ea7-43b9-9dcb-2b5bd4e1cbab</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -77,7 +81,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;send-button&quot;)</value>
-      <webElementGuid>37762bad-e8da-4ec4-af3d-8643db4b45a1</webElementGuid>
+      <webElementGuid>cab54261-378c-4712-b1a4-38e134a893a6</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -85,7 +89,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//button[@id='send-button']</value>
-      <webElementGuid>17453a89-b728-4c1a-a60e-b52185cde614</webElementGuid>
+      <webElementGuid>4be62526-fe9b-48f5-8202-72b79786593a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -93,7 +97,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='messages-view']/div/main/div/div[2]/div[2]/form/div/div/div/div[2]/div[4]/button</value>
-      <webElementGuid>e8921299-2e6b-43e6-ae1a-b323cec9365b</webElementGuid>
+      <webElementGuid>755187d7-51d2-493c-b57c-2597b494dbf4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -101,7 +105,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[1]/following::button[2]</value>
-      <webElementGuid>b10a4701-51a3-418d-882f-b86de59fde65</webElementGuid>
+      <webElementGuid>5f2b83f5-ee96-4a92-9c55-f3e3c22572d3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -109,7 +113,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='t'])[2]/following::button[2]</value>
-      <webElementGuid>a253d5f3-d347-46a9-b3b5-22d1748c5c0a</webElementGuid>
+      <webElementGuid>0c05c206-964f-4629-a443-dcd3488621e7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -117,7 +121,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='NUFI v0.8.6-rc1'])[1]/preceding::button[1]</value>
-      <webElementGuid>5dcfc321-0439-466f-ae86-f3a44bef927e</webElementGuid>
+      <webElementGuid>b5fd0731-d18f-405c-b93f-16cb16ff079e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -125,7 +129,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Upload files'])[1]/preceding::button[1]</value>
-      <webElementGuid>94c92aee-7f8d-4ed6-9326-afcd9dc45b87</webElementGuid>
+      <webElementGuid>f287d21e-a40f-4479-b8cc-301b59cc4866</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -133,7 +137,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[4]/button</value>
-      <webElementGuid>64d28d3e-bc0f-4e14-bb27-de364a6f441b</webElementGuid>
+      <webElementGuid>a9a4e341-5e55-4d30-96a1-3c09e7db2e53</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -141,6 +145,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//button[@id = 'send-button' and @type = 'submit']</value>
-      <webElementGuid>5281e476-12f0-41ca-8550-d1a22e443ac7</webElementGuid>
+      <webElementGuid>eebc1338-dc4d-49a5-b480-9ad465c01082</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

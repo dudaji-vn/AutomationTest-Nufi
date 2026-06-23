@@ -19,19 +19,19 @@ WebUI.click(findTestObject('Core Chat/button_My Agents'))
 WebUI.delay(2)
 
 // Select Nufi option
-WebUI.click(findTestObject('Core Chat/Sellect_Nufi'))
+WebUI.click(findTestObject('Core Chat/Agent/Sellect_Nufi'))
 WebUI.delay(2)
 
 // Select Qwen2.5-0.5B
-WebUI.click(findTestObject('Core Chat/sellect_Qwen2.5-0.5B'))
+WebUI.click(findTestObject('Core Chat/Agent/sellect_Qwen2.5-0.5B'))
 WebUI.delay(2)
 
 // Verify that span_Agents shows "Qwen2.5-0.5B"
 WebUI.waitForElementPresent(
-    findTestObject('Core Chat/span_Agents'), 
+    findTestObject('Core Chat/Agent/span_Agents'), 
     10, FailureHandling.STOP_ON_FAILURE)
 
-String agentName = WebUI.getText(findTestObject('Core Chat/span_Agents'))
+String agentName = WebUI.getText(findTestObject('Core Chat/Agent/span_Agents'))
 WebUI.comment('Selected Agent: ' + agentName)
 
 if (agentName.contains('Qwen2.5-0.5B')) {

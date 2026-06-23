@@ -19,19 +19,19 @@ WebUI.click(findTestObject('Core Chat/button_My Agents'))
 WebUI.delay(2)
 
 // Select Gemini option
-WebUI.click(findTestObject('Core Chat/Sellect_Gemini'))
+WebUI.click(findTestObject('Core Chat/Agent/Sellect_Gemini'))
 WebUI.delay(2)
 
 // Select Gemini (1)
-WebUI.click(findTestObject('Core Chat/sellect_gemini (1)'))
+WebUI.click(findTestObject('Core Chat/Agent/sellect_gemini (1)'))
 WebUI.delay(2)
 
 // Verify that span_Agents shows "gemini"
 WebUI.waitForElementPresent(
-    findTestObject('Core Chat/span_Agents'), 
+    findTestObject('Core Chat/Agent/span_Agents'), 
     10, FailureHandling.STOP_ON_FAILURE)
 
-String agentName = WebUI.getText(findTestObject('Core Chat/span_Agents')).toLowerCase()
+String agentName = WebUI.getText(findTestObject('Core Chat/Agent/span_Agents')).toLowerCase()
 WebUI.comment('Selected Agent: ' + agentName)
 
 if (agentName.contains('gemini')) {

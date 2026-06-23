@@ -1,56 +1,136 @@
-import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import internal.GlobalVariable
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import com.kms.katalon.core.testobject.TestObject
+import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
-import internal.GlobalVariable as GlobalVariable
-import keywords.ChatKeywords
 
-// Core Chat Setup - Login + Navigate + Select Gemini
-ChatKeywords.coreChateSetup()
-WebUI.delay(2)
+/**
+ * TC03: Edit Response Test
+ * 
+ * Test Flow:
+ * 1. Open browser
+ * 2. Login
+ * 3. Open new conversation
+ * 4. Select Gemini endpoint + model
+ * 5. Send a message and get response
+ * 6. Click Edit button of target message using index variable
+ * 7. Edit the response text
+ * 8. Save & Submit
+ * 9. Verify edited text appears in target message
+ */
 
-// Send a prompt to generate a response to edit
-String testMessage = 'Test message for edit response'
-WebUI.click(findTestObject('Core Chat/chat_input'))
-WebUI.delay(1)
-WebUI.clearText(findTestObject('Core Chat/chat_input'))
-WebUI.setText(findTestObject('Core Chat/chat_input'), testMessage)
-WebUI.delay(1)
-WebUI.click(findTestObject('Core Chat/button__send-button'))
-WebUI.delay(3)
+// Define target message index
+// 1 = first message, 2 = second message, "last()" = last message, "last()-1" = second last
+def TARGET_INDEX = 1
 
-// Wait for edit button and open editor
-WebUI.waitForElementPresent(findTestObject('Core Chat/Page_AIs Nature And Offer/button_Edit'), 30, FailureHandling.STOP_ON_FAILURE)
-WebUI.click(findTestObject('Core Chat/Page_AIs Nature And Offer/button_Edit'))
-WebUI.delay(1)
+WebUI.comment('=== TC03: Edit Response Test (Message index: ' + TARGET_INDEX + ') ===')
 
-// Wait for textarea in edit modal
-WebUI.waitForElementPresent(findTestObject('Core Chat/Page_T C Gio/textarea_Response_text'), 10, FailureHandling.STOP_ON_FAILURE)
-String original = WebUI.getAttribute(findTestObject('Core Chat/Page_T C Gio/textarea_Response_text'), 'value')
-WebUI.comment('Original response length: ' + (original == null ? 0 : original.length()))
+try {
+    // Step 1: Open browser
+    WebUI.comment('Step 1: Opening browser...')
+    CustomKeywords.'keywords.ChatKeywords.openBrowser'(
+        GlobalVariable.Base_URL
+    )
 
-String edited = ''
-if (original != null) {
-    edited = original + ' [edited by automated test]'
-} else {
-    edited = ' [edited by automated test]'
+    // Step 2: Login
+    WebUI.comment('Step 2: Logging in...')
+    CustomKeywords.'keywords.ChatKeywords.loginChat'(
+        GlobalVariable.email,
+        GlobalVariable.password
+    )
+
+    // Step 3: Open new conversation
+    WebUI.comment('Step 3: Opening new conversation...')
+    CustomKeywords.'keywords.ChatKeywords.openNewConversation'(
+        GlobalVariable.Base_URL
+    )
+
+    // Step 4: Select endpoint + model
+    WebUI.comment('Step 4: Selecting Gemini endpoint and model...')
+    CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'(
+        'Gemini',
+        'gemini'
+    )
+
+    // Step 5: Send message and get response
+    WebUI.comment('Step 5: Sending test message...')
+    String testMessage = 'Test message for edit response'
+    String response = CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
+    WebUI.comment('Response received: ' + (response.length() > 100 ? response.substring(0, 100) + '...' : response))
+
+    // Step 6: Click Edit button of target message using index variable
+    WebUI.comment('Step 6: Clicking Edit button of message index: ' + TARGET_INDEX)
+    
+    String editButtonXpath = "(//div[contains(@class,'message-content')])[" + TARGET_INDEX + "]/ancestor::div[contains(@class,'message')]//button[contains(@aria-label, 'Edit') or contains(@title, 'Edit')]"
+    
+    TestObject editButton = new TestObject('dynamic_edit_button')
+    editButton.addProperty('xpath', ConditionType.EQUALS, editButtonXpath)
+    
+    WebUI.waitForElementVisible(editButton, 30)
+    WebUI.click(editButton)
+    WebUI.comment('Edit button of message ' + TARGET_INDEX + ' clicked')
+    WebUI.delay(2)
+
+    // Step 7: Wait for textarea and edit response text
+    WebUI.comment('Step 7: Editing response text...')
+    TestObject textareaResponse = new TestObject('dynamic_edit_textarea')
+    textareaResponse.addProperty('xpath', ConditionType.EQUALS, 
+        "//textarea[@data-testid='message-text-editor']")
+    
+    WebUI.waitForElementVisible(textareaResponse, 10)
+    String originalText = WebUI.getAttribute(textareaResponse, 'value')
+    WebUI.comment('Original text length: ' + (originalText == null ? 0 : originalText.length()))
+    
+    String editedText = (originalText != null && originalText.trim().length() > 0) 
+        ? originalText + ' [edited by automated test]' 
+        : '[edited by automated test]'
+    
+    WebUI.clearText(textareaResponse)
+    WebUI.setText(textareaResponse, editedText)
+    WebUI.comment('Text edited successfully')
+    WebUI.delay(1)
+
+    // Step 8: Click Save & Submit button
+    WebUI.comment('Step 8: Saving edited response...')
+    TestObject saveButton = new TestObject('dynamic_save_button')
+    saveButton.addProperty('xpath', ConditionType.EQUALS, 
+        "//button[contains(text(),'Save') or contains(text(),'Submit') or contains(@aria-label,'Save')]")
+    
+    WebUI.waitForElementClickable(saveButton, 10)
+    WebUI.click(saveButton)
+    WebUI.comment('Save & Submit button clicked')
+    WebUI.delay(3)
+
+    // Step 9: Verify edited text appears in target message
+    WebUI.comment('Step 9: Verifying edited text in message ' + TARGET_INDEX + '...')
+    
+    String targetMessageXpath = "(//div[contains(@class,'message-content')])[" + TARGET_INDEX + "]"
+    TestObject targetMessage = new TestObject('dynamic_target_message')
+    targetMessage.addProperty('xpath', ConditionType.EQUALS, targetMessageXpath)
+    
+    WebUI.waitForElementVisible(targetMessage, 10)
+    String updatedResponse = WebUI.getText(targetMessage)
+    WebUI.comment('Updated message: ' + (updatedResponse.length() > 100 ? updatedResponse.substring(0, 100) + '...' : updatedResponse))
+    
+    if (updatedResponse.contains('edited by automated test')) {
+        WebUI.comment('Edit saved successfully in message ' + TARGET_INDEX)
+        WebUI.takeScreenshot('TC03_EditMessage_Success.png')
+    } else {
+        WebUI.comment('Edited text not found in message ' + TARGET_INDEX)
+        WebUI.takeScreenshot('TC03_EditMessage_Failure.png')
+        throw new Exception('Edited text not visible in message ' + TARGET_INDEX)
+    }
+
+    // Step 10: Close browser
+    WebUI.comment('Step 10: Closing browser...')
+    CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
+
+    WebUI.comment('TC03 PASSED')
+
+} catch (Exception e) {
+    WebUI.comment('TC03 FAILED: ' + e.getMessage())
+    WebUI.takeScreenshot('TC03_EditMessage_Error.png')
+    CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
+    throw e
 }
-WebUI.clearText(findTestObject('Core Chat/Page_T C Gio/textarea_Response_text'))
-WebUI.setText(findTestObject('Core Chat/Page_T C Gio/textarea_Response_text'), edited)
-WebUI.delay(1)
-
-// Click Save & Submit
-WebUI.click(findTestObject('Core Chat/Page_T C Gio/button_Save  Submit'))
-WebUI.delay(3)
-
-// Verify edited text appears in page (basic presence check)
-boolean found = WebUI.verifyTextPresent('edited by automated test', false, FailureHandling.OPTIONAL)
-if (found) {
-    WebUI.comment('Edit saved and visible in the chat')
-    WebUI.takeScreenshot('EditResponse_Success.png')
-} else {
-    WebUI.comment('Edited text not found after save')
-    WebUI.takeScreenshot('EditResponse_Failure.png')
-    WebUI.markFailed('Edited text not visible')
-}
-
-WebUI.comment('Edit-response test completed')

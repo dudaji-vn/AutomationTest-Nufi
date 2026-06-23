@@ -1,7 +1,7 @@
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import com.example.CustomKeywords
+import keywords.ChatKeywords
 
 /**
  * Core Chat Setup - Common setup for all Core Chat test cases
@@ -11,16 +11,7 @@ import com.example.CustomKeywords
  * 3. Gemini endpoint selection
  */
 
-// 1. Setup - Login
-WebUI.callTestCase(findTestCase('Test Cases/Setup/Login'), [:])
-WebUI.delay(2)
-
-// 2. Navigate to Base URL
-WebUI.navigateToUrl(GlobalVariable.Base_URL)
-WebUI.delay(3)
-
-// 3. Select Gemini endpoint
-CustomKeywords.selectGeminiEndpoint()
-WebUI.delay(2)
+// Execute core chat setup using the composite keyword
+ChatKeywords.coreChateSetup()
 
 WebUI.comment('Core Chat Setup completed successfully')

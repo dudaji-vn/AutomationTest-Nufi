@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC07_Fork_StartForkHere</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fb4b82ca-ac7b-4512-881b-922eea552a3f</testCaseGuid>
+</TestCaseEntity>

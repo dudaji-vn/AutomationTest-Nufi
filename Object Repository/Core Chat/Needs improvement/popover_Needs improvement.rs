@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>sellect_gemini (1)</name>
+   <name>popover_Needs improvement</name>
    <tag></tag>
-   <elementGuidId>30cfc5d7-062b-40dd-bd87-3c057b12bc8f</elementGuidId>
+   <elementGuidId>ca1ee4c6-5bf8-4b7e-9b54-1d7693ba6c90</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
@@ -11,14 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id=':rca:']</value>
+         <value>//div[@role='dialog' and contains(@class, 'popover-animate')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value>internal:role=option[name=&quot;gemini Pin&quot;i]</value>
+         <value>internal:role=dialog</value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
@@ -29,31 +29,31 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>24671759-e19b-4bfe-9817-6cbb772f1d3c</webElementGuid>
+      <webElementGuid>9181b000-a5c4-47af-b4b9-2fe54de38977</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>:r2i:</value>
+      <webElementGuid>b5bda1d4-80e1-49af-89d3-1200dc0662eb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>id</name>
+      <name>data-open</name>
       <type>Main</type>
-      <value>:rca:</value>
-      <webElementGuid>0a700d9d-2672-46e8-8d62-1f8e6d61f930</webElementGuid>
+      <value>true</value>
+      <webElementGuid>43ce2fa8-4a8c-45bd-bb4e-05ebb2d3c255</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>role</name>
       <type>Main</type>
-      <value>option</value>
-      <webElementGuid>b465589a-e3e7-49ad-81ed-104597c0b38a</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>relative gap-2 py-1 outline-none! scroll-m-1 scroll-mt-[calc(var(--combobox-height,0px)+var(--label-height,4px))] aria-disabled:opacity-25 data-[active-item]:bg-black/[0.075] data-[active-item]:text-black dark:data-[active-item]:bg-white/10 dark:data-[active-item]:text-white sm:text-sm min-w-0 before:absolute before:left-0 before:top-1 before:bottom-1 before:w-0.5 before:bg-transparent before:rounded-full data-[active-item]:before:bg-black dark:data-[active-item]:before:bg-white group flex w-full cursor-pointer items-center justify-between rounded-lg px-2 text-sm</value>
-      <webElementGuid>7dd93c44-faa1-4a1f-af5d-e12a3be2e49c</webElementGuid>
+      <value>dialog</value>
+      <webElementGuid>7e012530-53a4-4210-94eb-f8f3c7ee568c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -61,78 +61,78 @@
       <name>tabindex</name>
       <type>Main</type>
       <value>-1</value>
-      <webElementGuid>99580aa4-87b4-468c-ac7b-f507f44dff50</webElementGuid>
+      <webElementGuid>64879381-d6f2-4bc0-982e-ace12a61c4a4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>data-active-item</name>
+      <name>class</name>
+      <type>Main</type>
+      <value>popover-animate flex w-auto flex-col gap-1.5 overflow-hidden rounded-2xl border border-border-medium bg-surface-secondary p-1.5 shadow-lg</value>
+      <webElementGuid>67f8a6c8-149c-4da4-9cc2-d75cde536e7f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-enter</name>
       <type>Main</type>
       <value>true</value>
-      <webElementGuid>ac4eaebd-6774-4a44-8cb1-60ed37177c76</webElementGuid>
+      <webElementGuid>456879e1-13ad-4f4a-9673-dccd5443a789</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>gemini</value>
-      <webElementGuid>51af5002-a5e3-482b-8fc3-c20a68c47a42</webElementGuid>
+      <value>Didn't match my requestInaccurate or incorrect answerPoor style or toneExpected an imageRefused without reasonLacked useful informationOther issue</value>
+      <webElementGuid>2f906b55-7eda-4603-9859-cd56c131752c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;:rca:&quot;)</value>
-      <webElementGuid>c65e394b-8e1b-48e9-964e-1bbea22f06ae</webElementGuid>
+      <value>id(&quot;:r2i:&quot;)</value>
+      <webElementGuid>a0ba789e-fc50-42ae-9746-c7e13d995521</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//div[@id=':rca:']</value>
-      <webElementGuid>2b8951f2-a2d2-4d9e-a1dd-8ee5431bb338</webElementGuid>
+      <value>//div[@id=':r2i:']</value>
+      <webElementGuid>bd79a5e6-5114-499d-88aa-6961c67f7cfe</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id=':rc9:']/div</value>
-      <webElementGuid>1e99e9f5-ecf5-4cca-8b55-77f862e4bb76</webElementGuid>
+      <value>//div[@id='portal/:r2i:']/div/div</value>
+      <webElementGuid>97d8cebf-40bd-41ee-8a99-cb2d6d1dae77</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Gemini models...'])[1]/following::div[2]</value>
-      <webElementGuid>2f2a8f05-9b45-498b-96b7-f9ed962cee62</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Gemini'])[1]/following::div[8]</value>
-      <webElementGuid>8b5d6e5e-0270-4b74-bd80-dc9dd40d3568</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='`'])[1]/following::div[3]</value>
+      <webElementGuid>8e6a3d47-9ae8-44e2-b12b-16100a10e90c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[3]/div[2]/div/div/div[2]/div</value>
-      <webElementGuid>80d1ee0e-51a4-446b-8ee3-473eff669a65</webElementGuid>
+      <value>//div[3]/div/div</value>
+      <webElementGuid>70252f5c-3496-4444-bade-d0801d808f4d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//div[@id = ':rca:' and (text() = 'gemini' or . = 'gemini')]</value>
-      <webElementGuid>a85b3262-1e39-4055-99e6-07fca6d1e826</webElementGuid>
+      <value>//div[@id = ':r2i:' and (text() = concat(&quot;Didn&quot; , &quot;'&quot; , &quot;t match my requestInaccurate or incorrect answerPoor style or toneExpected an imageRefused without reasonLacked useful informationOther issue&quot;) or . = concat(&quot;Didn&quot; , &quot;'&quot; , &quot;t match my requestInaccurate or incorrect answerPoor style or toneExpected an imageRefused without reasonLacked useful informationOther issue&quot;))]</value>
+      <webElementGuid>1d0d7c8f-0e30-4af4-821b-5caaa882d06e</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

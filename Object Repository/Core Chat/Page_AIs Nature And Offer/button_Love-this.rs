@@ -7,11 +7,14 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//button[@type='button'])[28]</value>
+         <value>//*[@type = 'button' and @title = 'Love this' and @aria-pressed = 'true']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'button' and @title = 'Love this']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -29,7 +32,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>53de8b87-9e5b-4939-91b2-a71ad77d8bf5</webElementGuid>
+      <webElementGuid>c58292c4-5cbb-48f9-94a0-dc9527ac818b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -37,7 +40,7 @@
       <name>class</name>
       <type>Main</type>
       <value>hover-button rounded-lg p-1.5 text-text-secondary-alt hover:text-text-primary hover:bg-surface-hover md:group-hover:visible md:group-focus-within:visible md:group-[.final-completion]:visible focus-visible:ring-2 focus-visible:ring-black dark:focus-visible:ring-white focus-visible:outline-none</value>
-      <webElementGuid>f2cc9d75-10c3-4bc5-9f52-b0cbcfefce6d</webElementGuid>
+      <webElementGuid>5e31fa20-9510-4989-9bcd-6f52f09bfbda</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -45,7 +48,7 @@
       <name>type</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>1181b99b-fc27-48f9-bf97-7ab507fd8138</webElementGuid>
+      <webElementGuid>1cb7c6e4-647a-4a65-b039-c0d5cb0f0e35</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -53,7 +56,7 @@
       <name>title</name>
       <type>Main</type>
       <value>Love this</value>
-      <webElementGuid>fc971a8a-929e-4805-88c5-7697a43e41cb</webElementGuid>
+      <webElementGuid>ecc0038e-2464-4c56-8270-c0efbcdbdcf2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -61,7 +64,7 @@
       <name>aria-pressed</name>
       <type>Main</type>
       <value>false</value>
-      <webElementGuid>ca7011e1-b433-4ea4-89f4-377358fe19c1</webElementGuid>
+      <webElementGuid>e43066ef-94ab-4614-9410-685a37f01eb1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -69,7 +72,7 @@
       <name>aria-haspopup</name>
       <type>Main</type>
       <value>menu</value>
-      <webElementGuid>2ed4ca05-7040-4126-a90f-30302b369538</webElementGuid>
+      <webElementGuid>b366f9a4-1109-4243-88a0-163b059c76df</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -77,7 +80,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;7b395f9a-69d8-418e-948c-7320bc9c967e&quot;)/div[@class=&quot;relative flex flex-col w-11/12 agent-turn&quot;]/div[@class=&quot;flex flex-col gap-1&quot;]/div[@class=&quot;mt-1 flex justify-start gap-3 empty:hidden lg:flex text-xs&quot;]/div[@class=&quot;group visible flex justify-center gap-0.5 self-end focus-within:outline-none lg:justify-start&quot;]/button[@class=&quot;hover-button rounded-lg p-1.5 text-text-secondary-alt hover:text-text-primary hover:bg-surface-hover md:group-hover:visible md:group-focus-within:visible md:group-[.final-completion]:visible focus-visible:ring-2 focus-visible:ring-black dark:focus-visible:ring-white focus-visible:outline-none&quot;]</value>
-      <webElementGuid>fe913003-1bc4-4dc7-96a0-9dee4fef3a04</webElementGuid>
+      <webElementGuid>a9516177-4625-4b11-a324-a923182b5cfa</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -85,7 +88,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>(//button[@type='button'])[28]</value>
-      <webElementGuid>449162cf-1899-41bd-bbad-67cc38a66565</webElementGuid>
+      <webElementGuid>2407f8a1-1414-4029-a157-10f82fdd8596</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -93,7 +96,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='7b395f9a-69d8-418e-948c-7320bc9c967e']/div[2]/div/div[2]/div/button[5]</value>
-      <webElementGuid>9b2c3a5e-20f9-4986-a83d-dae1853d185f</webElementGuid>
+      <webElementGuid>8f833c60-f15b-4daf-829e-b6ab0a81f90a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -101,7 +104,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Response 2:'])[1]/following::button[5]</value>
-      <webElementGuid>2fd93731-9e17-4371-975c-731e2dde5ce9</webElementGuid>
+      <webElementGuid>f467a007-0349-4048-97e8-ba9a63acfc13</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -109,7 +112,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='NUFI v0.8.6-rc1'])[1]/preceding::button[7]</value>
-      <webElementGuid>598d217e-8287-48e3-af0c-0304fe20ad7d</webElementGuid>
+      <webElementGuid>94d69cca-2d8c-433b-8c7a-35017df07f05</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -117,7 +120,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Upload files'])[1]/preceding::button[7]</value>
-      <webElementGuid>dd25a943-816d-4b80-b342-ca58e760c893</webElementGuid>
+      <webElementGuid>6e3630ac-54e5-4e3a-a658-633c173eec8f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -125,7 +128,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/button[5]</value>
-      <webElementGuid>75762210-e3ab-4f3c-97e7-0de5c6106e30</webElementGuid>
+      <webElementGuid>3889d17e-6972-4178-bfeb-50bde5193051</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -133,6 +136,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//button[@type = 'button' and @title = 'Love this']</value>
-      <webElementGuid>40205d43-5994-4890-b7a5-0b64526c2a50</webElementGuid>
+      <webElementGuid>01f9d804-deb4-4eb0-9ac4-95b03811e7cb</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
