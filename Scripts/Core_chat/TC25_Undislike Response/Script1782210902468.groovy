@@ -6,7 +6,7 @@ import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 
 /**
- * TC25: Undislike Response (Remove Dislike)
+ * TC25: Undislike Response - Remove Dislike with Other Issue feedback
  * 
  * Test Flow:
  * 1. Open browser
@@ -16,12 +16,14 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
  * 5. Send a message and get response
  * 6. Click Dislike button of the last message
  * 7. Select "Other issue" reason
- * 8. Verify dislike success
- * 9. Click Dislike button again to remove dislike
- * 10. Verify dislike removed
+ * 8. Enter feedback in textarea
+ * 9. Click Save button
+ * 10. Verify feedback submitted successfully
+ * 11. Click Dislike button again to remove dislike
+ * 12. Verify dislike removed
  */
 
-WebUI.comment('=== TC25: Undislike Response (Remove Dislike) ===')
+WebUI.comment('=== TC25: Undislike Response (Remove Dislike with Other Issue) ===')
 
 try {
     WebUI.comment('Step 1: Opening browser...')
@@ -59,28 +61,49 @@ try {
     WebUI.click(reasonOption)
     WebUI.comment('"Other issue" reason selected')
 
-    WebUI.comment('Step 8: Verifying popup closed...')
-    WebUI.waitForElementNotVisible(popup, 5)
-    WebUI.comment('Popup closed successfully - Dislike added')
+    WebUI.comment('Step 8: Waiting for feedback popup...')
+    TestObject feedbackPopup = findTestObject('Object Repository/Core Chat/Needs improvement/popup_Provide additional feedback')
+    WebUI.waitForElementVisible(feedbackPopup, 5)
+    WebUI.comment('Feedback popup displayed')
 
-    WebUI.comment('Step 9: Clicking Dislike button again to remove dislike...')
+    WebUI.comment('Step 9: Entering feedback...')
+    TestObject feedbackTextarea = findTestObject('Object Repository/Core Chat/Needs improvement/textarea_Provide additional feedback')
+    WebUI.waitForElementVisible(feedbackTextarea, 5)
+    
+    String feedbackMessage = 'This is automated test feedback for Other issue'
+    WebUI.setText(feedbackTextarea, feedbackMessage)
+    WebUI.comment('Feedback entered: ' + feedbackMessage)
+
+    WebUI.comment('Step 10: Clicking Save button...')
+    TestObject saveButton = findTestObject('Object Repository/Core Chat/Needs improvement/button_Save')
+    WebUI.waitForElementClickable(saveButton, 5)
+    WebUI.click(saveButton)
+    WebUI.comment('Save button clicked')
+
+    WebUI.comment('Step 11: Verifying feedback popup closed...')
+    WebUI.waitForElementNotVisible(feedbackPopup, 5)
+    WebUI.comment('Feedback popup closed successfully - Dislike added with feedback')
+    
+    WebUI.delay(2)
+
+    WebUI.comment('Step 12: Clicking Dislike button again to remove dislike...')
     WebUI.waitForElementVisible(dislikeButton, 5)
     WebUI.click(dislikeButton)
     WebUI.comment('Dislike button clicked again to remove dislike')
 
-    WebUI.comment('Step 10: Verifying dislike removed...')
+    WebUI.comment('Step 13: Verifying dislike removed...')
     WebUI.delay(2)
-    WebUI.takeScreenshot('TC25_Undislike_Success.png')
+    WebUI.takeScreenshot('TC25_Undislike_OtherIssue_Success.png')
     WebUI.comment('Dislike removed successfully')
 
-    WebUI.comment('Step 11: Closing browser...')
+    WebUI.comment('Step 14: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
     WebUI.comment('TC25 PASSED')
 
 } catch (Exception e) {
     WebUI.comment('TC25 FAILED: ' + e.getMessage())
-    WebUI.takeScreenshot('TC25_Undislike_Error.png')
+    WebUI.takeScreenshot('TC25_Undislike_OtherIssue_Error.png')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
     throw e
 }

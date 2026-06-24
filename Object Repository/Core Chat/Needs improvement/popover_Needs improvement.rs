@@ -6,12 +6,16 @@
    <elementGuidId>18f24075-e974-4320-9710-623751b7b3d9</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>BASIC</key>
+         <value>//*[@id = ':r2s:']</value>
       </entry>
       <entry>
          <key>XPATH</key>
          <value>//div[contains(@class, 'popover-animate')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -29,7 +33,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>47958cb1-6a08-45be-a1b9-e26b0d367b77</webElementGuid>
+      <webElementGuid>3f884dcf-1391-4d58-a698-4251820eb949</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -37,7 +41,7 @@
       <name>id</name>
       <type>Main</type>
       <value>:r2s:</value>
-      <webElementGuid>08a1969f-b760-4887-86f1-754a316388eb</webElementGuid>
+      <webElementGuid>ff1b2fec-bb02-435e-9e4e-34758f70de50</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -45,7 +49,7 @@
       <name>data-open</name>
       <type>Main</type>
       <value>true</value>
-      <webElementGuid>f10a63bd-4d35-4cd2-a72c-2dad45400f24</webElementGuid>
+      <webElementGuid>b3a01cbd-8bc7-4743-a9a1-bae43788cdb5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -53,7 +57,7 @@
       <name>role</name>
       <type>Main</type>
       <value>dialog</value>
-      <webElementGuid>6e434b1a-d273-4ca0-8fe9-e48570af6bce</webElementGuid>
+      <webElementGuid>a9782dda-4204-48a9-83f3-e02a64c965aa</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -61,7 +65,7 @@
       <name>tabindex</name>
       <type>Main</type>
       <value>-1</value>
-      <webElementGuid>eed6dda1-a1c2-4386-aab9-f479a902e241</webElementGuid>
+      <webElementGuid>a440f799-1d00-4e57-a6fb-195cdc7cfe9a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -69,7 +73,7 @@
       <name>class</name>
       <type>Main</type>
       <value>popover-animate flex w-auto flex-col gap-1.5 overflow-hidden rounded-2xl border border-border-medium bg-surface-secondary p-1.5 shadow-lg</value>
-      <webElementGuid>e2255573-dcd7-4769-8cb9-067dc7ec1b01</webElementGuid>
+      <webElementGuid>42103a0e-5f9b-4300-90dd-13c1ec16c249</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -77,15 +81,15 @@
       <name>data-enter</name>
       <type>Main</type>
       <value>true</value>
-      <webElementGuid>eb081d89-3841-41f2-9190-5411a2de33ff</webElementGuid>
+      <webElementGuid>dae23e8f-bbcf-406f-8470-25c4f5701183</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
       <value>Didn't match my requestInaccurate or incorrect answerPoor style or toneExpected an imageRefused without reasonLacked useful informationOther issue</value>
-      <webElementGuid>e48e5151-e52b-4a22-bf59-af1611af9be3</webElementGuid>
+      <webElementGuid>4158eb49-49d2-47de-9920-a7edea2f1215</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -93,7 +97,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;:r2s:&quot;)</value>
-      <webElementGuid>ddd20b02-15ce-42ef-b9de-7a84c4b4a433</webElementGuid>
+      <webElementGuid>91a8aebc-2be9-498a-9a06-c7988f6be688</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -101,7 +105,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//div[@id=':r2s:']</value>
-      <webElementGuid>d2acb1e1-e446-421a-bffa-cc5b7502a091</webElementGuid>
+      <webElementGuid>706216db-d100-4b63-b5ed-2cbd2c3ff10c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -109,7 +113,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='portal/:r2s:']/div/div</value>
-      <webElementGuid>1b1dcf5f-9ebe-4107-9293-3d81ddccc2ea</webElementGuid>
+      <webElementGuid>767382ca-fe5b-43a7-a0ed-5a11b15d3d0d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -117,7 +121,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Log out'])[1]/following::div[3]</value>
-      <webElementGuid>77be1797-4cf9-4a44-9003-ca0bd12b4cee</webElementGuid>
+      <webElementGuid>e9362362-3bcc-46f0-a85a-16512354bdd5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -125,7 +129,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Settings'])[1]/following::div[5]</value>
-      <webElementGuid>2c281cfc-97cc-4862-ba63-a606eed64062</webElementGuid>
+      <webElementGuid>ddfb9ed6-c25d-4716-8fec-3616cdf448d7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -133,7 +137,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[3]/div/div</value>
-      <webElementGuid>05668211-c5b5-495b-96c5-9197e6b5eebb</webElementGuid>
+      <webElementGuid>3269c3d8-a658-4f72-83d1-3bcd9fe8e0a3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -141,6 +145,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[@id = ':r2s:' and (text() = concat(&quot;Didn&quot; , &quot;'&quot; , &quot;t match my requestInaccurate or incorrect answerPoor style or toneExpected an imageRefused without reasonLacked useful informationOther issue&quot;) or . = concat(&quot;Didn&quot; , &quot;'&quot; , &quot;t match my requestInaccurate or incorrect answerPoor style or toneExpected an imageRefused without reasonLacked useful informationOther issue&quot;))]</value>
-      <webElementGuid>a4f95eab-1fe0-4433-8e76-b9975ec09e14</webElementGuid>
+      <webElementGuid>6276c335-9edf-43b9-968f-49011a1b8856</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

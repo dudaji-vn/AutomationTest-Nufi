@@ -6,7 +6,7 @@ import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 
 /**
- * TC24: Dislike Response - Other issue
+ * TC24: Dislike Response - Other issue with feedback
  * 
  * Test Flow:
  * 1. Open browser
@@ -16,10 +16,12 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
  * 5. Send a message and get response
  * 6. Click Dislike button of the last message
  * 7. Select "Other issue" reason
- * 8. Verify dislike success
+ * 8. Enter feedback in textarea
+ * 9. Click Save button
+ * 10. Verify feedback submitted successfully
  */
 
-WebUI.comment('=== TC24: Dislike Response (Other issue) ===')
+WebUI.comment('=== TC24: Dislike Response (Other issue with feedback) ===')
 
 try {
     WebUI.comment('Step 1: Opening browser...')
@@ -57,12 +59,33 @@ try {
     WebUI.click(reasonOption)
     WebUI.comment('"Other issue" reason selected')
 
-    WebUI.comment('Step 8: Verifying popup closed...')
-    WebUI.waitForElementNotVisible(popup, 5)
-    WebUI.comment('Popup closed successfully')
+    WebUI.comment('Step 8: Waiting for feedback popup...')
+    TestObject feedbackPopup = findTestObject('Object Repository/Core Chat/Needs improvement/popup_Provide additional feedback')
+    WebUI.waitForElementVisible(feedbackPopup, 5)
+    WebUI.comment('Feedback popup displayed')
+
+    WebUI.comment('Step 9: Entering feedback...')
+    TestObject feedbackTextarea = findTestObject('Object Repository/Core Chat/Needs improvement/textarea_Provide additional feedback')
+    WebUI.waitForElementVisible(feedbackTextarea, 5)
+    
+    String feedbackMessage = 'This is automated test feedback for Other issue'
+    WebUI.setText(feedbackTextarea, feedbackMessage)
+    WebUI.comment('Feedback entered: ' + feedbackMessage)
+
+    WebUI.comment('Step 10: Clicking Save button...')
+    TestObject saveButton = findTestObject('Object Repository/Core Chat/Needs improvement/button_Save')
+    WebUI.waitForElementClickable(saveButton, 5)
+    WebUI.click(saveButton)
+    WebUI.comment('Save button clicked')
+
+    WebUI.comment('Step 11: Verifying feedback popup closed...')
+    WebUI.waitForElementNotVisible(feedbackPopup, 5)
+    WebUI.comment('Feedback popup closed successfully')
+    
+    WebUI.delay(2)
     WebUI.takeScreenshot('TC24_Dislike_OtherIssue_Success.png')
 
-    WebUI.comment('Step 9: Closing browser...')
+    WebUI.comment('Step 12: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
     WebUI.comment('TC24 PASSED')
