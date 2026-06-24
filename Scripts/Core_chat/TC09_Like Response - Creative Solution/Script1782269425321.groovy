@@ -6,7 +6,7 @@ import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 
 /**
- * TC22: Dislike Response - Refused without reason
+ * TC09: Like Response - Creative Solution
  * 
  * Test Flow:
  * 1. Open browser
@@ -14,12 +14,12 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
  * 3. Open new conversation
  * 4. Select Nufi endpoint + Qwen model
  * 5. Send a message and get response
- * 6. Click Dislike button of the last message
- * 7. Select "Refused without reason" reason
- * 8. Verify dislike success
+ * 6. Click Like button of the last message
+ * 7. Select "Creative Solution" reason
+ * 8. Verify like success
  */
 
-WebUI.comment('=== TC22: Dislike Response (Refused without reason) ===')
+WebUI.comment('=== TC09: Like Response (Creative Solution) ===')
 
 try {
     WebUI.comment('Step 1: Opening browser...')
@@ -35,41 +35,41 @@ try {
     CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'('Nufi', 'Qwen2.5-0.5B')
 
     WebUI.comment('Step 5: Sending test message...')
-    String testMessage = 'Dislike test message'
+    String testMessage = 'Like test message'
     String response = CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
     WebUI.comment('Response received: ' + (response.length() > 100 ? response.substring(0, 100) + '...' : response))
 
-    WebUI.comment('Step 6: Clicking Dislike button of the last message...')
-    TestObject dislikeButton = new TestObject('dynamic_dislike_button')
-    dislikeButton.addProperty('xpath', ConditionType.EQUALS, 
-        "(//div[contains(@class,'message-content')])[last()]/ancestor::div[contains(@class,'message')]//button[@title='Needs improvement']")
+    WebUI.comment('Step 6: Clicking Like button of the last message...')
+    TestObject likeButton = new TestObject('dynamic_like_button')
+    likeButton.addProperty('xpath', ConditionType.EQUALS, 
+        "(//div[contains(@class,'message-content')])[last()]/ancestor::div[contains(@class,'message')]//button[@title='Love this']")
     
-    WebUI.waitForElementVisible(dislikeButton, 5)
-    WebUI.click(dislikeButton)
-    WebUI.comment('Dislike button clicked')
+    WebUI.waitForElementVisible(likeButton, 5)
+    WebUI.click(likeButton)
+    WebUI.comment('Like button clicked')
 
-    WebUI.comment('Step 7: Selecting "Refused without reason" reason...')
-    TestObject popup = findTestObject('Object Repository/Core Chat/Needs improvement/popover_Needs improvement')
+    WebUI.comment('Step 7: Selecting "Creative Solution" reason...')
+    TestObject popup = findTestObject('Object Repository/Core Chat/Love-this/popover_Love-this')
     WebUI.waitForElementVisible(popup, 5)
     
-    TestObject reasonOption = findTestObject('Object Repository/Core Chat/Needs improvement/button_Refused without reason')
+    TestObject reasonOption = findTestObject('Object Repository/Core Chat/Love-this/button_Creative Solution')
     WebUI.waitForElementVisible(reasonOption, 5)
     WebUI.click(reasonOption)
-    WebUI.comment('"Refused without reason" reason selected')
+    WebUI.comment('"Creative Solution" reason selected')
 
     WebUI.comment('Step 8: Verifying popup closed...')
     WebUI.waitForElementNotVisible(popup, 5)
     WebUI.comment('Popup closed successfully')
-    WebUI.takeScreenshot('TC22_Dislike_RefusedWithoutReason_Success.png')
+    WebUI.takeScreenshot('TC09_Like_CreativeSolution_Success.png')
 
     WebUI.comment('Step 9: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
-    WebUI.comment('TC22 PASSED')
+    WebUI.comment('TC09 PASSED')
 
 } catch (Exception e) {
-    WebUI.comment('TC22 FAILED: ' + e.getMessage())
-    WebUI.takeScreenshot('TC22_Dislike_RefusedWithoutReason_Error.png')
+    WebUI.comment('TC09 FAILED: ' + e.getMessage())
+    WebUI.takeScreenshot('TC09_Like_CreativeSolution_Error.png')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
     throw e
 }

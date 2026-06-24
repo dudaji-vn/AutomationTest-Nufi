@@ -21,8 +21,8 @@ CustomKeywords.'keywords.ChatKeywords.openNewConversation'(
 
 // 4. Select endpoint + model
 CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'(
-    'Gemini',
-    'gemini'
+    'Nufi',
+    'Qwen2.5-0.5B'
 )
 
 // 5. Send message
@@ -33,8 +33,8 @@ CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(
     testMessage
 )
 
-// 6. Verify no error
-//CustomKeywords.'keywords.ChatKeywords.verifyNoError'()
+// 6. Verify no error (commented out to ignore errors)
+// CustomKeywords.'keywords.ChatKeywords.verifyNoError'()
 
 // 7. Screenshot
 WebUI.takeScreenshot(

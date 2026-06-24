@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Agents</name>
+   <tag></tag>
+   <elementGuidId>7b606355-7484-463a-a2d5-02c2187d5788</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>span.flex-grow.truncate.text-left</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@id=':r4l:']/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:label=&quot;Select a model&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>32737703-cb56-410f-a3fd-4892aa83892b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex-grow truncate text-left</value>
+      <webElementGuid>d7aba670-eb8d-492c-b6b5-63fe56e0639c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Qwen2.5-0.5B</value>
+      <webElementGuid>954f36e2-3786-41fc-a46a-b4a8191a6e20</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;:r4l:&quot;)/span[@class=&quot;flex-grow truncate text-left&quot;]</value>
+      <webElementGuid>20cc3b4a-928e-49f6-8aca-1dbe96185d03</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//button[@id=':r4l:']/span</value>
+      <webElementGuid>6fe9746f-feee-4cb1-ab76-13b7dda2613c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Forking Repository with Related Branches'])[2]/following::span[1]</value>
+      <webElementGuid>3496ab56-e60d-4afc-b17a-2cd78213ab90</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Fork Test Message'])[2]/following::span[1]</value>
+      <webElementGuid>0d416b2c-c41b-4293-9bd2-9a899d608f24</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Prompt 1:'])[1]/preceding::span[1]</value>
+      <webElementGuid>a2b7c22c-a177-440a-b863-68aee1705c2c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Qwen2.5-0.5B']/parent::*</value>
+      <webElementGuid>877d5117-e1f0-491a-8ea7-62b90d18a630</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//main/div/div/div/div/div/div/button/span</value>
+      <webElementGuid>b684add0-8ca2-4e85-b7f0-eae77b45944c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Qwen2.5-0.5B' or . = 'Qwen2.5-0.5B')]</value>
+      <webElementGuid>86b1f6c8-ec88-4843-8a72-ce20426d687b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

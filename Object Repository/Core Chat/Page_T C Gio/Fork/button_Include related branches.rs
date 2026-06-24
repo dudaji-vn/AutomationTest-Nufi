@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Include related branches</name>
+   <tag></tag>
+   <elementGuidId>3aa0876c-65bd-4737-a178-871538c6ced2</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[37]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:label=&quot;Include related branches&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>2e4758d3-5008-4391-b188-4fb73ae13086</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mx-0.5 w-14 flex-1 rounded-xl border-2 border-border-medium bg-surface-secondary text-text-secondary transition duration-200 ease-in-out hover:bg-surface-hover hover:text-text-primary</value>
+      <webElementGuid>b8a50523-2e0e-48a0-9f2a-835d52eee76e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-label</name>
+      <type>Main</type>
+      <value>Include related branches</value>
+      <webElementGuid>bdc67ec7-1ea0-46ed-b41c-4396a76fac50</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>ade60e09-ccc2-42e8-9066-fdcaa03945b0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Include related branches</value>
+      <webElementGuid>cb599ce1-f876-4541-ab26-03421251323d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;:r67:&quot;)/div[@class=&quot;flex h-full w-full items-center justify-center gap-1&quot;]/div[@class=&quot;flex flex-col items-center&quot;]/button[@class=&quot;mx-0.5 w-14 flex-1 rounded-xl border-2 border-border-medium bg-surface-secondary text-text-secondary transition duration-200 ease-in-out hover:bg-surface-hover hover:text-text-primary&quot;]</value>
+      <webElementGuid>a0fdbf99-68a5-4f39-aa78-dfc0a62d823a</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[37]</value>
+      <webElementGuid>3d02da3c-8694-472d-87c2-89940d6cb108</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id=':r67:']/div[2]/div[2]/button</value>
+      <webElementGuid>9593f888-18f3-4426-a327-e22eccb29ffc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Visible messages only'])[1]/following::button[2]</value>
+      <webElementGuid>29b627be-8547-47de-9424-748515513c18</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='View detailed explanation of all fork options and their behaviors'])[1]/following::button[3]</value>
+      <webElementGuid>566c286e-445f-4f40-9930-cbb28ec50216</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Include all to/from here'])[1]/preceding::button[2]</value>
+      <webElementGuid>8381a474-9ed5-4e42-8565-a8320cc9cdb1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/div/div/div[2]/div[2]/button</value>
+      <webElementGuid>64acf967-a150-4a95-9f0e-974273e4be83</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button' and (text() = 'Include related branches' or . = 'Include related branches')]</value>
+      <webElementGuid>cd247905-a2e9-4fb2-bcdb-fa3c23c91091</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

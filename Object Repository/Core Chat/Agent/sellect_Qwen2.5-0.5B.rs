@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>sellect_Qwen2.5-0.5B</name>
+   <tag></tag>
+   <elementGuidId>e3781efe-efca-43de-b078-e921219d0eb1</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.flex.w-full.min-w-0.items-center.gap-2.px-1.py-1</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id=':r91:']/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=option[name=&quot;Qwen2.5-0.5B Pin&quot;i] >> div</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>7994b8b2-a8a1-44a5-bf33-5d084dfb021f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex w-full min-w-0 items-center gap-2 px-1 py-1</value>
+      <webElementGuid>8a114cb1-8aa8-4191-b861-07ef9d77aaf5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Qwen2.5-0.5B</value>
+      <webElementGuid>a734a58d-ad63-4b98-b18a-e291f273491a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;:r91:&quot;)/div[@class=&quot;flex w-full min-w-0 items-center gap-2 px-1 py-1&quot;]</value>
+      <webElementGuid>e0c962fb-de17-44a6-a542-187c8947d961</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id=':r91:']/div</value>
+      <webElementGuid>bf862ee8-05a7-4fd1-824d-1a1b1526b556</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Nufi models...'])[1]/following::div[3]</value>
+      <webElementGuid>20f47d2b-f407-4b7f-9c8a-56c23ccf33df</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='selected'])[1]/following::div[8]</value>
+      <webElementGuid>0ba29125-3047-417d-8add-dc25cbeeb4fc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/div[2]/div/div/div[2]/div/div</value>
+      <webElementGuid>bf603b51-3738-4680-be7b-d310ecfc38a5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Qwen2.5-0.5B' or . = 'Qwen2.5-0.5B')]</value>
+      <webElementGuid>0b80a60e-9e2a-47a7-99b4-473359e7b345</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

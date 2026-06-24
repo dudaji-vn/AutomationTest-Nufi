@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>message-text-editor</name>
+   <tag></tag>
+   <elementGuidId>ccb11baf-6971-4263-ab96-9ee5154bb244</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//textarea[@data-testid='message-text-editor']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>.bg-token-main-surface-primary</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>aba3bbcd-5732-4b7f-8f57-ccad2f5d9398</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>bg-token-main-surface-primary relative mt-2 flex w-full flex-grow flex-col overflow-hidden rounded-2xl border border-border-medium text-text-primary [&amp;:has(textarea:focus)]:border-border-heavy [&amp;:has(textarea:focus)]:shadow-[0_2px_6px_rgba(0,0,0,.05)]</value>
+      <webElementGuid>91862394-8567-4818-b2a4-341866eaf53a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;aae1e49a-c6ad-44c7-bf9c-33e7b3682aff&quot;)/div[@class=&quot;relative flex flex-col w-11/12 user-turn&quot;]/div[@class=&quot;flex flex-col gap-1&quot;]/div[@class=&quot;flex min-h-[20px] max-w-full flex-grow flex-col gap-0&quot;]/div[@class=&quot;text-message flex min-h-[20px] flex-col items-start gap-3 overflow-visible [.text-message+&amp;]:mt-5&quot;]/div[@class=&quot;bg-token-main-surface-primary relative mt-2 flex w-full flex-grow flex-col overflow-hidden rounded-2xl border border-border-medium text-text-primary [&amp;:has(textarea:focus)]:border-border-heavy [&amp;:has(textarea:focus)]:shadow-[0_2px_6px_rgba(0,0,0,.05)]&quot;]</value>
+      <webElementGuid>17950ac9-5f3e-4b43-bc85-591328c3d7b7</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='aae1e49a-c6ad-44c7-bf9c-33e7b3682aff']/div[2]/div/div/div/div</value>
+      <webElementGuid>248efb5d-c92f-4524-91a4-7ca55c574cd2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Prompt 1:'])[1]/following::div[4]</value>
+      <webElementGuid>1aa7a247-aec0-4633-a623-e30197579ff3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Save &amp; Submit'])[1]/preceding::div[1]</value>
+      <webElementGuid>e553ce3e-5291-4c90-9bac-76d49334ac7f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Save'])[1]/preceding::div[1]</value>
+      <webElementGuid>d6a51a0d-85f0-4061-a295-52d33af076fa</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/div/div/div/div/div/div/div[2]/div/div/div/div</value>
+      <webElementGuid>1e5fc052-b623-4f64-bce9-8f7f45f96882</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

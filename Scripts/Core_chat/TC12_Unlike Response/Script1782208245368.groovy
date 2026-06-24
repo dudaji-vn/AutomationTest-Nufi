@@ -51,7 +51,7 @@ try {
     WebUI.comment('Like button clicked')
 
     WebUI.comment('Step 7: Selecting "Accurate and Reliable" reason...')
-    TestObject popup = findTestObject('Object Repository/Core Chat/Love-this/popup_Love-this')
+    TestObject popup = findTestObject('Object Repository/Core Chat/Love-this/popover_Love-this')
     WebUI.waitForElementVisible(popup, 5)
     
     TestObject reasonOption = findTestObject('Object Repository/Core Chat/Love-this/button_Accurate and Reliable')

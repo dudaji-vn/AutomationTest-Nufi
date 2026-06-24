@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Fork-Menu</name>
+   <tag></tag>
+   <elementGuidId>bc8904cf-098f-4a69-8ac7-94ce5067bae0</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[27]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:label=&quot;Message 2&quot;i >> internal:label=&quot;Open Fork Menu&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>cbfc29bb-85d4-4b6e-901d-6da94b24197e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>hover-button rounded-lg p-1.5 text-text-secondary-alt hover:text-text-primary hover:bg-surface-hover md:group-hover:visible md:group-focus-within:visible md:group-[.final-completion]:visible focus-visible:ring-2 focus-visible:ring-black dark:focus-visible:ring-white focus-visible:outline-none</value>
+      <webElementGuid>f8fb6f64-5cd0-4d70-86a3-35f00be27b0a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>1118e154-256e-4b69-b17c-576c40fe56fe</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-label</name>
+      <type>Main</type>
+      <value>Open Fork Menu</value>
+      <webElementGuid>eea27a6b-9f4e-4a06-b2bc-909ea560b480</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;a1c00fac-bcf3-4bfc-9d13-07063d986e43&quot;)/div[@class=&quot;relative flex flex-col w-11/12 agent-turn&quot;]/div[@class=&quot;flex flex-col gap-1&quot;]/div[@class=&quot;mt-1 flex justify-start gap-3 empty:hidden lg:flex text-xs&quot;]/div[@class=&quot;group visible flex justify-center gap-0.5 self-end focus-within:outline-none lg:justify-start&quot;]/button[@class=&quot;hover-button rounded-lg p-1.5 text-text-secondary-alt hover:text-text-primary hover:bg-surface-hover md:group-hover:visible md:group-focus-within:visible md:group-[.final-completion]:visible focus-visible:ring-2 focus-visible:ring-black dark:focus-visible:ring-white focus-visible:outline-none&quot;]</value>
+      <webElementGuid>8074285a-3ca1-4178-9fbf-390bb5837cb5</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[27]</value>
+      <webElementGuid>85053584-09c9-491a-87ed-1d0c8387a52c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='a1c00fac-bcf3-4bfc-9d13-07063d986e43']/div[2]/div/div[2]/div/button[4]</value>
+      <webElementGuid>d511d1c5-256e-4938-aa73-0c1b46f9237f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Response 2:'])[1]/following::button[4]</value>
+      <webElementGuid>c671c035-4475-4c08-b2ab-bfcfffc0b64b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='NUFI v0.8.6-rc1'])[1]/preceding::button[8]</value>
+      <webElementGuid>4f68956e-a54d-42f0-8bc1-b6629eb88fa8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Upload files'])[1]/preceding::button[8]</value>
+      <webElementGuid>5b1cf458-b811-4329-88cd-b34b978032fe</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div[2]/div/div[2]/div/button[4]</value>
+      <webElementGuid>33c86b50-e812-4e4f-b46a-d61d0ea46501</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button']</value>
+      <webElementGuid>15b0d478-10c4-4f60-b1dc-83affa7b1a46</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

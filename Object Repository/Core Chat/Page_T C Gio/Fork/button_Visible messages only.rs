@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Visible messages only</name>
+   <tag></tag>
+   <elementGuidId>ddcb4813-d042-4265-944b-eed9926c72d0</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[34]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:label=&quot;Visible messages only&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>2fb857ce-d50f-4bc9-b384-2ae201a48f5e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mx-0.5 w-14 flex-1 rounded-xl border-2 border-border-medium bg-surface-secondary text-text-secondary transition duration-200 ease-in-out hover:bg-surface-hover hover:text-text-primary</value>
+      <webElementGuid>b15c106c-5df6-4ce2-893e-0a35b7b73811</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-label</name>
+      <type>Main</type>
+      <value>Visible messages only</value>
+      <webElementGuid>65c0dc42-8a87-4b7e-8792-b0c7ee3ac1c1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>a04afcf7-4edc-47ae-afc2-d6db5512e4a3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Visible messages only</value>
+      <webElementGuid>e40ce4b5-1bd2-4378-950c-dd9958cafab9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;:r54:&quot;)/div[@class=&quot;flex h-full w-full items-center justify-center gap-1&quot;]/div[@class=&quot;flex flex-col items-center&quot;]/button[@class=&quot;mx-0.5 w-14 flex-1 rounded-xl border-2 border-border-medium bg-surface-secondary text-text-secondary transition duration-200 ease-in-out hover:bg-surface-hover hover:text-text-primary&quot;]</value>
+      <webElementGuid>c0015001-83a7-4c7b-abf6-c125877e02b7</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[34]</value>
+      <webElementGuid>3002b9e4-9776-4767-b3a4-47930385af2b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id=':r54:']/div[2]/div/button</value>
+      <webElementGuid>72e88ec3-f76e-49ff-8851-3af009394592</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='View detailed explanation of all fork options and their behaviors'])[1]/following::button[1]</value>
+      <webElementGuid>a15d4f26-a5f5-451a-8e8c-ae7a6bb30b3e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Include related branches'])[1]/preceding::button[2]</value>
+      <webElementGuid>cb80bd48-1afa-471b-8c70-425d9a44b508</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/div/div/div[2]/div/button</value>
+      <webElementGuid>417f0702-4ea4-4097-9ab0-29f45c972589</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button' and (text() = 'Visible messages only' or . = 'Visible messages only')]</value>
+      <webElementGuid>0bd2459e-ffbf-44f2-98f9-ef417572da9d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -6,15 +6,18 @@
    <elementGuidId>84fc7bf0-8fc4-4c2b-b389-60a966c1070d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>BASIC</key>
+         <value>//*[@type = 'button' and (text() = 'My Agents' or . = 'My Agents')]</value>
       </entry>
       <entry>
          <key>XPATH</key>
          <value>//button[@id=':rj:']</value>
       </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
@@ -29,7 +32,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>51cc9760-bd5f-4b3b-991a-c94a6c630522</webElementGuid>
+      <webElementGuid>1c14fe97-c7a3-4fa1-9d83-7ebfb8de3d04</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -37,7 +40,7 @@
       <name>class</name>
       <type>Main</type>
       <value>cursor-pointer flex h-10 w-full items-center justify-center gap-2 rounded-xl border border-border-light px-3 py-2 text-sm text-text-primary bg-presentation hover:bg-surface-active-alt my-1 flex h-9 w-full max-w-[70vw] items-center justify-center gap-2 rounded-xl border border-border-light bg-presentation px-3 py-2 text-sm text-text-primary hover:bg-surface-active-alt</value>
-      <webElementGuid>3ae4f5ee-b89a-4b2f-a448-5a126d210b6d</webElementGuid>
+      <webElementGuid>b11bc783-6d72-4e9d-8cb4-36c580e29948</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -45,7 +48,7 @@
       <name>aria-label</name>
       <type>Main</type>
       <value>Select a model</value>
-      <webElementGuid>7d6e1504-d2f9-4f36-af60-6f728beda304</webElementGuid>
+      <webElementGuid>4542160a-0158-4a09-87f0-7eaeca8b7082</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -53,7 +56,7 @@
       <name>aria-expanded</name>
       <type>Main</type>
       <value>false</value>
-      <webElementGuid>45b04052-f1cb-44dc-a65f-58b54f104cd0</webElementGuid>
+      <webElementGuid>915e9f6e-1d73-4b40-a0b4-80060c500112</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -61,15 +64,15 @@
       <name>aria-haspopup</name>
       <type>Main</type>
       <value>menu</value>
-      <webElementGuid>b15196bf-7286-4d24-901b-ed8a1e87ecff</webElementGuid>
+      <webElementGuid>84d41c18-7279-44da-a0a1-cc89d94bdd8e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
       <value>:rj:</value>
-      <webElementGuid>9e6c943d-6f00-49df-ac63-f9ace2a24f9e</webElementGuid>
+      <webElementGuid>c9d05270-fb8b-4a76-b0ca-d2d2ae6a3705</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -77,7 +80,7 @@
       <name>type</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>08ecedcd-229e-435b-ba20-d955475b11d3</webElementGuid>
+      <webElementGuid>f0dcf703-811b-406b-af10-4a2b66a8c17d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -85,7 +88,7 @@
       <name>text</name>
       <type>Main</type>
       <value>My Agents</value>
-      <webElementGuid>78af5c89-8acc-4f47-a3fa-fc2792d8ebd2</webElementGuid>
+      <webElementGuid>bd85829a-06d4-47d7-ad5f-25dc5e98978d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -93,7 +96,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;:rj:&quot;)</value>
-      <webElementGuid>137f1b2b-ef62-4b8a-915a-83ba561be506</webElementGuid>
+      <webElementGuid>565f94eb-4197-4e58-9df5-88997e29965e</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -101,7 +104,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//button[@id=':rj:']</value>
-      <webElementGuid>043be877-53cb-4e08-ab85-33ba17b1f57c</webElementGuid>
+      <webElementGuid>bdfc1ddc-6cac-40d1-b925-439d19461341</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -109,7 +112,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='messages-view']/div/main/div/div/div/div/div/div/button</value>
-      <webElementGuid>d2f80ce6-56c3-49ca-820e-76859604a6bf</webElementGuid>
+      <webElementGuid>9715bc39-f7e6-42bb-be1a-ca3067e2e51d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -117,7 +120,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Initial Greeting'])[1]/following::button[2]</value>
-      <webElementGuid>c63a33d5-ee02-4409-a05f-f569844d1ec4</webElementGuid>
+      <webElementGuid>7a79e8c8-c520-4df0-ab66-a0750cfbda5d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -125,7 +128,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='cô giáo em'])[1]/following::button[2]</value>
-      <webElementGuid>a428b889-d2be-4cce-a99c-da720f47656c</webElementGuid>
+      <webElementGuid>fb88fb35-b74e-4881-b38c-2394e1609679</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -133,7 +136,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Welcome to Nufi Chat.'])[1]/preceding::button[3]</value>
-      <webElementGuid>8e7a1929-7cd4-4b29-98ab-e2f36cae426d</webElementGuid>
+      <webElementGuid>18051df0-8675-4001-9022-81e43fba10e8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -141,7 +144,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//main/div/div/div/div/div/div/button</value>
-      <webElementGuid>9f49d7db-982d-4186-96d5-ea46ea4f9cee</webElementGuid>
+      <webElementGuid>63f10050-e49e-42ba-ba57-2afbf3b73bf3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -149,6 +152,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//button[@id = ':rj:' and @type = 'button' and (text() = 'My Agents' or . = 'My Agents')]</value>
-      <webElementGuid>c552e4d5-07b6-488a-baa2-88ade0ce09a9</webElementGuid>
+      <webElementGuid>0684b19f-f956-477e-a724-5ab27b98ff3c</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

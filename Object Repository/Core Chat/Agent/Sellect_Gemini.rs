@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Sellect_Gemini</name>
+   <tag></tag>
+   <elementGuidId>b322caaa-f703-4a07-b1cc-0b7a80a5ed9f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='endpoint-Gemini-menu']/span/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=option[name=&quot;Gemini&quot;s] >> div >> nth=0</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>a19e8d42-583f-4961-a3ae-d53caa68444c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>group flex w-full min-w-0 items-center justify-between gap-1.5 py-1 text-sm</value>
+      <webElementGuid>73137ae2-4d08-4aa8-85e2-1e44517dd756</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Gemini</value>
+      <webElementGuid>bba7dd70-d653-4617-92c8-da06fa564cbe</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;endpoint-Gemini-menu&quot;)/span[@class=&quot;flex-1&quot;]/div[@class=&quot;group flex w-full min-w-0 items-center justify-between gap-1.5 py-1 text-sm&quot;]</value>
+      <webElementGuid>e8b5b79d-985a-451a-bb97-3de9416abe25</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='endpoint-Gemini-menu']/span/div</value>
+      <webElementGuid>cbf6a188-da78-4913-8d9f-65ba8ea31c70</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Nufi'])[1]/following::div[3]</value>
+      <webElementGuid>ec29092c-8e13-4658-83d9-560439313773</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='selected'])[1]/following::div[7]</value>
+      <webElementGuid>2492ad35-1e8b-4ead-8de1-aea53d840513</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Gemini models...'])[1]/preceding::div[4]</value>
+      <webElementGuid>931a818d-47e6-4ee1-95f8-a011b9d1622f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/span/div</value>
+      <webElementGuid>8991aaf4-cf9e-4dad-bb88-a7b9caa73a2f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Gemini' or . = 'Gemini')]</value>
+      <webElementGuid>4b95448e-92e8-45a0-9eb0-ae64d1240553</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Sellect_Nufi</name>
+   <tag></tag>
+   <elementGuidId>66a4cd41-87a0-4242-8d95-ba865be9df04</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='endpoint-Nufi-menu']/span/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=option[name=&quot;Nufi&quot;i] >> div >> nth=0</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>c33ef34c-b9fd-4271-b6d4-c59eb1b10ea6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>group flex w-full min-w-0 items-center justify-between gap-1.5 py-1 text-sm</value>
+      <webElementGuid>89c55028-56fd-46ef-8c21-6bcce4a12ae1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Nufi</value>
+      <webElementGuid>a2ce97c4-616e-4811-a117-01dd50ad8f78</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;endpoint-Nufi-menu&quot;)/span[@class=&quot;flex-1&quot;]/div[@class=&quot;group flex w-full min-w-0 items-center justify-between gap-1.5 py-1 text-sm&quot;]</value>
+      <webElementGuid>0a9f2926-8271-4d86-a58f-2eb50b23c9c0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='endpoint-Nufi-menu']/span/div</value>
+      <webElementGuid>22d7f9cc-2766-4f16-b3aa-be1f99cfd0b3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='My Agents'])[1]/following::div[3]</value>
+      <webElementGuid>3172e9e3-e9bd-4f67-9e4e-6c0d33fc29cf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search models...'])[1]/following::div[7]</value>
+      <webElementGuid>bed7da9e-010a-4c7f-ab0a-a1fa5cd74bf6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Gemini'])[1]/preceding::div[5]</value>
+      <webElementGuid>82522b79-df28-46c5-a609-cb78b8526c4b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span/div</value>
+      <webElementGuid>35ed9e71-41a7-4e47-a8f0-93f022d8f482</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Nufi' or . = 'Nufi')]</value>
+      <webElementGuid>ecdc01c1-35b0-4665-bd4b-5103200e6fbb</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

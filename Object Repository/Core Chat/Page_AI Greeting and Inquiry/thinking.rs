@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//span[contains(@class, 'result-thinking')]</value>
+         <value>//span[@class='result-thinking']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -24,12 +24,12 @@
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>span</value>
-      <webElementGuid>2fcc018c-bb66-4c42-ae5e-b0da3b6b56be</webElementGuid>
+      <value>DIV</value>
+      <webElementGuid>7e233822-8c36-4715-8768-fe6e8d0046b7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -44,8 +44,8 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;d34619b3-0674-47f5-a03f-bba0d1f3d3b5_&quot;)/div[@class=&quot;relative flex flex-col w-11/12 agent-turn&quot;]/div[@class=&quot;flex flex-col gap-1&quot;]/div[@class=&quot;flex min-h-[20px] max-w-full flex-grow flex-col gap-0&quot;]/div[@class=&quot;text-message flex min-h-[20px] flex-col items-start gap-3 overflow-visible [.text-message+&amp;]:mt-5&quot;]/div[@class=&quot;text-message flex min-h-[20px] flex-col items-start gap-3 overflow-visible&quot;]/div[@class=&quot;markdown prose dark:prose-invert light w-full break-words dark:text-gray-100&quot;]/div[@class=&quot;absolute&quot;]/p[@class=&quot;submitting relative&quot;]/span[@class=&quot;result-thinking&quot;]</value>
-      <webElementGuid>90440833-afc3-478f-a39e-22c4847ebfc4</webElementGuid>
+      <value>xpath1782271504716</value>
+      <webElementGuid>60bccba5-5c89-436b-b75b-b6174adb0ef2</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>

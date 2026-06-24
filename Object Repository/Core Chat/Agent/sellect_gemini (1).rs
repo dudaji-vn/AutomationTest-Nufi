@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>sellect_gemini (1)</name>
+   <tag></tag>
+   <elementGuidId>4a6767ad-7e61-4f8c-ba47-696f1f949f5a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.flex.w-full.min-w-0.items-center.gap-2.px-1.py-1</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id=':ra2:']/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=option[name=&quot;gemini Pin&quot;i] >> div</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>cf479dc6-f3d5-4f8c-af8a-e380e5462e7d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex w-full min-w-0 items-center gap-2 px-1 py-1</value>
+      <webElementGuid>94d4d310-86b3-4750-81bf-1feb39648604</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>gemini</value>
+      <webElementGuid>faadf7df-3877-4bcb-aaea-9d057b601528</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;:ra2:&quot;)/div[@class=&quot;flex w-full min-w-0 items-center gap-2 px-1 py-1&quot;]</value>
+      <webElementGuid>2fb465f7-284c-425a-a5ad-f723914143c9</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id=':ra2:']/div</value>
+      <webElementGuid>e468a4d5-275f-4788-a6e4-7447832d9c6d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Gemini models...'])[1]/following::div[3]</value>
+      <webElementGuid>af4c9390-fe0d-498b-a447-508a7d4bada7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Gemini'])[1]/following::div[9]</value>
+      <webElementGuid>95251434-45d2-49bb-b1a2-79107d21858b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/div[2]/div/div/div[2]/div/div</value>
+      <webElementGuid>48e606d4-73f8-457a-962b-3ad47c8ee9f4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'gemini' or . = 'gemini')]</value>
+      <webElementGuid>17d88414-2594-4525-8ea4-4bc6b1c1ba1f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

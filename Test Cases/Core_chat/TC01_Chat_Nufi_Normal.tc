@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Test normal chat with Gemini endpoint - select Gemini if needed and send chat messages</description>
-   <name>TC01_Chat_Gemini_Normal</name>
+   <name>TC01_Chat_Nufi_Normal</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
