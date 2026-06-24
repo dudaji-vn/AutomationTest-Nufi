@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03_Like_ClearWellWritten</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e07632f9-5fa8-4f0d-b495-dfecf5254987</testCaseGuid>
+</TestCaseEntity>

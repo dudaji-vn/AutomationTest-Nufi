@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC06_Fork_StartForkHere_IncludeFromHere</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>143aa444-ddc5-4d77-a957-ffb12620344d</testCaseGuid>
+</TestCaseEntity>

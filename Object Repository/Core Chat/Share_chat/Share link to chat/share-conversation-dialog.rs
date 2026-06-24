@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>share-conversation-dialog</name>
+   <tag></tag>
+   <elementGuidId>ee4a414c-5c45-449c-beca-b0c41f7133b5</elementGuidId>
+   <imagePath></imagePath>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.flex.items-center.gap-2.rounded-md.bg-surface-secondary.p-2</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='share-conversation-dialog']/div[2]/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>div >> internal:has-text=/^https://chat\.nufi\.me/share/NO3sCpE34v20D73cMNswe$/ >> nth=1</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>8401ea30-8888-431a-8774-7fc57158fa64</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex items-center gap-2 rounded-md bg-surface-secondary p-2</value>
+      <webElementGuid>dac1e2cf-573b-4e10-aafb-fc89a9a186c2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>https://chat.nufi.me/share/NO3sCpE34v20D73cMNswe</value>
+      <webElementGuid>452b4448-b4d7-4d2c-8876-440b230900b7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;share-conversation-dialog&quot;)/div[@class=&quot;relative items-center overflow-auto rounded-lg p-2&quot;]/div[@class=&quot;flex items-center gap-2 rounded-md bg-surface-secondary p-2&quot;]</value>
+      <webElementGuid>e9a95599-ed1f-4094-a5cd-5fa5195b5b9f</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='share-conversation-dialog']/div[2]/div</value>
+      <webElementGuid>91d40df4-823d-47da-b74b-89e113b6b574</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Your name and any messages you add after sharing stay private.'])[1]/following::div[2]</value>
+      <webElementGuid>fcf4d661-cf1b-4de3-ba40-5806cf671710</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Share link to chat'])[1]/following::div[5]</value>
+      <webElementGuid>dc8cdd2b-c64c-418d-b5c6-22b9c3d6e902</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Close'])[1]/preceding::div[5]</value>
+      <webElementGuid>ddc49bd1-1039-43d5-ab7e-86a4e34e5b07</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[5]/div[2]/div/div[2]/div</value>
+      <webElementGuid>6042cf76-3462-4c34-8c8b-788b653348db</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'https://chat.nufi.me/share/NO3sCpE34v20D73cMNswe' or . = 'https://chat.nufi.me/share/NO3sCpE34v20D73cMNswe')]</value>
+      <webElementGuid>6147a637-5a92-4e99-aabc-ba9f3119f6ce</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

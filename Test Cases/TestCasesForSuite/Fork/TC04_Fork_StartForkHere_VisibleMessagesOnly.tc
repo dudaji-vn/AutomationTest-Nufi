@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_Fork_StartForkHere_VisibleMessagesOnly</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>11902790-6911-428c-9938-aa69f349533a</testCaseGuid>
+</TestCaseEntity>

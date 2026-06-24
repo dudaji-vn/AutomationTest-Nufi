@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC05_Fork_StartForkHere_IncludeRelatedBranches</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b1116ba1-e1de-4a09-afa4-d07b2e56436a</testCaseGuid>
+</TestCaseEntity>

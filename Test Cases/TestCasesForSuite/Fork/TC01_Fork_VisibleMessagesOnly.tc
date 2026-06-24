@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_Fork_VisibleMessagesOnly</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5a7b3433-9053-489f-94d1-c9d82515ce02</testCaseGuid>
+</TestCaseEntity>

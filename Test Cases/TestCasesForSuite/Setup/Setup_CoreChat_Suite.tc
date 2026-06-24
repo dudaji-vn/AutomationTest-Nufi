@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Setup_Fork_Suite</description>
+   <name>Setup_CoreChat_Suite</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0e505915-360e-4c99-9e52-ccb0529fc7bd</testCaseGuid>
+</TestCaseEntity>

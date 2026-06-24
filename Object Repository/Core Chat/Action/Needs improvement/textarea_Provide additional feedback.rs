@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>textarea_Provide additional feedback</name>
+   <tag></tag>
+   <elementGuidId>39bdf0c9-894a-455a-ac71-e90bff10cda5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='radix-:r2l:']/textarea</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>textarea.w-full.rounded-xl.border.border-border-light.bg-transparent.p-2.text-text-primary</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:attr=[placeholder=&quot;Please provide any additional feedback here&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>textarea</value>
+      <webElementGuid>48ef372e-35cd-42db-b77c-00a2a6ec80a7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>w-full rounded-xl border border-border-light bg-transparent p-2 text-text-primary</value>
+      <webElementGuid>83325e85-2843-4141-894b-3badaa1b407a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>rows</name>
+      <type>Main</type>
+      <value>4</value>
+      <webElementGuid>7a889773-7c4f-4aaa-9afd-593b693f8d32</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>placeholder</name>
+      <type>Main</type>
+      <value>Please provide any additional feedback here</value>
+      <webElementGuid>4bedfbc9-c016-4eff-a6c0-b513808c7bb9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>maxlength</name>
+      <type>Main</type>
+      <value>500</value>
+      <webElementGuid>54ee94c5-8947-4e48-8c20-a894a956a930</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;radix-:r2l:&quot;)/textarea[@class=&quot;w-full rounded-xl border border-border-light bg-transparent p-2 text-text-primary&quot;]</value>
+      <webElementGuid>4dd052aa-af91-4ae0-b026-cef1387d908e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='radix-:r2l:']/textarea</value>
+      <webElementGuid>c9f17598-bf9a-4301-9016-ca855e4b3b80</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[4]/textarea</value>
+      <webElementGuid>1ab5b701-d7f6-4bcd-a8cc-7031a4ecb1aa</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//textarea[@placeholder = 'Please provide any additional feedback here']</value>
+      <webElementGuid>7f2a8dd1-a871-4298-842e-3d7873af339e</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

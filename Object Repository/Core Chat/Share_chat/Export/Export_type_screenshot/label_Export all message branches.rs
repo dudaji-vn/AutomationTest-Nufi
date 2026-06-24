@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>label_Export all message branches</name>
+   <tag></tag>
+   <elementGuidId>00402524-6e64-402a-ae96-52de04103d8c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='radix-:r59:']/div[2]/div/div[2]/div[2]/label</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:text=&quot;Export all message branches&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>label</value>
+      <webElementGuid>e032fca2-f1bb-400b-a809-66118d1c2b6b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>for</name>
+      <type>Main</type>
+      <value>exportBranches</value>
+      <webElementGuid>de3e546f-fd3f-4e68-9d1e-76dc1d2972be</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>block w-full break-all peer-disabled:cursor-not-allowed peer-disabled:opacity-70 dark:text-gray-200 text-left text-sm font-medium</value>
+      <webElementGuid>db954d04-4274-4bb2-8eda-48064ff01235</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Export all message branches</value>
+      <webElementGuid>230e055c-854e-445b-9bfd-3e7a8dc8f675</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;radix-:r59:&quot;)/div[@class=&quot;px-0 py-2&quot;]/div[@class=&quot;flex w-full flex-col items-center gap-6&quot;]/div[@class=&quot;grid w-full gap-6 sm:grid-cols-2&quot;]/div[@class=&quot;grid w-full items-center gap-2&quot;]/label[@class=&quot;block w-full break-all peer-disabled:cursor-not-allowed peer-disabled:opacity-70 dark:text-gray-200 text-left text-sm font-medium&quot;]</value>
+      <webElementGuid>d94c4942-b14f-4ef2-8b4b-6055b59fde8a</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='radix-:r59:']/div[2]/div/div[2]/div[2]/label</value>
+      <webElementGuid>18814007-d3f1-4ff5-b0f1-695370c4c946</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Not Supported'])[1]/following::label[1]</value>
+      <webElementGuid>6918e2af-c036-4990-8c97-758aa96e29f5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Include endpoint options'])[1]/following::label[2]</value>
+      <webElementGuid>dc5e0d19-932b-4ef4-9b07-c34eb1f78a13</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Not Supported'])[2]/preceding::label[1]</value>
+      <webElementGuid>7712cb73-383c-493d-9b6d-de3ad490cc77</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/preceding::label[2]</value>
+      <webElementGuid>121cb914-3977-4333-b47e-6cd2b551c2e2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Export all message branches']/parent::*</value>
+      <webElementGuid>7801c39a-78b6-454d-8f4c-5a3adac697e5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div[2]/label</value>
+      <webElementGuid>61559e78-094d-44d4-ad1e-86120bc05356</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//label[(text() = 'Export all message branches' or . = 'Export all message branches')]</value>
+      <webElementGuid>9f052ad6-5794-40e3-a9cf-ba79fa3fa9d8</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

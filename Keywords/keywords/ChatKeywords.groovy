@@ -295,7 +295,7 @@ public class ChatKeywords {
 			WebUI.comment('=== KEYWORD: waitForThinking ===')
 			WebUI.comment('Waiting for thinking indicator (timeout: ' + timeoutSeconds + 's)')
 			
-			TestObject thinkingIndicator = findTestObject('Object Repository/Core Chat/Page_AI Greeting and Inquiry/thinking')
+			TestObject thinkingIndicator = findTestObject('Object Repository/Core Chat/Chatting/thinking')
 			boolean isVisible = WebUI.waitForElementVisible(thinkingIndicator, timeoutSeconds)
 			
 			if (isVisible) {
@@ -320,7 +320,7 @@ public class ChatKeywords {
 			WebUI.comment('=== KEYWORD: waitForThinkingToDisappear ===')
 			WebUI.comment('Waiting for thinking indicator to disappear (timeout: ' + timeoutSeconds + 's)')
 			
-			TestObject thinkingIndicator = findTestObject('Object Repository/Core Chat/Page_AI Greeting and Inquiry/thinking')
+			TestObject thinkingIndicator = findTestObject('Object Repository/Core Chat/Chatting/thinking')
 			boolean isNotVisible = WebUI.waitForElementNotVisible(thinkingIndicator, timeoutSeconds)
 			
 			if (isNotVisible) {
@@ -346,7 +346,7 @@ public class ChatKeywords {
 			WebUI.comment('Waiting for response (timeout: ' + timeoutSeconds + 's)')
 			long startTime = System.currentTimeMillis()
 
-			TestObject thinkingIndicator = findTestObject('Object Repository/Core Chat/Page_AI Greeting and Inquiry/thinking')
+			TestObject thinkingIndicator = findTestObject('Object Repository/Core Chat/Chatting/thinking')
 			try {
 				WebUI.waitForElementNotVisible(thinkingIndicator, timeoutSeconds)
 				WebUI.comment('✓ Thinking indicator gone - first token received')
@@ -355,7 +355,7 @@ public class ChatKeywords {
 			}
 			
 			try {
-				WebUI.waitForElementNotVisible(findTestObject('Object Repository/Core Chat/Page_AI Greeting and Inquiry/Stop'), timeoutSeconds)
+				WebUI.waitForElementNotVisible(findTestObject('Object Repository/Core Chat/Chatting/Stop'), timeoutSeconds)
 				WebUI.comment('✓ Stop button disappeared - generation completed')
 			} catch (Exception ex) {
 				WebUI.comment('⚠ Stop button check skipped - may not have appeared')
@@ -393,7 +393,7 @@ public class ChatKeywords {
 			}
 
 			// Get last message using Object Repository
-			TestObject lastMessage = findTestObject('Object Repository/Core Chat/Page_AI Greeting and Inquiry/message-content')
+			TestObject lastMessage = findTestObject('Object Repository/Core Chat/Chatting/message-content')
 			WebUI.waitForElementVisible(lastMessage, MEDIUM_WAIT)
 
 			String responseText = WebUI.getText(lastMessage)
@@ -442,7 +442,7 @@ public class ChatKeywords {
 	void waitForMessageVisible(int timeoutSeconds = MEDIUM_WAIT) {
 		try {
 			WebUI.comment('=== KEYWORD: waitForMessageVisible ===')
-			TestObject messageBubble = findTestObject('Object Repository/Core Chat/Page_AI Greeting and Inquiry/message-content')
+			TestObject messageBubble = findTestObject('Object Repository/Core Chat/Chatting/message-content')
 			WebUI.waitForElementVisible(messageBubble, timeoutSeconds)
 			WebUI.comment('✓ Message bubble appeared')
 		} catch (Exception e) {
@@ -642,7 +642,7 @@ public class ChatKeywords {
 	void verifyForkSuccess(int timeoutSeconds = 5) {
 		try {
 			WebUI.comment('=== KEYWORD: verifyForkSuccess ===')
-			TestObject forkSuccessMessage = findTestObject('Object Repository/Core Chat/Page_Fork Test Message/div_Successfully forked conversation')
+			TestObject forkSuccessMessage = findTestObject('Object Repository/Core Chat/Action/Fork/Fork Test Message')
 			WebUI.waitForElementVisible(forkSuccessMessage, timeoutSeconds)
 			WebUI.comment('Fork success message displayed')
 			WebUI.waitForElementNotVisible(forkSuccessMessage, timeoutSeconds)
@@ -730,7 +730,7 @@ public class ChatKeywords {
 			WebUI.comment('=== KEYWORD: selectDislikeReason ===')
 			WebUI.comment('Selecting dislike reason: ' + reasonText)
 			
-			TestObject popup = findTestObject('Object Repository/Core Chat/Needs improvement/popover_Needs improvement')
+			TestObject popup = findTestObject('Object Repository/Core Chat/Action/Needs improvement/popover_Needs improvement')
 			WebUI.waitForElementVisible(popup, timeoutSeconds)
 			
 			TestObject reasonOption = new TestObject('dynamic_dislike_reason')

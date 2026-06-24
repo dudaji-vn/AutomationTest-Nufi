@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>image_Share-QR-Code</name>
+   <tag></tag>
+   <elementGuidId>83bb11ae-a5cb-4cfb-a752-2b409b24a7b2</elementGuidId>
+   <imagePath></imagePath>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>svg.rounded-2xl > path:nth-of-type(2)</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[local-name()='svg' and .//*[local-name()='title' and text()='QR code for sharing this conversation link']]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=img[name=&quot;QR code for sharing this conversation link&quot;i] >> path >> nth=1</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>path</value>
+      <webElementGuid>622576d2-e436-402d-ba9a-19da59c31e47</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>fill</name>
+      <type>Main</type>
+      <value>#000000</value>
+      <webElementGuid>9fcc2309-c850-4db7-8f88-5336d96dc906</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>d</name>
+      <type>Main</type>
+      <value>M2 2h7v1H2zM12 2h1v1H12zM14 2h1v1H14zM16 2h1v1H16zM18 2h5v1H18zM24,2 h7v1H24zM2 3h1v1H2zM8 3h1v1H8zM10 3h1v1H10zM12 3h1v1H12zM15 3h3v1H15zM20 3h1v1H20zM22 3h1v1H22zM24 3h1v1H24zM30,3 h1v1H30zM2 4h1v1H2zM4 4h3v1H4zM8 4h1v1H8zM14 4h1v1H14zM17 4h2v1H17zM20 4h2v1H20zM24 4h1v1H24zM26 4h3v1H26zM30,4 h1v1H30zM2 5h1v1H2zM4 5h3v1H4zM8 5h1v1H8zM10 5h3v1H10zM14 5h2v1H14zM17 5h3v1H17zM22 5h1v1H22zM24 5h1v1H24zM26 5h3v1H26zM30,5 h1v1H30zM2 6h1v1H2zM4 6h3v1H4zM8 6h1v1H8zM11 6h1v1H11zM16 6h1v1H16zM20 6h3v1H20zM24 6h1v1H24zM26 6h3v1H26zM30,6 h1v1H30zM2 7h1v1H2zM8 7h1v1H8zM10 7h2v1H10zM13 7h3v1H13zM17 7h2v1H17zM20 7h1v1H20zM22 7h1v1H22zM24 7h1v1H24zM30,7 h1v1H30zM2 8h7v1H2zM10 8h1v1H10zM12 8h1v1H12zM14 8h1v1H14zM16 8h1v1H16zM18 8h1v1H18zM20 8h1v1H20zM22 8h1v1H22zM24,8 h7v1H24zM11 9h3v1H11zM21 9h2v1H21zM2 10h5v1H2zM8 10h4v1H8zM13 10h3v1H13zM17 10h3v1H17zM21 10h1v1H21zM23 10h1v1H23zM25 10h1v1H25zM27 10h1v1H27zM29 10h1v1H29zM2 11h2v1H2zM7 11h1v1H7zM9 11h1v1H9zM12 11h1v1H12zM14 11h1v1H14zM16 11h1v1H16zM21 11h1v1H21zM23 11h2v1H23zM26 11h1v1H26zM30,11 h1v1H30zM2 12h2v1H2zM6 12h1v1H6zM8 12h2v1H8zM12 12h1v1H12zM17 12h4v1H17zM22 12h1v1H22zM24 12h1v1H24zM26 12h1v1H26zM6 13h1v1H6zM17 13h2v1H17zM20 13h1v1H20zM22 13h6v1H22zM29 13h1v1H29zM2 14h1v1H2zM6 14h7v1H6zM14 14h1v1H14zM16 14h2v1H16zM19 14h1v1H19zM25 14h1v1H25zM27 14h2v1H27zM4 15h2v1H4zM7 15h1v1H7zM10 15h1v1H10zM13 15h1v1H13zM17 15h2v1H17zM20 15h7v1H20zM30,15 h1v1H30zM5 16h5v1H5zM11 16h1v1H11zM16 16h2v1H16zM22 16h1v1H22zM24 16h5v1H24zM2 17h1v1H2zM6 17h1v1H6zM9 17h5v1H9zM17 17h1v1H17zM22 17h3v1H22zM26 17h1v1H26zM29 17h1v1H29zM2 18h4v1H2zM8 18h1v1H8zM12 18h1v1H12zM15 18h1v1H15zM17 18h5v1H17zM27 18h2v1H27zM2 19h1v1H2zM4 19h4v1H4zM11 19h1v1H11zM13 19h1v1H13zM16 19h1v1H16zM18 19h5v1H18zM24 19h3v1H24zM28 19h1v1H28zM30,19 h1v1H30zM2 20h1v1H2zM4 20h1v1H4zM6 20h1v1H6zM8 20h3v1H8zM15 20h5v1H15zM26 20h1v1H26zM28 20h1v1H28zM2 21h1v1H2zM6 21h2v1H6zM9 21h2v1H9zM13 21h2v1H13zM16 21h1v1H16zM21 21h2v1H21zM29 21h1v1H29zM2 22h1v1H2zM5 22h1v1H5zM7 22h2v1H7zM12 22h1v1H12zM15 22h1v1H15zM17 22h1v1H17zM21 22h6v1H21zM28,22 h3v1H28zM10 23h2v1H10zM13 23h1v1H13zM16 23h5v1H16zM22 23h1v1H22zM26,23 h5v1H26zM2 24h7v1H2zM10 24h1v1H10zM14 24h2v1H14zM17 24h3v1H17zM21 24h2v1H21zM24 24h1v1H24zM26 24h3v1H26zM2 25h1v1H2zM8 25h1v1H8zM11 25h3v1H11zM16 25h1v1H16zM20 25h1v1H20zM22 25h1v1H22zM26 25h1v1H26zM29 25h1v1H29zM2 26h1v1H2zM4 26h3v1H4zM8 26h1v1H8zM10 26h1v1H10zM12 26h7v1H12zM22 26h5v1H22zM28 26h2v1H28zM2 27h1v1H2zM4 27h3v1H4zM8 27h1v1H8zM10 27h1v1H10zM18 27h4v1H18zM27 27h2v1H27zM30,27 h1v1H30zM2 28h1v1H2zM4 28h3v1H4zM8 28h1v1H8zM10 28h3v1H10zM15 28h1v1H15zM17 28h3v1H17zM22 28h8v1H22zM2 29h1v1H2zM8 29h1v1H8zM10 29h3v1H10zM16 29h1v1H16zM22 29h1v1H22zM25 29h1v1H25zM27 29h1v1H27zM29 29h1v1H29zM2 30h7v1H2zM10 30h1v1H10zM12 30h3v1H12zM16 30h6v1H16zM23 30h2v1H23zM26 30h1v1H26zM28 30h1v1H28z</value>
+      <webElementGuid>608e4bd2-57e2-492f-ad3b-69abe04a0773</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>shape-rendering</name>
+      <type>Main</type>
+      <value>crispEdges</value>
+      <webElementGuid>c7a65c2c-f315-43ad-b9ab-73fa1cd9f6ff</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;share-conversation-dialog&quot;)/div[@class=&quot;relative items-center overflow-auto rounded-lg p-2&quot;]/div[@class=&quot;mb-4 flex flex-col items-center&quot;]/svg[@class=&quot;rounded-2xl&quot;]/path[2]</value>
+      <webElementGuid>070ffe84-b340-45d4-86f2-8babb77e01a1</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

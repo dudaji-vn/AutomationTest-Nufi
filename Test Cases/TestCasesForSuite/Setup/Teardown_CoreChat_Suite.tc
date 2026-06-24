@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Teardown_CoreChat_Suite</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2a0ea5f2-e58b-48df-a8ad-cfe7fa9cd17c</testCaseGuid>
+</TestCaseEntity>

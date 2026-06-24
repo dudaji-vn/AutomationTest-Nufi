@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_Like_AccurateReliable</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d14ef3aa-d3b2-4ca3-9312-e1925c175ec4</testCaseGuid>
+</TestCaseEntity>

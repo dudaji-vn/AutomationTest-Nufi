@@ -7,7 +7,7 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import internal.GlobalVariable as GlobalVariable
 
 // Call Setup/Login to prepare authentication
-WebUI.callTestCase(findTestCase('Test Cases/Setup/Login'), [:])
+WebUI.callTestCase(findTestCase('null'), [:])
 WebUI.delay(2)
 
 // Navigate to Base URL - system will auto redirect to /c/new if token exists
