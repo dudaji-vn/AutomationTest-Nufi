@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_Dislike_ExpectedImage</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>675efa35-aa7a-419b-ba8b-b111d1863267</testCaseGuid>
+</TestCaseEntity>

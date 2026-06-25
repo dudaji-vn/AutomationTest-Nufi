@@ -11,14 +11,12 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
  * Test Flow:
  * 1. Open browser
  * 2. Login
- * 3. Open new conversation
- * 4. Select Nufi endpoint + Qwen model
- * 5. Send a message and get response
- * 6. Click Fork menu button of the last message
- * 7. Check "Start fork here" checkbox (uncheck Remember if checked)
- * 8. Test with "Visible messages only" option
- * 9. Test with "Include related branches" option
- * 10. Test with "Include all to/from here" option
+ * 3. Open existing chat from history
+ * 4. Click Fork menu button of the last message
+ * 5. Check "Start fork here" checkbox (uncheck Remember if checked)
+ * 6. Test with "Visible messages only" option
+ * 7. Test with "Include related branches" option
+ * 8. Test with "Include all to/from here" option
  */
 
 WebUI.comment('=== TC07: Fork Test (Start From Here with All Options) ===')
@@ -37,27 +35,13 @@ try {
         GlobalVariable.password
     )
 
-    // Step 3: Open new conversation
-    WebUI.comment('Step 3: Opening new conversation...')
-    CustomKeywords.'keywords.ChatKeywords.openNewConversation'(
-        GlobalVariable.Base_URL
-    )
+    // Step 3: Open existing chat from history
+    WebUI.comment('Step 3: Opening existing chat from history...')
+    String chatName = CustomKeywords.'keywords.HistoryChatKeywords.openRandomChatFromHistory'()
+    WebUI.comment('Opened chat: ' + chatName)
 
-    // Step 4: Select endpoint + model
-    WebUI.comment('Step 4: Selecting Nufi endpoint and Qwen model...')
-    CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'(
-        'Nufi',
-        'Qwen2.5-0.5B'
-    )
-
-    // Step 5: Send message and get response
-    WebUI.comment('Step 5: Sending test message...')
-    String testMessage = 'Fork test message - start from here'
-    String response = CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
-    WebUI.comment('Response received: ' + (response.length() > 100 ? response.substring(0, 100) + '...' : response))
-
-    // Step 6: Click Fork menu button of the last message
-    WebUI.comment('Step 6: Clicking Fork menu button of the last message...')
+    // Step 4: Click Fork menu button of the last message
+    WebUI.comment('Step 4: Clicking Fork menu button of the last message...')
     
     TestObject forkMenuButton = new TestObject('dynamic_fork_menu_button')
     forkMenuButton.addProperty('xpath', ConditionType.EQUALS, 
@@ -67,8 +51,8 @@ try {
     WebUI.click(forkMenuButton)
     WebUI.comment('Fork menu button clicked')
 
-    // Step 7: Check "Start fork here" checkbox and uncheck "Remember"
-    WebUI.comment('Step 7: Checking "Start fork here" checkbox...')
+    // Step 5: Check "Start fork here" checkbox and uncheck "Remember"
+    WebUI.comment('Step 5: Checking "Start fork here" checkbox...')
     
     TestObject startForkCheckbox = new TestObject('dynamic_start_fork_checkbox')
     startForkCheckbox.addProperty('xpath', ConditionType.EQUALS, 
@@ -91,8 +75,12 @@ try {
         WebUI.comment('"Remember" checkbox already unchecked')
     }
 
-    // Step 8: Test with "Visible messages only" option
-    WebUI.comment('Step 8: Testing with "Visible messages only" option...')
+    TestObject forkSuccessMessage = new TestObject('dynamic_fork_success_message')
+    forkSuccessMessage.addProperty('xpath', ConditionType.EQUALS, 
+        "//div[contains(text(),'Successfully forked')]")
+
+    // Step 6: Test with "Visible messages only" option
+    WebUI.comment('Step 6: Testing with "Visible messages only" option...')
     
     TestObject visibleMessagesOption = new TestObject('dynamic_visible_messages_option')
     visibleMessagesOption.addProperty('xpath', ConditionType.EQUALS, 
@@ -102,14 +90,13 @@ try {
     WebUI.click(visibleMessagesOption)
     WebUI.comment('"Visible messages only" option clicked')
     
-    TestObject forkSuccessMessage = findTestObject('Object Repository/Core Chat/Action/Fork/Fork Test Message')
     WebUI.waitForElementVisible(forkSuccessMessage, 5)
     WebUI.comment('Fork success message displayed for Visible messages only')
     WebUI.takeScreenshot('TC07_Fork_VisibleMessagesOnly_StartFromHere.png')
     WebUI.waitForElementNotVisible(forkSuccessMessage, 5)
 
-    // Step 9: Test with "Include related branches" option
-    WebUI.comment('Step 9: Testing with "Include related branches" option...')
+    // Step 7: Test with "Include related branches" option
+    WebUI.comment('Step 7: Testing with "Include related branches" option...')
     
     WebUI.waitForElementVisible(forkMenuButton, 5)
     WebUI.click(forkMenuButton)
@@ -139,8 +126,8 @@ try {
     WebUI.takeScreenshot('TC07_Fork_IncludeRelated_StartFromHere.png')
     WebUI.waitForElementNotVisible(forkSuccessMessage, 5)
 
-    // Step 10: Test with "Include all to/from here" option
-    WebUI.comment('Step 10: Testing with "Include all to/from here" option...')
+    // Step 8: Test with "Include all to/from here" option
+    WebUI.comment('Step 8: Testing with "Include all to/from here" option...')
     
     WebUI.waitForElementVisible(forkMenuButton, 5)
     WebUI.click(forkMenuButton)
@@ -169,8 +156,8 @@ try {
     WebUI.comment('Fork success message displayed for Include all to/from here')
     WebUI.takeScreenshot('TC07_Fork_IncludeFromHere_StartFromHere.png')
 
-    // Step 11: Close browser
-    WebUI.comment('Step 11: Closing browser...')
+    // Step 9: Close browser
+    WebUI.comment('Step 9: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
     WebUI.comment('TC07 PASSED')

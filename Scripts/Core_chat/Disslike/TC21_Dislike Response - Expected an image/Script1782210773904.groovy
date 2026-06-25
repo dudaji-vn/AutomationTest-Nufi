@@ -11,35 +11,30 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
  * Test Flow:
  * 1. Open browser
  * 2. Login
- * 3. Open new conversation
- * 4. Select Nufi endpoint + Qwen model
- * 5. Send a message and get response
- * 6. Click Dislike button of the last message
- * 7. Select "Expected an image" reason
- * 8. Verify dislike success
+ * 3. Open existing chat from history
+ * 4. Click Dislike button of the last message
+ * 5. Select "Expected an image" reason
+ * 6. Verify dislike success
  */
 
 WebUI.comment('=== TC21: Dislike Response (Expected an image) ===')
 
 try {
+    // Step 1: Open browser
     WebUI.comment('Step 1: Opening browser...')
     CustomKeywords.'keywords.ChatKeywords.openBrowser'(GlobalVariable.Base_URL)
 
+    // Step 2: Login
     WebUI.comment('Step 2: Logging in...')
     CustomKeywords.'keywords.ChatKeywords.loginChat'(GlobalVariable.email, GlobalVariable.password)
 
-    WebUI.comment('Step 3: Opening new conversation...')
-    CustomKeywords.'keywords.ChatKeywords.openNewConversation'(GlobalVariable.Base_URL)
+    // Step 3: Open existing chat from history
+    WebUI.comment('Step 3: Opening existing chat from history...')
+    String chatName = CustomKeywords.'keywords.HistoryChatKeywords.openRandomChatFromHistory'()
+    WebUI.comment('Opened chat: ' + chatName)
 
-    WebUI.comment('Step 4: Selecting Nufi endpoint and Qwen model...')
-    CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'('Nufi', 'Qwen2.5-0.5B')
-
-    WebUI.comment('Step 5: Sending test message...')
-    String testMessage = 'Dislike test message'
-    String response = CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
-    WebUI.comment('Response received: ' + (response.length() > 100 ? response.substring(0, 100) + '...' : response))
-
-    WebUI.comment('Step 6: Clicking Dislike button of the last message...')
+    // Step 4: Click Dislike button of the last message
+    WebUI.comment('Step 4: Clicking Dislike button of the last message...')
     TestObject dislikeButton = new TestObject('dynamic_dislike_button')
     dislikeButton.addProperty('xpath', ConditionType.EQUALS, 
         "(//div[contains(@class,'message-content')])[last()]/ancestor::div[contains(@class,'message')]//button[@title='Needs improvement']")
@@ -48,21 +43,27 @@ try {
     WebUI.click(dislikeButton)
     WebUI.comment('Dislike button clicked')
 
-    WebUI.comment('Step 7: Selecting "Expected an image" reason...')
-    TestObject popup = findTestObject('Object Repository/Core Chat/Action/Needs improvement/popover_Needs improvement')
+    // Step 5: Select "Expected an image" reason
+    WebUI.comment('Step 5: Selecting "Expected an image" reason...')
+    TestObject popup = new TestObject('dynamic_dislike_popup')
+    popup.addProperty('xpath', ConditionType.EQUALS, "//div[@role='dialog' and contains(@class, 'popover-animate')]")
     WebUI.waitForElementVisible(popup, 5)
     
-    TestObject reasonOption = findTestObject('Object Repository/Core Chat/Action/Needs improvement/button_Expected an image')
+    TestObject reasonOption = new TestObject('dynamic_dislike_reason')
+    reasonOption.addProperty('xpath', ConditionType.EQUALS, 
+        "//*[@type='button' and (text()='Expected an image' or .='Expected an image')]")
     WebUI.waitForElementVisible(reasonOption, 5)
     WebUI.click(reasonOption)
     WebUI.comment('"Expected an image" reason selected')
 
-    WebUI.comment('Step 8: Verifying popup closed...')
+    // Step 6: Verify popup closed
+    WebUI.comment('Step 6: Verifying popup closed...')
     WebUI.waitForElementNotVisible(popup, 5)
     WebUI.comment('Popup closed successfully')
     WebUI.takeScreenshot('TC21_Dislike_ExpectedImage_Success.png')
 
-    WebUI.comment('Step 9: Closing browser...')
+    // Step 7: Close browser
+    WebUI.comment('Step 7: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
     WebUI.comment('TC21 PASSED')

@@ -12,10 +12,10 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>3c28f6ff-bb6f-40a4-8f9b-82d6ee9dcc1c</testSuiteGuid>
    <testCaseLink>
-      <guid>75c9dd1f-a64f-4eca-93c8-8bf44e86f40f</guid>
+      <guid>72354554-5512-4aae-8ff0-da2a3df2fe9a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Setup/Setup_CoreChat_Suite</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Setup/Setup_HistoryChat_Suite</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

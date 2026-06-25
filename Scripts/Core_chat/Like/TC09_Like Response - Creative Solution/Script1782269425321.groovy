@@ -11,35 +11,30 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
  * Test Flow:
  * 1. Open browser
  * 2. Login
- * 3. Open new conversation
- * 4. Select Nufi endpoint + Qwen model
- * 5. Send a message and get response
- * 6. Click Like button of the last message
- * 7. Select "Creative Solution" reason
- * 8. Verify like success
+ * 3. Open existing chat from history
+ * 4. Click Like button of the last message
+ * 5. Select "Creative Solution" reason
+ * 6. Verify like success
  */
 
 WebUI.comment('=== TC09: Like Response (Creative Solution) ===')
 
 try {
+    // Step 1: Open browser
     WebUI.comment('Step 1: Opening browser...')
     CustomKeywords.'keywords.ChatKeywords.openBrowser'(GlobalVariable.Base_URL)
 
+    // Step 2: Login
     WebUI.comment('Step 2: Logging in...')
     CustomKeywords.'keywords.ChatKeywords.loginChat'(GlobalVariable.email, GlobalVariable.password)
 
-    WebUI.comment('Step 3: Opening new conversation...')
-    CustomKeywords.'keywords.ChatKeywords.openNewConversation'(GlobalVariable.Base_URL)
+    // Step 3: Open existing chat from history
+    WebUI.comment('Step 3: Opening existing chat from history...')
+    String chatName = CustomKeywords.'keywords.HistoryChatKeywords.openRandomChatFromHistory'()
+    WebUI.comment('Opened chat: ' + chatName)
 
-    WebUI.comment('Step 4: Selecting Nufi endpoint and Qwen model...')
-    CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'('Nufi', 'Qwen2.5-0.5B')
-
-    WebUI.comment('Step 5: Sending test message...')
-    String testMessage = 'Like test message'
-    String response = CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
-    WebUI.comment('Response received: ' + (response.length() > 100 ? response.substring(0, 100) + '...' : response))
-
-    WebUI.comment('Step 6: Clicking Like button of the last message...')
+    // Step 4: Click Like button of the last message
+    WebUI.comment('Step 4: Clicking Like button of the last message...')
     TestObject likeButton = new TestObject('dynamic_like_button')
     likeButton.addProperty('xpath', ConditionType.EQUALS, 
         "(//div[contains(@class,'message-content')])[last()]/ancestor::div[contains(@class,'message')]//button[@title='Love this']")
@@ -48,21 +43,27 @@ try {
     WebUI.click(likeButton)
     WebUI.comment('Like button clicked')
 
-    WebUI.comment('Step 7: Selecting "Creative Solution" reason...')
-    TestObject popup = findTestObject('Object Repository/Core Chat/Action/Love-this/popover_Love-this')
+    // Step 5: Select "Creative Solution" reason
+    WebUI.comment('Step 5: Selecting "Creative Solution" reason...')
+    TestObject popup = new TestObject('dynamic_love_popup')
+    popup.addProperty('xpath', ConditionType.EQUALS, "//div[@role='dialog' and contains(@class, 'popover-animate')]")
     WebUI.waitForElementVisible(popup, 5)
     
-    TestObject reasonOption = findTestObject('Object Repository/Core Chat/Action/Love-this/button_Creative Solution')
+    TestObject reasonOption = new TestObject('dynamic_creative_reason')
+    reasonOption.addProperty('xpath', ConditionType.EQUALS, 
+        "//*[@type='button' and (text()='Creative Solution' or .='Creative Solution')]")
     WebUI.waitForElementVisible(reasonOption, 5)
     WebUI.click(reasonOption)
     WebUI.comment('"Creative Solution" reason selected')
 
-    WebUI.comment('Step 8: Verifying popup closed...')
+    // Step 6: Verify popup closed
+    WebUI.comment('Step 6: Verifying popup closed...')
     WebUI.waitForElementNotVisible(popup, 5)
     WebUI.comment('Popup closed successfully')
     WebUI.takeScreenshot('TC09_Like_CreativeSolution_Success.png')
 
-    WebUI.comment('Step 9: Closing browser...')
+    // Step 7: Close browser
+    WebUI.comment('Step 7: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
     WebUI.comment('TC09 PASSED')

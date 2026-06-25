@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC31_Navbar_OpenClose</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0bfced71-85a7-4e01-ab9a-36d6fd30b61a</testCaseGuid>
+</TestCaseEntity>

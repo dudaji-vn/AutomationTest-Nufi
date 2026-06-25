@@ -12,7 +12,7 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>72a36e17-f174-4a5a-8313-91d906ee49ec</testSuiteGuid>
    <testCaseLink>
-      <guid>a309a1ef-d9ea-4458-89fc-89867b53d5ca</guid>
+      <guid>5781c47c-362a-4e56-aa7a-4f919c9e261c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Setup/Setup_CoreChat_Suite</testCaseId>

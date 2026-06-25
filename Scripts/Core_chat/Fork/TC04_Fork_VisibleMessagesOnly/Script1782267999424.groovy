@@ -11,12 +11,10 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
  * Test Flow:
  * 1. Open browser
  * 2. Login
- * 3. Open new conversation
- * 4. Select Nufi endpoint + Qwen model
- * 5. Send a message and get response
- * 6. Click Fork menu button of the last message
- * 7. Click "Visible messages only" option
- * 8. Verify fork success message displayed
+ * 3. Open existing chat from history
+ * 4. Click Fork menu button of the last message
+ * 5. Click "Visible messages only" option
+ * 6. Verify fork success message displayed
  */
 
 WebUI.comment('=== TC04: Fork Test (Visible Messages Only) ===')
@@ -35,27 +33,13 @@ try {
         GlobalVariable.password
     )
 
-    // Step 3: Open new conversation
-    WebUI.comment('Step 3: Opening new conversation...')
-    CustomKeywords.'keywords.ChatKeywords.openNewConversation'(
-        GlobalVariable.Base_URL
-    )
+    // Step 3: Open existing chat from history
+    WebUI.comment('Step 3: Opening existing chat from history...')
+    String chatName = CustomKeywords.'keywords.HistoryChatKeywords.openRandomChatFromHistory'()
+    WebUI.comment('Opened chat: ' + chatName)
 
-    // Step 4: Select endpoint + model
-    WebUI.comment('Step 4: Selecting Nufi endpoint and Qwen model...')
-    CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'(
-        'Nufi',
-        'Qwen2.5-0.5B'
-    )
-
-    // Step 5: Send message and get response
-    WebUI.comment('Step 5: Sending test message...')
-    String testMessage = 'Fork test message - visible only'
-    String response = CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
-    WebUI.comment('Response received: ' + (response.length() > 100 ? response.substring(0, 100) + '...' : response))
-
-    // Step 6: Click Fork menu button of the last message
-    WebUI.comment('Step 6: Clicking Fork menu button of the last message...')
+    // Step 4: Click Fork menu button of the last message
+    WebUI.comment('Step 4: Clicking Fork menu button of the last message...')
     
     TestObject forkMenuButton = new TestObject('dynamic_fork_menu_button')
     forkMenuButton.addProperty('xpath', ConditionType.EQUALS, 
@@ -65,8 +49,8 @@ try {
     WebUI.click(forkMenuButton)
     WebUI.comment('Fork menu button clicked')
 
-    // Step 7: Click "Visible messages only" option
-    WebUI.comment('Step 7: Clicking "Visible messages only" option...')
+    // Step 5: Click "Visible messages only" option
+    WebUI.comment('Step 5: Clicking "Visible messages only" option...')
     
     TestObject visibleMessagesOption = new TestObject('dynamic_visible_messages_option')
     visibleMessagesOption.addProperty('xpath', ConditionType.EQUALS, 
@@ -76,16 +60,19 @@ try {
     WebUI.click(visibleMessagesOption)
     WebUI.comment('"Visible messages only" option clicked')
 
-    // Step 8: Verify fork success message displayed
-    WebUI.comment('Step 8: Verifying fork success message...')
+    // Step 6: Verify fork success message displayed
+    WebUI.comment('Step 6: Verifying fork success message...')
     
-    TestObject forkSuccessMessage = findTestObject('Object Repository/Core Chat/Action/Fork/Fork Test Message')
+    TestObject forkSuccessMessage = new TestObject('dynamic_fork_success_message')
+    forkSuccessMessage.addProperty('xpath', ConditionType.EQUALS, 
+        "//div[contains(text(),'Successfully forked')]")
+    
     WebUI.waitForElementVisible(forkSuccessMessage, 5)
     WebUI.comment('Fork success message displayed')
     WebUI.takeScreenshot('TC04_Fork_VisibleMessagesOnly_Success.png')
 
-    // Step 9: Close browser
-    WebUI.comment('Step 9: Closing browser...')
+    // Step 7: Close browser
+    WebUI.comment('Step 7: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
     WebUI.comment('TC04 PASSED')

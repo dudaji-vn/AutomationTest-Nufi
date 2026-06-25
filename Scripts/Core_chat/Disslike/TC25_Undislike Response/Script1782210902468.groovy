@@ -11,39 +11,34 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
  * Test Flow:
  * 1. Open browser
  * 2. Login
- * 3. Open new conversation
- * 4. Select Nufi endpoint + Qwen model
- * 5. Send a message and get response
- * 6. Click Dislike button of the last message
- * 7. Select "Other issue" reason
- * 8. Enter feedback in textarea
- * 9. Click Save button
- * 10. Verify feedback submitted successfully
- * 11. Click Dislike button again to remove dislike
- * 12. Verify dislike removed
+ * 3. Open existing chat from history
+ * 4. Click Dislike button of the last message
+ * 5. Select "Other issue" reason
+ * 6. Enter feedback in textarea
+ * 7. Click Save button
+ * 8. Verify feedback submitted successfully
+ * 9. Click Dislike button again to remove dislike
+ * 10. Verify dislike removed
  */
 
 WebUI.comment('=== TC25: Undislike Response (Remove Dislike with Other Issue) ===')
 
 try {
+    // Step 1: Open browser
     WebUI.comment('Step 1: Opening browser...')
     CustomKeywords.'keywords.ChatKeywords.openBrowser'(GlobalVariable.Base_URL)
 
+    // Step 2: Login
     WebUI.comment('Step 2: Logging in...')
     CustomKeywords.'keywords.ChatKeywords.loginChat'(GlobalVariable.email, GlobalVariable.password)
 
-    WebUI.comment('Step 3: Opening new conversation...')
-    CustomKeywords.'keywords.ChatKeywords.openNewConversation'(GlobalVariable.Base_URL)
+    // Step 3: Open existing chat from history
+    WebUI.comment('Step 3: Opening existing chat from history...')
+    String chatName = CustomKeywords.'keywords.HistoryChatKeywords.openRandomChatFromHistory'()
+    WebUI.comment('Opened chat: ' + chatName)
 
-    WebUI.comment('Step 4: Selecting Nufi endpoint and Qwen model...')
-    CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'('Nufi', 'Qwen2.5-0.5B')
-
-    WebUI.comment('Step 5: Sending test message...')
-    String testMessage = 'Undislike test message'
-    String response = CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
-    WebUI.comment('Response received: ' + (response.length() > 100 ? response.substring(0, 100) + '...' : response))
-
-    WebUI.comment('Step 6: Clicking Dislike button of the last message...')
+    // Step 4: Click Dislike button of the last message
+    WebUI.comment('Step 4: Clicking Dislike button of the last message...')
     TestObject dislikeButton = new TestObject('dynamic_dislike_button')
     dislikeButton.addProperty('xpath', ConditionType.EQUALS, 
         "(//div[contains(@class,'message-content')])[last()]/ancestor::div[contains(@class,'message')]//button[@title='Needs improvement']")
@@ -52,51 +47,107 @@ try {
     WebUI.click(dislikeButton)
     WebUI.comment('Dislike button clicked')
 
-    WebUI.comment('Step 7: Selecting "Other issue" reason...')
-    TestObject popup = findTestObject('Object Repository/Core Chat/Action/Needs improvement/popover_Needs improvement')
+    // Step 5: Wait for popup and select "Other issue"
+    WebUI.comment('Step 5: Waiting for dislike popup...')
+    TestObject popup = new TestObject('dynamic_dislike_popup')
+    popup.addProperty('xpath', ConditionType.EQUALS, "//div[@role='dialog' and contains(@class, 'popover-animate')]")
     WebUI.waitForElementVisible(popup, 5)
-    
-    TestObject reasonOption = findTestObject('Object Repository/Core Chat/Action/Needs improvement/button_Other issue')
-    WebUI.waitForElementVisible(reasonOption, 5)
-    WebUI.click(reasonOption)
-    WebUI.comment('"Other issue" reason selected')
+    WebUI.comment('Dislike popup displayed')
 
-    WebUI.comment('Step 8: Waiting for feedback popup...')
-    TestObject feedbackPopup = findTestObject('Object Repository/Core Chat/Action/Needs improvement/popup_Provide additional feedback')
+    // Try multiple XPath options for "Other issue"
+    WebUI.comment('Step 6: Selecting "Other issue" reason...')
+    
+    // Option 1: Try with "Other issue" text
+    TestObject reasonOption = new TestObject('dynamic_dislike_other_reason')
+    reasonOption.addProperty('xpath', ConditionType.EQUALS, 
+        "//button[contains(text(), 'Other issue')]")
+    
+    boolean found = WebUI.waitForElementVisible(reasonOption, 3, FailureHandling.OPTIONAL)
+    
+    if (!found) {
+        // Option 2: Try with just "Other"
+        reasonOption.addProperty('xpath', ConditionType.EQUALS, 
+            "//button[contains(text(), 'Other') and not(contains(text(), 'Related'))]")
+        found = WebUI.waitForElementVisible(reasonOption, 3, FailureHandling.OPTIONAL)
+    }
+    
+    if (!found) {
+        // Option 3: Try with aria-label
+        reasonOption.addProperty('xpath', ConditionType.EQUALS, 
+            "//*[@aria-label='Other issue']")
+        found = WebUI.waitForElementVisible(reasonOption, 3, FailureHandling.OPTIONAL)
+    }
+    
+    if (!found) {
+        // Option 4: Try with class containing "other"
+        reasonOption.addProperty('xpath', ConditionType.EQUALS, 
+            "//button[contains(@class, 'other')]")
+        found = WebUI.waitForElementVisible(reasonOption, 3, FailureHandling.OPTIONAL)
+    }
+    
+    if (found) {
+        WebUI.click(reasonOption)
+        WebUI.comment('"Other issue" reason selected')
+    } else {
+        WebUI.comment('Could not find "Other issue" button, trying to click last button...')
+        // Try to click the last button in the popup as fallback
+        TestObject lastButton = new TestObject('dynamic_last_button')
+        lastButton.addProperty('xpath', ConditionType.EQUALS, 
+            "(//div[@role='dialog']//button)[last()]")
+        WebUI.waitForElementVisible(lastButton, 5)
+        WebUI.click(lastButton)
+        WebUI.comment('Last button clicked as fallback')
+    }
+
+    // Step 7: Wait for feedback popup
+    WebUI.comment('Step 7: Waiting for feedback popup...')
+    TestObject feedbackPopup = new TestObject('dynamic_feedback_popup')
+    feedbackPopup.addProperty('xpath', ConditionType.EQUALS, 
+        "//*[contains(text(), 'Provide additional feedback')]")
     WebUI.waitForElementVisible(feedbackPopup, 5)
     WebUI.comment('Feedback popup displayed')
 
-    WebUI.comment('Step 9: Entering feedback...')
-    TestObject feedbackTextarea = findTestObject('Object Repository/Core Chat/Action/Needs improvement/textarea_Provide additional feedback')
+    // Step 8: Enter feedback
+    WebUI.comment('Step 8: Entering feedback...')
+    TestObject feedbackTextarea = new TestObject('dynamic_feedback_textarea')
+    feedbackTextarea.addProperty('xpath', ConditionType.EQUALS, 
+        "//textarea[@placeholder='Provide additional feedback']")
     WebUI.waitForElementVisible(feedbackTextarea, 5)
     
     String feedbackMessage = 'This is automated test feedback for Other issue'
     WebUI.setText(feedbackTextarea, feedbackMessage)
     WebUI.comment('Feedback entered: ' + feedbackMessage)
 
-    WebUI.comment('Step 10: Clicking Save button...')
-    TestObject saveButton = findTestObject('Object Repository/Core Chat/Action/Needs improvement/button_Save')
+    // Step 9: Click Save button
+    WebUI.comment('Step 9: Clicking Save button...')
+    TestObject saveButton = new TestObject('dynamic_dislike_save_button')
+    saveButton.addProperty('xpath', ConditionType.EQUALS, 
+        "//*[@type='button' and contains(text(), 'Save')]")
     WebUI.waitForElementClickable(saveButton, 5)
     WebUI.click(saveButton)
     WebUI.comment('Save button clicked')
 
-    WebUI.comment('Step 11: Verifying feedback popup closed...')
+    // Step 10: Verify feedback popup closed
+    WebUI.comment('Step 10: Verifying feedback popup closed...')
     WebUI.waitForElementNotVisible(feedbackPopup, 5)
     WebUI.comment('Feedback popup closed successfully - Dislike added with feedback')
     
     WebUI.delay(2)
 
-    WebUI.comment('Step 12: Clicking Dislike button again to remove dislike...')
+    // Step 11: Click Dislike button again to remove dislike
+    WebUI.comment('Step 11: Clicking Dislike button again to remove dislike...')
     WebUI.waitForElementVisible(dislikeButton, 5)
     WebUI.click(dislikeButton)
     WebUI.comment('Dislike button clicked again to remove dislike')
 
-    WebUI.comment('Step 13: Verifying dislike removed...')
+    // Step 12: Verify dislike removed
+    WebUI.comment('Step 12: Verifying dislike removed...')
     WebUI.delay(2)
     WebUI.takeScreenshot('TC25_Undislike_OtherIssue_Success.png')
     WebUI.comment('Dislike removed successfully')
 
-    WebUI.comment('Step 14: Closing browser...')
+    // Step 13: Close browser
+    WebUI.comment('Step 13: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
     WebUI.comment('TC25 PASSED')

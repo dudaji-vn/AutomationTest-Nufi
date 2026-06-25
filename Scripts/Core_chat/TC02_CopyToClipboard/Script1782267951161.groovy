@@ -11,11 +11,9 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
  * Test Flow:
  * 1. Open browser
  * 2. Login
- * 3. Open new conversation
- * 4. Select Gemini endpoint + model
- * 5. Send a message and get response
- * 6. Click copy button of the LAST response message
- * 7. Verify clipboard contains the response
+ * 3. Open existing chat from history
+ * 4. Click copy button of the LAST response message
+ * 5. Verify clipboard contains the response
  */
 
 WebUI.comment('=== TC02: Copy to Clipboard Test ===')
@@ -34,27 +32,25 @@ try {
         GlobalVariable.password
     )
 
-    // Step 3: Open new conversation
-    WebUI.comment('Step 3: Opening new conversation...')
-    CustomKeywords.'keywords.ChatKeywords.openNewConversation'(
-        GlobalVariable.Base_URL
-    )
+    // Step 3: Open existing chat from history
+    WebUI.comment('Step 3: Opening existing chat from history...')
+    String chatName = CustomKeywords.'keywords.HistoryChatKeywords.openRandomChatFromHistory'()
+    WebUI.comment('Opened chat: ' + chatName)
 
-    // Step 4: Select endpoint + model
-    WebUI.comment('Step 4: Selecting Gemini endpoint and model...')
-    CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'(
-        'Nufi',
-        'Qwen2.5-0.5B'
-    )
-
-    // Step 5: Send message and get response
-    WebUI.comment('Step 5: Sending test message...')
-    String testMessage = 'Test message for copy to clipboard'
-    String response = CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
+    // Step 4: Get the response from the chat (last message)
+    WebUI.comment('Step 4: Getting response from chat...')
+    
+    // Create dynamic TestObject for last message
+    TestObject lastMessage = new TestObject('dynamic_last_message')
+    lastMessage.addProperty('xpath', ConditionType.EQUALS, 
+        "(//div[contains(@class,'message-content')])[last()]")
+    
+    WebUI.waitForElementVisible(lastMessage, 30)
+    String response = WebUI.getText(lastMessage)
     WebUI.comment('Response received: ' + (response.length() > 100 ? response.substring(0, 100) + '...' : response))
 
-    // Step 6: Click copy button of the LAST response message
-    WebUI.comment('Step 6: Clicking copy button of the last response...')
+    // Step 5: Click copy button of the LAST response message
+    WebUI.comment('Step 5: Clicking copy button of the last response...')
     
     TestObject copyButtonLastMessage = new TestObject('dynamic_copy_button_last')
     copyButtonLastMessage.addProperty('xpath', ConditionType.EQUALS, 
@@ -65,8 +61,8 @@ try {
     WebUI.comment('Copy button of last message clicked')
     WebUI.delay(1)
 
-    // Step 7: Read system clipboard
-    WebUI.comment('Step 7: Reading system clipboard...')
+    // Step 6: Read system clipboard
+    WebUI.comment('Step 6: Reading system clipboard...')
     try {
         java.awt.Toolkit toolkit = java.awt.Toolkit.getDefaultToolkit()
         java.awt.datatransfer.Clipboard clipboard = toolkit.getSystemClipboard()
@@ -103,8 +99,8 @@ try {
         WebUI.takeScreenshot('TC02_CopyToClipboard_NoAccess.png')
     }
 
-    // Step 8: Close browser
-    WebUI.comment('Step 8: Closing browser...')
+    // Step 7: Close browser
+    WebUI.comment('Step 7: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
     WebUI.comment('TC02 PASSED')

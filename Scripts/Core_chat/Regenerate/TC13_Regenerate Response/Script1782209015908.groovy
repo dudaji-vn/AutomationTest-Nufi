@@ -11,35 +11,39 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
  * Test Flow:
  * 1. Open browser
  * 2. Login
- * 3. Open new conversation
- * 4. Select Nufi endpoint + Qwen model
- * 5. Send a message and get response
- * 6. Click Regenerate button of the last message
- * 7. Wait for new response
- * 8. Verify new response is generated
+ * 3. Open existing chat from history
+ * 4. Click Regenerate button of the last message
+ * 5. Wait for new response
+ * 6. Verify new response is generated
  */
 
 WebUI.comment('=== TC13: Regenerate Response ===')
 
 try {
+    // Step 1: Open browser
     WebUI.comment('Step 1: Opening browser...')
     CustomKeywords.'keywords.ChatKeywords.openBrowser'(GlobalVariable.Base_URL)
 
+    // Step 2: Login
     WebUI.comment('Step 2: Logging in...')
     CustomKeywords.'keywords.ChatKeywords.loginChat'(GlobalVariable.email, GlobalVariable.password)
 
-    WebUI.comment('Step 3: Opening new conversation...')
-    CustomKeywords.'keywords.ChatKeywords.openNewConversation'(GlobalVariable.Base_URL)
+    // Step 3: Open existing chat from history
+    WebUI.comment('Step 3: Opening existing chat from history...')
+    String chatName = CustomKeywords.'keywords.HistoryChatKeywords.openRandomChatFromHistory'()
+    WebUI.comment('Opened chat: ' + chatName)
 
-    WebUI.comment('Step 4: Selecting Nufi endpoint and Qwen model...')
-    CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'('Nufi', 'Qwen2.5-0.5B')
-
-    WebUI.comment('Step 5: Sending test message...')
-    String testMessage = 'Regenerate test message'
-    String originalResponse = CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
+    // Step 4: Get original response
+    WebUI.comment('Step 4: Getting original response...')
+    TestObject lastMessage = new TestObject('dynamic_last_message')
+    lastMessage.addProperty('xpath', ConditionType.EQUALS, 
+        "(//div[contains(@class,'message-content')])[last()]")
+    WebUI.waitForElementVisible(lastMessage, 5)
+    String originalResponse = WebUI.getText(lastMessage)
     WebUI.comment('Original response: ' + (originalResponse.length() > 100 ? originalResponse.substring(0, 100) + '...' : originalResponse))
 
-    WebUI.comment('Step 6: Clicking Regenerate button of the last message...')
+    // Step 5: Click Regenerate button of the last message
+    WebUI.comment('Step 5: Clicking Regenerate button of the last message...')
     TestObject regenerateButton = new TestObject('dynamic_regenerate_button')
     regenerateButton.addProperty('xpath', ConditionType.EQUALS, 
         "(//div[contains(@class,'message-content')])[last()]/ancestor::div[contains(@class,'message')]//button[@title='Regenerate']")
@@ -48,16 +52,18 @@ try {
     WebUI.click(regenerateButton)
     WebUI.comment('Regenerate button clicked')
 
-    WebUI.comment('Step 7: Waiting for new response...')
-    TestObject thinkingIndicator = findTestObject('Object Repository/Core Chat/Chatting/thinking')
+    // Step 6: Wait for new response
+    WebUI.comment('Step 6: Waiting for new response...')
+    TestObject thinkingIndicator = new TestObject('dynamic_thinking_indicator')
+    thinkingIndicator.addProperty('xpath', ConditionType.EQUALS, "//span[contains(@class,'result-thinking')]")
     WebUI.waitForElementVisible(thinkingIndicator, 5)
     WebUI.comment('Thinking indicator appeared - regenerating...')
     
     WebUI.waitForElementNotVisible(thinkingIndicator, 30)
     WebUI.comment('Thinking indicator disappeared - new response received')
 
-    WebUI.comment('Step 8: Verifying new response...')
-    TestObject lastMessage = findTestObject('Object Repository/Core Chat/Chatting/message-content')
+    // Step 7: Verify new response
+    WebUI.comment('Step 7: Verifying new response...')
     WebUI.waitForElementVisible(lastMessage, 5)
     
     String newResponse = WebUI.getText(lastMessage)
@@ -70,7 +76,8 @@ try {
         throw new Exception('New response is empty')
     }
 
-    WebUI.comment('Step 9: Closing browser...')
+    // Step 8: Close browser
+    WebUI.comment('Step 8: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
     WebUI.comment('TC13 PASSED')

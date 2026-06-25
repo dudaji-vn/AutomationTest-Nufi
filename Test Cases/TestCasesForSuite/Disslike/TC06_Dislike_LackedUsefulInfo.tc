@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC06_Dislike_LackedUsefulInfo</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5ff71d99-238d-41a3-827d-7b9c85cfd8f2</testCaseGuid>
+</TestCaseEntity>

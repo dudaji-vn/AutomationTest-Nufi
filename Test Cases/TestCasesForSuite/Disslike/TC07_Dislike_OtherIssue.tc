@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC07_Dislike_OtherIssue</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8b643912-a9f6-4e42-9ba6-e76d72121d6f</testCaseGuid>
+</TestCaseEntity>

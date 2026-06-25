@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_Dislike_Inaccurate</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d15694ff-fcb3-4770-b655-0fc803584f0b</testCaseGuid>
+</TestCaseEntity>

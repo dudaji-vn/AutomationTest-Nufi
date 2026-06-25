@@ -11,13 +11,11 @@ import com.kms.katalon.core.model.FailureHandling as FailureHandling
  * Test Flow:
  * 1. Open browser
  * 2. Login
- * 3. Open new conversation
- * 4. Select Gemini endpoint + model
- * 5. Send a message and get response
- * 6. Click Edit button of target message using index variable
- * 7. Edit the response text
- * 8. Save & Submit
- * 9. Verify edited text appears in target message
+ * 3. Open existing chat from history
+ * 4. Click Edit button of target message using index variable
+ * 5. Edit the response text
+ * 6. Save & Submit
+ * 7. Verify edited text appears in target message
  */
 
 def TARGET_INDEX = 1
@@ -38,27 +36,13 @@ try {
         GlobalVariable.password
     )
 
-    // Step 3: Open new conversation
-    WebUI.comment('Step 3: Opening new conversation...')
-    CustomKeywords.'keywords.ChatKeywords.openNewConversation'(
-        GlobalVariable.Base_URL
-    )
+    // Step 3: Open existing chat from history
+    WebUI.comment('Step 3: Opening existing chat from history...')
+    String chatName = CustomKeywords.'keywords.HistoryChatKeywords.openRandomChatFromHistory'()
+    WebUI.comment('Opened chat: ' + chatName)
 
-    // Step 4: Select endpoint + model
-    WebUI.comment('Step 4: Selecting Gemini endpoint and model...')
-    CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'(
-        'Nufi',
-        'Qwen2.5-0.5B'
-    )
-
-    // Step 5: Send message and get response
-    WebUI.comment('Step 5: Sending test message...')
-    String testMessage = 'Test message for edit response'
-    String response = CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
-    WebUI.comment('Response received: ' + (response.length() > 100 ? response.substring(0, 100) + '...' : response))
-
-    // Step 6: Click Edit button of target message
-    WebUI.comment('Step 6: Clicking Edit button of message index: ' + TARGET_INDEX)
+    // Step 4: Click Edit button of target message
+    WebUI.comment('Step 4: Clicking Edit button of message index: ' + TARGET_INDEX)
     
     String editButtonXpath = "(//div[contains(@class,'message-content')])[" + TARGET_INDEX + "]/ancestor::div[contains(@class,'message')]//button[contains(@aria-label, 'Edit') or contains(@title, 'Edit')]"
     
@@ -70,8 +54,8 @@ try {
     WebUI.comment('Edit button of message ' + TARGET_INDEX + ' clicked')
     WebUI.delay(2)
 
-    // Step 7: Edit response text using data-testid
-    WebUI.comment('Step 7: Editing response text...')
+    // Step 5: Edit response text using data-testid
+    WebUI.comment('Step 5: Editing response text...')
     TestObject textareaResponse = new TestObject('dynamic_edit_textarea')
     textareaResponse.addProperty('xpath', ConditionType.EQUALS, 
         "//textarea[@data-testid='message-text-editor']")
@@ -89,8 +73,8 @@ try {
     WebUI.comment('Text edited successfully')
     WebUI.delay(1)
 
-    // Step 8: Click Save & Submit button
-    WebUI.comment('Step 8: Saving edited response...')
+    // Step 6: Click Save & Submit button
+    WebUI.comment('Step 6: Saving edited response...')
     TestObject saveButton = new TestObject('dynamic_save_button')
     saveButton.addProperty('xpath', ConditionType.EQUALS, 
         "//button[contains(text(),'Save & Submit')]")
@@ -100,8 +84,8 @@ try {
     WebUI.comment('Save & Submit button clicked')
     WebUI.delay(3)
 
-    // Step 9: Verify edited text appears in target message
-    WebUI.comment('Step 9: Verifying edited text in message ' + TARGET_INDEX + '...')
+    // Step 7: Verify edited text appears in target message
+    WebUI.comment('Step 7: Verifying edited text in message ' + TARGET_INDEX + '...')
     
     String targetMessageXpath = "(//div[contains(@class,'message-content')])[" + TARGET_INDEX + "]"
     TestObject targetMessage = new TestObject('dynamic_target_message')
@@ -120,8 +104,8 @@ try {
         throw new Exception('Edited text not visible in message ' + TARGET_INDEX)
     }
 
-    // Step 10: Close browser
-    WebUI.comment('Step 10: Closing browser...')
+    // Step 8: Close browser
+    WebUI.comment('Step 8: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
     WebUI.comment('TC03 PASSED')

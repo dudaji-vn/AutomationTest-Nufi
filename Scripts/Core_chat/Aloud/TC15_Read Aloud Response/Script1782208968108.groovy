@@ -6,39 +6,34 @@ import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 
 /**
- * TC002: Read Aloud Response
+ * TC15: Read Aloud Response
  * 
  * Test Flow:
  * 1. Open browser
  * 2. Login
- * 3. Open new conversation
- * 4. Select Nufi endpoint + Qwen model
- * 5. Send a message and get response
- * 6. Click Read Aloud button of the last message
- * 7. Verify read aloud started
+ * 3. Open existing chat from history
+ * 4. Click Read Aloud button of the last message
+ * 5. Verify read aloud started
  */
 
 WebUI.comment('=== TC15: Read Aloud Response ===')
 
 try {
+    // Step 1: Open browser
     WebUI.comment('Step 1: Opening browser...')
     CustomKeywords.'keywords.ChatKeywords.openBrowser'(GlobalVariable.Base_URL)
 
+    // Step 2: Login
     WebUI.comment('Step 2: Logging in...')
     CustomKeywords.'keywords.ChatKeywords.loginChat'(GlobalVariable.email, GlobalVariable.password)
 
-    WebUI.comment('Step 3: Opening new conversation...')
-    CustomKeywords.'keywords.ChatKeywords.openNewConversation'(GlobalVariable.Base_URL)
+    // Step 3: Open existing chat from history
+    WebUI.comment('Step 3: Opening existing chat from history...')
+    String chatName = CustomKeywords.'keywords.HistoryChatKeywords.openRandomChatFromHistory'()
+    WebUI.comment('Opened chat: ' + chatName)
 
-    WebUI.comment('Step 4: Selecting Nufi endpoint and Qwen model...')
-    CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'('Nufi', 'Qwen2.5-0.5B')
-
-    WebUI.comment('Step 5: Sending test message...')
-    String testMessage = 'Read aloud test message'
-    String response = CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
-    WebUI.comment('Response received: ' + (response.length() > 100 ? response.substring(0, 100) + '...' : response))
-
-    WebUI.comment('Step 6: Clicking Read Aloud button of the last message...')
+    // Step 4: Click Read Aloud button of the last message
+    WebUI.comment('Step 4: Clicking Read Aloud button of the last message...')
     TestObject readButton = new TestObject('dynamic_read_button')
     readButton.addProperty('xpath', ConditionType.EQUALS, 
         "(//div[contains(@class,'message-content')])[last()]/ancestor::div[contains(@class,'message')]//button[@title='Read aloud']")
@@ -48,11 +43,13 @@ try {
     WebUI.comment('Read Aloud button clicked')
     WebUI.delay(2)
 
-    WebUI.comment('Step 7: Verifying read aloud started...')
+    // Step 5: Verify read aloud started
+    WebUI.comment('Step 5: Verifying read aloud started...')
     WebUI.takeScreenshot('TC15_ReadAloud_Success.png')
     WebUI.comment('Read aloud started successfully')
 
-    WebUI.comment('Step 8: Closing browser...')
+    // Step 6: Close browser
+    WebUI.comment('Step 6: Closing browser...')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
 
     WebUI.comment('TC15 PASSED')

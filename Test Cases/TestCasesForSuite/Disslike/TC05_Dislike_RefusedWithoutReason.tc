@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC05_Dislike_RefusedWithoutReason</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c3469708-bf48-4465-9451-87821906aa66</testCaseGuid>
+</TestCaseEntity>
