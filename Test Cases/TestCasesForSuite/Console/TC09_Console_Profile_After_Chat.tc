@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC09_Console_Profile_After_Chat</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e8f9005a-6e2c-472e-bfa5-b62d640feb59</testCaseGuid>
+</TestCaseEntity>

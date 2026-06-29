@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>header_Hi</name>
+   <tag></tag>
+   <elementGuidId>4d2c0de2-5adf-48e6-8f9c-6838de8a0c3a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>section.space-y-6 > header</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='root']/div/main/section/header</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:text=&quot;Hi 👋6a2f5884d9e8d6dcd24d3242USER&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>header</value>
+      <webElementGuid>03be143a-e688-420d-9257-2eee1c347039</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Hi 👋6a2f5884d9e8d6dcd24d3242USER</value>
+      <webElementGuid>2f4b7122-ca30-4ce3-a762-8eb1c14205eb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;min-h-dvh bg-background text-foreground&quot;]/main[@class=&quot;mx-auto max-w-5xl px-4 py-6 sm:px-6 sm:py-8&quot;]/section[@class=&quot;space-y-6&quot;]/header[1]</value>
+      <webElementGuid>89dae02d-7cea-48f3-8adf-91426e29792b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/main/section/header</value>
+      <webElementGuid>bf3ed8eb-641f-4749-ae04-dd4255e4c31c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='API keys'])[1]/following::header[1]</value>
+      <webElementGuid>50ea4ace-7e68-4788-b7ee-5efc3c00f79a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Usage'])[1]/following::header[1]</value>
+      <webElementGuid>52182a02-706d-4854-87a9-41b8c3be862d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//section/header</value>
+      <webElementGuid>addf004d-8bad-4b05-b45a-e483eca44ff5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//header[(text() = 'Hi 👋6a2f5884d9e8d6dcd24d3242USER' or . = 'Hi 👋6a2f5884d9e8d6dcd24d3242USER')]</value>
+      <webElementGuid>75305f79-ce0a-405d-bcfc-910bbe05ca9b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

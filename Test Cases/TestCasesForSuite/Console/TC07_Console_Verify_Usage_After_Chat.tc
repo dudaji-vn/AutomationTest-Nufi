@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC07_Console_Verify_Usage_After_Chat</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>26ff7c8b-7661-4858-a384-75f5caefcf14</testCaseGuid>
+</TestCaseEntity>

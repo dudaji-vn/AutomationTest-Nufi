@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>btn_Log out</name>
+   <name>menuitem_Console</name>
    <tag></tag>
-   <elementGuidId>90eaeed5-985f-4c01-bb9e-bd842b7fb76b</elementGuidId>
+   <elementGuidId>4038ab89-cffc-4445-a4fb-ce2f64f3a0f9</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@role='menuitem']//*[local-name()='svg' and contains(@class, 'lucide-log-out')]/ancestor::div[@role='menuitem']</value>
+         <key>CSS</key>
+         <value></value>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>//div[@id=':r7l:']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value>internal:role=menuitem[name=&quot;Log out&quot;i]</value>
+         <value>internal:role=menuitem[name=&quot;Console&quot;i]</value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
@@ -28,23 +29,23 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>744afedb-9943-4e25-96ec-1c9eb63cce68</webElementGuid>
+      <webElementGuid>630fafd9-759e-43c6-9c6e-be8627c2f401</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>:ra:</value>
-      <webElementGuid>abaff094-5517-4647-b479-1a2ba4a23f65</webElementGuid>
+      <value>:r7l:</value>
+      <webElementGuid>6f924de8-2491-4212-93ec-afdf974bd0ce</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>role</name>
       <type>Main</type>
       <value>menuitem</value>
-      <webElementGuid>d0cd724a-87ee-4a20-a76c-3d75360e94f2</webElementGuid>
+      <webElementGuid>d0ac7ba8-3bbb-4494-9925-8362f8f8d8a1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -52,7 +53,7 @@
       <name>class</name>
       <type>Main</type>
       <value>select-item text-sm</value>
-      <webElementGuid>62384612-f3d0-4cf7-9adf-bfd37f5a4eb9</webElementGuid>
+      <webElementGuid>7120df6d-59f0-4783-8dd2-bd70f1b720ab</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -60,7 +61,7 @@
       <name>tabindex</name>
       <type>Main</type>
       <value>0</value>
-      <webElementGuid>741f7934-4491-4f93-8397-b18f29a7d49f</webElementGuid>
+      <webElementGuid>06624b8e-b63b-4b79-ac01-4cc3a9b2912b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -68,78 +69,94 @@
       <name>data-active-item</name>
       <type>Main</type>
       <value>true</value>
-      <webElementGuid>a80d22f5-2ba6-4962-ad55-74b9ac5d9684</webElementGuid>
+      <webElementGuid>216d9a63-67ee-4fd7-9bf2-59baa895edb9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Log out</value>
-      <webElementGuid>37844fe7-3856-4dee-bb5a-22afc3ffd6fc</webElementGuid>
+      <value>Console</value>
+      <webElementGuid>d2643c71-d4ee-477f-8510-67d747c68f98</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;:ra:&quot;)</value>
-      <webElementGuid>42b11cce-43aa-481c-b680-67e7cb29b130</webElementGuid>
+      <value>id(&quot;:r7l:&quot;)</value>
+      <webElementGuid>ae5e67b6-c17b-47a7-a1e0-bc4bf8f4a3ca</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//div[@id=':ra:']</value>
-      <webElementGuid>edcf05d6-0bbf-4ae3-b294-1163d6928a7a</webElementGuid>
+      <value>//div[@id=':r7l:']</value>
+      <webElementGuid>cb9f60e9-ec06-4efa-b542-04f111079bc3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id=':r1:']/div[8]</value>
-      <webElementGuid>be4a7095-8738-42cd-b98f-c0025fc4527d</webElementGuid>
+      <value>//div[@id=':r7c:']/div[5]</value>
+      <webElementGuid>a6abcb44-2d44-4176-80e1-7e859234dbcf</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Settings'])[1]/following::div[2]</value>
-      <webElementGuid>8b6d39f2-99d2-42f7-8db1-f6a95144583d</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Help &amp; FAQ'])[1]/following::div[1]</value>
+      <webElementGuid>d95acae7-202e-4b9a-90be-cf6ab5ba02b7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Console'])[1]/following::div[3]</value>
-      <webElementGuid>d2a8fa67-92e4-4b98-9b1b-8ffc6ea174c8</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='My Files'])[1]/following::div[2]</value>
+      <webElementGuid>767256af-fbaf-4056-bc6a-7347bbe12090</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Log out']/parent::*</value>
-      <webElementGuid>3913808a-0078-499c-b454-5f139f60bab2</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Settings'])[1]/preceding::div[1]</value>
+      <webElementGuid>4a52b99a-36da-4216-b66a-767b8f350e2e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Log out'])[1]/preceding::div[3]</value>
+      <webElementGuid>948ce014-031e-4df0-8213-1fb5b22916f1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Console']/parent::*</value>
+      <webElementGuid>8c98e88e-de36-49b4-b20c-e1fa0570d9b0</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[8]</value>
-      <webElementGuid>6a805054-1cd3-4d47-beb2-52b0f5e59876</webElementGuid>
+      <value>//div[2]/div/div/div[5]</value>
+      <webElementGuid>f86d3201-4d37-4e41-9039-dd44beb0fc28</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//div[@id = ':ra:' and (text() = 'Log out' or . = 'Log out')]</value>
-      <webElementGuid>96529d54-e7a2-4138-94c2-5b2f8acf02bd</webElementGuid>
+      <value>//div[@id = ':r7l:' and (text() = 'Console' or . = 'Console')]</value>
+      <webElementGuid>6b070e2e-7e5e-4996-a39d-a06366f9bc89</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

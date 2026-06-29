@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC08_Console_Verify_Keys_After_Chat</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c3ea57bf-deae-44b1-8870-24c7d9cfdaf2</testCaseGuid>
+</TestCaseEntity>

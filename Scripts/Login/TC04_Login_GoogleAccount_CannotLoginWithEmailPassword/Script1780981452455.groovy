@@ -62,9 +62,9 @@ if (googleLoginSuccess) {
 }
 
 // ========== STEP 2: Logout ==========
-WebUI.click(findTestObject('Object Repository/Page_Nufi Chat/Side_bar/img_avatar'))
+WebUI.click(findTestObject('Object Repository/Core Chat/nav/nav_items/button_Account Settings'))
 
-WebUI.click(findTestObject('Object Repository/Page_Nufi Chat/Side_bar/btn_Log out'))
+WebUI.click(findTestObject('Object Repository/Core Chat/nav/Account_Settings/btn_Log out'))
 
 WebUI.delay(2)
 
