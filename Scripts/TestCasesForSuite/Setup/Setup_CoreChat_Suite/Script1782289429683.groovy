@@ -41,8 +41,10 @@ try {
     // Step 4: Select endpoint + model
     WebUI.comment('Selecting Nufi endpoint and Qwen model...')
     CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'(
-        'Nufi',
-        'Qwen2.5-0.5B'
+//        'Nufi',
+//        'Qwen2.5-0.5B'
+		'sys_test_npu',
+		'llama-3-1-8b-v1-rngd'
     )
 
     // Step 5: Send message and get response

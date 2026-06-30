@@ -12,13 +12,6 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>5228b21b-bba0-4c4b-991a-f34080f9a43b</testSuiteGuid>
    <testCaseLink>
-      <guid>105ac382-a0c2-4d9e-9b0e-7f82a8a66eac</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Setup/Setup_HistoryChat_Suite</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>f40dcca0-a026-4874-b3f2-c4ec0ba32823</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

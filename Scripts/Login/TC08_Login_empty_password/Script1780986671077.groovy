@@ -37,16 +37,16 @@ boolean isStillOnLoginPage = currentUrl.contains('/login')
 boolean isPassed = isErrorDisplayed && isStillOnLoginPage
 
 if (isPassed) {
-    WebUI.comment('TC08 PASSED - Để trống password bị từ chối đúng cách')
+    WebUI.comment('TC08 PASSED - Empty password was rejected correctly')
     WebUI.takeScreenshot('TC08_Passed.png')
 } else if (isErrorDisplayed) {
-    WebUI.comment('TC08 FAILED - Hiển thị error message nhưng không ở trang login: ' + currentUrl)
+    WebUI.comment('TC08 FAILED - Error message shown but not on login page: ' + currentUrl)
     WebUI.takeScreenshot('TC08_Failed_UnexpectedUrl.png')
 } else if (isStillOnLoginPage) {
-    WebUI.comment('TC08 FAILED - Không hiển thị error message dù để trống password')
+    WebUI.comment('TC08 FAILED - No error message shown despite empty password')
     WebUI.takeScreenshot('TC08_Failed_NoError.png')
 } else {
-    WebUI.comment('TC08 FAILED - Redirect dù để trống password: ' + currentUrl)
+    WebUI.comment('TC08 FAILED - Redirected despite empty password: ' + currentUrl)
     WebUI.takeScreenshot('TC08_Failed_Redirect.png')
 }
 assert isPassed : 'TC08 failed - expected error message and stay on login page, actual URL: ' + currentUrl

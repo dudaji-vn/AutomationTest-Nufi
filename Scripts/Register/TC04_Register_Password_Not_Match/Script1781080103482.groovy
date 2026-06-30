@@ -16,7 +16,7 @@ String randomEmail = "test_" + timestamp + "@example.com"
 String randomPassword = "Abc@123456"
 String wrongConfirmPassword = "Abc@123457"  // Different from password
 
-WebUI.comment('=== TC04: Đăng ký thất bại - Password và Confirm không khớp ===')
+WebUI.comment('=== TC04: Registration failed - Password and Confirm do not match ===')
 WebUI.comment('Password: ' + randomPassword)
 WebUI.comment('Confirm Password: ' + wrongConfirmPassword)
 
@@ -67,10 +67,10 @@ if (isErrorDisplayed) {
         String generalMsg = WebUI.getText(findTestObject('Page_Signup/Message_error'))
         WebUI.comment('General error message: "' + generalMsg + '"')
         if (generalMsg.contains('match') || generalMsg.contains('password')) {
-            WebUI.comment('✓ PASSED: Có error message liên quan đến password')
+            WebUI.comment('✓ PASSED: There are error message liên quan đến password')
         }
     } else {
-        WebUI.comment('✗ FAILED: Không hiển thị error message cho password không khớp')
+        WebUI.comment('✗ FAILED: No error message displayed for password mismatch')
     }
 }
 
@@ -90,7 +90,7 @@ boolean hasSuccessMessage = WebUI.verifyElementPresent(
     3, FailureHandling.OPTIONAL)
 
 if (!hasSuccessMessage) {
-    WebUI.comment('✓ PASSED: Không hiển thị message thành công')
+    WebUI.comment('✓ PASSED: No success message displayed')
 } else {
     WebUI.comment('✗ FAILED: Vẫn hiển thị message thành công')
 }

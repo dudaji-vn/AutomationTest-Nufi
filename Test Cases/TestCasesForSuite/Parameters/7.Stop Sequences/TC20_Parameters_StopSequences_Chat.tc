@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC20_Parameters_StopSequences_Chat</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1397c9f0-62e8-4f6c-afc0-c504506d5f1d</testCaseGuid>
+</TestCaseEntity>

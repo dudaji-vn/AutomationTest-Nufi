@@ -77,7 +77,7 @@ for (int i = 1; i <= numberOfAccounts; i++) {
     // Get text from message element
     //	String actualMessage = WebUI.getText(findTestObject('Page_Signup/Registration_Message'))
     //	
-    //	// Kiểm tra có chứa "Registration successful" không
+    //	// Check if it contains "Registration successful"
     //	if (actualMessage.contains('Registration successful')) {
     //		WebUI.comment('✓ PASSED: Message contains "Registration successful"')
     //	} else {
@@ -92,9 +92,9 @@ for (int i = 1; i <= numberOfAccounts; i++) {
     boolean isRedirectedToLogin = currentUrl.contains('/login')
 
     if (hasSuccessMessage && isRedirectedToLogin) {
-        WebUI.comment((('✓ Tài khoản ' + i) + ' đăng ký thành công: ') + randomEmail)
+        WebUI.comment((('✓ Tài khoản ' + i) + ' registered successfully: ') + randomEmail)
     } else {
-        WebUI.comment(('✗ Tài khoản ' + i) + ' đăng ký thất bại')
+        WebUI.comment(('✗ Tài khoản ' + i) + ' registration failed')
         WebUI.takeScreenshot(('Signup_Failed_' + i) + '.png')
         assert false : 'TC01 failed - expected successful registration and redirect to login for account ' + randomEmail + ', actual URL: ' + currentUrl
     }
@@ -124,9 +124,9 @@ for (int i = 1; i <= numberOfAccounts; i++) {
 //	boolean isRedirectedToLogin = currentUrl.contains('/login')
 //
 //	if (hasSuccessMessage && isRedirectedToLogin) {
-//		WebUI.comment('✓ Tài khoản đăng ký thành công: ') 
+//		WebUI.comment('✓ Tài khoản registered successfully: ') 
 //	} else {
-//		WebUI.comment('✗ Tài khoản  đăng ký thất bại')
+//		WebUI.comment('✗ Tài khoản  registration failed')
 //	}
 //
 //    WebUI.closeBrowser()

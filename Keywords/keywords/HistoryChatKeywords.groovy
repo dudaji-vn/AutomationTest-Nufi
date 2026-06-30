@@ -18,9 +18,9 @@ public class HistoryChatKeywords {
     // ============================================================
     // TIMEOUT CONSTANTS
     // ============================================================
-    static final int SHORT_WAIT  = 5
-    static final int MEDIUM_WAIT = 10
-    static final int LONG_WAIT   = 30
+    static final int SHORT_WAIT  = 2
+    static final int MEDIUM_WAIT = 4
+    static final int LONG_WAIT   = 5
 
     // ============================================================
     // PRIVATE HELPER: ENSURE NAVBAR READY
@@ -43,7 +43,6 @@ public class HistoryChatKeywords {
             openButton.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
             WebUI.waitForElementClickable(openButton, SHORT_WAIT)
             WebUI.click(openButton)
-            WebUI.delay(1)
         }
         
         // Step 2: Ensure Chat History tab is active
@@ -60,7 +59,6 @@ public class HistoryChatKeywords {
             chatHistoryButton.addProperty('xpath', ConditionType.EQUALS, "//button[@aria-label='Chat History']")
             WebUI.waitForElementClickable(chatHistoryButton, SHORT_WAIT)
             WebUI.click(chatHistoryButton)
-            WebUI.delay(1)
         }
     }
 
@@ -191,7 +189,6 @@ public class HistoryChatKeywords {
             WebUI.waitForElementClickable(targetChat, SHORT_WAIT)
             WebUI.click(targetChat)
             WebUI.comment('Chat opened successfully')
-            WebUI.delay(2)
             
             return chatLabel
             
@@ -314,7 +311,6 @@ public class HistoryChatKeywords {
             WebUI.waitForElementClickable(targetChat, SHORT_WAIT)
             WebUI.click(targetChat)
             WebUI.comment('Chat opened successfully')
-            WebUI.delay(2)
             
             return foundLabel
             

@@ -17,9 +17,9 @@ public class ChatKeywords {
 	// ============================================================
 	// TIMEOUT CONSTANTS
 	// ============================================================
-	static final int SHORT_WAIT  = 5
-	static final int MEDIUM_WAIT = 15
-	static final int LONG_WAIT   = 90
+	static final int SHORT_WAIT  = 2
+	static final int MEDIUM_WAIT = 4
+	static final int LONG_WAIT   = 5
 	
 	// ============================================================
 	// KEYWORD: OPEN BROWSER
@@ -188,7 +188,6 @@ public class ChatKeywords {
 			WebUI.comment('✓ Endpoint selected: ' + endpointName)
 
 			// Allow submenu time to appear
-			WebUI.delay(1)
 		} catch (Exception e) {
 			WebUI.comment('✗ ERROR in selectEndpoint: ' + e.getMessage())
 			throw e
@@ -224,7 +223,6 @@ public class ChatKeywords {
 			WebUI.comment('✓ Model selected: ' + modelName)
 
 			// Step 3: Wait for dropdown to close
-			WebUI.delay(1)
 			TestObject listbox = new TestObject('dynamic_listbox_closed_check')
 			listbox.addProperty('xpath', ConditionType.EQUALS, "//div[@role='listbox']")
 			boolean closed = WebUI.waitForElementNotVisible(listbox, SHORT_WAIT)
@@ -253,7 +251,6 @@ public class ChatKeywords {
 			WebUI.comment('Configuring endpoint: ' + endpointName + ' / model: ' + modelName)
 
 			selectEndpoint(endpointName)
-			WebUI.delay(2)
 			selectModel(modelName)
 
 			WebUI.comment('✓ Endpoint and model configured: ' + endpointName + ' / ' + modelName)
@@ -460,7 +457,6 @@ public class ChatKeywords {
 			WebUI.comment('=== KEYWORD: sendMessageAndVerifyResponse ===')
 
 			sendMessage(message)
-			WebUI.delay(1)
 
 			waitForResponse()
 
@@ -530,15 +526,12 @@ public class ChatKeywords {
 
 			WebUI.comment('Step 1: Logging in...')
 			loginChat(email, password)
-			WebUI.delay(2)
 
 			WebUI.comment('Step 2: Opening new conversation...')
 			openNewConversation(baseUrl)
-			WebUI.delay(2)
 
 			WebUI.comment('Step 3: Selecting Gemini endpoint...')
 			selectGeminiEndpoint()
-			WebUI.delay(2)
 
 			WebUI.comment('✓ Core chat setup completed successfully')
 		} catch (Exception e) {

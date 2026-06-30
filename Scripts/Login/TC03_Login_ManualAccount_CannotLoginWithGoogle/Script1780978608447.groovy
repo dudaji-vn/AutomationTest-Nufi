@@ -82,10 +82,10 @@ boolean isStillOnLoginPage = currentUrl.contains('/login') || currentUrl.contain
 boolean isPassed = !currentUrl.contains('/c/new') && (isErrorMessageDisplayed || isStillOnLoginPage)
 
 if (isPassed) {
-    WebUI.comment('TC03 PASSED: User đăng ký thủ công KHÔNG thể đăng nhập bằng Google OAuth')
+    WebUI.comment('TC03 PASSED: Manual account user CANNOT login with Google OAuth')
     WebUI.takeScreenshot('TC03_Passed.png')
 } else {
-    WebUI.comment('TC03 FAILED: User đã đăng nhập được bằng Google OAuth dù đã đăng ký thủ công hoặc không có thông báo lỗi đúng')
+    WebUI.comment('TC03 FAILED: User logged in with Google OAuth despite manual registration or incorrect error notice')
     WebUI.takeScreenshot('TC03_Failed.png')
 }
 assert isPassed : 'TC03 failed - expected no Google OAuth login for manual account, actual URL: ' + currentUrl + ', isErrorMessageDisplayed=' + isErrorMessageDisplayed + ', isStillOnLoginPage=' + isStillOnLoginPage + '\n'

@@ -14,7 +14,7 @@ WebUI.navigateToUrl(GlobalVariable.Base_URL + '/login')
 WebUI.delay(3)
 
 for (String invalidEmail in invalidEmails) {
-    WebUI.comment('=== Đang test với email: ' + invalidEmail + ' ===')
+    WebUI.comment('=== Testing with email: ' + invalidEmail + ' ===')
     
     // Enter invalid email
     WebUI.setText(findTestObject('Page_Login/input_Sign in_email'), invalidEmail)
@@ -33,11 +33,11 @@ for (String invalidEmail in invalidEmails) {
         5, FailureHandling.OPTIONAL)
     
     if (isErrorDisplayed) {
-        WebUI.comment('TC05 PASSED - Email: ' + invalidEmail + ' - Hiển thị đúng error message')
+        WebUI.comment('TC05 PASSED - Email: ' + invalidEmail + ' - Correct error message displayed')
     } else {
-        WebUI.comment('TC05 FAILED - Email: ' + invalidEmail + ' - Không hiển thị error message')
+        WebUI.comment('TC05 FAILED - Email: ' + invalidEmail + ' - No error message displayed')
         WebUI.takeScreenshot('TC05_Failed_' + invalidEmail.replace('@', '_') + '.png')
-        assert isErrorDisplayed : 'TC05 failed - Email: ' + invalidEmail + ' - Không hiển thị error message'
+        assert isErrorDisplayed : 'TC05 failed - Email: ' + invalidEmail + ' - No error message displayed'
     }
     
     // Reload the page before testing the next email (avoid redirect issues)

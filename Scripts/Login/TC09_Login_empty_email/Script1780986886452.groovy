@@ -38,16 +38,16 @@ boolean isStillOnLoginPage = currentUrl.contains('/login') ||
 boolean isPassed = isErrorDisplayed && isStillOnLoginPage
 
 if (isPassed) {
-    WebUI.comment('TC09 PASSED - Để trống email bị từ chối đúng cách')
+    WebUI.comment('TC09 PASSED - Empty email was rejected correctly')
     WebUI.takeScreenshot('TC09_Passed.png')
 } else if (isErrorDisplayed) {
-    WebUI.comment('TC09 FAILED - Hiển thị error message nhưng không ở trang login: ' + currentUrl)
+    WebUI.comment('TC09 FAILED - Error message shown but not on login page: ' + currentUrl)
     WebUI.takeScreenshot('TC09_Failed_UnexpectedUrl.png')
 } else if (isStillOnLoginPage) {
-    WebUI.comment('TC09 FAILED - Không hiển thị error message dù để trống email')
+    WebUI.comment('TC09 FAILED - No error message shown despite empty email')
     WebUI.takeScreenshot('TC09_Failed_NoError.png')
 } else {
-    WebUI.comment('TC09 FAILED - Redirect dù để trống email: ' + currentUrl)
+    WebUI.comment('TC09 FAILED - Redirected despite empty email: ' + currentUrl)
     WebUI.takeScreenshot('TC09_Failed_Redirect.png')
 }
 assert isPassed : 'TC09 failed - expected error message and stay on login page, actual URL: ' + currentUrl

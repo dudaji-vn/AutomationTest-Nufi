@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC15_Parameters_PresencePenalty_Input</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c9e23df1-9547-48b3-b951-435f3d5b3342</testCaseGuid>
+</TestCaseEntity>

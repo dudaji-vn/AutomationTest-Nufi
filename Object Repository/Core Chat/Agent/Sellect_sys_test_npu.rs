@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Sellect_sys_test_npu</name>
+   <tag></tag>
+   <elementGuidId>a6f61dea-f001-4e2b-86b6-a6000ed5c42f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='endpoint-sys_test_npu-menu']/span/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=option[name=&quot;sys_test_npu&quot;i] >> div >> nth=0</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>658487ae-bc7f-4b01-9f1c-1b972c98aeff</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>group flex w-full min-w-0 items-center justify-between gap-1.5 py-1 text-sm</value>
+      <webElementGuid>61534fc2-c33f-46c6-91b2-5f1fa7b699c0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>sys_test_npu</value>
+      <webElementGuid>ab459eb2-a2e4-485c-bb66-6e94da8532a8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;endpoint-sys_test_npu-menu&quot;)/span[@class=&quot;flex-1&quot;]/div[@class=&quot;group flex w-full min-w-0 items-center justify-between gap-1.5 py-1 text-sm&quot;]</value>
+      <webElementGuid>ca7141af-a376-46cd-b266-311e87da4676</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='endpoint-sys_test_npu-menu']/span/div</value>
+      <webElementGuid>1d06eb13-2914-4470-9715-63f587936b4f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='sys_test_gpu'])[1]/following::div[3]</value>
+      <webElementGuid>6b261a87-56c6-46a4-94c3-d401efb8930f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='selected'])[1]/following::div[7]</value>
+      <webElementGuid>3cb24663-7343-43cc-9a36-d7da757de85b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='test-1-dudaji'])[1]/preceding::div[5]</value>
+      <webElementGuid>256afea9-2382-497c-97e9-34be111a99de</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[5]/span/div</value>
+      <webElementGuid>d5be5b5c-fcd9-4bd6-8413-575b29c3c4af</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'sys_test_npu' or . = 'sys_test_npu')]</value>
+      <webElementGuid>0b3e35d0-207e-4c67-a108-7b9bb59c35f5</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

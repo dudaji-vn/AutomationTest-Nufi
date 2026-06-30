@@ -38,7 +38,7 @@ WebUI.comment('Current Url after login attempt: ' + currentUrl)
 
 boolean loginSuccess = currentUrl.contains('/c/new') || currentUrl.contains('/chat')
 if (loginSuccess) {
-    WebUI.comment('TC02 PASSED - Login tài khoản đăng ký thành công')
+    WebUI.comment('TC02 PASSED - Registered account login succeeded')
     WebUI.takeScreenshot('Login_Success.png')
 } else {
     WebUI.comment('TC02 FAILED - Không quay về trang chat, actual URL: ' + currentUrl)

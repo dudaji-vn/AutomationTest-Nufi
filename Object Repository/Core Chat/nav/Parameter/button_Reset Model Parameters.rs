@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Reset Model Parameters</name>
+   <tag></tag>
+   <elementGuidId>8fbf0055-923b-4b52-a8c7-43f5e7ea0748</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>button.btn.btn-neutral.flex.w-full.items-center.justify-center.gap-2.px-4.py-2.text-sm</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[15]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=button[name=&quot;Reset Model Parameters&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>5e9c5646-43ed-472d-8012-3f8b2d2f6975</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>ad4ecab8-bf84-4e0d-8856-c5ef9fa5f355</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>btn btn-neutral flex w-full items-center justify-center gap-2 px-4 py-2 text-sm</value>
+      <webElementGuid>a708d16d-c270-4919-9b2f-23d6876b41ca</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Reset Model Parameters</value>
+      <webElementGuid>6e089c79-7958-40f2-954f-45a03e8cfce0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;flex&quot;]/div[@class=&quot;relative z-0 flex h-full w-full overflow-hidden&quot;]/div[@class=&quot;fixed left-0 top-0 z-[110] flex h-full bg-surface-primary-alt translate-x-0&quot;]/nav[@class=&quot;min-h-0 flex-1 overflow-hidden bg-surface-primary-alt&quot;]/div[@class=&quot;flex h-full min-h-0 flex-col overflow-y-auto overflow-x-hidden text-text-primary&quot;]/div[@class=&quot;h-auto max-w-full px-3 pb-3 pt-2&quot;]/div[@class=&quot;mt-4 flex justify-center&quot;]/button[@class=&quot;btn btn-neutral flex w-full items-center justify-center gap-2 px-4 py-2 text-sm&quot;]</value>
+      <webElementGuid>81c264ba-4a05-4e6f-8767-b15c7a39a989</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[15]</value>
+      <webElementGuid>1d659390-8e4b-4bec-8fd4-e5af5ba38c6c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div/div/nav/div/div/div[2]/button</value>
+      <webElementGuid>a7a7d85b-0a1f-4c2c-977d-01a1768e5ec6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='File Token Limit'])[1]/following::button[1]</value>
+      <webElementGuid>7fc4d86a-e550-4c2d-90dc-454253cf50a7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Disable Streaming'])[1]/following::button[2]</value>
+      <webElementGuid>0982c823-bbed-44ae-a7f8-202f6da42580</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Save As Preset'])[1]/preceding::button[1]</value>
+      <webElementGuid>9c66001d-1d5f-4a87-bcf5-535fddceb09e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Welcome to Nufi Chat.'])[1]/preceding::button[4]</value>
+      <webElementGuid>9f816f82-4745-4c27-8545-8c0890c4f689</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Reset Model Parameters']/parent::*</value>
+      <webElementGuid>61e98ec9-a1b6-4216-9411-a4671f928978</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//nav/div/div/div[2]/button</value>
+      <webElementGuid>55fdbe31-c261-412f-a654-19a41218821d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button' and (text() = 'Reset Model Parameters' or . = 'Reset Model Parameters')]</value>
+      <webElementGuid>fa859d97-bcbe-4a33-b7ce-5cdcee7db920</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

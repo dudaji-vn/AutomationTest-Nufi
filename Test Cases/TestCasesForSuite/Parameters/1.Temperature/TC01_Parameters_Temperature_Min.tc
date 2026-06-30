@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_Parameters_Temperature_Min</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e3bcd116-3f16-4fb0-a87a-594a5584571c</testCaseGuid>
+</TestCaseEntity>

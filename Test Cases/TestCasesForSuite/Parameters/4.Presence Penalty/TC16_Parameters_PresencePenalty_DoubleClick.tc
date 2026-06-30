@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC16_Parameters_PresencePenalty_DoubleClick</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c988fa09-52f9-4dc0-b5f9-115d0375b53a</testCaseGuid>
+</TestCaseEntity>

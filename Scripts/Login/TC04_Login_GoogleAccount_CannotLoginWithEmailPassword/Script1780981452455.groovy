@@ -54,11 +54,11 @@ String currentUrl = WebUI.getUrl()
 
 boolean googleLoginSuccess = currentUrl.contains('/c/new') || currentUrl.contains('/oauth') || currentUrl.contains('chat.nufi.me') && !currentUrl.contains('/login')
 if (googleLoginSuccess) {
-    WebUI.comment('Bước 1: Đăng nhập Google OAuth thành công (lần đầu)')
+    WebUI.comment('Step 1: Google OAuth login succeeded (first attempt)')
     WebUI.takeScreenshot('TC04_Step1_GoogleLogin_Success.png')
 } else {
-    WebUI.comment('TC04 FAILED - Bước 1: Đăng nhập Google OAuth thất bại - URL: ' + currentUrl)
-    assert false : 'TC04 failed at step 1 - Google OAuth login không thành công, actual URL: ' + currentUrl
+    WebUI.comment('TC04 FAILED - Step 1: Google OAuth login failed - URL: ' + currentUrl)
+    assert false : 'TC04 failed at step 1 - Google OAuth login did not succeed, actual URL: ' + currentUrl
 }
 
 // ========== STEP 2: Logout ==========
@@ -83,7 +83,7 @@ String finalUrl = WebUI.getUrl()
 boolean isStillOnLoginPage = finalUrl.contains('/login') || finalUrl.contains('chat.nufi.me') && !finalUrl.contains('/c/new')
 
 if (isErrorDisplayed && isStillOnLoginPage) {
-    WebUI.comment('TC04 PASSED - Không thể đăng nhập bằng email/password với cùng email Google')
+    WebUI.comment('TC04 PASSED - Cannot login with email/password using same Google email')
 } else {
     WebUI.comment('TC04 FAILED - Expected error message and stay on login page, actual URL: ' + finalUrl)
     WebUI.takeScreenshot('TC04_Failed.png')

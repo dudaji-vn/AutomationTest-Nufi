@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC05_Parameters_Top_P_Min</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>94a69a2f-5241-4d58-82d5-709637660324</testCaseGuid>
+</TestCaseEntity>

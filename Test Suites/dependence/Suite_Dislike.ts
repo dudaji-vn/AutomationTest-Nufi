@@ -12,13 +12,6 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>06183753-aaf1-49ea-b26b-36a957848561</testSuiteGuid>
    <testCaseLink>
-      <guid>eefe6edd-6443-4849-8535-6ec0a7027696</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Setup/Setup_CoreChat_Suite</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>102f63ca-e6e9-4dbe-a4e8-388ee411ae5e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

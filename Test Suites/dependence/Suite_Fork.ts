@@ -12,13 +12,6 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>3c28f6ff-bb6f-40a4-8f9b-82d6ee9dcc1c</testSuiteGuid>
    <testCaseLink>
-      <guid>72354554-5512-4aae-8ff0-da2a3df2fe9a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Setup/Setup_HistoryChat_Suite</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>d450f3cf-1b28-4a0a-b18d-fe2e16ac0a09</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -65,13 +58,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Fork/TC07_Fork_Remember_IncludeFromHere</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>db685ec6-efb9-4c1f-94db-67e00c19b1fc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Setup/Teardown_CoreChat_Suite</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

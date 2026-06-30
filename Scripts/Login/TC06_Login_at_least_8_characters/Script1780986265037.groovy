@@ -17,7 +17,7 @@ WebUI.delay(3)
 String validEmail = "test@example.com"
 
 for (String shortPassword in shortPasswords) {
-    WebUI.comment('=== Đang test với password: "' + shortPassword + '" (độ dài: ' + shortPassword.length() + ') ===')
+    WebUI.comment('=== Testing with password: "' + shortPassword + '" (length: ' + shortPassword.length() + ') ===')
     
     // Enter a valid email
     WebUI.setText(findTestObject('Page_Login/input_Sign in_email'), validEmail)
@@ -36,11 +36,11 @@ for (String shortPassword in shortPasswords) {
         5, FailureHandling.OPTIONAL)
     
     if (isErrorDisplayed) {
-        WebUI.comment('TC06 PASSED - Password: "' + shortPassword + '" - Hiển thị đúng error message')
+        WebUI.comment('TC06 PASSED - Password: "' + shortPassword + '" - Correct error message displayed')
     } else {
-        WebUI.comment('TC06 FAILED - Password: "' + shortPassword + '" - Không hiển thị error message')
+        WebUI.comment('TC06 FAILED - Password: "' + shortPassword + '" - No error message displayed')
         WebUI.takeScreenshot('TC06_Failed_pw_' + shortPassword + '.png')
-        assert isErrorDisplayed : 'TC06 failed - Password: "' + shortPassword + '" - Không hiển thị error message'
+        assert isErrorDisplayed : 'TC06 failed - Password: "' + shortPassword + '" - No error message displayed'
     }
     
     // Clear form before next test (do not reload to keep email)

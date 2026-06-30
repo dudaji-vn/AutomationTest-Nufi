@@ -14,7 +14,7 @@ WebUI.delay(3)
 String unregisteredEmail = "nonexistent_" + System.currentTimeMillis() + "@example.com"
 String anyPassword = "Test@123456"  // Password has at least 8 characters, valid format
 
-WebUI.comment('=== Đang test với email chưa đăng ký: ' + unregisteredEmail + ' ===')
+WebUI.comment('=== Testing with unregistered email: ' + unregisteredEmail + ' ===')
 
 // Enter unregistered email
 WebUI.setText(findTestObject('Page_Login/input_Sign in_email'), unregisteredEmail)
@@ -39,16 +39,16 @@ boolean isStillOnLoginPage = currentUrl.contains('/login')
 boolean isPassed = isErrorDisplayed && isStillOnLoginPage
 
 if (isPassed) {
-    WebUI.comment('TC07 PASSED - Email chưa đăng ký bị từ chối đúng cách')
+    WebUI.comment('TC07 PASSED - Unregistered email was rejected correctly')
     WebUI.takeScreenshot('TC07_Passed.png')
 } else if (isErrorDisplayed) {
-    WebUI.comment('TC07 FAILED - Hiển thị error message nhưng không ở trang login: ' + currentUrl)
+    WebUI.comment('TC07 FAILED - Error message shown but not on login page: ' + currentUrl)
     WebUI.takeScreenshot('TC07_Failed_UnexpectedUrl.png')
 } else if (isStillOnLoginPage) {
-    WebUI.comment('TC07 FAILED - Không hiển thị error message nhưng vẫn ở trang login')
+    WebUI.comment('TC07 FAILED - No error message shown while still on login page')
     WebUI.takeScreenshot('TC07_Failed_NoError.png')
 } else {
-    WebUI.comment('TC07 FAILED - Đã redirect đến: ' + currentUrl)
+    WebUI.comment('TC07 FAILED - Redirected to: ' + currentUrl)
     WebUI.takeScreenshot('TC07_Failed_Redirect.png')
 }
 assert isPassed : 'TC07 failed - expected error message and stay on login page, actual URL: ' + currentUrl

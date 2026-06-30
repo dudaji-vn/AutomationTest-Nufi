@@ -12,13 +12,6 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>72a36e17-f174-4a5a-8313-91d906ee49ec</testSuiteGuid>
    <testCaseLink>
-      <guid>5781c47c-362a-4e56-aa7a-4f919c9e261c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Setup/Setup_CoreChat_Suite</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>76bb10e1-cbfc-4c7a-bf00-a588c1edfd2b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -44,13 +37,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Like/TC04_Like_AttentionToDetail</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>0d8994eb-53e8-4b8a-95ad-adb8b19bb5aa</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Setup/Teardown_CoreChat_Suite</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

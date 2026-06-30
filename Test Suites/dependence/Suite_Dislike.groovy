@@ -31,7 +31,7 @@ import com.kms.katalon.core.annotation.TearDownTestCase
 /**
  * Setup test suite environment.
  */
-@SetUp(skipped = true) // Please change skipped to be false to activate this method.
+@SetUp(skipped = false) // Please change skipped to be false to activate this method.
 def setUp() {
 	// Put your code here.WebUI.comment
 	('=== SUITE SETUP: Dislike Suite ===')
@@ -42,7 +42,7 @@ def setUp() {
 /**
  * Clean test suites environment.
  */
-@TearDown(skipped = true) // Please change skipped to be false to activate this method.
+@TearDown(skipped = false) // Please change skipped to be false to activate this method.
 def tearDown() {
 	// Put your code here.
 	WebUI.comment('=== SUITE TEARDOWN: Dislike Suite ===')

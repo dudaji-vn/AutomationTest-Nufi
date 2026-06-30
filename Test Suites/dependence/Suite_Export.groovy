@@ -31,15 +31,18 @@ import com.kms.katalon.core.annotation.TearDownTestCase
 /**
  * Setup test suite environment.
  */
-@SetUp(skipped = true) // Please change skipped to be false to activate this method.
+@SetUp(skipped = false) // Please change skipped to be false to activate this method.
 def setUp() {
 	// Put your code here.
+	('=== SUITE SETUP: Export Suite ===')
+	WebUI.callTestCase(findTestCase('Test Cases/TestCasesForSuite/Setup/Setup_HistoryChat_Suite'), [:], FailureHandling.STOP_ON_FAILURE)
+	WebUI.comment('✓ Suite setup completed')
 }
 
 /**
  * Clean test suites environment.
  */
-@TearDown(skipped = true) // Please change skipped to be false to activate this method.
+@TearDown(skipped = false) // Please change skipped to be false to activate this method.
 def tearDown() {
 	// Put your code here.
 	WebUI.comment('=== SUITE TEARDOWN: Export Suite ===')
