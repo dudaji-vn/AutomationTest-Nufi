@@ -16,134 +16,104 @@ WebUI.comment('=== TC16: Presence Penalty - Double Click Reset ===')
 try {
     // === CHECK NAVBAR ===
     WebUI.comment('Step 0: Checking Navbar state...')
-    
     TestObject navSidebar = new TestObject('navSidebar')
     navSidebar.addProperty('xpath', ConditionType.EQUALS, "//nav")
     WebUI.waitForElementVisible(navSidebar, 10)
-    
-    String ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
-    WebUI.comment('Navbar aria-hidden: ' + ariaHidden)
-    
-    if (ariaHidden == 'true') {
+
+    if (WebUI.getAttribute(navSidebar, 'aria-hidden') == 'true') {
         WebUI.comment('Navbar is closed, opening sidebar...')
-        TestObject openSidebarButton = new TestObject('openSidebarButton')
-        openSidebarButton.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
-        WebUI.waitForElementClickable(openSidebarButton, 5)
-        WebUI.click(openSidebarButton)
+        TestObject openBtn = new TestObject('openSidebarButton')
+        openBtn.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
+        WebUI.click(openBtn)
         WebUI.delay(1)
-        WebUI.comment('Sidebar opened')
-        
-        ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
-        WebUI.comment('Navbar aria-hidden after open: ' + ariaHidden)
-        if (ariaHidden == 'false') {
-            WebUI.comment('✓ Navbar opened successfully')
-        }
-    } else {
-        WebUI.comment('✓ Navbar is already open (aria-hidden="false")')
     }
 
-    // === CHECK PARAMETERS TAB ===
-    WebUI.comment('Step 1: Checking Parameters tab state...')
-    
+    // === OPEN PARAMETERS TAB ===
+    WebUI.comment('Step 1: Opening Parameters tab...')
     TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
-    
-    String ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
-    String isPressed = WebUI.getAttribute(parametersButton, 'aria-pressed')
-    
-    WebUI.comment('Parameters button aria-label: ' + ariaLabel)
-    WebUI.comment('Parameters button aria-pressed: ' + isPressed)
-    
-    if (ariaLabel == 'Parameters' && isPressed == 'true') {
-        WebUI.comment('✓ Parameters tab is open (correct aria-label and aria-pressed)')
-    } else {
-        WebUI.comment('Parameters tab not open or wrong label, clicking to open...')
+
+    if (WebUI.getAttribute(parametersButton, 'aria-pressed') != 'true') {
         WebUI.click(parametersButton)
         WebUI.delay(2)
-        
-        ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
-        isPressed = WebUI.getAttribute(parametersButton, 'aria-pressed')
-        WebUI.comment('After click - Parameters button aria-label: ' + ariaLabel)
-        WebUI.comment('After click - Parameters button aria-pressed: ' + isPressed)
-        
-        if (ariaLabel == 'Parameters' && isPressed == 'true') {
-            WebUI.comment('✓ Parameters tab opened successfully')
-        }
     }
 
-    // === GET PRESENCE PENALTY SLIDER ===
+    // === PRESENCE PENALTY SLIDER ===
     WebUI.comment('Step 2: Getting Presence Penalty slider...')
-    
-    TestObject sliderThumb = findTestObject('Object Repository/Core Chat/nav/Parameter/slider_Presence Penalty_thumb')
+    TestObject sliderThumb = new TestObject('presencePenaltySliderThumb')
+    sliderThumb.addProperty('xpath', ConditionType.EQUALS,
+        "//span[contains(@id,'presence_penalty') or contains(@id,'presence-penalty') or contains(@id,'presencePenalty')]//span[@role='slider']")
+
     WebUI.waitForElementVisible(sliderThumb, 10)
     WebUI.comment('Presence Penalty slider found')
 
-    // === GET DEFAULT VALUE ===
-    WebUI.comment('Step 3: Getting default value...')
-    
-    double defaultValue = 0.0
-    String currentValue = WebUI.getAttribute(sliderThumb, 'aria-valuenow')
-    WebUI.comment('Current Presence Penalty: ' + currentValue)
+    // === DRAG SLIDER TO DIFFERENT VALUE ===
+    WebUI.comment('Step 3: Dragging slider to a different value...')
+    WebUI.click(sliderThumb)   // Focus first
+    WebUI.delay(0.5)
 
-    // === DRAG SLIDER TO A DIFFERENT VALUE ===
-    WebUI.comment('Step 4: Dragging slider to a different value...')
-    
     String widthScript = """
         var element = document.evaluate(
-            "//span[contains(@id,'presence_penalty') and contains(@id,'slider')]",
-            document,
-            null,
-            XPathResult.FIRST_ORDERED_NODE_TYPE,
-            null
+            "//span[contains(@id,'presence_penalty') or contains(@id,'presence-penalty') or contains(@id,'presencePenalty')]",
+            document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null
         ).singleNodeValue;
         return element ? element.getBoundingClientRect().width : 0;
     """
     double sliderWidth = (Double) WebUI.executeJavaScript(widthScript, null)
     WebUI.comment('Slider width: ' + sliderWidth + 'px')
-    
-    // Drag to 50% (1.0)
-    WebUI.dragAndDropByOffset(sliderThumb, (int)(sliderWidth * 0.5), 0)
+
+    WebUI.dragAndDropByOffset(sliderThumb, (int)(sliderWidth * 0.6), 0)
     WebUI.delay(1.5)
-    
+
     String valueAfterDrag = WebUI.getAttribute(sliderThumb, 'aria-valuenow')
     WebUI.comment('Presence Penalty after drag: ' + valueAfterDrag)
-    
-    if (Double.parseDouble(valueAfterDrag) > 0.3) {
-        WebUI.comment('✓ Slider moved to new value: ' + valueAfterDrag)
-    } else {
-        WebUI.comment('⚠ Slider did not move, current: ' + valueAfterDrag)
-    }
 
     // === DOUBLE CLICK TO RESET ===
-    WebUI.comment('Step 5: Double clicking thumb to reset to default...')
-    
+    WebUI.comment('Step 4: Double clicking thumb to reset to default...')
     WebUI.doubleClick(sliderThumb)
     WebUI.delay(1.5)
-    
+
     String valueAfterDoubleClick = WebUI.getAttribute(sliderThumb, 'aria-valuenow')
     WebUI.comment('Presence Penalty after double click: ' + valueAfterDoubleClick)
-    
-    double actualValue = Double.parseDouble(valueAfterDoubleClick)
-    
-    if (Math.abs(actualValue - defaultValue) <= 0.05) {
-        WebUI.comment('✅ Presence Penalty reset to default (0.0) successfully')
-    } else {
-        WebUI.comment('⚠ Presence Penalty not reset to default: ' + actualValue)
-        
-        WebUI.comment('Trying double click again...')
+
+    // Numeric verification
+    boolean isResetSuccess = false
+    try {
+        BigDecimal actualNum = new BigDecimal(valueAfterDoubleClick)
+        BigDecimal expectedDefault = new BigDecimal("0.0")
+
+        if (actualNum.compareTo(expectedDefault) == 0) {
+            WebUI.comment('Presence Penalty successfully reset to default value (0.0)')
+            isResetSuccess = true
+        }
+    } catch (Exception e) {
+        WebUI.comment('Cannot convert value to number: ' + valueAfterDoubleClick)
+    }
+
+    // Retry if first attempt failed
+    if (!isResetSuccess) {
+        WebUI.comment('Reset failed on first attempt. Trying double click again...')
         WebUI.doubleClick(sliderThumb)
         WebUI.delay(1.5)
-        
+
         valueAfterDoubleClick = WebUI.getAttribute(sliderThumb, 'aria-valuenow')
-        WebUI.comment('Presence Penalty after second double click: ' + valueAfterDoubleClick)
-        
-        if (Double.parseDouble(valueAfterDoubleClick) <= 0.1 && Double.parseDouble(valueAfterDoubleClick) >= -0.1) {
-            WebUI.comment('✅ Presence Penalty reset to default on second attempt')
-        }
+        WebUI.comment('Value after second double click: ' + valueAfterDoubleClick)
+
+        try {
+            BigDecimal actualNum = new BigDecimal(valueAfterDoubleClick)
+            if (actualNum.compareTo(new BigDecimal("0.0")) == 0) {
+                WebUI.comment('Presence Penalty reset to default on second attempt')
+                isResetSuccess = true
+            }
+        } catch (Exception e) {}
+    }
+
+    if (!isResetSuccess) {
+        KeywordUtil.markFailed("FAILED: Presence Penalty did not reset to 0.0. Actual: " + valueAfterDoubleClick)
     }
 
     WebUI.takeScreenshot('TC16_PresencePenalty_DoubleClick_Reset.png')
-    WebUI.comment('✅ TC16 PASSED - Presence Penalty Double Click Reset test')
+    WebUI.comment('=== TC16 Completed Successfully ===')
 
 } catch (Exception e) {
     WebUI.comment('TC16 FAILED: ' + e.getMessage())

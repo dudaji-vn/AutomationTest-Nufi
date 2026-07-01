@@ -5,117 +5,142 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
+import org.openqa.selenium.Keys as Keys
 
 /**
  * TC03: Parameters - Temperature Input Field
- * Verify direct input of Temperature values (0.0 - 2.0)
+ * Verify direct input of Temperature values (0.0 - 2.0) with numeric comparison
  */
 
-WebUI.comment('=== TC03: Temperature - Input Field Test ===')
+WebUI.comment('=== TC03: Temperature - Input Field Test (Automation Only) ===')
 
 try {
-    // === CHECK NAVBAR ===
+    // === CHECK NAVBAR & PARAMETERS TAB ===
     WebUI.comment('Step 0: Checking Navbar state...')
-    
     TestObject navSidebar = new TestObject('navSidebar')
     navSidebar.addProperty('xpath', ConditionType.EQUALS, "//nav")
     WebUI.waitForElementVisible(navSidebar, 10)
-    
-    String ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
-    WebUI.comment('Navbar aria-hidden: ' + ariaHidden)
-    
-    if (ariaHidden == 'true') {
+
+    if (WebUI.getAttribute(navSidebar, 'aria-hidden') == 'true') {
         WebUI.comment('Navbar is closed, opening sidebar...')
-        TestObject openSidebarButton = new TestObject('openSidebarButton')
-        openSidebarButton.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
-        WebUI.waitForElementClickable(openSidebarButton, 5)
-        WebUI.click(openSidebarButton)
+        TestObject openBtn = new TestObject('openSidebarButton')
+        openBtn.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
+        WebUI.click(openBtn)
         WebUI.delay(1)
-        WebUI.comment('Sidebar opened')
-        
-        ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
-        WebUI.comment('Navbar aria-hidden after open: ' + ariaHidden)
-        if (ariaHidden == 'false') {
-            WebUI.comment('✓ Navbar opened successfully')
-        }
-    } else {
-        WebUI.comment('✓ Navbar is open (aria-hidden="false")')
     }
 
-    // === VERIFY PARAMETERS TAB ===
-    WebUI.comment('Step 1: Checking Parameters tab state...')
-    
+    WebUI.comment('Step 1: Opening Parameters tab...')
     TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
     
-    String ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
-    String isPressed = WebUI.getAttribute(parametersButton, 'aria-pressed')
-    
-    WebUI.comment('Parameters button aria-label: ' + ariaLabel)
-    WebUI.comment('Parameters button aria-pressed: ' + isPressed)
-    
-    if (ariaLabel == 'Parameters' && isPressed == 'true') {
-        WebUI.comment('✓ Parameters tab is open (correct aria-label and aria-pressed)')
-    } else {
-        WebUI.comment('Parameters tab not open or wrong label, clicking to open...')
+    if (WebUI.getAttribute(parametersButton, 'aria-pressed') != 'true') {
         WebUI.click(parametersButton)
         WebUI.delay(2)
-        
-        ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
-        isPressed = WebUI.getAttribute(parametersButton, 'aria-pressed')
-        WebUI.comment('After click - Parameters button aria-label: ' + ariaLabel)
-        WebUI.comment('After click - Parameters button aria-pressed: ' + isPressed)
-        
-        if (ariaLabel == 'Parameters' && isPressed == 'true') {
-            WebUI.comment('✓ Parameters tab opened successfully')
-        }
     }
 
-    // === Input Temperature ===
+    // === TEMPERATURE INPUT ===
     WebUI.comment('Step 2: Testing Temperature input field...')
-    
     TestObject tempInput = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Temperature')
     WebUI.waitForElementVisible(tempInput, 10)
-    WebUI.comment('Temperature input field found')
 
-    // Test value list
-    String[] testValues = ["0.0", "0.5", "1.0", "1.5", "2.0", "0.75", "1.23"]
-    List<String> results = new ArrayList<>()
-
-    for (String value : testValues) {
-        WebUI.comment("Testing input value: ${value}")
-        
-        WebUI.clearText(tempInput)
-        WebUI.setText(tempInput, value)
-        WebUI.delay(1)
-        
-        String actualValue = WebUI.getAttribute(tempInput, 'value').trim()
-        results.add(actualValue)
-        
-        if (actualValue == value) {
-            WebUI.comment("✅ Input '${value}' accepted correctly")
-        } else {
-            WebUI.comment("⚠ Input '${value}' → Actual: '${actualValue}'")
-        }
-        
-        WebUI.takeScreenshot("TC03_Temperature_Input_${value.replace('.', '_')}.png")
+    // ================== HELPER FUNCTIONS ==================
+    def setValueAndBlur = { String value ->
+        WebUI.comment("→ Entering: " + value)
+        WebUI.click(tempInput)
+        WebUI.sendKeys(tempInput, Keys.chord(Keys.CONTROL, "a"))
+        WebUI.sendKeys(tempInput, value)
+        WebUI.clickOffset(tempInput, 250, 0)   // Trigger onblur
+        WebUI.delay(1.2)
     }
 
-    // Verify invalid value (2.5 > max 2.0)
-    WebUI.comment('Testing invalid input (2.5 - exceeds max)...')
-    WebUI.clearText(tempInput)
-    WebUI.setText(tempInput, "2.5")
-    WebUI.delay(1)
-    String invalidResult = WebUI.getAttribute(tempInput, 'value')
-    WebUI.comment("Input 2.5 → Actual: ${invalidResult} (should be clamped or rejected)")
+    def verifyNumericValue = { String expectedStr, String testStep ->
+        String actualStr = WebUI.getAttribute(tempInput, 'value').trim()
+        try {
+            BigDecimal actualNum = new BigDecimal(actualStr)
+            BigDecimal expectedNum = new BigDecimal(expectedStr)
+            
+            if (actualNum.compareTo(expectedNum) == 0) {
+                WebUI.comment("PASSED - ${testStep}: Expected '${expectedStr}' → Actual: '${actualStr}'")
+                return true
+            } else {
+                KeywordUtil.markFailed("FAILED - ${testStep}: Expected ${expectedStr} but got ${actualStr}")
+                return false
+            }
+        } catch (Exception e) {
+            KeywordUtil.markFailed("FAILED - ${testStep}: Cannot convert to number. Actual: '${actualStr}'")
+            return false
+        }
+    }
 
-    WebUI.takeScreenshot('TC03_Temperature_Input_Final.png')
+    // === TEST 1-4: VALID & CLAMPING CASES (giữ nguyên) ===
+    WebUI.comment('=== Test 1: Valid values ===')
+    String[][] validValues = [["0.75", "0.75"], ["2", "2"], ["0.0", "0.0"]]
+    for (String[] pair : validValues) {
+        setValueAndBlur(pair[0])
+        verifyNumericValue(pair[1], "Valid value test")
+        WebUI.takeScreenshot("TC03_Temp_Valid_${pair[0]}.png")
+    }
 
-    WebUI.comment('=== TC03 Completed - Temperature Input Field Test ===')
-    WebUI.comment('✅ TC03 PASSED')
+    WebUI.comment('=== Test 2: Exceed max (2.5) → clamp 2.0 ===')
+    setValueAndBlur("2.5")
+    verifyNumericValue("2.0", "Exceed max test")
+
+    WebUI.comment('=== Test 3: Below min (-0.5) → clamp 0.0 ===')
+    setValueAndBlur("-0.5")
+    verifyNumericValue("0.0", "Below min test")
+
+    WebUI.comment('=== Test 4: Very large (99) → clamp 2.0 ===')
+    setValueAndBlur("99")
+    verifyNumericValue("2.0", "Very large value test")
+
+    // === TEST 5: INVALID INPUT (TÁCH RÕ CÁC BƯỚC) ===
+    WebUI.comment('=== Test 5: Invalid input (non-numeric) ===')
+    
+    // Bước 1: Thiết lập giá trị hợp lệ ban đầu
+    WebUI.comment('Step 5.1: Set initial valid value')
+    setValueAndBlur("1.5")
+    verifyNumericValue("1.5", "Set initial valid value")
+
+    // Bước 2-4: Test với chữ
+    String[] invalidInputs = ["abc", "xyz123", "hello!"]
+
+    for (String invalid : invalidInputs) {
+        WebUI.comment("--- Testing invalid input: " + invalid + " ---")
+        
+        // Bước 2: Nhập chữ
+        WebUI.comment("Step 5.2: Entering invalid text: " + invalid)
+        WebUI.click(tempInput)
+        WebUI.sendKeys(tempInput, Keys.chord(Keys.CONTROL, "a"))
+        WebUI.sendKeys(tempInput, invalid)
+        
+        // Bước 3: Trigger onblur (click ra ngoài)
+        WebUI.comment("Step 5.3: Trigger onblur by clicking outside")
+        WebUI.clickOffset(tempInput, 250, 0)
+        WebUI.delay(1.2)
+        
+        // Bước 4: Kiểm tra lại giá trị trong input
+        WebUI.comment("Step 5.4: Checking value after onblur")
+        String actualAfterInvalid = WebUI.getAttribute(tempInput, 'value').trim()
+        
+        try {
+            BigDecimal actualNum = new BigDecimal(actualAfterInvalid)
+            if (actualNum.compareTo(new BigDecimal("1.5")) == 0) {
+                WebUI.comment("PASSED: Invalid input '" + invalid + "' correctly reverted to previous valid value (1.5)")
+            } else {
+                KeywordUtil.markFailed("FAILED: Invalid input '" + invalid + "' did not revert. Actual: " + actualAfterInvalid)
+            }
+        } catch (Exception e) {
+            KeywordUtil.markFailed("FAILED: Invalid input resulted in non-numeric value: " + actualAfterInvalid)
+        }
+        
+        WebUI.takeScreenshot("TC03_Temp_Invalid_" + invalid + ".png")
+    }
+
+    WebUI.takeScreenshot("TC03_Temperature_Input_Final.png")
+    WebUI.comment('=== TC03 Automation Test Completed Successfully ===')
 
 } catch (Exception e) {
-    WebUI.comment('❌ TC03 FAILED: ' + e.getMessage())
-    WebUI.takeScreenshot('TC03_Temperature_Input_Error.png')
-    throw e
+    WebUI.comment('TC03 FAILED: ' + e.getMessage())
+    WebUI.takeScreenshot('TC03_Temperature_Error.png')
+    KeywordUtil.markFailedAndStop("Exception occurred: " + e.getMessage())
 }

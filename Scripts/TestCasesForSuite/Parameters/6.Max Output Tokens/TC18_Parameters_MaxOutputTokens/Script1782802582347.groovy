@@ -5,6 +5,7 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
+import org.openqa.selenium.Keys as Keys
 
 /**
  * TC18: Parameters - Max Output Tokens Input & Verify
@@ -14,7 +15,8 @@ import com.kms.katalon.core.util.KeywordUtil
  * 1. Open Parameters panel
  * 2. Enter minimum value (50) and verify output
  * 3. Enter maximum value (500) and verify output
- * 4. Reset to default and verify
+ * 4. Enter non-numeric value and verify NaN
+ * 5. Reset to default and verify
  */
 
 WebUI.comment('=== TC18: Max Output Tokens - Input & Verify ===')
@@ -22,68 +24,35 @@ WebUI.comment('=== TC18: Max Output Tokens - Input & Verify ===')
 try {
     // === CHECK NAVBAR ===
     WebUI.comment('Step 0: Checking Navbar state...')
-    
     TestObject navSidebar = new TestObject('navSidebar')
     navSidebar.addProperty('xpath', ConditionType.EQUALS, "//nav")
     WebUI.waitForElementVisible(navSidebar, 10)
-    
-    String ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
-    WebUI.comment('Navbar aria-hidden: ' + ariaHidden)
-    
-    if (ariaHidden == 'true') {
+
+    if (WebUI.getAttribute(navSidebar, 'aria-hidden') == 'true') {
         WebUI.comment('Navbar is closed, opening sidebar...')
-        TestObject openSidebarButton = new TestObject('openSidebarButton')
-        openSidebarButton.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
-        WebUI.waitForElementClickable(openSidebarButton, 5)
-        WebUI.click(openSidebarButton)
+        TestObject openBtn = new TestObject('openSidebarButton')
+        openBtn.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
+        WebUI.click(openBtn)
         WebUI.delay(1)
-        WebUI.comment('Sidebar opened')
-        
-        ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
-        WebUI.comment('Navbar aria-hidden after open: ' + ariaHidden)
-        if (ariaHidden == 'false') {
-            WebUI.comment('✓ Navbar opened successfully')
-        }
-    } else {
-        WebUI.comment('✓ Navbar is already open (aria-hidden="false")')
     }
 
-    // === CHECK PARAMETERS TAB ===
-    WebUI.comment('Step 1: Checking Parameters tab state...')
-    
+    // === OPEN PARAMETERS TAB ===
+    WebUI.comment('Step 1: Opening Parameters tab...')
     TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
-    
-    String ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
-    String isPressed = WebUI.getAttribute(parametersButton, 'aria-pressed')
-    
-    WebUI.comment('Parameters button aria-label: ' + ariaLabel)
-    WebUI.comment('Parameters button aria-pressed: ' + isPressed)
-    
-    if (ariaLabel == 'Parameters' && isPressed == 'true') {
-        WebUI.comment('✓ Parameters tab is open (correct aria-label and aria-pressed)')
-    } else {
-        WebUI.comment('Parameters tab not open or wrong label, clicking to open...')
+
+    if (WebUI.getAttribute(parametersButton, 'aria-pressed') != 'true') {
         WebUI.click(parametersButton)
         WebUI.delay(2)
-        
-        ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
-        isPressed = WebUI.getAttribute(parametersButton, 'aria-pressed')
-        WebUI.comment('After click - Parameters button aria-label: ' + ariaLabel)
-        WebUI.comment('After click - Parameters button aria-pressed: ' + isPressed)
-        
-        if (ariaLabel == 'Parameters' && isPressed == 'true') {
-            WebUI.comment('✓ Parameters tab opened successfully')
-        }
     }
 
-    // === TEST MAX OUTPUT TOKENS ===
-    WebUI.comment('Step 2: Testing Max Output Tokens...')
-    
+    // === MAX OUTPUT TOKENS INPUT ===
+    WebUI.comment('Step 2: Testing Max Output Tokens input field...')
     TestObject inputField = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Max Output Tokens')
     WebUI.waitForElementVisible(inputField, 10)
     WebUI.comment('Max Output Tokens input field found')
-    
+
+    // === MESSAGE ELEMENTS ===
     TestObject lastMessage = new TestObject('last_message')
     lastMessage.addProperty('xpath', ConditionType.EQUALS, "(//div[contains(@class,'message-content')])[last()]")
     
@@ -94,115 +63,143 @@ try {
     TestObject thinkingIndicator = new TestObject('thinking_indicator')
     thinkingIndicator.addProperty('xpath', ConditionType.EQUALS, "//span[contains(@class,'result-thinking')]")
 
-    // === TEST 1: MINIMUM VALUE (50) ===
-    WebUI.comment('=== Test 1: Set minimum value (50) and verify ===')
-    
-    int minValue = 50
-    WebUI.clearText(inputField)
-    WebUI.setText(inputField, String.valueOf(minValue))
-    WebUI.delay(1)
-    
-    String actualMin = WebUI.getAttribute(inputField, 'value').trim()
-    WebUI.comment("Input '${minValue}' → Actual: '${actualMin}'")
-    
-    if (actualMin == String.valueOf(minValue)) {
-        WebUI.comment('✅ Minimum value (50) accepted')
-    } else {
-        WebUI.comment('⚠ Minimum value not accepted: "' + actualMin + '"')
+    // === CHAT INPUT ELEMENT ===
+    TestObject chatInput = findTestObject('Object Repository/Core Chat/chat_input')
+
+    // ================== HELPER FUNCTIONS ==================
+    def setValueAndBlur = { String value ->
+        WebUI.comment("→ Entering: " + value)
+        WebUI.click(inputField)
+        WebUI.sendKeys(inputField, Keys.chord(Keys.CONTROL, "a"))
+        WebUI.sendKeys(inputField, value)
+        WebUI.clickOffset(inputField, 250, 0)
+        WebUI.delay(1.2)
     }
-    
-    // Send a message requesting a long response to test the limit
+
+    def verifyValue = { String expected, String testStep ->
+        String actual = WebUI.getAttribute(inputField, 'value').trim()
+        if (actual == expected) {
+            WebUI.comment("PASSED - ${testStep}: Expected '${expected}' → Actual: '${actual}'")
+            return true
+        } else {
+            KeywordUtil.markFailed("FAILED - ${testStep}: Expected ${expected} but got ${actual}")
+            return false
+        }
+    }
+
+    def dismissModalAndRegenerate = {
+        WebUI.comment("Clicking chat input to dismiss any modal/overlay...")
+        WebUI.click(chatInput)
+        WebUI.delay(1)
+        
+        WebUI.comment("Clicking regenerate button...")
+        WebUI.waitForElementClickable(regenerateButton, 10)
+        WebUI.click(regenerateButton)
+        WebUI.waitForElementNotVisible(thinkingIndicator, 30)
+        WebUI.delay(2)
+    }
+
+    // === TEST 1: MIN VALUE (50) ===
+    WebUI.comment('=== Test 1: Set minimum value (50) and verify ===')
+    setValueAndBlur("50")
+    verifyValue("50", "Min value test")
+    WebUI.takeScreenshot('TC18_MaxOutputTokens_Min_Input.png')
+
     WebUI.comment('Sending test message with min Max Output Tokens (50)...')
     String testMessage = 'Write a detailed essay about artificial intelligence, at least 500 words'
     CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
     WebUI.delay(2)
     
     String responseMin = WebUI.getText(lastMessage)
-    WebUI.comment('Response with min output limit (50):')
-    WebUI.comment('Length: ' + responseMin.length() + ' chars')
-    WebUI.comment('Preview: ' + (responseMin.length() > 100 ? responseMin.substring(0, 100) + '...' : responseMin))
+    WebUI.comment('Response with min output limit (50): Length: ' + responseMin.length() + ' chars')
     WebUI.takeScreenshot('TC18_MaxOutputTokens_Min_Response.png')
 
-    // === TEST 2: MAXIMUM VALUE (500) ===
+    // === TEST 2: MAX VALUE (500) ===
     WebUI.comment('=== Test 2: Set maximum value (500) and verify ===')
-    
-    int maxValue = 500
-    WebUI.clearText(inputField)
-    WebUI.setText(inputField, String.valueOf(maxValue))
-    WebUI.delay(1)
-    
-    String actualMax = WebUI.getAttribute(inputField, 'value').trim()
-    WebUI.comment("Input '${maxValue}' → Actual: '${actualMax}'")
-    
-    if (actualMax == String.valueOf(maxValue)) {
-        WebUI.comment('✅ Maximum value (500) accepted')
-    } else {
-        WebUI.comment('⚠ Maximum value not accepted: "' + actualMax + '"')
-    }
-    
-    // Regenerate with new limit
+    setValueAndBlur("500")
+    verifyValue("500", "Max value test")
+    WebUI.takeScreenshot('TC18_MaxOutputTokens_Max_Input.png')
+
     WebUI.comment('Regenerating with max Max Output Tokens (500)...')
-    WebUI.waitForElementClickable(regenerateButton, 10)
-    WebUI.click(regenerateButton)
-    WebUI.waitForElementNotVisible(thinkingIndicator, 30)
-    WebUI.delay(2)
+    dismissModalAndRegenerate()
     
     String responseMax = WebUI.getText(lastMessage)
-    WebUI.comment('Response with max output limit (500):')
-    WebUI.comment('Length: ' + responseMax.length() + ' chars')
-    WebUI.comment('Preview: ' + (responseMax.length() > 100 ? responseMax.substring(0, 100) + '...' : responseMax))
+    WebUI.comment('Response with max output limit (500): Length: ' + responseMax.length() + ' chars')
     WebUI.takeScreenshot('TC18_MaxOutputTokens_Max_Response.png')
 
-    // === TEST 3: RESET TO DEFAULT ===
-    WebUI.comment('=== Test 3: Reset to default (clear value) ===')
+    // === TEST 3: INVALID INPUT (NON-NUMERIC) -> SHOULD SHOW NaN ===
+    WebUI.comment('=== Test 3: Invalid input (non-numeric) -> should show NaN ===')
+
+    String[] invalidInputs = ["abc", "xyz123", "hello!"]
+
+    for (String invalid : invalidInputs) {
+        WebUI.comment("--- Testing invalid input: " + invalid + " ---")
+
+        // Clear and enter invalid text directly
+        WebUI.click(inputField)
+        WebUI.sendKeys(inputField, Keys.chord(Keys.CONTROL, "a"))
+        WebUI.sendKeys(inputField, invalid)
+
+        // Trigger onblur
+        WebUI.clickOffset(inputField, 250, 0)
+        WebUI.delay(1.5)
+
+        String actualAfterInvalid = WebUI.getAttribute(inputField, 'value').trim()
+        WebUI.comment("Input '" + invalid + "' -> Actual: '" + actualAfterInvalid + "'")
+
+        if (actualAfterInvalid == "NaN" || actualAfterInvalid == "nan" || actualAfterInvalid == "") {
+            WebUI.comment("PASSED: Invalid input '" + invalid + "' correctly handled as NaN")
+        } else {
+            KeywordUtil.markFailed("FAILED: Invalid input '" + invalid + "' not handled correctly. Actual: " + actualAfterInvalid)
+        }
+
+        WebUI.takeScreenshot("TC18_MaxOutputTokens_Invalid_" + invalid + ".png")
+    }
+
+    // === TEST 4: RESET TO DEFAULT ===
+    WebUI.comment('=== Test 4: Reset to default (clear value) ===')
     
-    WebUI.clearText(inputField)
+    WebUI.click(inputField)
+    WebUI.sendKeys(inputField, Keys.chord(Keys.CONTROL, "a"))
+    WebUI.sendKeys(inputField, "\b")
+    WebUI.clickOffset(inputField, 250, 0)
     WebUI.delay(1)
     
     String afterClear = WebUI.getAttribute(inputField, 'value')
     WebUI.comment('Value after clear: "' + afterClear + '"')
     
     if (afterClear == '' || afterClear == null) {
-        WebUI.comment('✅ Value cleared (system default)')
+        WebUI.comment('Value cleared (system default)')
     } else {
-        WebUI.comment('⚠ Value not cleared: "' + afterClear + '"')
+        WebUI.comment('Value not cleared: "' + afterClear + '"')
+        KeywordUtil.markFailed("FAILED: Value not cleared. Actual: '" + afterClear + "'")
     }
-    
-    // Regenerate with default
+    WebUI.takeScreenshot('TC18_MaxOutputTokens_Reset.png')
+
     WebUI.comment('Regenerating with default Max Output Tokens...')
-    WebUI.waitForElementClickable(regenerateButton, 10)
-    WebUI.click(regenerateButton)
-    WebUI.waitForElementNotVisible(thinkingIndicator, 30)
-    WebUI.delay(2)
+    dismissModalAndRegenerate()
     
     String responseDefault = WebUI.getText(lastMessage)
-    WebUI.comment('Response with default output limit:')
-    WebUI.comment('Length: ' + responseDefault.length() + ' chars')
-    WebUI.comment('Preview: ' + (responseDefault.length() > 100 ? responseDefault.substring(0, 100) + '...' : responseDefault))
+    WebUI.comment('Response with default output limit: Length: ' + responseDefault.length() + ' chars')
     WebUI.takeScreenshot('TC18_MaxOutputTokens_Default_Response.png')
 
-    // === SO SÁNH VÀ VERIFY ===
+    // === COMPARISON ===
     WebUI.comment('=== Comparison ===')
     WebUI.comment('Min output limit (50) response length: ' + responseMin.length() + ' chars')
     WebUI.comment('Max output limit (500) response length: ' + responseMax.length() + ' chars')
     WebUI.comment('Default output limit response length: ' + responseDefault.length() + ' chars')
     
-    // Verify the response with min limit is shorter than max limit
     if (responseMin.length() < responseMax.length()) {
-        WebUI.comment('✅ Min output limit (50) produced shorter response (expected)')
+        WebUI.comment('Min output limit (50) produced shorter response (expected)')
         WebUI.comment('   Difference: ' + (responseMax.length() - responseMin.length()) + ' chars')
     } else {
-        WebUI.comment('⚠ Min output limit response length (' + responseMin.length() + 
+        WebUI.comment('Min output limit response length (' + responseMin.length() + 
                       ') not shorter than max (' + responseMax.length() + ')')
     }
-    
-    WebUI.comment('=== Range Verification ===')
-    WebUI.comment('Min value: 50')
-    WebUI.comment('Max value: 500')
-    WebUI.comment('Range: 50 - 500')
-    
+
     WebUI.takeScreenshot('TC18_MaxOutputTokens_Complete.png')
-    WebUI.comment('✅ TC18 PASSED - Max Output Tokens Input & Verify test')
+    WebUI.comment('TC18 Completed - Max Output Tokens Input & Verify test')
+    WebUI.comment('TC18 PASSED')
 
 } catch (Exception e) {
     WebUI.comment('TC18 FAILED: ' + e.getMessage())

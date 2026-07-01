@@ -5,10 +5,11 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
+import org.openqa.selenium.Keys as Keys
 
 /**
  * TC15: Parameters - Presence Penalty Input Field
- * Verify direct input into Presence Penalty field (-2.0 - 2.0)
+ * Verify direct input of Presence Penalty values (-2.0 to 2.0)
  */
 
 WebUI.comment('=== TC15: Presence Penalty - Input Field Test ===')
@@ -16,114 +17,126 @@ WebUI.comment('=== TC15: Presence Penalty - Input Field Test ===')
 try {
     // === CHECK NAVBAR ===
     WebUI.comment('Step 0: Checking Navbar state...')
-    
     TestObject navSidebar = new TestObject('navSidebar')
     navSidebar.addProperty('xpath', ConditionType.EQUALS, "//nav")
     WebUI.waitForElementVisible(navSidebar, 10)
-    
-    String ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
-    WebUI.comment('Navbar aria-hidden: ' + ariaHidden)
-    
-    if (ariaHidden == 'true') {
+
+    if (WebUI.getAttribute(navSidebar, 'aria-hidden') == 'true') {
         WebUI.comment('Navbar is closed, opening sidebar...')
-        TestObject openSidebarButton = new TestObject('openSidebarButton')
-        openSidebarButton.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
-        WebUI.waitForElementClickable(openSidebarButton, 5)
-        WebUI.click(openSidebarButton)
+        TestObject openBtn = new TestObject('openSidebarButton')
+        openBtn.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
+        WebUI.click(openBtn)
         WebUI.delay(1)
-        WebUI.comment('Sidebar opened')
-        
-        ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
-        WebUI.comment('Navbar aria-hidden after open: ' + ariaHidden)
-        if (ariaHidden == 'false') {
-            WebUI.comment('✓ Navbar opened successfully')
-        }
-    } else {
-        WebUI.comment('✓ Navbar is already open (aria-hidden="false")')
     }
 
-    // === CHECK PARAMETERS TAB ===
-    WebUI.comment('Step 1: Checking Parameters tab state...')
-    
+    // === OPEN PARAMETERS TAB ===
+    WebUI.comment('Step 1: Opening Parameters tab...')
     TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
-    
-    String ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
-    String isPressed = WebUI.getAttribute(parametersButton, 'aria-pressed')
-    
-    WebUI.comment('Parameters button aria-label: ' + ariaLabel)
-    WebUI.comment('Parameters button aria-pressed: ' + isPressed)
-    
-    if (ariaLabel == 'Parameters' && isPressed == 'true') {
-        WebUI.comment('✓ Parameters tab is open (correct aria-label and aria-pressed)')
-    } else {
-        WebUI.comment('Parameters tab not open or wrong label, clicking to open...')
+
+    if (WebUI.getAttribute(parametersButton, 'aria-pressed') != 'true') {
         WebUI.click(parametersButton)
         WebUI.delay(2)
-        
-        ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
-        isPressed = WebUI.getAttribute(parametersButton, 'aria-pressed')
-        WebUI.comment('After click - Parameters button aria-label: ' + ariaLabel)
-        WebUI.comment('After click - Parameters button aria-pressed: ' + isPressed)
-        
-        if (ariaLabel == 'Parameters' && isPressed == 'true') {
-            WebUI.comment('✓ Parameters tab opened successfully')
-        }
     }
 
-    // === TEST PRESENCE PENALTY INPUT FIELD ===
+    // === PRESENCE PENALTY INPUT ===
     WebUI.comment('Step 2: Testing Presence Penalty input field...')
-    
     TestObject inputField = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Presence Penalty')
     WebUI.waitForElementVisible(inputField, 10)
     WebUI.comment('Presence Penalty input field found')
 
-    String[] testValues = ["-2.0", "-1.5", "-0.5", "0.0", "0.5", "1.5", "2.0"]
-    List<String> results = new ArrayList<>()
-
-    for (String value : testValues) {
-        WebUI.comment("Testing input value: ${value}")
-        
-        WebUI.clearText(inputField)
-        WebUI.setText(inputField, value)
-        WebUI.delay(1)
-        
-        String actualValue = WebUI.getAttribute(inputField, 'value').trim()
-        results.add(actualValue)
-        
-        if (actualValue == value) {
-            WebUI.comment("✅ Input '${value}' accepted correctly")
-        } else {
-            WebUI.comment("⚠ Input '${value}' → Actual: '${actualValue}'")
-        }
-        
-        WebUI.takeScreenshot("TC15_PresencePenalty_Input_${value.replace('.', '_').replace('-', 'neg')}.png")
+    // ================== HELPER FUNCTIONS ==================
+    def setValueAndBlur = { String value ->
+        WebUI.comment("→ Entering: " + value)
+        WebUI.click(inputField)
+        WebUI.sendKeys(inputField, Keys.chord(Keys.CONTROL, "a"))
+        WebUI.sendKeys(inputField, value)
+        WebUI.clickOffset(inputField, 250, 0)
+        WebUI.delay(1.2)
     }
 
-    // Check invalid input
-    // Check invalid input (3.0 > max 2.0)
-    WebUI.comment('Testing invalid input (3.0 - exceeds max)...')
-    WebUI.clearText(inputField)
-    WebUI.setText(inputField, "3.0")
-    WebUI.delay(1)
-    String invalidResult = WebUI.getAttribute(inputField, 'value')
-    WebUI.comment("Input 3.0 → Actual: ${invalidResult} (should be clamped or rejected)")
+    def verifyNumericValue = { String expectedStr, String testStep ->
+        String actualStr = WebUI.getAttribute(inputField, 'value').trim()
+        try {
+            BigDecimal actualNum = new BigDecimal(actualStr)
+            BigDecimal expectedNum = new BigDecimal(expectedStr)
 
-    // Check invalid input (-3.0 < -2.0)
-    WebUI.comment('Testing invalid input (-3.0 - below min)...')
-    WebUI.clearText(inputField)
-    WebUI.setText(inputField, "-3.0")
-    WebUI.delay(1)
-    String belowMinResult = WebUI.getAttribute(inputField, 'value')
-    WebUI.comment("Input -3.0 → Actual: ${belowMinResult} (should be clamped or rejected)")
+            if (actualNum.compareTo(expectedNum) == 0) {
+                WebUI.comment("PASSED - ${testStep}: Expected '${expectedStr}' → Actual: '${actualStr}'")
+                return true
+            } else {
+                KeywordUtil.markFailed("FAILED - ${testStep}: Expected ${expectedStr} but got ${actualStr}")
+                return false
+            }
+        } catch (Exception e) {
+            KeywordUtil.markFailed("FAILED - ${testStep}: Cannot convert to number. Actual: '${actualStr}'")
+            return false
+        }
+    }
 
-    WebUI.takeScreenshot('TC15_PresencePenalty_Input_Final.png')
+    // === TEST 1: VALID VALUES ===
+    WebUI.comment('=== Test 1: Valid values (-2.0 to 2.0) ===')
+    String[][] validValues = [
+        ["-2.0", "-2.0"],
+        ["-1.0", "-1.0"],
+        ["0.0",  "0.0"],
+        ["1.0",  "1.0"],
+        ["2.0",  "2.0"]
+    ]
 
-    WebUI.comment('=== TC15 Completed - Presence Penalty Input Field Test ===')
-    WebUI.comment('✅ TC15 PASSED')
+    for (String[] pair : validValues) {
+        setValueAndBlur(pair[0])
+        verifyNumericValue(pair[1], "Valid value test")
+        WebUI.takeScreenshot("TC15_PresencePenalty_Valid_${pair[0].replace('-', 'neg')}.png")
+    }
+
+    // === TEST 2: Exceed max ===
+    WebUI.comment('=== Test 2: Exceed max (3.0) → clamp to 2.0 ===')
+    setValueAndBlur("3.0")
+    verifyNumericValue("2.0", "Exceed max test")
+
+    // === TEST 3: Below min ===
+    WebUI.comment('=== Test 3: Below min (-3.0) → clamp to -2.0 ===')
+    setValueAndBlur("-3.0")
+    verifyNumericValue("-2.0", "Below min test")
+
+    // === TEST 4: Invalid input ===
+    WebUI.comment('=== Test 4: Invalid input (non-numeric) ===')
+    setValueAndBlur("0.5")
+    verifyNumericValue("0.5", "Set initial valid value")
+
+    String[] invalidInputs = ["abc", "xyz123", "hello!"]
+    for (String invalid : invalidInputs) {
+        WebUI.comment("--- Testing invalid input: " + invalid + " ---")
+        
+        WebUI.click(inputField)
+        WebUI.sendKeys(inputField, Keys.chord(Keys.CONTROL, "a"))
+        WebUI.sendKeys(inputField, invalid)
+        WebUI.clickOffset(inputField, 250, 0)
+        WebUI.delay(1.5)
+
+        String actualAfter = WebUI.getAttribute(inputField, 'value').trim()
+        WebUI.comment("After invalid input → Actual: " + actualAfter)
+
+        try {
+            BigDecimal actualNum = new BigDecimal(actualAfter)
+            if (actualNum.compareTo(new BigDecimal("0.5")) == 0) {
+                WebUI.comment("PASSED: Invalid input correctly reverted to previous value")
+            } else {
+                KeywordUtil.markFailed("FAILED: Invalid input did not revert. Actual: " + actualAfter)
+            }
+        } catch (Exception e) {
+            KeywordUtil.markFailed("FAILED: Non-numeric value after invalid input: " + actualAfter)
+        }
+
+        WebUI.takeScreenshot("TC15_PresencePenalty_Invalid_" + invalid + ".png")
+    }
+
+    WebUI.takeScreenshot("TC15_PresencePenalty_Final.png")
+    WebUI.comment('=== TC15 Completed Successfully ===')
 
 } catch (Exception e) {
-    WebUI.comment('❌ TC15 FAILED: ' + e.getMessage())
-    WebUI.takeScreenshot('TC15_PresencePenalty_Input_Error.png')
+    WebUI.comment('TC15 FAILED: ' + e.getMessage())
+    WebUI.takeScreenshot('TC15_PresencePenalty_Error.png')
     KeywordUtil.markFailedAndStop("Exception occurred: " + e.getMessage())
 }
