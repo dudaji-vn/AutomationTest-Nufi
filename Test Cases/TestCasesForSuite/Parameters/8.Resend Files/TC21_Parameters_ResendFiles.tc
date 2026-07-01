@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC21_Parameters_ResendFiles</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6ccc221b-ce3f-4724-8be8-f1d0a48c8908</testCaseGuid>
+</TestCaseEntity>

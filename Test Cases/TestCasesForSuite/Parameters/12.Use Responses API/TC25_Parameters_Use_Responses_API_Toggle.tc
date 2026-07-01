@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC25_Parameters_Use_Responses_API_Toggle</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>72e4301a-ef92-4b7e-91e5-74d64315f6a9</testCaseGuid>
+</TestCaseEntity>

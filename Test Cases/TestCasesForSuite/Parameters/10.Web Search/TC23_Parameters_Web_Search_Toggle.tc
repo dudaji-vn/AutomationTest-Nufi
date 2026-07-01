@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC23_Parameters_Web_Search_Toggle</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6da5aea7-82e3-4000-b504-68aa3e96fb32</testCaseGuid>
+</TestCaseEntity>
