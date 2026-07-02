@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC17_Parameters_MaxContextTokens</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>0abbe4bb-a935-440e-91cc-0e93ebc587be</testCaseGuid>
-</TestCaseEntity>

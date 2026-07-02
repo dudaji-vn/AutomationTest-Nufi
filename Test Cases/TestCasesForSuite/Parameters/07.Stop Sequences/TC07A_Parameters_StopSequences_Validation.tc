@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC07A_Parameters_StopSequences_Validation</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>01881bdf-10c0-4066-b4c8-730d9bac0cfa</testCaseGuid>
+</TestCaseEntity>

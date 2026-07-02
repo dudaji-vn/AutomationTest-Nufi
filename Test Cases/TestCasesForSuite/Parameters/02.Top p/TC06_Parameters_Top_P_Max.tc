@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC06_Parameters_Top_P_Max</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>bf4ac290-6941-4ad6-b12e-6b3727f525fe</testCaseGuid>
-</TestCaseEntity>

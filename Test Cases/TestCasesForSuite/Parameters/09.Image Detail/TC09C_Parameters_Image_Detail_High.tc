@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC09C_Parameters_Image_Detail_High</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5647620b-619b-40d2-ba28-b91cc9df724c</testCaseGuid>
+</TestCaseEntity>

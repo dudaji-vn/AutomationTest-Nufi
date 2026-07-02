@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC13_Parameters_PresencePenalty_Min</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>98d7395f-bc2f-4bf2-af34-4e21cfd71191</testCaseGuid>
-</TestCaseEntity>

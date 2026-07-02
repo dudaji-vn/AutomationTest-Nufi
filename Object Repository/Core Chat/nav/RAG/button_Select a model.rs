@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Select a model</name>
+   <tag></tag>
+   <elementGuidId>23a84634-6b6f-414f-b31a-2b0e641805da</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>button.btn.btn-neutral.border-token-border-light.relative.h-9.w-full.rounded-lg.font-medium</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[14]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'button' and (text() = 'Select a model' or . = 'Select a model')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=button[name=&quot;Select a model&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>04caf563-6a5d-4852-9786-fda4a719bcdd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>45860d83-3797-469f-918e-5c98bc04cd18</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>btn btn-neutral border-token-border-light relative h-9 w-full rounded-lg font-medium</value>
+      <webElementGuid>e3417204-729f-458c-976e-4ba152b73940</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-haspopup</name>
+      <type>Main</type>
+      <value>true</value>
+      <webElementGuid>c08de3f1-e9b9-40a7-8c23-61df2f7c66b4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-expanded</name>
+      <type>Main</type>
+      <value>false</value>
+      <webElementGuid>813a8c5b-5c5e-45c0-8658-e65a6861dd65</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Select a model</value>
+      <webElementGuid>55a80443-3c75-4016-a344-ddb80d49286c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;flex&quot;]/div[@class=&quot;relative z-0 flex h-full w-full overflow-hidden&quot;]/div[@class=&quot;fixed left-0 top-0 z-[110] flex h-full bg-surface-primary-alt translate-x-0&quot;]/nav[@class=&quot;min-h-0 flex-1 overflow-hidden bg-surface-primary-alt&quot;]/div[@class=&quot;flex h-full min-h-0 flex-col overflow-y-auto overflow-x-hidden text-text-primary&quot;]/form[@class=&quot;scrollbar-gutter-stable flex flex-1 flex-col px-3 pb-3 pt-2&quot;]/div[@class=&quot;flex-1&quot;]/div[@class=&quot;h-auto pt-1&quot;]/div[@class=&quot;mb-4&quot;]/button[@class=&quot;btn btn-neutral border-token-border-light relative h-9 w-full rounded-lg font-medium&quot;]</value>
+      <webElementGuid>c426ecea-512a-4712-87cb-2aa83d3f76f2</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[14]</value>
+      <webElementGuid>9b33c30f-03f7-49f3-b7ee-db8cb1665d77</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div/div/nav/div/form/div/div[2]/div[5]/button</value>
+      <webElementGuid>ebb0f179-aeff-493a-b499-c3f2abf72a03</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='*'])[3]/following::button[1]</value>
+      <webElementGuid>4bba2531-acda-4191-beca-4e1d2e9ac6e4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Capabilities'])[1]/preceding::button[1]</value>
+      <webElementGuid>14b93dce-7cb4-4567-895d-f83e091286d0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[5]/button</value>
+      <webElementGuid>746133d8-cf5e-43ac-ba16-e7244ab6180c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button' and (text() = 'Select a model' or . = 'Select a model')]</value>
+      <webElementGuid>a8cc4927-2714-4d6a-8277-56da7dc37f8e</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

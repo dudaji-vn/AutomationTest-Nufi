@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03B_Parameters_FrequencyPenalty_Max</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>caf05b64-ad69-40df-b828-981dd295dd0f</testCaseGuid>
+</TestCaseEntity>

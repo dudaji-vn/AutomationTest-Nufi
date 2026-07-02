@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC11_Parameters_FrequencyPenalty_Input</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>2eea519b-95f5-4984-adb7-2534a804813c</testCaseGuid>
-</TestCaseEntity>

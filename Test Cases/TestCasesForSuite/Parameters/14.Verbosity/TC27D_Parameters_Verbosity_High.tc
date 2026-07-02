@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC27D_Parameters_Verbosity_High</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>d7759607-9ed8-4bd0-8e36-6378788b6acc</testCaseGuid>
-</TestCaseEntity>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Upload for File Search</name>
+   <tag></tag>
+   <elementGuidId>991c922b-e9ee-4253-a6d0-1f33e594c4d0</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>button.btn.btn-neutral.border-token-border-light.relative.h-9.w-full.rounded-lg.text-sm.font-medium</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[17]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=button[name=&quot;Upload for File Search&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>cfd84d1c-db4d-4719-a736-c7441fc7c6d4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>224b4aac-bd12-4406-83d6-c77c632c32e6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>btn btn-neutral border-token-border-light relative h-9 w-full rounded-lg text-sm font-medium</value>
+      <webElementGuid>14d7c1bd-2630-44c7-88ab-f822a4413747</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Upload for File Search</value>
+      <webElementGuid>aba8ac2c-b15b-420b-a246-ba7c5a15f36d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;flex&quot;]/div[@class=&quot;relative z-0 flex h-full w-full overflow-hidden&quot;]/div[@class=&quot;fixed left-0 top-0 z-[110] flex h-full bg-surface-primary-alt translate-x-0&quot;]/nav[@class=&quot;min-h-0 flex-1 overflow-hidden bg-surface-primary-alt&quot;]/div[@class=&quot;flex h-full min-h-0 flex-col overflow-y-auto overflow-x-hidden text-text-primary&quot;]/form[@class=&quot;scrollbar-gutter-stable flex flex-1 flex-col px-3 pb-3 pt-2&quot;]/div[@class=&quot;flex-1&quot;]/div[@class=&quot;h-auto pt-1&quot;]/div[@class=&quot;mb-4 flex w-full flex-col items-start gap-3&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;flex flex-col gap-3&quot;]/div[1]/button[@class=&quot;btn btn-neutral border-token-border-light relative h-9 w-full rounded-lg text-sm font-medium&quot;]</value>
+      <webElementGuid>16cddbea-36f1-44b0-baf2-b2f1aa5d4449</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[17]</value>
+      <webElementGuid>aaff1719-d85c-43bd-bc1f-b9236ae87e98</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div/div/nav/div/form/div/div[2]/div[6]/div/div[3]/div/button</value>
+      <webElementGuid>4619644f-a43d-4561-ad22-a12280eb637f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Enable File Search'])[1]/following::button[2]</value>
+      <webElementGuid>2517352f-2ab7-4480-bc86-fe4d57aef6ce</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='File Search'])[1]/following::button[3]</value>
+      <webElementGuid>d1ab8d0f-4631-4533-a903-9a35e0f4f26e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Agent must be created before uploading files for File Search.'])[1]/preceding::button[1]</value>
+      <webElementGuid>c5353ebe-5f60-42c6-9f13-a6d922349226</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[6]/div/div[3]/div/button</value>
+      <webElementGuid>75fdaea0-a877-42e4-8744-025ff72b50a3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button' and (text() = 'Upload for File Search' or . = 'Upload for File Search')]</value>
+      <webElementGuid>e3a19877-2f65-4bf4-aec2-dfc83c7c66a1</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

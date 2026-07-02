@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC08_Parameters_TopP_DoubleClick</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>ce1042e5-3326-4f3d-ba60-ae7160d342d1</testCaseGuid>
-</TestCaseEntity>

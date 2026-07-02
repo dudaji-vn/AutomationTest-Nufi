@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Back to builder</name>
+   <tag></tag>
+   <elementGuidId>6cfa4060-3b21-4593-ae82-316912c663c7</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>button.btn.btn-neutral.relative</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[11]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:label=&quot;Back to builder&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>34b0dc30-8f69-4dff-9e48-358c3ba743cb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>16b3bdff-7c2b-4ce2-ab27-a5defa61a3b6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>btn btn-neutral relative</value>
+      <webElementGuid>2a66d1c3-a349-4e71-a32a-693f1ddaabd7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-label</name>
+      <type>Main</type>
+      <value>Back to builder</value>
+      <webElementGuid>8c732087-7736-442c-b2d1-48da276695f4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;flex&quot;]/div[@class=&quot;relative z-0 flex h-full w-full overflow-hidden&quot;]/div[@class=&quot;fixed left-0 top-0 z-[110] flex h-full bg-surface-primary-alt translate-x-0&quot;]/nav[@class=&quot;min-h-0 flex-1 overflow-hidden bg-surface-primary-alt&quot;]/div[@class=&quot;flex h-full min-h-0 flex-col overflow-y-auto overflow-x-hidden text-text-primary&quot;]/form[@class=&quot;scrollbar-gutter-stable flex flex-1 flex-col px-3 pb-3 pt-2&quot;]/div[@class=&quot;flex-1&quot;]/div[@class=&quot;mb-1 flex w-full flex-col gap-2 text-sm&quot;]/div[@class=&quot;model-panel relative flex flex-col items-center px-16 pt-2 text-center&quot;]/div[@class=&quot;absolute left-0 top-4&quot;]/button[@class=&quot;btn btn-neutral relative&quot;]</value>
+      <webElementGuid>9b400fe8-663a-43aa-9402-4e0e137a7c5b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[11]</value>
+      <webElementGuid>b1914157-6188-464d-9c7d-e33c607042a3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div/div/nav/div/form/div/div[2]/div/div/button</value>
+      <webElementGuid>2147e3a3-9615-40b8-8c9f-e2f4c135dce6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Create New Agent'])[1]/following::button[1]</value>
+      <webElementGuid>bd6abc70-186f-4990-b6cf-7d62be65e261</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Agent'])[1]/following::button[2]</value>
+      <webElementGuid>a76543f3-296f-40de-b978-a86c46f62bc0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Model Parameters'])[1]/preceding::button[1]</value>
+      <webElementGuid>393489ca-34ea-4d96-a0cf-3205450329d5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/button</value>
+      <webElementGuid>250dbaab-20f4-4fdc-a19b-66791ac6b813</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button']</value>
+      <webElementGuid>79cc19ce-b63a-4abe-ae14-69bb57b54e97</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

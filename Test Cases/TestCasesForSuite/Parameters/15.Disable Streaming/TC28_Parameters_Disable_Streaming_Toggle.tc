@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC28_Parameters_Disable_Streaming_Toggle</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>f13100a9-aa7b-4570-ab3a-fee4dfd58f66</testCaseGuid>
-</TestCaseEntity>

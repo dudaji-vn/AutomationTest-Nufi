@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_Parameters_Presence_Penalty</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8bf039fc-2dbe-4543-ad54-baee159bff18</testCaseGuid>
+</TestCaseEntity>

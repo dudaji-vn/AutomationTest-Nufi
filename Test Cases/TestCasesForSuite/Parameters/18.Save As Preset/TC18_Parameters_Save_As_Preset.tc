@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC18_Parameters_Save_As_Preset</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3ce00b7a-f791-4830-8330-403e7a7f08aa</testCaseGuid>
+</TestCaseEntity>

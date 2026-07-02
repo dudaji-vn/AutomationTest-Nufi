@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC27C_Parameters_Verbosity_Medium</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>d7e0b15a-546b-44d0-b57a-48beb0a5aeae</testCaseGuid>
-</TestCaseEntity>

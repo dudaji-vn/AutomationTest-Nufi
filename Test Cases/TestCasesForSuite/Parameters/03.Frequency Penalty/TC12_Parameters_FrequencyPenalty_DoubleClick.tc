@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC12_Parameters_FrequencyPenalty_DoubleClick</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>af3d04cc-4e0e-4e4d-8657-f076795da2e5</testCaseGuid>
-</TestCaseEntity>

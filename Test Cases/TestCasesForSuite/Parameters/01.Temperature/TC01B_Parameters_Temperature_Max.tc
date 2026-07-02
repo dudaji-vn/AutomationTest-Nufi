@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01B_Parameters_Temperature_Max</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4ccef22e-ae48-4d0f-8353-c22e86854960</testCaseGuid>
+</TestCaseEntity>

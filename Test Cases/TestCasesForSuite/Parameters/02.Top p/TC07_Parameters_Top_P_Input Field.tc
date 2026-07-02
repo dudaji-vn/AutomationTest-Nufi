@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC07_Parameters_Top_P_Input Field</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>a4682fb7-1277-4036-983c-26b258b99b82</testCaseGuid>
-</TestCaseEntity>

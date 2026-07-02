@@ -12,192 +12,136 @@
    <rerunImmediately>true</rerunImmediately>
    <testSuiteGuid>da5fb45a-549b-470d-83c6-f40604c8c7ae</testSuiteGuid>
    <testCaseLink>
-      <guid>a984eb67-4190-434e-b825-d3135f3cf704</guid>
+      <guid>7318fd4a-f590-4d9d-ba6d-5bbbdaa335d7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/01.Temperature/TC01_Parameters_Temperature_Min</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/01.Temperature/TC01_Parameters_Temperature</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>477e51e4-c879-4113-a154-dab0f09e40a6</guid>
+      <guid>3669533e-8b6f-4c50-84ef-b170adef5621</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/01.Temperature/TC02_Parameters_Temperature_Max</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/02.Top p/TC02_Parameters_Top_P</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>2ea5c300-bdca-4477-a6f5-32c6925416d5</guid>
+      <guid>0ba2d561-c24a-4a91-a90f-0085eb24d21f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/01.Temperature/TC03_Parameters_Temperature_Input Field</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/03.Frequency Penalty/TC03_Parameters_Frequency_Penalty</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>0b79771f-479b-44b5-af35-15c6635a894b</guid>
+      <guid>28795aec-8772-4b5f-a3b6-d49612b33f12</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/01.Temperature/TC04_Parameters_Temperature_DoubleClick</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/04.Presence Penalty/TC04_Parameters_Presence_Penalty</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c135f4db-786b-44fe-8491-5457f12d7bda</guid>
+      <guid>951a81b9-0b48-4033-80c0-d3853b63fa87</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/02.Top p/TC05_Parameters_Top_P_Min</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/05.Max Context Tokens/TC05_Parameters_MaxContextTokens</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c948d1c6-8d23-459b-98df-597a4f5b2033</guid>
+      <guid>3659485c-c971-4b1b-8606-82567c856dcf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/02.Top p/TC06_Parameters_Top_P_Max</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/06.Max Output Tokens/TC06_Parameters_MaxOutputTokens</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>5615e9c5-a1ce-420b-86f7-8cccef2c77f2</guid>
+      <guid>317b81e5-4a90-4f40-9be0-b515207ee97a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/02.Top p/TC07_Parameters_Top_P_Input Field</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/07.Stop Sequences/TC07A_Parameters_StopSequences_Validation</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>9b520995-ab8b-4b72-a6b1-0ccbe3d6a389</guid>
+      <guid>5851a0e0-501b-4922-8540-5303309d8985</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/02.Top p/TC08_Parameters_TopP_DoubleClick</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/07.Stop Sequences/TC07B_Parameters_StopSequences_Chat</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>0f7a7a1d-947e-4f9d-bb44-6d3033be6c0d</guid>
+      <guid>467f8b56-a908-4276-a8ab-6c114b753cc0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/03.Frequency Penalty/TC09_Parameters_FrequencyPenalty_Min</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/08.Resend Files/TC08_Parameters_ResendFiles</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>208fadc1-ec4a-4c96-8dc4-a6d743acc622</guid>
+      <guid>35ff46e3-a805-4226-9c8a-b07a518356b6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/03.Frequency Penalty/TC10_Parameters_FrequencyPenalty_Max</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/09.Image Detail/TC09_Parameters_ImageDetail_Slider</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>27326d92-e29b-4ca5-9f5e-812931298e49</guid>
+      <guid>4bfc5509-3d02-4d87-9058-81ef7534ccdc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/03.Frequency Penalty/TC11_Parameters_FrequencyPenalty_Input</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/10.Web Search/TC10_Parameters_Web_Search_Toggle</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>d1735ba5-393a-4cee-82d7-99d473dfccc5</guid>
+      <guid>9c3714f1-70d0-413f-ab80-976c43acc10e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/03.Frequency Penalty/TC12_Parameters_FrequencyPenalty_DoubleClick</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/11.Reasoning Effort/TC11_Parameters_Reasoning_Effort_Slider</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>f6eadf56-f4fc-4e60-9d9b-93750a49af3e</guid>
+      <guid>664fd626-2c00-451b-b2cb-e6ab482de735</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/04.Presence Penalty/TC13_Parameters_PresencePenalty_Min</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/12.Use Responses API/TC12_Parameters_Use_Responses_API_Toggle</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>eacb343c-acf4-40fb-b25e-4ce07a889c03</guid>
+      <guid>d0c1b1ce-b3ac-486c-9c0c-1049a1d2d4e5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/04.Presence Penalty/TC14_Parameters_PresencePenalty_Max</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/13.Reasoning Summary/TC13_Parameters_Reasoning_Summary</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>2e4af0d6-060e-4daa-b496-31088cf8f0ce</guid>
+      <guid>ff6db758-9cd4-4be9-8a87-e61bbda88f40</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/04.Presence Penalty/TC15_Parameters_PresencePenalty_Input</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/14.Verbosity/TC14_Parameters_Verbosity_Slider</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>5d9e595f-3d18-4726-892b-2aad80f9e8db</guid>
+      <guid>7e01e474-646e-40cf-b9dd-b64d828b0c17</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/04.Presence Penalty/TC16_Parameters_PresencePenalty_DoubleClick</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/15.Disable Streaming/TC15_Parameters_Disable_Streaming_Toggle</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>a42ff21a-71c3-4f80-8119-5212dcef18d5</guid>
+      <guid>73b9e77d-895f-4304-82b7-e89cbffb5f12</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/05.Max Context Tokens/TC17_Parameters_MaxContextTokens</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/16.File Token Limit/TC16_Parameters_File_Token_Limit_Input_Field</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>106fa574-5852-4e6b-ad96-4cbeda926eb4</guid>
+      <guid>f26c6eef-5ae4-4b3d-a4de-1ccd23cf0c0e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/06.Max Output Tokens/TC18_Parameters_MaxOutputTokens</testCaseId>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/17.Reset Model Parameters/TC17_Parameters_Reset_Model_Parameters</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>2ffbfbda-9a7b-4e6e-b89f-eadf6abc6f1a</guid>
+      <guid>79e6335c-67d1-4ddc-aaa2-ca67cf94b5db</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/07.Stop Sequences/TC19_Parameters_StopSequences_Validation</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>6a060e74-ab4d-4f8f-a419-d1cf98b063a3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/07.Stop Sequences/TC20_Parameters_StopSequences_Chat</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ab314918-0843-47a6-8abb-eb029c652461</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/08.Resend Files/TC21_Parameters_ResendFiles</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a5f7904e-08fd-4016-b8e3-de50c3438dc1</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/10.Web Search/TC23_Parameters_Web_Search_Toggle</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>9ff9ddfc-890b-42ab-83bf-f7197a11c9ce</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/11.Reasoning Effort/TC24_Parameters_Reasoning_Effort_Slider</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>71cb16c1-463c-491f-92f8-98472b713d8b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/12.Use Responses API/TC25_Parameters_Use_Responses_API_Toggle</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>281c4e75-8bd4-41ae-bdec-668ac241a858</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/13.Reasoning Summary/TC26_Parameters_Reasoning_Summary_Slider</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>fcb74ff3-7bc5-4b24-85da-e5538f116522</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/14.Verbosity/TC27_Parameters_Verbosity_Slider</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>06beea8c-4b5c-4946-b450-c93d1dd6ff6c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/TestCasesForSuite/Parameters/15.Disable Streaming/TC28_Parameters_Disable_Streaming_Toggle</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestCasesForSuite/Parameters/18.Save As Preset/TC18_Parameters_Save_As_Preset</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC16_Parameters_File_Token_Limit_Input_Field</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e48d4861-d07a-442b-8494-56883e7d48cd</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC09A_Parameters_Image_Detail_Default</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>eb7ab2f6-2002-4833-8334-45bce3e9413f</testCaseGuid>
+</TestCaseEntity>

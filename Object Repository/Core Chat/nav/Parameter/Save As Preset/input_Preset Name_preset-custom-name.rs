@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_Preset Name_preset-custom-name</name>
+   <tag></tag>
+   <elementGuidId>95741c4f-b84f-46e8-921e-9daae16ee282</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#preset-custom-name</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='preset-custom-name']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:attr=[placeholder=&quot;something needs to go here. was empty&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>1c802da8-e55c-4466-ab8a-84176c95d117</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>ring-offset-background focus-visible:outline-none rounded-md border focus:border-gray-400 focus:bg-gray-50 bg-transparent text-sm shadow-[0_0_10px_rgba(0,0,0,0.05)] outline-none focus-within:placeholder:text-text-primary focus:placeholder:text-text-primary placeholder:text-text-secondary focus:outline-none focus:ring-gray-400 focus:ring-opacity-20 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-gray-700 dark:border-gray-600 dark:focus:bg-gray-600 dark:focus:border-gray-600 dark:text-gray-50 dark:shadow-[0_0_15px_rgba(0,0,0,0.10)] dark:focus:outline-none flex h-10 max-h-10 w-full resize-none border-border-medium px-3 py-2</value>
+      <webElementGuid>67a81e96-a0e9-487b-a04b-a91bb9ce2b5c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>preset-custom-name</value>
+      <webElementGuid>3333beed-67d8-484f-864a-f15bc4756f3f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>placeholder</name>
+      <type>Main</type>
+      <value>something needs to go here. was empty</value>
+      <webElementGuid>37451e1f-9372-4364-94d4-5314fefa9a78</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-label</name>
+      <type>Main</type>
+      <value>Preset Name</value>
+      <webElementGuid>c8f78e68-02c1-472a-9264-a5eba7255add</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>value</name>
+      <type>Main</type>
+      <value>New Chat</value>
+      <webElementGuid>a8e2bac7-ea68-4163-aa92-fe2170b8826a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;preset-custom-name&quot;)</value>
+      <webElementGuid>05f45a5d-c42e-4bd8-a1c4-f3ca0759e628</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//input[@id='preset-custom-name']</value>
+      <webElementGuid>a3fe1b6e-427a-4261-9db5-e2954f06eea0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='radix-:r1u:']/div[2]/div/div/input</value>
+      <webElementGuid>5eaa0d73-c2f3-4d2b-94d9-ddc5e69ee7ec</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/input</value>
+      <webElementGuid>266f371c-318f-4ef4-8e89-c3eb254cc0b8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//input[@id = 'preset-custom-name' and @placeholder = 'something needs to go here. was empty']</value>
+      <webElementGuid>8b8c93b4-e111-4fc0-8292-d8bd7f2a487e</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

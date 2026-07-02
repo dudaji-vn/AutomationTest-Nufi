@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03_Parameters_Frequency_Penalty</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8e2cbea7-748b-494e-a73b-20e3465ce4f3</testCaseGuid>
+</TestCaseEntity>

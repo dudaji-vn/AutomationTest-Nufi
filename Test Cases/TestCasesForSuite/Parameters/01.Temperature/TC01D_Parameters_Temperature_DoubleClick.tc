@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01D_Parameters_Temperature_DoubleClick</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0844bafd-0f43-41b3-99f0-4f4ab35b33b6</testCaseGuid>
+</TestCaseEntity>

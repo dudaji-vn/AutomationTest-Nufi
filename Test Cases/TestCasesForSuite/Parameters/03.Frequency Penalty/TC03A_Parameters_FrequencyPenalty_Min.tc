@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03A_Parameters_FrequencyPenalty_Min</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>59fe67fe-8c6c-4e70-8bd5-1a61b8a8f0d3</testCaseGuid>
+</TestCaseEntity>

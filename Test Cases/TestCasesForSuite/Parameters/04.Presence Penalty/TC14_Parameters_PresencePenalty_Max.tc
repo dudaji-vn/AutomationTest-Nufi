@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC14_Parameters_PresencePenalty_Max</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>2716fd6d-ddb4-4acf-941c-ea3f4f9167b2</testCaseGuid>
-</TestCaseEntity>
