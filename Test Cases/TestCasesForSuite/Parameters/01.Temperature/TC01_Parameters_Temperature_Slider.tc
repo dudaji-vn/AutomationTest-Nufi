@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_Parameters_Temperature_Slider</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1c5809a5-354c-4238-a57e-21eab1fa72a5</testCaseGuid>
+</TestCaseEntity>

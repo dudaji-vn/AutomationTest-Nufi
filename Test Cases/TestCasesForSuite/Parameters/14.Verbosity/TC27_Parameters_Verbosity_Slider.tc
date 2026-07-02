@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC27_Parameters_Verbosity_Slider</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>184093bb-4b57-45bb-917d-223fdf60dec9</testCaseGuid>
+</TestCaseEntity>

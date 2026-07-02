@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC27E_Parameters_Verbosity_DoubleClick_Reset</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2e36ee30-68ea-493f-af8f-8727866bb497</testCaseGuid>
+</TestCaseEntity>

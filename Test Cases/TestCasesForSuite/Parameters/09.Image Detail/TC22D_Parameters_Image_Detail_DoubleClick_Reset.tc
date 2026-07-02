@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC22D_Parameters_Image_Detail_DoubleClick_Reset</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>49d94b22-5eef-48d0-a81b-173a66bde794</testCaseGuid>
+</TestCaseEntity>
