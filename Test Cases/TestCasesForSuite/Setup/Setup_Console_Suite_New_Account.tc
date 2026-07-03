@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Setup_Console_Suite</name>
+   <name>Setup_Console_Suite_New_Account</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>f64dcc05-8ee8-453c-ae8d-6ed9a61ccc36</testCaseGuid>
+   <testCaseGuid>8e79bdf9-0db0-4dd4-839a-87ffd9dcde7d</testCaseGuid>
 </TestCaseEntity>

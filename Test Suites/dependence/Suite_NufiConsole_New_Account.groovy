@@ -35,16 +35,19 @@ import com.kms.katalon.core.annotation.TearDownTestCase
 def setUp() {
 	// Put your code here.
 	WebUI.comment('=== SUITE SETUP: Nufi Console Suite ===')
-	WebUI.callTestCase(findTestCase('Test Cases/TestCasesForSuite/Setup/Setup_Console_Suite'), [:], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Test Cases/TestCasesForSuite/Setup/Setup_Console_Suite_New_Account'), [:], FailureHandling.STOP_ON_FAILURE)
 	WebUI.comment('✓ Suite setup completed')
 }
 
 /**
  * Clean test suites environment.
  */
-@TearDown(skipped = true) // Please change skipped to be false to activate this method.
+@TearDown(skipped = false) // Please change skipped to be false to activate this method.
 def tearDown() {
 	// Put your code here.
+	WebUI.comment('=== SUITE TEARDOWN: Nufi Console Suite ===')
+	WebUI.callTestCase(findTestCase('Test Cases/TestCasesForSuite/Setup/Teardown_CoreChat_Suite'), [:], FailureHandling.OPTIONAL)
+	WebUI.comment('✓ Suite teardown completed')
 }
 
 /**
@@ -52,7 +55,7 @@ def tearDown() {
  */
 @SetupTestCase(skipped = true) // Please change skipped to be false to activate this method.
 def setupTestCase() {
-	// Put your code here.
+	// Put your code here.	
 }
 
 /**
@@ -61,9 +64,6 @@ def setupTestCase() {
 @TearDownTestCase(skipped = true) // Please change skipped to be false to activate this method.
 def tearDownTestCase() {
 	// Put your code here.
-	WebUI.comment('=== SUITE TEARDOWN: Nufi Console Suite ===')
-	WebUI.callTestCase(findTestCase('Test Cases/TestCasesForSuite/Setup/Teardown_CoreChat_Suite'), [:], FailureHandling.OPTIONAL)
-	WebUI.comment('✓ Suite teardown completed')
 }
 
 /**
