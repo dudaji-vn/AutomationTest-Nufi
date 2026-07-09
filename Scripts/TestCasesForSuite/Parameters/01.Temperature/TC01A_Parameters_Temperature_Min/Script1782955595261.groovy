@@ -55,7 +55,7 @@ try {
     // === CHECK PARAMETERS TAB ===
     WebUI.comment('Step 1: Checking Parameters tab state...')
     
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
     
     // Check correct aria-label="Parameters" and aria-pressed="true"

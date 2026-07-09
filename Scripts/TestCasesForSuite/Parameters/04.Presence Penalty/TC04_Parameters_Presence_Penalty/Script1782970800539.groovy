@@ -61,7 +61,7 @@ try {
     // ============================================================
     WebUI.comment('Step 1: Opening Parameters tab...')
     
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
     
     String ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
@@ -96,7 +96,7 @@ try {
     sliderThumb.addProperty('xpath', ConditionType.EQUALS,
         "//span[contains(@id,'presence_penalty') or contains(@id,'presence-penalty') or contains(@id,'presencePenalty')]//span[@role='slider']")
     
-    TestObject inputField = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Presence Penalty')
+    TestObject inputField = findTestObject('Object Repository/nav/Parameter/input_Presence Penalty')
     
     WebUI.waitForElementVisible(sliderThumb, 10)
     WebUI.waitForElementVisible(inputField, 10)

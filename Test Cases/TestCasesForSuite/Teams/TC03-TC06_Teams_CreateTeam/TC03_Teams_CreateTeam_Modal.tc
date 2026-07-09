@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03_Teams_CreateTeam_Modal</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>344d5e94-28c2-4b3f-a8f9-e6d486d1ebdb</testCaseGuid>
+</TestCaseEntity>

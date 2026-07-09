@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_Teams_DisplayTeam-or-EmptyState</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>05827dc8-4f50-44af-ae29-b6e3e26d9cf7</testCaseGuid>
+</TestCaseEntity>

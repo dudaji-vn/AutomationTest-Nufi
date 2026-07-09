@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_Teams_CreateTeam_Validation</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>02b1a8d1-023e-4aa0-b7f3-7c7adfafea67</testCaseGuid>
+</TestCaseEntity>

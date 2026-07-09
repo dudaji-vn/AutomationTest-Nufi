@@ -49,7 +49,7 @@ try {
     // STEP 1: OPEN PARAMETERS TAB
     // ============================================================
     WebUI.comment('Step 1: Opening Parameters tab...')
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
     
     if (WebUI.getAttribute(parametersButton, 'aria-pressed') != 'true') {
@@ -65,7 +65,7 @@ try {
     // STEP 2: GET TEMPERATURE INPUT
     // ============================================================
     WebUI.comment('Step 2: Getting Temperature input field...')
-    TestObject tempInput = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Temperature')
+    TestObject tempInput = findTestObject('Object Repository/nav/Parameter/input_Temperature')
     WebUI.waitForElementVisible(tempInput, 10)
     WebUI.comment('Temperature input found')
 

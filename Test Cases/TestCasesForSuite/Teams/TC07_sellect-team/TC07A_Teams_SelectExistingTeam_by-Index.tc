@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC07A_Teams_SelectExistingTeam_by-Index</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6117a34b-04aa-4719-9c05-752aa70c58c8</testCaseGuid>
+</TestCaseEntity>

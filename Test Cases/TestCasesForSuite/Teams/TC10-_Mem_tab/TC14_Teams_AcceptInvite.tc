@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC14_Teams_AcceptInvite</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>451aec1d-b6f2-4392-aa5e-e9a3b2cf43d6</testCaseGuid>
+</TestCaseEntity>

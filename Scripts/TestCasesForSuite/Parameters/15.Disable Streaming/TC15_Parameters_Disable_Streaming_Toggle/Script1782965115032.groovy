@@ -56,7 +56,7 @@ try {
     // ============================================================
     WebUI.comment('Step 1: Checking Parameters tab state...')
     
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
     
     String ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
@@ -87,7 +87,7 @@ try {
     // ============================================================
     WebUI.comment('Step 2: Getting Disable Streaming toggle...')
     
-    TestObject disableStreamingToggle = findTestObject('Object Repository/Core Chat/nav/Parameter/button_Disable Streaming')
+    TestObject disableStreamingToggle = findTestObject('Object Repository/nav/Parameter/button_Disable Streaming')
     WebUI.waitForElementVisible(disableStreamingToggle, 10)
     WebUI.comment('Disable Streaming toggle found')
 

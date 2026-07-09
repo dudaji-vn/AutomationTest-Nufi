@@ -34,16 +34,16 @@ try {
     }
     
     WebUI.waitForElementClickable(
-        findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters'),
+        findTestObject('Object Repository/nav/nav_items/button_Parameters'),
         10
     )
-    WebUI.click(findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters'))
+    WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Parameters'))
     WebUI.delay(2)
 
     // Step 2: Set stop sequence = "Python"
     WebUI.comment('Step 2: Setting stop sequence to "Python"...')
     
-    TestObject inputField = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Stop Sequence')
+    TestObject inputField = findTestObject('Object Repository/nav/Parameter/input_Stop Sequence')
     WebUI.waitForElementVisible(inputField, 10)
     
     WebUI.click(inputField)

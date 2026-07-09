@@ -44,51 +44,51 @@ try {
     // Step 2: Click Account Settings button
     WebUI.comment('Step 2: Clicking Account Settings button...')
     WebUI.waitForElementClickable(
-        findTestObject('Object Repository/Core Chat/nav/nav_items/button_Account Settings'),
+        findTestObject('Object Repository/nav/nav_items/button_Account Settings'),
         10
     )
-    WebUI.click(findTestObject('Object Repository/Core Chat/nav/nav_items/button_Account Settings'))
+    WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Account Settings'))
     WebUI.delay(1)
     WebUI.comment('Account Settings button clicked')
     
     // Step 3: Click Settings menu item
     WebUI.comment('Step 3: Clicking Settings menu item...')
     WebUI.waitForElementClickable(
-        findTestObject('Object Repository/Core Chat/nav/Account_Settings/menuitem_Settings'),
+        findTestObject('Object Repository/nav/Account_Settings/menuitem_Settings'),
         10
     )
-    WebUI.click(findTestObject('Object Repository/Core Chat/nav/Account_Settings/menuitem_Settings'))
+    WebUI.click(findTestObject('Object Repository/nav/Account_Settings/menuitem_Settings'))
     WebUI.delay(2)
     WebUI.comment('Settings menu item clicked')
     
     // Step 4: Click Account tab
     WebUI.comment('Step 4: Clicking Account tab...')
     WebUI.waitForElementClickable(
-        findTestObject('Object Repository/Core Chat/nav/Account_Settings/item_Settings/Tab/button_Account'),
+        findTestObject('Object Repository/nav/Account_Settings/item_Settings/Tab/button_Account'),
         10
     )
-    WebUI.click(findTestObject('Object Repository/Core Chat/nav/Account_Settings/item_Settings/Tab/button_Account'))
+    WebUI.click(findTestObject('Object Repository/nav/Account_Settings/item_Settings/Tab/button_Account'))
     WebUI.delay(2)
     WebUI.comment('Account tab clicked')
     
     // Step 5: Click Delete Account button
     WebUI.comment('Step 5: Clicking Delete Account button...')
     WebUI.waitForElementClickable(
-        findTestObject('Object Repository/Core Chat/nav/Account_Settings/item_Settings/Account_tab/button_Delete'),
+        findTestObject('Object Repository/nav/Account_Settings/item_Settings/Account_tab/button_Delete'),
         10
     )
-    WebUI.click(findTestObject('Object Repository/Core Chat/nav/Account_Settings/item_Settings/Account_tab/button_Delete'))
+    WebUI.click(findTestObject('Object Repository/nav/Account_Settings/item_Settings/Account_tab/button_Delete'))
     WebUI.delay(2)
     WebUI.comment('Delete Account button clicked')
     
     // Step 6: Enter email to confirm
     WebUI.comment('Step 6: Entering email to confirm deletion...')
     WebUI.waitForElementVisible(
-        findTestObject('Object Repository/Core Chat/nav/Account_Settings/item_Settings/Account_tab/Delete/email-confirm-input'),
+        findTestObject('Object Repository/nav/Account_Settings/item_Settings/Account_tab/Delete/email-confirm-input'),
         10
     )
     WebUI.setText(
-        findTestObject('Object Repository/Core Chat/nav/Account_Settings/item_Settings/Account_tab/Delete/email-confirm-input'),
+        findTestObject('Object Repository/nav/Account_Settings/item_Settings/Account_tab/Delete/email-confirm-input'),
         GlobalVariable.consoleUserEmail
     )
     WebUI.comment('Email entered: ' + GlobalVariable.consoleUserEmail)
@@ -97,10 +97,10 @@ try {
     // Step 7: Click Permanently Delete button
     WebUI.comment('Step 7: Clicking Permanently Delete button...')
     WebUI.waitForElementClickable(
-        findTestObject('Object Repository/Core Chat/nav/Account_Settings/item_Settings/Account_tab/Delete/button_Permanently delete my account'),
+        findTestObject('Object Repository/nav/Account_Settings/item_Settings/Account_tab/Delete/button_Permanently delete my account'),
         10
     )
-    WebUI.click(findTestObject('Object Repository/Core Chat/nav/Account_Settings/item_Settings/Account_tab/Delete/button_Permanently delete my account'))
+    WebUI.click(findTestObject('Object Repository/nav/Account_Settings/item_Settings/Account_tab/Delete/button_Permanently delete my account'))
     WebUI.delay(3)
     WebUI.comment('Permanently Delete button clicked')
     

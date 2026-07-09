@@ -31,7 +31,7 @@ try {
 
     // === OPEN PARAMETERS TAB ===
     WebUI.comment('Step 1: Opening Parameters tab...')
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
 
     if (WebUI.getAttribute(parametersButton, 'aria-pressed') != 'true') {
@@ -41,7 +41,7 @@ try {
 
     // === FREQUENCY PENALTY INPUT ===
     WebUI.comment('Step 2: Testing Frequency Penalty input field...')
-    TestObject inputField = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Frequency Penalty')
+    TestObject inputField = findTestObject('Object Repository/nav/Parameter/input_Frequency Penalty')
     WebUI.waitForElementVisible(inputField, 10)
     WebUI.comment('Frequency Penalty input field found')
 

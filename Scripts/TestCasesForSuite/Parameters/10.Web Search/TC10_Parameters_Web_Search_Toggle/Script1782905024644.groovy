@@ -44,7 +44,7 @@ try {
     }
     
     // Open Parameters tab
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementClickable(parametersButton, 10)
     WebUI.click(parametersButton)
     WebUI.delay(2)
@@ -55,7 +55,7 @@ try {
     // ============================================================
     WebUI.comment('Step 2: Getting Web Search toggle...')
     
-    TestObject webSearchToggle = findTestObject('Object Repository/Core Chat/nav/Parameter/button_Web Search')
+    TestObject webSearchToggle = findTestObject('Object Repository/nav/Parameter/button_Web Search')
     WebUI.waitForElementVisible(webSearchToggle, 10)
     WebUI.comment('Web Search toggle found')
 

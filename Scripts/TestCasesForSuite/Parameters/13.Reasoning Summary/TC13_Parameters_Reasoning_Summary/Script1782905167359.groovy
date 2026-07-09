@@ -52,7 +52,7 @@ try {
     // ============================================================
     WebUI.comment('Step 1: Opening Parameters tab...')
     
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
     
     if (WebUI.getAttribute(parametersButton, 'aria-pressed') != 'true') {
@@ -70,8 +70,8 @@ try {
     WebUI.comment('Step 2: Getting Reasoning Summary slider...')
     
     // ✅ SỬ DỤNG OBJECT REPOSITORY
-    TestObject sliderThumb = findTestObject('Object Repository/Core Chat/nav/Parameter/slider_Reasoning Summary_thumb')
-    TestObject inputDisplay = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Reasoning Summary')
+    TestObject sliderThumb = findTestObject('Object Repository/nav/Parameter/slider_Reasoning Summary_thumb')
+    TestObject inputDisplay = findTestObject('Object Repository/nav/Parameter/input_Reasoning Summary')
     
     WebUI.waitForElementVisible(sliderThumb, 10)
     WebUI.waitForElementVisible(inputDisplay, 10)

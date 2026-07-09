@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC10_Teams_InviteMember_Modal</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>913b0fdb-c8c5-4eca-a22f-c40147c49a89</testCaseGuid>
+</TestCaseEntity>

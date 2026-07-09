@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Save As Preset</name>
+   <tag></tag>
+   <elementGuidId>537db507-e1f5-476d-9b3a-4821af7c0641</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[16]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=button[name=&quot;Save As Preset&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>461bb742-cff7-4105-8076-0be6e653cb74</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>btn btn-primary focus:shadow-outline flex w-full items-center justify-center px-4 py-2 font-semibold text-white hover:bg-surface-submit-hover</value>
+      <webElementGuid>38c193e4-52f6-4f48-b8c2-82e7dc424b9e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>e8d7900d-0d49-4bff-a90c-970997bfebb8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Save As Preset</value>
+      <webElementGuid>63915c6f-dac7-4c5c-a89b-689e383bc09a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;flex&quot;]/div[@class=&quot;relative z-0 flex h-full w-full overflow-hidden&quot;]/div[@class=&quot;fixed left-0 top-0 z-[110] flex h-full bg-surface-primary-alt translate-x-0&quot;]/nav[@class=&quot;min-h-0 flex-1 overflow-hidden bg-surface-primary-alt&quot;]/div[@class=&quot;flex h-full min-h-0 flex-col overflow-y-auto overflow-x-hidden text-text-primary&quot;]/div[@class=&quot;h-auto max-w-full px-3 pb-3 pt-2&quot;]/div[@class=&quot;mt-2 flex justify-center&quot;]/button[@class=&quot;btn btn-primary focus:shadow-outline flex w-full items-center justify-center px-4 py-2 font-semibold text-white hover:bg-surface-submit-hover&quot;]</value>
+      <webElementGuid>d45ee86f-f453-4f1c-8ccb-7a0113498c9e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[16]</value>
+      <webElementGuid>e9720a79-8386-4aeb-848f-5e085c8fd95d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div/div/nav/div/div/div[3]/button</value>
+      <webElementGuid>09b96fd0-87d5-4e15-a3fb-e47cdc1225ea</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Reset Model Parameters'])[1]/following::button[1]</value>
+      <webElementGuid>7e858f60-e62c-4ad4-bad0-627323404260</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='File Token Limit'])[1]/following::button[2]</value>
+      <webElementGuid>15db4f14-c736-469f-9531-8a65b3fbcaa6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Welcome to Nufi Chat.'])[1]/preceding::button[3]</value>
+      <webElementGuid>d15f5771-7dc2-4f58-8db8-97cf81b3511e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='W'])[1]/preceding::button[3]</value>
+      <webElementGuid>5a97d5bd-b499-41fc-b910-d3f85f0ae796</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Save As Preset']/parent::*</value>
+      <webElementGuid>9585ad64-4aa1-4db7-8ec2-bd0e98793ca0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//nav/div/div/div[3]/button</value>
+      <webElementGuid>a0a96113-9922-4f79-8bb1-9616dc3f0059</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button' and (text() = 'Save As Preset' or . = 'Save As Preset')]</value>
+      <webElementGuid>c6f9fef2-6aa2-4763-b9e9-8bb3b68758db</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

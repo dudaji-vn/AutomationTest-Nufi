@@ -64,7 +64,7 @@ try {
     // ============================================================
     WebUI.comment('Step 1: Checking Parameters tab state...')
     
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
     
     String ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
@@ -95,7 +95,7 @@ try {
     // ============================================================
     WebUI.comment('Step 2: Getting Save As Preset button...')
     
-    TestObject saveAsPresetButton = findTestObject('Object Repository/Core Chat/nav/Parameter/button_Save As Preset')
+    TestObject saveAsPresetButton = findTestObject('Object Repository/nav/Parameter/button_Save As Preset')
     WebUI.waitForElementVisible(saveAsPresetButton, 10)
     WebUI.comment('Save As Preset button found')
 
@@ -110,7 +110,7 @@ try {
     WebUI.takeScreenshot('TC18_SaveAsPreset_Popup_Opened.png')
     
     // Verify popup appears
-    TestObject popup = findTestObject('Object Repository/Core Chat/nav/Parameter/Save As Preset/popup_Save As Preset')
+    TestObject popup = findTestObject('Object Repository/nav/Parameter/Save As Preset/popup_Save As Preset')
     WebUI.waitForElementVisible(popup, 10)
     WebUI.comment('Save As Preset popup verified')
 
@@ -119,7 +119,7 @@ try {
     // ============================================================
     WebUI.comment('Step 4: Getting Preset Name input...')
     
-    TestObject presetNameInput = findTestObject('Object Repository/Core Chat/nav/Parameter/Save As Preset/input_Preset Name_preset-custom-name')
+    TestObject presetNameInput = findTestObject('Object Repository/nav/Parameter/Save As Preset/input_Preset Name_preset-custom-name')
     WebUI.waitForElementVisible(presetNameInput, 10)
     WebUI.comment('Preset Name input found')
 
@@ -155,7 +155,7 @@ try {
     WebUI.takeScreenshot('TC18_SaveAsPreset_Custom_Name.png')
     
     // Click Save button
-    TestObject saveButton = findTestObject('Object Repository/Core Chat/nav/Parameter/Save As Preset/button_Save')
+    TestObject saveButton = findTestObject('Object Repository/nav/Parameter/Save As Preset/button_Save')
     WebUI.waitForElementVisible(saveButton, 10)
     WebUI.click(saveButton)
     WebUI.delay(2)
@@ -163,7 +163,7 @@ try {
     
     // Verify success toast appears
     try {
-        WebUI.waitForElementVisible(findTestObject('Object Repository/Core Chat/nav/Parameter/toast_Success'), 5)
+        WebUI.waitForElementVisible(findTestObject('Object Repository/Toast/Toast_Success'), 5)
         WebUI.comment('PASSED - Success toast appeared for custom preset: ' + customPresetName)
         WebUI.takeScreenshot('TC18_SaveAsPreset_Custom_Success.png')
     } catch (Exception e) {
@@ -212,7 +212,7 @@ try {
     
     // Verify success toast appears with conversation name
     try {
-        WebUI.waitForElementVisible(findTestObject('Object Repository/Core Chat/nav/Parameter/toast_Success'), 5)
+        WebUI.waitForElementVisible(findTestObject('Object Repository/Toast/Toast_Success'), 5)
         WebUI.comment('PASSED - Success toast appeared with default conversation name: ' + conversationName)
         WebUI.takeScreenshot('TC18_SaveAsPreset_Default_Conversation_Success.png')
     } catch (Exception e) {
@@ -248,7 +248,7 @@ try {
     WebUI.takeScreenshot('TC18_SaveAsPreset_Before_Cancel.png')
     
     // Click Cancel button
-    TestObject cancelButton = findTestObject('Object Repository/Core Chat/nav/Parameter/Save As Preset/button_Cancel')
+    TestObject cancelButton = findTestObject('Object Repository/nav/Parameter/Save As Preset/button_Cancel')
     WebUI.waitForElementVisible(cancelButton, 10)
     WebUI.click(cancelButton)
     WebUI.delay(1.5)

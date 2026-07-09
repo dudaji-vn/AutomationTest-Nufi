@@ -38,7 +38,7 @@ try {
 
     // === OPEN PARAMETERS TAB ===
     WebUI.comment('Step 1: Opening Parameters tab...')
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
 
     if (WebUI.getAttribute(parametersButton, 'aria-pressed') != 'true') {
@@ -48,7 +48,7 @@ try {
 
     // === MAX OUTPUT TOKENS INPUT ===
     WebUI.comment('Step 2: Testing Max Output Tokens input field...')
-    TestObject inputField = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Max Output Tokens')
+    TestObject inputField = findTestObject('Object Repository/nav/Parameter/input_Max Output Tokens')
     WebUI.waitForElementVisible(inputField, 10)
     WebUI.comment('Max Output Tokens input field found')
 

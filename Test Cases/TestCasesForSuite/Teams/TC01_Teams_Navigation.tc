@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_Teams_Navigation</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ce5f4811-2ae6-4f41-8e4c-98bdc78c6891</testCaseGuid>
+</TestCaseEntity>

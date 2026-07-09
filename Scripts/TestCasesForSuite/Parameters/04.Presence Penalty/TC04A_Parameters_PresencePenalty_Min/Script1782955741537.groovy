@@ -45,7 +45,7 @@ try {
     // === CHECK PARAMETERS TAB ===
     WebUI.comment('Step 1: Checking Parameters tab state...')
     
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
     
     String ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
@@ -75,7 +75,7 @@ try {
     WebUI.comment('Step 2: Setting Presence Penalty to -2.0 (Minimum)...')
     
     // Use Object Repository for the slider thumb
-    TestObject sliderThumb = findTestObject('Object Repository/Core Chat/nav/Parameter/slider_Presence Penalty_thumb')
+    TestObject sliderThumb = findTestObject('Object Repository/nav/Parameter/slider_Presence Penalty_thumb')
     WebUI.waitForElementVisible(sliderThumb, 10)
     
     // Get current value

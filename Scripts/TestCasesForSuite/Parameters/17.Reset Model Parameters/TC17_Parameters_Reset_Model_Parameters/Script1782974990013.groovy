@@ -58,7 +58,7 @@ try {
     // ============================================================
     WebUI.comment('Step 1: Checking Parameters tab state...')
     
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
     
     String ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
@@ -90,15 +90,15 @@ try {
     WebUI.comment('Step 2: Getting Reset Model Parameters button and parameter elements...')
     
     // Reset button
-    TestObject resetButton = findTestObject('Object Repository/Core Chat/nav/Parameter/button_Reset Model Parameters')
+    TestObject resetButton = findTestObject('Object Repository/nav/Parameter/button_Reset Model Parameters')
     WebUI.waitForElementVisible(resetButton, 10)
     WebUI.comment('Reset Model Parameters button found')
     
     // Parameter input elements
-    TestObject temperatureInput = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Temperature')
-    TestObject topPInput = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Top P')
-    TestObject freqPenaltyInput = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Frequency Penalty')
-    TestObject presencePenaltyInput = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Presence Penalty')
+    TestObject temperatureInput = findTestObject('Object Repository/nav/Parameter/input_Temperature')
+    TestObject topPInput = findTestObject('Object Repository/nav/Parameter/input_Top P')
+    TestObject freqPenaltyInput = findTestObject('Object Repository/nav/Parameter/input_Frequency Penalty')
+    TestObject presencePenaltyInput = findTestObject('Object Repository/nav/Parameter/input_Presence Penalty')
     
     WebUI.waitForElementVisible(temperatureInput, 10)
     WebUI.waitForElementVisible(topPInput, 10)

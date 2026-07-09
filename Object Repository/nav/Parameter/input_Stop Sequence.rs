@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_Stop Sequence</name>
+   <tag></tag>
+   <elementGuidId>e9474038-5ff5-49fe-954c-3290a99b85ee</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id = 'stop-dynamic-input' and @placeholder = 'Separate values by pressing `Enter`']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#stop-dynamic-input</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='stop-dynamic-input']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:attr=[placeholder=&quot;Separate values by pressing `Enter`&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>cbe26f9b-4d51-4669-9463-532e965f9141</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>w-full rounded-lg border border-border-light text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 flex h-9 max-h-9 border-none bg-surface-secondary px-3 py-2</value>
+      <webElementGuid>d7a8b143-3840-457a-ad70-ea6c3159f682</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>stop-dynamic-input</value>
+      <webElementGuid>e7abe933-0251-42fb-bf26-2ef1fc3b850c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>placeholder</name>
+      <type>Main</type>
+      <value>Separate values by pressing `Enter`</value>
+      <webElementGuid>b8ca45e4-8c1b-4f43-842f-6bdccb89be85</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;stop-dynamic-input&quot;)</value>
+      <webElementGuid>01b3163e-2e50-4daf-9fc2-3900ef828fc1</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//input[@id='stop-dynamic-input']</value>
+      <webElementGuid>b9e48298-3d66-48c6-9de9-2afe0ec18ecc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div/div/nav/div/div/div/div[9]/a/div[2]/div/input</value>
+      <webElementGuid>086159ea-6e52-4889-8d09-820c429f9a3b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/input</value>
+      <webElementGuid>18b06486-b076-4944-99f6-f5c0fe90d6a4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//input[@id = 'stop-dynamic-input' and @placeholder = 'Separate values by pressing `Enter`']</value>
+      <webElementGuid>a4def390-da4d-4761-a9f7-c72016969b23</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

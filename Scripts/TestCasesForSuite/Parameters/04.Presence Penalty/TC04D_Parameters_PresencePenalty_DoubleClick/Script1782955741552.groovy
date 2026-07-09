@@ -30,7 +30,7 @@ try {
 
     // === OPEN PARAMETERS TAB ===
     WebUI.comment('Step 1: Opening Parameters tab...')
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
 
     if (WebUI.getAttribute(parametersButton, 'aria-pressed') != 'true') {

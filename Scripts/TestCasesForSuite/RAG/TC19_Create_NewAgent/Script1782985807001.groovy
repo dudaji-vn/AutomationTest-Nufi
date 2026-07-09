@@ -16,7 +16,7 @@ WebUI.comment('=== TC19: Create New Agent ===')
 try {
     // Step 0: Open Agent Builder
     WebUI.comment('Step 0: Open Agent Builder...')
-    TestObject btnAgentBuilder = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Agent Builder')
+    TestObject btnAgentBuilder = findTestObject('Object Repository/nav/nav_items/button_Agent Builder')
     WebUI.waitForElementVisible(btnAgentBuilder, 15)
     WebUI.click(btnAgentBuilder)
     WebUI.delay(2)
@@ -31,13 +31,13 @@ try {
 
     // Step 2: Input Name
     WebUI.comment('Step 2: Input Agent Name...')
-    TestObject inputName = findTestObject('Object Repository/Core Chat/nav/RAG/input__name')
+    TestObject inputName = findTestObject('Object Repository/nav/RAG/input__name')
     String agentName = "Auto_Test_Agent_" + System.currentTimeMillis()
     WebUI.setText(inputName, agentName)
 
     // Step 3: Select Category
     WebUI.comment('Step 3: Select Category...')
-    TestObject btnCategory = findTestObject('Object Repository/Core Chat/nav/RAG/button_selector_category')
+    TestObject btnCategory = findTestObject('Object Repository/nav/RAG/button_selector_category')
     WebUI.waitForElementVisible(btnCategory, 10)
     WebUI.click(btnCategory)
     WebUI.delay(1.5)
@@ -50,14 +50,14 @@ try {
 
     // Step 4: Switch to Model tab
     WebUI.comment('Step 4: Switch to Model tab...')
-    TestObject btnSelectModelTab = findTestObject('Object Repository/Core Chat/nav/RAG/button_Select a model')
+    TestObject btnSelectModelTab = findTestObject('Object Repository/nav/RAG/button_Select a model')
     WebUI.waitForElementVisible(btnSelectModelTab, 10)
     WebUI.click(btnSelectModelTab)
     WebUI.delay(2)
 
     // Step 5: Select Provider (Nufi)
     WebUI.comment('Step 5: Select Provider (Nufi)...')
-    TestObject btnProvider = findTestObject('Object Repository/Core Chat/nav/RAG/button_Select a provider')
+    TestObject btnProvider = findTestObject('Object Repository/nav/RAG/button_Select a provider')
     WebUI.waitForElementVisible(btnProvider, 10)
     WebUI.click(btnProvider)
     WebUI.delay(2)
@@ -70,20 +70,20 @@ try {
 
     // Step 6: Back to Builder (RẤT QUAN TRỌNG)
     WebUI.comment('Step 6: Back to Builder...')
-    TestObject btnBackToBuilder = findTestObject('Object Repository/Core Chat/nav/RAG/button_Back to builder')
+    TestObject btnBackToBuilder = findTestObject('Object Repository/nav/RAG/button_Back to builder')
     WebUI.waitForElementVisible(btnBackToBuilder, 10)
     WebUI.click(btnBackToBuilder)
     WebUI.delay(2)
 
     // Step 7: Create Agent
     WebUI.comment('Step 7: Click Create Agent...')
-    TestObject btnCreate = findTestObject('Object Repository/Core Chat/nav/RAG/button_Create')
+    TestObject btnCreate = findTestObject('Object Repository/nav/RAG/button_Create')
     WebUI.click(btnCreate)
     WebUI.delay(5)
 
     // Step 8: Verify success
     WebUI.comment('Step 8: Verify Agent created successfully...')
-    TestObject uploadBtn = findTestObject('Object Repository/Core Chat/nav/RAG/button_Upload for File Search')
+    TestObject uploadBtn = findTestObject('Object Repository/nav/RAG/button_Upload for File Search')
     
     if (WebUI.verifyElementPresent(uploadBtn, 15, FailureHandling.OPTIONAL)) {
         WebUI.comment('SUCCESS: Agent "' + agentName + '" created successfully!')

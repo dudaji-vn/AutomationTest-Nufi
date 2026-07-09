@@ -72,10 +72,10 @@ try {
     
     // Click Parameters button
     WebUI.waitForElementClickable(
-        findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters'),
+        findTestObject('Object Repository/nav/nav_items/button_Parameters'),
         10
     )
-    WebUI.click(findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters'))
+    WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Parameters'))
     WebUI.delay(2)
     WebUI.comment('Parameters panel opened')
 

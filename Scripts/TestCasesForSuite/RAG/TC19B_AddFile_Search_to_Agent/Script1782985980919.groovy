@@ -16,15 +16,15 @@ try {
     WebUI.click(findTestObject('Object Repository/Core Chat/nav/RAG/button_Open_Recent_Agent')) // chỉnh theo object thật
 
     WebUI.comment('Step 2: Enable File Search...')
-    TestObject checkbox = findTestObject('Object Repository/Core Chat/nav/RAG/button_File Search_file-search-checkbox')
+    TestObject checkbox = findTestObject('Object Repository/nav/RAG/button_File Search_file-search-checkbox')
     WebUI.click(checkbox)
 
     WebUI.comment('Step 3: Fill optional support contact...')
-    WebUI.setText(findTestObject('Object Repository/Core Chat/nav/RAG/input_Name_support-contact-name'), "Support Team")
-    WebUI.setText(findTestObject('Object Repository/Core Chat/nav/RAG/input_Email_support-contact-email'), "support@company.com")
+    WebUI.setText(findTestObject('Object Repository/nav/RAG/input_Name_support-contact-name'), "Support Team")
+    WebUI.setText(findTestObject('Object Repository/nav/RAG/input_Email_support-contact-email'), "support@company.com")
 
     WebUI.comment('Step 4: Upload files for long-term memory...')
-    WebUI.click(findTestObject('Object Repository/Core Chat/nav/RAG/button_Upload for File Search'))
+    WebUI.click(findTestObject('Object Repository/nav/RAG/button_Upload for File Search'))
     WebUI.delay(2)
     // Thực hiện upload file nếu cần
 

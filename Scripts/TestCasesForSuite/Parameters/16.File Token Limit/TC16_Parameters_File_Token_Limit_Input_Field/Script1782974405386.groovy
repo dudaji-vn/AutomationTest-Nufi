@@ -59,7 +59,7 @@ try {
     // ============================================================
     WebUI.comment('Step 1: Checking Parameters tab state...')
     
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
     
     String ariaLabel = WebUI.getAttribute(parametersButton, 'aria-label')
@@ -90,7 +90,7 @@ try {
     // ============================================================
     WebUI.comment('Step 2: Getting File Token Limit input field...')
     
-    TestObject inputField = findTestObject('Object Repository/Core Chat/nav/Parameter/input_File Token Limit')
+    TestObject inputField = findTestObject('Object Repository/nav/Parameter/input_File Token Limit')
     WebUI.waitForElementVisible(inputField, 10)
     WebUI.comment('File Token Limit input found')
 

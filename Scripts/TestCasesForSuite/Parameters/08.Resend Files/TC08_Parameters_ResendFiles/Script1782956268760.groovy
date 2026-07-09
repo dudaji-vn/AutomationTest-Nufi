@@ -35,16 +35,16 @@ try {
     }
     
     WebUI.waitForElementClickable(
-        findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters'),
+        findTestObject('Object Repository/nav/nav_items/button_Parameters'),
         10
     )
-    WebUI.click(findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters'))
+    WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Parameters'))
     WebUI.delay(2)
 
     // Step 2: Get Resend Files toggle
     WebUI.comment('Step 2: Getting Resend Files toggle...')
     
-    TestObject resendFilesToggle = findTestObject('Object Repository/Core Chat/nav/Parameter/button_Resend Files')
+    TestObject resendFilesToggle = findTestObject('Object Repository/nav/Parameter/button_Resend Files')
     WebUI.waitForElementVisible(resendFilesToggle, 10)
     WebUI.comment('Resend Files toggle found')
 

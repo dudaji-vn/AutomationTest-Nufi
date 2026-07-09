@@ -63,7 +63,7 @@ try {
 	// ============================================================
 	WebUI.comment('Step 1: Opening Parameters tab...')
 	
-	TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+	TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
 	WebUI.waitForElementVisible(parametersButton, 10)
 	
 	if (WebUI.getAttribute(parametersButton, 'aria-pressed') != 'true') {
@@ -84,7 +84,7 @@ try {
 	sliderThumb.addProperty('xpath', ConditionType.EQUALS,
 		"//span[contains(@id,'reasoning') or contains(@id,'Reasoning')]//span[@role='slider']")
 	
-	TestObject inputDisplay = findTestObject('Object Repository/Core Chat/nav/Parameter/input_Reasoning Effort')
+	TestObject inputDisplay = findTestObject('Object Repository/nav/Parameter/input_Reasoning Effort')
 	
 	WebUI.waitForElementVisible(sliderThumb, 10)
 	WebUI.waitForElementVisible(inputDisplay, 10)

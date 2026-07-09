@@ -45,7 +45,7 @@ try {
     // ============================================================
     WebUI.comment('Step 1: Opening Parameters tab...')
     
-    TestObject parametersButton = findTestObject('Object Repository/Core Chat/nav/nav_items/button_Parameters')
+    TestObject parametersButton = findTestObject('Object Repository/nav/nav_items/button_Parameters')
     WebUI.waitForElementVisible(parametersButton, 10)
     
     if (WebUI.getAttribute(parametersButton, 'aria-pressed') != 'true') {
@@ -62,7 +62,7 @@ try {
     // ============================================================
     WebUI.comment('Step 2: Getting Use Responses API toggle...')
     
-    TestObject useResponsesAPIToggle = findTestObject('Object Repository/Core Chat/nav/Parameter/button_Use Responses API')
+    TestObject useResponsesAPIToggle = findTestObject('Object Repository/nav/Parameter/button_Use Responses API')
     WebUI.waitForElementVisible(useResponsesAPIToggle, 10)
     WebUI.comment('Use Responses API toggle found')
 
