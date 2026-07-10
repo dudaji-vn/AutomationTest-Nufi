@@ -15,28 +15,28 @@
       <guid>79538448-e3b6-43cc-bcc9-03b08adaadcb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Fork/TC04_Fork_VisibleMessagesOnly</testCaseId>
+      <testCaseId>Test Cases/CHAT/FORK/CHAT_FORK_001_Visible_Messages_Only</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>481bfe2f-ec2f-47bb-8d31-882edeb1f39c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Fork/TC05_Fork_IncludeRelatedBranches</testCaseId>
+      <testCaseId>Test Cases/CHAT/FORK/CHAT_FORK_002_Include_Related_Branches</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>cbb58251-80f8-4729-bb07-33e05be5213a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Fork/TC06_Fork_IncludeFromHere</testCaseId>
+      <testCaseId>Test Cases/CHAT/FORK/CHAT_FORK_003_Include_From_Here</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>917c08c5-e01f-4a0c-b874-19b9455246ab</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Fork/TC07_Fork_StartForkHere</testCaseId>
+      <testCaseId>Test Cases/CHAT/FORK/CHAT_FORK_004_Start_Fork_Flows</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

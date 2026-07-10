@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_REGENERATE_002_Multiple</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b60911f7-e9ad-4c68-ac22-fff19a8b6765</testCaseGuid>
+</TestCaseEntity>

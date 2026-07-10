@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_SHARE_001_Create_Link</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a0285b52-f9d2-4249-84d5-1bae14f11777</testCaseGuid>
+</TestCaseEntity>

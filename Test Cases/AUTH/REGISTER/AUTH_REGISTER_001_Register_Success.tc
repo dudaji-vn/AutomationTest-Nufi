@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AUTH_REGISTER_001_Register_Success</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>40a20e22-9781-4d47-b65b-fa98bf2e505c</testCaseGuid>
+</TestCaseEntity>

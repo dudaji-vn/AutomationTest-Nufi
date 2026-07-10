@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_DISLIKE_006_Lacked_Useful_Info</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>90732b10-45de-4b90-9f2d-925b77d99e25</testCaseGuid>
+</TestCaseEntity>

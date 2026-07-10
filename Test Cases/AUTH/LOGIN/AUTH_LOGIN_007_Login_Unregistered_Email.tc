@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AUTH_LOGIN_007_Login_Unregistered_Email</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a7769657-a664-479a-928c-8829376f57c8</testCaseGuid>
+</TestCaseEntity>

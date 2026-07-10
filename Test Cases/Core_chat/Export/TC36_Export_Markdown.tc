@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC36_Export_Markdown</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>926332ab-6e87-4cdb-9ed8-b8691042b905</testCaseGuid>
-</TestCaseEntity>

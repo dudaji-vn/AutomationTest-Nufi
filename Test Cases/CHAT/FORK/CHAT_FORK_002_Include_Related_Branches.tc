@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test the fork action using the Include related branches option.</description>
+   <name>CHAT_FORK_002_Include_Related_Branches</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c7f2d1e4-9a4f-4a8e-8d72-db5cc5e70f96</testCaseGuid>
+</TestCaseEntity>

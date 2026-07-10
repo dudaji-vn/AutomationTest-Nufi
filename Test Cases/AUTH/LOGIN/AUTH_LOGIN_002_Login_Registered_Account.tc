@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify user can login to the platform using their self-registered account.</description>
+   <name>AUTH_LOGIN_002_Login_Registered_Account</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>372c436d-b3b5-4daf-a6ad-80f290607b53</testCaseGuid>
+</TestCaseEntity>

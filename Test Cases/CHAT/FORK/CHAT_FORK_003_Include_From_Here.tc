@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test the fork action using the Include all to/from here option.</description>
+   <name>CHAT_FORK_003_Include_From_Here</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>be28dd93-7ae0-41c5-94f3-9e7d219e3c44</testCaseGuid>
+</TestCaseEntity>

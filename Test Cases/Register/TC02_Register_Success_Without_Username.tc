@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC02_Register_Success_Without_Username</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>d7cc66a7-b872-4145-9b37-7df4c149c653</testCaseGuid>
-</TestCaseEntity>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Verify that a user who registered manually (via /register) can NOT log in using Google OAuth with the same email address</description>
-   <name>TC03_Login_ManualAccount_CannotLoginWithGoogle</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>1711e364-3144-4784-beb1-50dc01c65a7c</testCaseGuid>
-</TestCaseEntity>

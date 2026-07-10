@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC32_Navbar_ChatHistory</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>bd0c7db4-cb50-44b0-bb25-e5119f61fc52</testCaseGuid>
-</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_DISLIKE_008_Undislike_Flow</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2a755ff5-1bce-4975-8365-db70d6a08b8c</testCaseGuid>
+</TestCaseEntity>

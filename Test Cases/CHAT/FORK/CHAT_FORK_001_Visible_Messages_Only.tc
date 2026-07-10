@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test the fork action using the Visible messages only option.</description>
+   <name>CHAT_FORK_001_Visible_Messages_Only</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d3a1f46e-68ea-4f05-91fb-2f5d5bf0c4b2</testCaseGuid>
+</TestCaseEntity>

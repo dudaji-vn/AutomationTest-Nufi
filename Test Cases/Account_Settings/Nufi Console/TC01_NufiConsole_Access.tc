@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC01_NufiConsole_Access</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>65c71353-01fa-4de9-85b5-5e22063f8289</testCaseGuid>
-</TestCaseEntity>

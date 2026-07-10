@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_HISTORY_002_Select_From_History</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>afff5bec-ef3e-45f4-8c66-e79b7792f77a</testCaseGuid>
+</TestCaseEntity>

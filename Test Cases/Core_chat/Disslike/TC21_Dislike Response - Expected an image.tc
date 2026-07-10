@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC21_Dislike Response - Expected an image</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>39f41047-4551-4278-9942-a8666472c3ed</testCaseGuid>
-</TestCaseEntity>

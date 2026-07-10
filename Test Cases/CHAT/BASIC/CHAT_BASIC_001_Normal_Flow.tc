@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test normal chat with Gemini endpoint - select Gemini if needed and send chat messages</description>
+   <name>CHAT_BASIC_001_Normal_Flow</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d3e4f5g6-h7i8-4j9k-l0m1-n2o3p4q5r6s7</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_SHARE_005_Delete_Link</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d37cba03-0eca-4e4e-82c8-1f79b1cdbcc9</testCaseGuid>
+</TestCaseEntity>

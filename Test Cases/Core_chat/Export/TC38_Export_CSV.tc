@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC38_Export_CSV</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>083507d3-53d0-4e06-9fc8-7c78cd32043e</testCaseGuid>
-</TestCaseEntity>

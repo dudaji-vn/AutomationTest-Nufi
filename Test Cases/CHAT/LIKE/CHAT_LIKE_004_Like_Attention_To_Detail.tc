@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_LIKE_004_Like_Attention_To_Detail</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b63e01b9-1aaf-42ef-a4c1-92f0cd811aca</testCaseGuid>
+</TestCaseEntity>

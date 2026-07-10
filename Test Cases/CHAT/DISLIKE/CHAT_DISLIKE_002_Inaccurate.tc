@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_DISLIKE_002_Inaccurate</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>98b35e80-df1c-4105-a62a-b39e711d8db3</testCaseGuid>
+</TestCaseEntity>

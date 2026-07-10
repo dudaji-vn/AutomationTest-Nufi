@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC22_Dislike Response - Refused without reason</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>ee2acb3c-dab7-4da0-bbc8-d4408beb6b7a</testCaseGuid>
-</TestCaseEntity>

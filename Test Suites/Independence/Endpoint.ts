@@ -15,14 +15,14 @@
       <guid>1265cab2-a39b-4945-8430-0d8a3a9797fa</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Endpoint/TC01_Select_Gemini</testCaseId>
+      <testCaseId>Test Cases/MODEL/MODEL_ENDPOINT_001_Select_Gemini</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>a039a1a7-2779-49ca-b915-33fc864bd14c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Endpoint/TC02_Select_Nufi_Qwen</testCaseId>
+      <testCaseId>Test Cases/MODEL/MODEL_ENDPOINT_002_Select_Nufi_Qwen</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

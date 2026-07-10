@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC06_Login_at_least_8_characters</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>42f90e27-01b1-40ad-8416-fd4e58f67ada</testCaseGuid>
-</TestCaseEntity>

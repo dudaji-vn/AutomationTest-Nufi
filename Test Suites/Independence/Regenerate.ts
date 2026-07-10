@@ -15,14 +15,14 @@
       <guid>b3a5a0f1-dcbf-4c09-909c-ecb0e55b0244</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Regenerate/TC13_Regenerate Response</testCaseId>
+      <testCaseId>Test Cases/CHAT/REGENERATE/CHAT_REGENERATE_001_Response</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>0e40fa0b-618b-49d3-bee9-94d11deba641</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Regenerate/TC14_Regenerate Response Multiple Times</testCaseId>
+      <testCaseId>Test Cases/CHAT/REGENERATE/CHAT_REGENERATE_002_Multiple</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_READALOUD_002_Stop_Playback</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b4e6908d-b640-462b-8828-46a510d60a86</testCaseGuid>
+</TestCaseEntity>

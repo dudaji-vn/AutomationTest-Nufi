@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_SHARE_003_Refresh_Link</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c2278500-698b-40f8-a789-f257fe73cc5f</testCaseGuid>
+</TestCaseEntity>

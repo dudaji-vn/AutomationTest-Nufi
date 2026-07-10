@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Test the edit response flow in Core Chat.</description>
-   <name>TC03_Edit_Response</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>8b75a9d1-5f3e-4b4b-9c30-dce6b2e6f3c7</testCaseGuid>
-</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_EXPORT_001_Screenshot</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>dcbe4ffd-7a3f-46e6-97bd-a984edd3d9f8</testCaseGuid>
+</TestCaseEntity>

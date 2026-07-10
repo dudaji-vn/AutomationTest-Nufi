@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test selecting Nufi/Qwen endpoint by clicking My Agents button, selecting Qwen2.5-0.5B, and verifying it in span_Agents</description>
+   <name>MODEL_ENDPOINT_002_Select_Nufi_Qwen</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b2c3d4e5-f6g7-4h8i-j9k0-l1m2n3o4p5q6</testCaseGuid>
+</TestCaseEntity>

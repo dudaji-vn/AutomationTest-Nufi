@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CHAT_READALOUD_001_Response</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e1ba1fa0-6ddd-41a2-84ff-9efe527a4309</testCaseGuid>
+</TestCaseEntity>

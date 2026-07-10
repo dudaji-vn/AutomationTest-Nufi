@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MODEL_ENDPOINT_003_Select_Nufi_Llama</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4f8b24e5-329c-4bd5-b612-9926a8603e75</testCaseGuid>
+</TestCaseEntity>

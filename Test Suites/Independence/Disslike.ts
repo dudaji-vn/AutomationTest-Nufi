@@ -15,56 +15,56 @@
       <guid>50a8104e-1cc0-4ad4-b3b0-290a46620b96</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Disslike/TC18_Dislike Response - Didnt match my request</testCaseId>
+      <testCaseId>Test Cases/CHAT/DISLIKE/CHAT_DISLIKE_001_Mismatch</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>82f857d4-4219-4aaa-bd5f-3958680a6616</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Disslike/TC19_Dislike Response - Inaccurate or incorrect answer</testCaseId>
+      <testCaseId>Test Cases/CHAT/DISLIKE/CHAT_DISLIKE_002_Inaccurate</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>2f0e9975-8557-48c7-b8bb-2612b8fbe99d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Disslike/TC20_Dislike Response - Poor style or tone</testCaseId>
+      <testCaseId>Test Cases/CHAT/DISLIKE/CHAT_DISLIKE_003_Poor_Style</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>7aae2afb-70c9-4374-b9f9-79e78e533029</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Disslike/TC21_Dislike Response - Expected an image</testCaseId>
+      <testCaseId>Test Cases/CHAT/DISLIKE/CHAT_DISLIKE_004_Expected_Image</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>142d5f3c-d288-43b8-bada-28f15ac561d1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Disslike/TC22_Dislike Response - Refused without reason</testCaseId>
+      <testCaseId>Test Cases/CHAT/DISLIKE/CHAT_DISLIKE_005_Refused_Without_Reason</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>3b026d2c-3c59-4f7a-8dc6-0cc1a5464ced</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Disslike/TC23_Dislike Response - Lacked useful information</testCaseId>
+      <testCaseId>Test Cases/CHAT/DISLIKE/CHAT_DISLIKE_006_Lacked_Useful_Info</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>c96d1d31-8ca9-445a-a4b4-c751332b15bf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Disslike/TC24_Dislike Response - Other issue</testCaseId>
+      <testCaseId>Test Cases/CHAT/DISLIKE/CHAT_DISLIKE_007_Other_Issue</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>6642c40e-076e-43e8-ab00-f27737dfd837</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Disslike/TC25_Undislike Response</testCaseId>
+      <testCaseId>Test Cases/CHAT/DISLIKE/CHAT_DISLIKE_008_Undislike_Flow</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

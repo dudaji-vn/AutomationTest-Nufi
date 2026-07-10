@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Test selecting Gemini endpoint by clicking My Agents button, selecting Gemini, and verifying it in span_Agents</description>
-   <name>TC01_Select_Gemini</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>a1b2c3d4-e5f6-4g7h-i8j9-k0l1m2n3o4p5</testCaseGuid>
-</TestCaseEntity>

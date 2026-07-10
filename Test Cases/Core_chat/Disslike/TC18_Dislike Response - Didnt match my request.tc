@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC18_Dislike Response - Didnt match my request</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>3e08409a-5315-48c5-92a4-73e6f5e94379</testCaseGuid>
-</TestCaseEntity>

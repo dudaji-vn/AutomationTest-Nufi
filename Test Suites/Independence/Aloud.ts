@@ -15,21 +15,21 @@
       <guid>eee5b003-77d5-46c6-a8f5-48ab27696c0a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Aloud/TC15_Read Aloud Response</testCaseId>
+      <testCaseId>Test Cases/CHAT/READALOUD/CHAT_READALOUD_001_Response</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>96faa50f-7783-40c8-a221-0f7bf8ceeed1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Aloud/TC16_Read Aloud and Stop</testCaseId>
+      <testCaseId>Test Cases/CHAT/READALOUD/CHAT_READALOUD_002_Stop_Playback</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>0b108a92-afcc-4698-8203-a51f9464f2e8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Core_chat/Aloud/TC17_Read Aloud User Message</testCaseId>
+      <testCaseId>Test Cases/CHAT/READALOUD/CHAT_READALOUD_003_User_Message</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

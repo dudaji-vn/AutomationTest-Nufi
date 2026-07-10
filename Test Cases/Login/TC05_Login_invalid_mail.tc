@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC05_Login_invalid_mail</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>09b3768b-afbf-4728-80f3-aad33b998e7a</testCaseGuid>
-</TestCaseEntity>
