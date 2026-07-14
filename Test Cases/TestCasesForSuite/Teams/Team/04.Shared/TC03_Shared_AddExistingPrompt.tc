@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03_Shared_AddExistingPrompt</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>40bc0f7d-d784-45dd-acab-95cd5898b5e3</testCaseGuid>
+</TestCaseEntity>

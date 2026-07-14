@@ -35,8 +35,8 @@ try {
     int screenWidth = (Integer) WebUI.executeJavaScript(script, null)
     WebUI.comment('Screen width: ' + screenWidth + 'px')
     
-    if (screenWidth < 760) {
-        WebUI.comment('Screen width < 760px, ensuring navbar is open...')
+    if (screenWidth <= 768) {
+        WebUI.comment('Screen width <= 768px, ensuring navbar is open...')
         
         TestObject navSidebar = new TestObject('navSidebar')
         navSidebar.addProperty('xpath', ConditionType.EQUALS, "//nav")

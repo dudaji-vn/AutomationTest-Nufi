@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_Teams_OwnerTransferOwnership_Confirm</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>23b3d0b8-d31b-450e-98d5-4cc513f605c9</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01A_Create_NewAgent_with_Avatar</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>577114b0-4453-4d53-a30f-bcccbd164785</testCaseGuid>
+</TestCaseEntity>

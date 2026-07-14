@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC17_Teams_OwnerRemovesMember_Confirm</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>7fe4371b-cb5c-43c7-b43a-9ff71db40aca</testCaseGuid>
-</TestCaseEntity>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC08_Team_DeleteTeam</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>1f3eb32a-bfda-40ea-a86e-c2a0ccac2e31</testCaseGuid>
-</TestCaseEntity>

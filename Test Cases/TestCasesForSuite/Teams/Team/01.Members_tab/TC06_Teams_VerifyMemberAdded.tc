@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC06_Teams_VerifyMemberAdded</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>944ecf68-3e42-446a-891f-ac7f184f54ca</testCaseGuid>
+</TestCaseEntity>

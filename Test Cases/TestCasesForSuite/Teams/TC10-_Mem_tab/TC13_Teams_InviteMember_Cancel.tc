@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC13_Teams_InviteMember_Cancel</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>8b96a1b2-5307-4269-adef-d15532f37189</testCaseGuid>
-</TestCaseEntity>

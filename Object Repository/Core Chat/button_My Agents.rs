@@ -6,12 +6,12 @@
    <elementGuidId>84fc7bf0-8fc4-4c2b-b389-60a966c1070d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@type = 'button' and (text() = 'My Agents' or . = 'My Agents')]</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//button[@id=':rj:']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[@aria-label = 'Select a model']</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -27,12 +27,12 @@
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>1c14fe97-c7a3-4fa1-9d83-7ebfb8de3d04</webElementGuid>
+      <webElementGuid>09eaf088-b6e1-4098-a5ad-9175be8d87f3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -40,15 +40,15 @@
       <name>class</name>
       <type>Main</type>
       <value>cursor-pointer flex h-10 w-full items-center justify-center gap-2 rounded-xl border border-border-light px-3 py-2 text-sm text-text-primary bg-presentation hover:bg-surface-active-alt my-1 flex h-9 w-full max-w-[70vw] items-center justify-center gap-2 rounded-xl border border-border-light bg-presentation px-3 py-2 text-sm text-text-primary hover:bg-surface-active-alt</value>
-      <webElementGuid>b11bc783-6d72-4e9d-8cb4-36c580e29948</webElementGuid>
+      <webElementGuid>65035de2-4eeb-4e25-8ced-5004ccea53f4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>aria-label</name>
       <type>Main</type>
       <value>Select a model</value>
-      <webElementGuid>4542160a-0158-4a09-87f0-7eaeca8b7082</webElementGuid>
+      <webElementGuid>8618cde5-aa8d-4dd0-add0-bab4cbcbe94f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -56,7 +56,7 @@
       <name>aria-expanded</name>
       <type>Main</type>
       <value>false</value>
-      <webElementGuid>915e9f6e-1d73-4b40-a0b4-80060c500112</webElementGuid>
+      <webElementGuid>96b77543-42e8-41e8-becf-ddab897b0c0b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -64,7 +64,7 @@
       <name>aria-haspopup</name>
       <type>Main</type>
       <value>menu</value>
-      <webElementGuid>84d41c18-7279-44da-a0a1-cc89d94bdd8e</webElementGuid>
+      <webElementGuid>54f89962-2feb-4d77-9dd4-738d62483659</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -72,23 +72,23 @@
       <name>id</name>
       <type>Main</type>
       <value>:rj:</value>
-      <webElementGuid>c9d05270-fb8b-4a76-b0ca-d2d2ae6a3705</webElementGuid>
+      <webElementGuid>e1bd3603-9a30-49a1-a522-11ae9f3c4cee</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>f0dcf703-811b-406b-af10-4a2b66a8c17d</webElementGuid>
+      <webElementGuid>259871dc-6dee-42cd-b0d2-f201728096f2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
       <value>My Agents</value>
-      <webElementGuid>bd85829a-06d4-47d7-ad5f-25dc5e98978d</webElementGuid>
+      <webElementGuid>0e15a05b-6e97-4324-9fdb-3714bcaf0660</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -96,7 +96,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;:rj:&quot;)</value>
-      <webElementGuid>565f94eb-4197-4e58-9df5-88997e29965e</webElementGuid>
+      <webElementGuid>c939d388-1e6c-4b0e-8664-9b1e40b7dfff</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -104,7 +104,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//button[@id=':rj:']</value>
-      <webElementGuid>bdfc1ddc-6cac-40d1-b925-439d19461341</webElementGuid>
+      <webElementGuid>7df091d6-98b0-4bfa-883f-7e4e3eca6bf2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -112,7 +112,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='messages-view']/div/main/div/div/div/div/div/div/button</value>
-      <webElementGuid>9715bc39-f7e6-42bb-be1a-ca3067e2e51d</webElementGuid>
+      <webElementGuid>b1954ce8-023f-4fab-8489-bb3765141427</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -120,7 +120,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Initial Greeting'])[1]/following::button[2]</value>
-      <webElementGuid>7a79e8c8-c520-4df0-ab66-a0750cfbda5d</webElementGuid>
+      <webElementGuid>3c5e5780-e28f-4158-8e4b-ad76785adf67</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -128,7 +128,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='cô giáo em'])[1]/following::button[2]</value>
-      <webElementGuid>fb88fb35-b74e-4881-b38c-2394e1609679</webElementGuid>
+      <webElementGuid>216809e9-2a19-40fd-8592-a5305aee165a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -136,7 +136,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Welcome to Nufi Chat.'])[1]/preceding::button[3]</value>
-      <webElementGuid>18051df0-8675-4001-9022-81e43fba10e8</webElementGuid>
+      <webElementGuid>8c76e4ae-c2af-4993-995a-c1e70c393455</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -144,7 +144,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//main/div/div/div/div/div/div/button</value>
-      <webElementGuid>63f10050-e49e-42ba-ba57-2afbf3b73bf3</webElementGuid>
+      <webElementGuid>ef6db5aa-44b8-4e45-bf75-58c4caa1c832</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -152,6 +152,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//button[@id = ':rj:' and @type = 'button' and (text() = 'My Agents' or . = 'My Agents')]</value>
-      <webElementGuid>0684b19f-f956-477e-a724-5ab27b98ff3c</webElementGuid>
+      <webElementGuid>c85b3359-8e16-490b-b971-00920ca70727</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

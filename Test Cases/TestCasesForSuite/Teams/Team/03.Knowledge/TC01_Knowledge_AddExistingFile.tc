@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_Knowledge_AddExistingFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f3ef856d-c2e8-4f9c-b414-f7ebff4eeb36</testCaseGuid>
+</TestCaseEntity>

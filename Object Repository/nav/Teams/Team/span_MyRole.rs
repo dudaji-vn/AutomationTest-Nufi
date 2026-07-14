@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_MyRole</name>
+   <tag></tag>
+   <elementGuidId>5ff8ec1a-38aa-4841-8f09-232ad8d66dd7</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[./button[@aria-label='Teams']]//span[contains(@class, 'rounded-full')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>3a736d00-0230-4be8-91a6-f34d225803be</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>rounded-full bg-surface-tertiary px-2 py-0.5 text-xs font-medium text-text-secondary</value>
+      <webElementGuid>06ef65f5-388b-4274-8f3f-e419a9bbadc1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Admin</value>
+      <webElementGuid>2f087ee2-1101-4b42-a653-0bc62b77fa29</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;flex&quot;]/div[@class=&quot;relative z-0 flex h-full w-full overflow-hidden&quot;]/div[@class=&quot;relative flex h-full max-w-full flex-1 flex-col overflow-hidden&quot;]/div[@class=&quot;flex h-full w-full flex-col overflow-y-auto bg-presentation&quot;]/div[@class=&quot;mx-auto w-full max-w-5xl px-4 py-6 sm:px-6&quot;]/div[@class=&quot;flex flex-col gap-6&quot;]/div[@class=&quot;flex items-center gap-3&quot;]/div[@class=&quot;flex items-center gap-3&quot;]/div[@class=&quot;flex items-center gap-2&quot;]/span[@class=&quot;rounded-full bg-surface-tertiary px-2 py-0.5 text-xs font-medium text-text-secondary&quot;]</value>
+      <webElementGuid>0edfbdcb-a235-4206-aebc-bd93c73ca41d</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div/div/div/div/div/div/div/div[2]/span</value>
+      <webElementGuid>3b279247-51f1-4c55-9ebd-33455b804245</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Test Team 1783478184618'])[1]/following::span[1]</value>
+      <webElementGuid>7b9c352f-9638-4879-87e8-22f0b902eae4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Filter bookmarks...'])[1]/following::span[1]</value>
+      <webElementGuid>1b0b0e18-3057-4160-976e-4d77ab4de3fc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Members'])[1]/preceding::span[1]</value>
+      <webElementGuid>fa55389e-2fee-496d-80ca-d98f9d80f0f7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Invites'])[1]/preceding::span[1]</value>
+      <webElementGuid>ab1d3f84-7790-4fc8-9127-12b5ff3a6273</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Admin']/parent::*</value>
+      <webElementGuid>dcf7785c-0457-43ec-b381-6f4090f10091</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span</value>
+      <webElementGuid>165662ce-de68-42f7-9392-f583963a8b4b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Admin' or . = 'Admin')]</value>
+      <webElementGuid>ba4fa85f-4499-4349-b960-3510139e8c4d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

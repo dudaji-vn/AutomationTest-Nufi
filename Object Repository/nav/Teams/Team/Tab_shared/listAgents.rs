@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>listAgents</name>
+   <tag></tag>
+   <elementGuidId>e1ce92bd-9751-4e87-9d98-3314ae61d772</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='radix-:rl:-content-shared']/div/section/ul</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>ul.flex.flex-col.gap-2</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>ul</value>
+      <webElementGuid>b459911b-be28-4779-8712-82af41895a9c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex flex-col gap-2</value>
+      <webElementGuid>61458bc4-35ed-4c2f-8286-d1f2d9f66516</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>fileWhole teamLuna ‎file 2Whole team</value>
+      <webElementGuid>64c668ba-8ce2-4e15-899c-284e83194737</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;radix-:rl:-content-shared&quot;)/div[@class=&quot;flex flex-col gap-6&quot;]/section[@class=&quot;flex flex-col gap-3&quot;]/ul[@class=&quot;flex flex-col gap-2&quot;]</value>
+      <webElementGuid>24632bc7-95db-4a34-9753-79e2b76a9594</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='radix-:rl:-content-shared']/div/section/ul</value>
+      <webElementGuid>0508686d-e274-4736-ab45-a1b703bcfa55</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Add agent'])[1]/following::ul[1]</value>
+      <webElementGuid>4f981cba-51b4-4059-852e-92c0c447c19c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Agents'])[1]/following::ul[1]</value>
+      <webElementGuid>9607914d-68c5-41f3-b90f-7e8f1bf75681</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//ul</value>
+      <webElementGuid>ab0414b3-ca01-4ebd-8b32-bc7f4832af48</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//ul[(text() = 'fileWhole teamLuna ‎file 2Whole team' or . = 'fileWhole teamLuna ‎file 2Whole team')]</value>
+      <webElementGuid>aca843ac-c278-4ff2-8664-def67f23f95b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

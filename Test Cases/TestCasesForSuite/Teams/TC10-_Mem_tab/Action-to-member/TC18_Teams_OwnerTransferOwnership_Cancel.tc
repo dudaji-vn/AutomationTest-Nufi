@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC18_Teams_OwnerTransferOwnership_Cancel</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>ef0fc1cb-283f-47c5-8d6e-2f7818926f18</testCaseGuid>
-</TestCaseEntity>

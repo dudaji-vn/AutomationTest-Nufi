@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC11_Teams_InviteMember_Validation</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>85f35dfa-74c2-43f9-916f-d111ccc84ff5</testCaseGuid>
-</TestCaseEntity>

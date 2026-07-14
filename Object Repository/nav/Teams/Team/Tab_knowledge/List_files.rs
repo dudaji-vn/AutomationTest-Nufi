@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>List_files</name>
+   <tag></tag>
+   <elementGuidId>157fbd5c-4596-4620-aae0-c1bd5abc0ce2</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='radix-:rl:-content-knowledge']/section/ul</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>ul.flex.flex-col.gap-2</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>ul</value>
+      <webElementGuid>a2b66531-754a-4d58-9677-3d89157b4c2d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex flex-col gap-2</value>
+      <webElementGuid>66675303-4274-4d9a-b14c-10a75df30cbb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>sample.docx35.8 KBapplication/vnd.openxmlformats-officedocument.wordprocessingml.documentWhole teamsample.pdf1.7 KBapplication/pdfWhole team</value>
+      <webElementGuid>32be0d45-c8f6-48ed-abe1-f47a8b15893b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;radix-:rl:-content-knowledge&quot;)/section[@class=&quot;flex flex-col gap-4&quot;]/ul[@class=&quot;flex flex-col gap-2&quot;]</value>
+      <webElementGuid>d4ca859b-af55-4b95-90bc-7c6804ccc176</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='radix-:rl:-content-knowledge']/section/ul</value>
+      <webElementGuid>b3486e36-0fe1-4ded-966c-6125cf968146</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Add file'])[1]/following::ul[1]</value>
+      <webElementGuid>b2414581-729c-4f60-a651-e4662ae5d121</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Groups'])[1]/following::ul[1]</value>
+      <webElementGuid>4520a5f8-90a9-49d1-a79e-92f4722be9a3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//ul</value>
+      <webElementGuid>14e6be83-b2dc-4548-afcb-082f746cd328</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//ul[(text() = 'sample.docx35.8 KBapplication/vnd.openxmlformats-officedocument.wordprocessingml.documentWhole teamsample.pdf1.7 KBapplication/pdfWhole team' or . = 'sample.docx35.8 KBapplication/vnd.openxmlformats-officedocument.wordprocessingml.documentWhole teamsample.pdf1.7 KBapplication/pdfWhole team')]</value>
+      <webElementGuid>e19d447c-8b1b-40e0-99df-2b3626d4a4c0</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC20_Teams_OwnerChangeRole</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>06767096-c0cf-406b-acd8-4e2efa850eb4</testCaseGuid>
-</TestCaseEntity>

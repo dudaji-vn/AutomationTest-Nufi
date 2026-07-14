@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_Shared_UnsharedAgent</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a097ae1a-fd3a-4e1b-a62f-9195565a4510</testCaseGuid>
+</TestCaseEntity>

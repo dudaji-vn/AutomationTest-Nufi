@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_Shared_UnsharedPrompt</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>59e2d337-a6ad-4998-9741-7d8d7742c3e9</testCaseGuid>
+</TestCaseEntity>

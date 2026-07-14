@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC07C_Teams_SelectExistingTeam_byRole</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ab409ca7-ee54-452a-b8e2-1ad0f738c025</testCaseGuid>
+</TestCaseEntity>

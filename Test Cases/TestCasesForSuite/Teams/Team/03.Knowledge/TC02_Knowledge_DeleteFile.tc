@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_Knowledge_DeleteFile</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>903fc896-23e5-44f0-ac6d-b0196f7ad441</testCaseGuid>
+</TestCaseEntity>

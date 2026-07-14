@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_Invites_RevokeMember</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>88ec7465-e213-45f1-81c5-961cd1cf9c6a</testCaseGuid>
+</TestCaseEntity>

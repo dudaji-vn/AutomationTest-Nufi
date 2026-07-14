@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>listPromts</name>
+   <tag></tag>
+   <elementGuidId>4fd19745-5f7a-44fe-81cd-0770a0c9a54b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='radix-:rh3:-content-shared']/div/section[2]/ul</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>ul</value>
+      <webElementGuid>e2efee22-8839-414c-9fd0-4338a9140498</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex flex-col gap-2</value>
+      <webElementGuid>d3b3cf8e-c530-40c5-b0e6-1629cafd0e6b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>4 test groupWhole teamheheheheWhole team</value>
+      <webElementGuid>2b165f3f-b79a-4f92-b9ce-a4111e30b93f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;radix-:rh3:-content-shared&quot;)/div[@class=&quot;flex flex-col gap-6&quot;]/section[@class=&quot;flex flex-col gap-3&quot;]/ul[@class=&quot;flex flex-col gap-2&quot;]</value>
+      <webElementGuid>acb96063-ab6e-4e49-9c68-5395add6f0de</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='radix-:rh3:-content-shared']/div/section[2]/ul</value>
+      <webElementGuid>dc09c435-8295-4aed-aff5-3120fb9929de</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Add prompt'])[1]/following::ul[1]</value>
+      <webElementGuid>7384963d-de90-4f6b-8136-9d59f2dbbfbf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Prompts'])[1]/following::ul[1]</value>
+      <webElementGuid>dcc94f6e-0ae2-4cd9-89bf-1ef4dd359c03</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//section[2]/ul</value>
+      <webElementGuid>4f06d1bc-e98b-4875-9932-904352cc3bfd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//ul[(text() = '4 test groupWhole teamheheheheWhole team' or . = '4 test groupWhole teamheheheheWhole team')]</value>
+      <webElementGuid>92c41287-7efd-4a89-992c-8caf4cd64a8b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

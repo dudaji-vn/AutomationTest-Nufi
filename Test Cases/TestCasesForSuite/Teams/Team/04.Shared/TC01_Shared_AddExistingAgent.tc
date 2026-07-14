@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_Shared_AddExistingAgent</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>94e6308f-5a95-4af0-b7ca-7e5fad4f7c1d</testCaseGuid>
+</TestCaseEntity>

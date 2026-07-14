@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01B_AddFile_Search_to_Agent</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5607a57f-9f15-40d4-98f8-0511f4c7c65b</testCaseGuid>
+</TestCaseEntity>
