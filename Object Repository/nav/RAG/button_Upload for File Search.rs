@@ -13,8 +13,12 @@
          <key>XPATH</key>
          <value>(//button[@type='button'])[17]</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'button' and (text() = 'Upload for File Search' or . = 'Upload for File Search')]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
@@ -29,7 +33,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>cfd84d1c-db4d-4719-a736-c7441fc7c6d4</webElementGuid>
+      <webElementGuid>2b15dc4b-4e0f-4bed-aa06-0607348b44e3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -37,7 +41,7 @@
       <name>type</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>224b4aac-bd12-4406-83d6-c77c632c32e6</webElementGuid>
+      <webElementGuid>b6545d73-9739-4a3f-82d5-5a080d372630</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -45,7 +49,7 @@
       <name>class</name>
       <type>Main</type>
       <value>btn btn-neutral border-token-border-light relative h-9 w-full rounded-lg text-sm font-medium</value>
-      <webElementGuid>14d7c1bd-2630-44c7-88ab-f822a4413747</webElementGuid>
+      <webElementGuid>b5e96451-1d7d-4aa9-b9ec-484797ce23e6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -53,7 +57,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Upload for File Search</value>
-      <webElementGuid>aba8ac2c-b15b-420b-a246-ba7c5a15f36d</webElementGuid>
+      <webElementGuid>c37f13c9-490f-4ee7-8a81-7836add377b1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -61,7 +65,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;root&quot;)/div[@class=&quot;flex&quot;]/div[@class=&quot;relative z-0 flex h-full w-full overflow-hidden&quot;]/div[@class=&quot;fixed left-0 top-0 z-[110] flex h-full bg-surface-primary-alt translate-x-0&quot;]/nav[@class=&quot;min-h-0 flex-1 overflow-hidden bg-surface-primary-alt&quot;]/div[@class=&quot;flex h-full min-h-0 flex-col overflow-y-auto overflow-x-hidden text-text-primary&quot;]/form[@class=&quot;scrollbar-gutter-stable flex flex-1 flex-col px-3 pb-3 pt-2&quot;]/div[@class=&quot;flex-1&quot;]/div[@class=&quot;h-auto pt-1&quot;]/div[@class=&quot;mb-4 flex w-full flex-col items-start gap-3&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;flex flex-col gap-3&quot;]/div[1]/button[@class=&quot;btn btn-neutral border-token-border-light relative h-9 w-full rounded-lg text-sm font-medium&quot;]</value>
-      <webElementGuid>16cddbea-36f1-44b0-baf2-b2f1aa5d4449</webElementGuid>
+      <webElementGuid>c5a2efe8-5a94-4dc5-9b3e-3aaf3d8eb203</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -69,7 +73,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>(//button[@type='button'])[17]</value>
-      <webElementGuid>aaff1719-d85c-43bd-bc1f-b9236ae87e98</webElementGuid>
+      <webElementGuid>d83cffdf-b509-4a79-ac9d-d4ea3974a9a4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -77,7 +81,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='root']/div/div/div/nav/div/form/div/div[2]/div[6]/div/div[3]/div/button</value>
-      <webElementGuid>4619644f-a43d-4561-ad22-a12280eb637f</webElementGuid>
+      <webElementGuid>eb7ba920-04c6-43bf-9d92-a8b10c6b9673</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -85,7 +89,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Enable File Search'])[1]/following::button[2]</value>
-      <webElementGuid>2517352f-2ab7-4480-bc86-fe4d57aef6ce</webElementGuid>
+      <webElementGuid>685f2c78-ba1d-4384-b29a-ca1215887622</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -93,7 +97,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='File Search'])[1]/following::button[3]</value>
-      <webElementGuid>d1ab8d0f-4631-4533-a903-9a35e0f4f26e</webElementGuid>
+      <webElementGuid>3013e0c4-3525-458f-9478-578302724d19</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -101,7 +105,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Agent must be created before uploading files for File Search.'])[1]/preceding::button[1]</value>
-      <webElementGuid>c5353ebe-5f60-42c6-9f13-a6d922349226</webElementGuid>
+      <webElementGuid>9470b325-c183-46b2-97a3-587e167bf5d1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -109,7 +113,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[6]/div/div[3]/div/button</value>
-      <webElementGuid>75fdaea0-a877-42e4-8744-025ff72b50a3</webElementGuid>
+      <webElementGuid>5c2ecffb-0b0d-4c5e-815b-17f527a3e075</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -117,6 +121,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//button[@type = 'button' and (text() = 'Upload for File Search' or . = 'Upload for File Search')]</value>
-      <webElementGuid>e3a19877-2f65-4bf4-aec2-dfc83c7c66a1</webElementGuid>
+      <webElementGuid>afd22823-c0ad-4bbe-8eae-3cdebb09ebcb</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

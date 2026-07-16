@@ -53,15 +53,32 @@ try {
     WebUI.comment('Max Context Tokens input field found')
 
     // === MESSAGE ELEMENTS ===
-    TestObject lastMessage = new TestObject('last_message')
-    lastMessage.addProperty('xpath', ConditionType.EQUALS, "(//div[contains(@class,'message-content')])[last()]")
+    // Lấy message AI cuối cùng (không phải message user)
+    TestObject lastAIMessage = new TestObject('lastAIMessage')
+    lastAIMessage.addProperty('xpath', ConditionType.EQUALS, 
+        "(//div[contains(@class,'message-content') and not(contains(@class,'user-message'))])[last()]")
     
+    // Container của message AI cuối cùng
+    TestObject lastAIContainer = new TestObject('lastAIContainer')
+    lastAIContainer.addProperty('xpath', ConditionType.EQUALS, 
+        "(//div[contains(@class,'message-content') and not(contains(@class,'user-message'))])[last()]/ancestor::div[contains(@class,'message')]")
+    
+    // === REGENERATE BUTTON - CÁCH 1: Tìm theo title trong container action buttons ===
     TestObject regenerateButton = new TestObject('regenerate_button')
     regenerateButton.addProperty('xpath', ConditionType.EQUALS,
-        "(//div[contains(@class,'message-content')])[last()]/ancestor::div[contains(@class,'message')]//button[@title='Regenerate']")
+        "(//div[contains(@class,'message-content') and not(contains(@class,'user-message'))])[last()]/following::div[contains(@class,'mt-1')]//button[@title='Regenerate']")
+    
+    // === REGENERATE BUTTON - CÁCH 2: Tìm trực tiếp (dự phòng) ===
+    TestObject regenerateButtonSimple = new TestObject('regenerate_button_simple')
+    regenerateButtonSimple.addProperty('xpath', ConditionType.EQUALS,
+        "//button[@title='Regenerate']")
     
     TestObject thinkingIndicator = new TestObject('thinking_indicator')
     thinkingIndicator.addProperty('xpath', ConditionType.EQUALS, "//span[contains(@class,'result-thinking')]")
+    
+    // === CLICK OUTSIDE ELEMENT (to trigger onblur and close popups) ===
+    TestObject clickOutside = new TestObject('clickOutside')
+    clickOutside.addProperty('xpath', ConditionType.EQUALS, "//body")
 
     // ================== HELPER FUNCTIONS ==================
     def setValueAndBlur = { String value ->
@@ -72,7 +89,7 @@ try {
         // Type new value
         WebUI.sendKeys(inputField, value)
         // Trigger onblur by clicking outside
-        WebUI.clickOffset(inputField, 250, 0)
+        WebUI.click(clickOutside)
         WebUI.delay(1.2)
     }
 
@@ -86,12 +103,52 @@ try {
             return false
         }
     }
+    
+    def hoverOnLastAIMessage = {
+        WebUI.comment('Hovering on last AI message to show action buttons...')
+        WebUI.scrollToElement(lastAIContainer, 1)
+        WebUI.mouseOver(lastAIContainer)
+        WebUI.delay(1.5)  // Tăng thời gian để button hiển thị
+        WebUI.comment('✓ Hover completed')
+    }
+    
+    def waitForRegenerateButtonAndClick = {
+        WebUI.comment('Waiting for Regenerate button to be clickable...')
+        
+        // Thử XPath chính xác trước
+        boolean buttonFound = WebUI.waitForElementClickable(regenerateButton, 5, FailureHandling.OPTIONAL)
+        
+        // Nếu không tìm thấy, thử XPath đơn giản hơn
+        if (!buttonFound) {
+            WebUI.comment('Primary XPath not found, trying simple XPath...')
+            buttonFound = WebUI.waitForElementClickable(regenerateButtonSimple, 5, FailureHandling.OPTIONAL)
+            if (buttonFound) {
+                WebUI.comment('✓ Found regenerate button with simple XPath')
+                WebUI.click(regenerateButtonSimple)
+            } else {
+                KeywordUtil.markFailed('Regenerate button not found with either XPath')
+                return
+            }
+        } else {
+            WebUI.comment('✓ Found regenerate button with primary XPath')
+            WebUI.click(regenerateButton)
+        }
+        
+        WebUI.comment('✓ Regenerate button clicked')
+    }
+    
+    def waitForResponseComplete = {
+        WebUI.comment('Waiting for response to complete...')
+        WebUI.waitForElementNotVisible(thinkingIndicator, 30)
+        WebUI.delay(2)
+        WebUI.comment('✓ Response completed')
+    }
 
     // === TEST 1: MIN VALUE (50) ===
     WebUI.comment('=== Test 1: Set minimum value (50) and verify ===')
     setValueAndBlur("50")
     verifyValue("50", "Min value test")
-    WebUI.takeScreenshot('TC17_MaxContextTokens_Min_Input.png')
+    WebUI.takeScreenshot('TC05_MaxContextTokens_Min_Input.png')
 
     // Send message with min value
     WebUI.comment('Sending test message with min Max Context Tokens (50)...')
@@ -99,26 +156,27 @@ try {
     CustomKeywords.'keywords.ChatKeywords.sendMessageAndVerifyResponse'(testMessage)
     WebUI.delay(2)
     
-    String responseMin = WebUI.getText(lastMessage)
+    String responseMin = WebUI.getText(lastAIMessage)
     WebUI.comment('Response with min context (50): Length: ' + responseMin.length() + ' chars')
-    WebUI.takeScreenshot('TC17_MaxContextTokens_Min_Response.png')
+    WebUI.takeScreenshot('TC05_MaxContextTokens_Min_Response.png')
 
     // === TEST 2: MAX VALUE (1000) ===
     WebUI.comment('=== Test 2: Set maximum value (1000) and verify ===')
     setValueAndBlur("1000")
     verifyValue("1000", "Max value test")
-    WebUI.takeScreenshot('TC17_MaxContextTokens_Max_Input.png')
+    WebUI.takeScreenshot('TC05_MaxContextTokens_Max_Input.png')
 
+    // Hover to show regenerate button
+    hoverOnLastAIMessage()
+    
     // Regenerate with max value
     WebUI.comment('Regenerating with max Max Context Tokens (1000)...')
-    WebUI.waitForElementClickable(regenerateButton, 10)
-    WebUI.click(regenerateButton)
-    WebUI.waitForElementNotVisible(thinkingIndicator, 30)
-    WebUI.delay(2)
+    waitForRegenerateButtonAndClick()
+    waitForResponseComplete()
     
-    String responseMax = WebUI.getText(lastMessage)
+    String responseMax = WebUI.getText(lastAIMessage)
     WebUI.comment('Response with max context (1000): Length: ' + responseMax.length() + ' chars')
-    WebUI.takeScreenshot('TC17_MaxContextTokens_Max_Response.png')
+    WebUI.takeScreenshot('TC05_MaxContextTokens_Max_Response.png')
 
     // === TEST 3: INVALID INPUT (NON-NUMERIC) -> SHOULD SHOW NaN ===
     WebUI.comment('=== Test 3: Invalid input (non-numeric) -> should show NaN ===')
@@ -133,8 +191,8 @@ try {
         WebUI.sendKeys(inputField, Keys.chord(Keys.CONTROL, "a"))
         WebUI.sendKeys(inputField, invalid)
 
-        // Trigger onblur
-        WebUI.clickOffset(inputField, 250, 0)
+        // Trigger onblur by clicking outside
+        WebUI.click(clickOutside)
         WebUI.delay(1.5)
 
         // Check value after blur - should be NaN
@@ -147,7 +205,7 @@ try {
             KeywordUtil.markFailed("FAILED: Invalid input '" + invalid + "' not handled correctly. Actual: " + actualAfterInvalid)
         }
 
-        WebUI.takeScreenshot("TC17_MaxContextTokens_Invalid_" + invalid + ".png")
+        WebUI.takeScreenshot("TC05_MaxContextTokens_Invalid_" + invalid + ".png")
     }
 
     // === TEST 4: RESET TO DEFAULT ===
@@ -157,7 +215,7 @@ try {
     WebUI.sendKeys(inputField, Keys.chord(Keys.CONTROL, "a"))
     // Use "\b" (backspace) instead of Keys.BACK_SPACE to avoid Katalon compatibility issue
     WebUI.sendKeys(inputField, "\b")
-    WebUI.clickOffset(inputField, 250, 0)
+    WebUI.click(clickOutside)
     WebUI.delay(1)
     
     String afterClear = WebUI.getAttribute(inputField, 'value')
@@ -169,18 +227,19 @@ try {
         WebUI.comment('Value not cleared: "' + afterClear + '"')
         KeywordUtil.markFailed("FAILED: Value not cleared. Actual: '" + afterClear + "'")
     }
-    WebUI.takeScreenshot('TC17_MaxContextTokens_Reset.png')
+    WebUI.takeScreenshot('TC05_MaxContextTokens_Reset.png')
 
+    // Hover to show regenerate button
+    hoverOnLastAIMessage()
+    
     // Regenerate with default context
     WebUI.comment('Regenerating with default Max Context Tokens...')
-    WebUI.waitForElementClickable(regenerateButton, 10)
-    WebUI.click(regenerateButton)
-    WebUI.waitForElementNotVisible(thinkingIndicator, 30)
-    WebUI.delay(2)
+    waitForRegenerateButtonAndClick()
+    waitForResponseComplete()
     
-    String responseDefault = WebUI.getText(lastMessage)
+    String responseDefault = WebUI.getText(lastAIMessage)
     WebUI.comment('Response with default context: Length: ' + responseDefault.length() + ' chars')
-    WebUI.takeScreenshot('TC17_MaxContextTokens_Default_Response.png')
+    WebUI.takeScreenshot('TC05_MaxContextTokens_Default_Response.png')
 
     // === COMPARISON ===
     WebUI.comment('=== Comparison ===')
@@ -188,12 +247,12 @@ try {
     WebUI.comment('Max context (1000) response length: ' + responseMax.length() + ' chars')
     WebUI.comment('Default context response length: ' + responseDefault.length() + ' chars')
 
-    WebUI.takeScreenshot('TC17_MaxContextTokens_Complete.png')
-    WebUI.comment('TC17 Completed - Max Context Tokens Input & Verify test')
-    WebUI.comment('TC17 PASSED')
+    WebUI.takeScreenshot('TC05_MaxContextTokens_Complete.png')
+    WebUI.comment('TC05 Completed - Max Context Tokens Input & Verify test')
+    WebUI.comment('TC05 PASSED')
 
 } catch (Exception e) {
-    WebUI.comment('TC17 FAILED: ' + e.getMessage())
-    WebUI.takeScreenshot('TC17_MaxContextTokens_Error.png')
+    WebUI.comment('TC05 FAILED: ' + e.getMessage())
+    WebUI.takeScreenshot('TC05_MaxContextTokens_Error.png')
     KeywordUtil.markFailedAndStop("Exception occurred: " + e.getMessage())
 }

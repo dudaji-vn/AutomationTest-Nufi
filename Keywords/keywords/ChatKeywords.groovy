@@ -5,6 +5,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.testobject.ConditionType
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.webui.driver.DriverFactory
+
+
 
 /**
  * ChatKeywords.groovy
@@ -45,23 +49,45 @@ public class ChatKeywords {
 	}
 	
 	// ============================================================
-	// KEYWORD: CLOSE BROWSER
+	// KEYWORD: CLOSE BROWSER 
 	// ============================================================
-	/**
-	 * Closes the browser.
-	 * Call this at the END of every TC.
-	 */
 	@Keyword
 	void closeBrowser() {
-		try {
-			WebUI.comment('=== KEYWORD: closeBrowser ===')
-			WebUI.closeBrowser()
-			WebUI.comment('✓ Browser closed')
-		} catch (Exception e) {
-			WebUI.comment('✗ ERROR in closeBrowser: ' + e.getMessage())
-			throw e
-		}
+	    try {
+	        WebUI.comment('=== KEYWORD: closeBrowser ===')
+	        
+	        // WebUI
+	        try {
+	            WebUI.closeBrowser()
+	            WebUI.comment('✓ WebUI.closeBrowser() executed')
+	        } catch (Exception e) {
+	            WebUI.comment('⚠ WebUI.closeBrowser() error: ' + e.getMessage())
+	        }
+	        
+	        //  DriverFactory 
+	        try {
+	            def driver = DriverFactory.getWebDriver()
+	            if (driver != null) {
+	                driver.quit()
+	                WebUI.comment('✓ DriverFactory.quit() executed')
+	            }
+	        } catch (Exception e) {
+	            WebUI.comment('⚠ DriverFactory quit error: ' + e.getMessage())
+	        }
+	        
+	        //Force close all browser windows
+	        try {
+	            WebUI.executeJavaScript("window.close()", null)
+	        } catch (Exception e) {
+	            // Ignore
+	        }
+	        
+	        WebUI.comment('✓ Browser closed successfully')
+	    } catch (Exception e) {
+	        WebUI.comment('✗ ERROR in closeBrowser: ' + e.getMessage())
+	    }
 	}
+	
 
 	// ============================================================
 	// KEYWORD 1: LOGIN
@@ -781,6 +807,127 @@ public class ChatKeywords {
 			WebUI.comment('Read Aloud button clicked')
 		} catch (Exception e) {
 			WebUI.comment('✗ ERROR in clickReadAloudButton: ' + e.getMessage())
+			throw e
+		}
+	}
+	
+	// ============================================================
+	// KEYWORD 29: SWITCH TO ADVANCED INTERFACE
+	// ============================================================
+	@Keyword
+	void switchToAdvancedInterface() {
+		try {
+			WebUI.comment('=== KEYWORD: switchToAdvancedInterface ===')
+			
+			// Step 1: Check screen width
+			String screenWidthScript = "return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;"
+			int screenWidth = (int) WebUI.executeJavaScript(screenWidthScript, null)
+			WebUI.comment('Screen width: ' + screenWidth + 'px')
+			
+			if (screenWidth <= 760) {
+				WebUI.comment('Screen width <= 760px, ensuring navbar is open...')
+				
+				TestObject navSidebar = new TestObject('navSidebar')
+				navSidebar.addProperty('xpath', ConditionType.EQUALS, "//nav")
+				
+				String ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
+				
+				if (ariaHidden == 'true') {
+					WebUI.comment('Navbar is closed, opening...')
+					TestObject openButton = new TestObject('openButton')
+					openButton.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
+					WebUI.waitForElementClickable(openButton, 5)
+					WebUI.click(openButton)
+					WebUI.delay(1)
+					WebUI.comment('✓ Navbar opened')
+				} else {
+					WebUI.comment('✓ Navbar already open')
+				}
+			} else {
+				WebUI.comment('Screen width > 760px, skipping navbar check')
+			}
+			
+			// Step 2: Click Account Settings
+			WebUI.comment('Clicking Account Settings...')
+			WebUI.waitForElementClickable(
+				findTestObject('Object Repository/nav/nav_items/button_Account Settings'),
+				10
+			)
+			WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Account Settings'))
+			WebUI.delay(1)
+			WebUI.comment('✓ Account Settings clicked')
+			
+			// Step 3: Click Settings menu item
+			WebUI.comment('Clicking Settings menu item...')
+			WebUI.waitForElementClickable(
+				findTestObject('Object Repository/nav/Account_Settings/menuitem_Settings'),
+				10
+			)
+			WebUI.click(findTestObject('Object Repository/nav/Account_Settings/menuitem_Settings'))
+			WebUI.delay(2)
+			WebUI.comment('✓ Settings popup opened')
+			
+			// Step 4: Click Interface dropdown
+			WebUI.comment('Clicking Interface dropdown...')
+			
+			TestObject interfaceDropdown = new TestObject('interfaceDropdown')
+			interfaceDropdown.addProperty('xpath', ConditionType.EQUALS,
+				"//button[@data-testid='ui-mode-selector']")
+			
+			if (!WebUI.waitForElementVisible(interfaceDropdown, 5, FailureHandling.OPTIONAL)) {
+				WebUI.comment('Trying alternative selector for Interface dropdown...')
+				interfaceDropdown = new TestObject('interfaceDropdownAlt')
+				interfaceDropdown.addProperty('xpath', ConditionType.EQUALS,
+					"//div[@id='ui-mode-selector-label']/following-sibling::div//button")
+			}
+			
+			WebUI.waitForElementClickable(interfaceDropdown, 10)
+			WebUI.click(interfaceDropdown)
+			WebUI.delay(1)
+			WebUI.comment('✓ Interface dropdown opened')
+			
+			// Step 5: Select Advanced from dropdown
+			WebUI.comment('Selecting Advanced from dropdown...')
+			
+			TestObject advancedOption = new TestObject('advancedOption')
+			advancedOption.addProperty('xpath', ConditionType.EQUALS,
+				"//div[@role='listbox']//div[@data-theme='advanced']")
+			
+			if (!WebUI.waitForElementVisible(advancedOption, 5, FailureHandling.OPTIONAL)) {
+				WebUI.comment('Trying alternative selector for Advanced option...')
+				advancedOption = new TestObject('advancedOptionAlt')
+				advancedOption.addProperty('xpath', ConditionType.EQUALS,
+					"//div[@role='listbox']//span[contains(text(), 'Advanced')]/ancestor::div[@role='option']")
+			}
+			
+			WebUI.waitForElementClickable(advancedOption, 10)
+			WebUI.click(advancedOption)
+			WebUI.delay(1)
+			WebUI.comment('✓ Selected Advanced interface')
+			
+			// Step 6: Close Settings popup
+			WebUI.comment('Closing Settings popup...')
+			
+			TestObject closeButton = new TestObject('closeButton')
+			closeButton.addProperty('xpath', ConditionType.EQUALS,
+				"//button[contains(@class, 'rounded-sm')]//*[local-name()='svg']//*[local-name()='line' and @x1='6' and @x2='18' and @y1='6' and @y2='18']/ancestor::button")
+			
+			if (!WebUI.waitForElementVisible(closeButton, 5, FailureHandling.OPTIONAL)) {
+				WebUI.comment('Trying alternative selector for close button...')
+				closeButton = new TestObject('closeButtonAlt')
+				closeButton.addProperty('xpath', ConditionType.EQUALS,
+					"//button[@aria-label='Close Settings']")
+			}
+			
+			WebUI.waitForElementClickable(closeButton, 10)
+			WebUI.click(closeButton)
+			WebUI.delay(2)
+			
+			WebUI.comment('✓ Settings popup closed')
+			WebUI.comment('✓ Successfully switched to Advanced interface')
+			
+		} catch (Exception e) {
+			WebUI.comment('✗ ERROR in switchToAdvancedInterface: ' + e.getMessage())
 			throw e
 		}
 	}

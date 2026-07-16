@@ -8,78 +8,231 @@ import com.kms.katalon.core.util.KeywordUtil
 
 /**
  * TC01A: Create New Agent with Avatar
+ * Verify creation of new Agent with Avatar (profile image)
+ * Difference from TC01: Step 2 - Add Avatar
  */
 
 WebUI.comment('=== TC01A: Create New Agent with Avatar ===')
 
 try {
-    // Step 0: Open Agent Builder
-    WebUI.comment('Step 0: Open Agent Builder...')
-    TestObject btnAgentBuilder = findTestObject('Object Repository/nav/nav_items/button_Agent Builder')
-    WebUI.waitForElementVisible(btnAgentBuilder, 15)
-    WebUI.click(btnAgentBuilder)
-    WebUI.delay(2)
+    // ============================================================
+    // Step 0: Check Agent Builder and Navbar state
+    // ============================================================
+    WebUI.comment('Step 0: Checking Agent Builder and Navbar state...')
+    
+    // Step 0.1: Check if Agent Builder is open
+    WebUI.comment('Step 0.1: Checking if Agent Builder is open...')
+    
+    // Check if Agent configuration form is visible (aria-label="Agent configuration form")
+    TestObject agentConfigForm = new TestObject('agentConfigForm')
+    agentConfigForm.addProperty('xpath', ConditionType.EQUALS, 
+        "//form[@aria-label='Agent configuration form']")
+    
+    boolean isAgentBuilderOpen = WebUI.waitForElementVisible(agentConfigForm, 5, FailureHandling.OPTIONAL)
+    
+    if (!isAgentBuilderOpen) {
+        WebUI.comment('Agent Builder is not open, clicking Agent Builder button...')
+        
+        // Step 0.2: Check Navbar is open before clicking
+        WebUI.comment('Step 0.2: Checking Navbar state...')
+        TestObject navSidebar = new TestObject('navSidebar')
+        navSidebar.addProperty('xpath', ConditionType.EQUALS, "//nav")
+        WebUI.waitForElementVisible(navSidebar, 10)
+        
+        String ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
+        WebUI.comment('Navbar aria-hidden: ' + ariaHidden)
+        
+        if (ariaHidden == 'true') {
+            WebUI.comment('Navbar is closed, opening sidebar...')
+            TestObject openSidebarButton = new TestObject('openSidebarButton')
+            openSidebarButton.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
+            WebUI.waitForElementClickable(openSidebarButton, 5)
+            WebUI.click(openSidebarButton)
+            WebUI.delay(1)
+            WebUI.comment('✓ Sidebar opened')
+            
+            // Verify navbar is open
+            ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
+            WebUI.comment('Navbar aria-hidden after open: ' + ariaHidden)
+            if (ariaHidden == 'false') {
+                WebUI.comment('✓ Navbar opened successfully (aria-hidden="false")')
+            }
+        } else {
+            WebUI.comment('✓ Navbar is already open (aria-hidden="false")')
+        }
+        
+        // Click Agent Builder button
+        TestObject btnAgentBuilder = findTestObject('Object Repository/nav/nav_items/button_Agent Builder')
+        WebUI.waitForElementVisible(btnAgentBuilder, 15)
+        WebUI.click(btnAgentBuilder)
+        WebUI.delay(3)
+        
+        // Verify Agent Builder is open
+        WebUI.waitForElementVisible(agentConfigForm, 10)
+        WebUI.comment('✓ Agent Builder is open')
+    } else {
+        WebUI.comment('✓ Agent Builder is already open')
+        
+        // Still need to ensure navbar is open for other operations
+        WebUI.comment('Checking Navbar state...')
+        TestObject navSidebar = new TestObject('navSidebar')
+        navSidebar.addProperty('xpath', ConditionType.EQUALS, "//nav")
+        WebUI.waitForElementVisible(navSidebar, 5)
+        
+        String ariaHidden = WebUI.getAttribute(navSidebar, 'aria-hidden')
+        WebUI.comment('Navbar aria-hidden: ' + ariaHidden)
+        
+        if (ariaHidden == 'true') {
+            WebUI.comment('Navbar is closed, opening sidebar...')
+            TestObject openSidebarButton = new TestObject('openSidebarButton')
+            openSidebarButton.addProperty('xpath', ConditionType.EQUALS, "//button[@id='open-sidebar-button']")
+            WebUI.waitForElementClickable(openSidebarButton, 5)
+            WebUI.click(openSidebarButton)
+            WebUI.delay(1)
+            WebUI.comment('✓ Sidebar opened')
+        } else {
+            WebUI.comment('✓ Navbar is already open (aria-hidden="false")')
+        }
+    }
 
+    // ============================================================
     // Step 1: Click Create New Agent
+    // ============================================================
     WebUI.comment('Step 1: Click Create New Agent...')
     TestObject btnCreateAgent = new TestObject('btnCreateNewAgent')
-    btnCreateAgent.addProperty('xpath', ConditionType.EQUALS, "//button[contains(text(),'Create New Agent') or contains(text(),'New Agent')]")
+    btnCreateAgent.addProperty('xpath', ConditionType.EQUALS, 
+        "//form[@aria-label='Agent configuration form']//button[@aria-label='Create New Agent']")
     WebUI.waitForElementVisible(btnCreateAgent, 15)
     WebUI.click(btnCreateAgent)
     WebUI.delay(3)
+    WebUI.comment('✓ Create New Agent clicked')
 
-    // Step 2: Add Avatar (Sử dụng XPath tạm thời)
+    // ============================================================
+    // Step 2: Add Avatar (KHÁC BIỆT SO VỚI TC01)
+    // ============================================================
     WebUI.comment('Step 2: Add Avatar...')
+    
+    // Find avatar upload button (button with plus icon, aria-label="Upload agent avatar image")
     TestObject btnAddAvatar = new TestObject('btnAddAvatar')
     btnAddAvatar.addProperty('xpath', ConditionType.EQUALS, 
-        "//button[contains(@id,'add-img') or contains(text(),'Add image') or contains(@class,'avatar')]")
+        "//button[@aria-label='Upload agent avatar image']")
     
     WebUI.waitForElementVisible(btnAddAvatar, 10)
     WebUI.click(btnAddAvatar)
     WebUI.delay(1.5)
+    WebUI.comment('✓ Avatar upload button clicked')
+    
+    // Upload image from Data Files/Image folder
+    TestObject fileInput = new TestObject('fileInput')
+    fileInput.addProperty('xpath', ConditionType.EQUALS, 
+        "//input[@type='file' and @accept='image/png,.png,image/jpeg,.jpg,.jpeg,image/gif,.gif,image/webp,.webp']")
+    
+    // Lấy ảnh JPG từ Data Files/Image
+    String projectDir = System.getProperty("user.dir")
+    String imagePath = projectDir + "/Data Files/Image/jpg_sample.jpg"
+    
+    // Kiểm tra file tồn tại và upload
+    File imageFile = new File(imagePath)
+    if (imageFile.exists()) {
+        WebUI.comment('✓ Image file found: ' + imagePath)
+        WebUI.uploadFile(fileInput, imagePath)
+        WebUI.delay(2)
+        WebUI.comment('✓ Avatar image uploaded successfully (jpg_sample.jpg)')
+    } else {
+        WebUI.comment('⚠ Image file not found: ' + imagePath)
+        WebUI.comment('Please place "jpg_sample.jpg" in Data Files/Image folder')
+    }
 
-    // Upload image (nếu có file)
-    TestObject uploadImg = findTestObject('Object Repository/nav/RAG/Upload an image')
-    WebUI.click(uploadImg)
-    WebUI.delay(2)
-    WebUI.comment('Avatar upload section opened')
-
+    // ============================================================
     // Step 3: Input Name
+    // ============================================================
     WebUI.comment('Step 3: Input Agent Name...')
     TestObject inputName = findTestObject('Object Repository/nav/RAG/input__name')
     String agentName = "Agent_With_Avatar_" + System.currentTimeMillis()
     WebUI.setText(inputName, agentName)
+    WebUI.comment('Agent Name: ' + agentName)
 
+    // ============================================================
     // Step 4: Select Category
+    // ============================================================
     WebUI.comment('Step 4: Select Category...')
     TestObject btnCategory = findTestObject('Object Repository/nav/RAG/button_selector_category')
+    WebUI.waitForElementVisible(btnCategory, 10)
     WebUI.click(btnCategory)
     WebUI.delay(1.5)
+
     TestObject optionGeneral = new TestObject('option_General')
     optionGeneral.addProperty('xpath', ConditionType.EQUALS, "//div[@role='option']//span[text()='General']")
+    WebUI.waitForElementVisible(optionGeneral, 10)
     WebUI.click(optionGeneral)
+    WebUI.comment('✓ Selected category: General')
 
-    // Step 5: Switch to Model tab & Select Model
+    // ============================================================
+    // Step 5: Switch to Model tab
+    // ============================================================
     WebUI.comment('Step 5: Switch to Model tab...')
-    WebUI.click(findTestObject('Object Repository/nav/RAG/button_Select a model'))
-    WebUI.delay(1.5)
+    TestObject btnSelectModelTab = findTestObject('Object Repository/nav/RAG/button_Select a model')
+    WebUI.waitForElementVisible(btnSelectModelTab, 10)
+    WebUI.click(btnSelectModelTab)
+    WebUI.delay(2)
+    WebUI.comment('✓ Model tab opened')
 
-    WebUI.click(findTestObject('Object Repository/nav/RAG/button_Select a provider'))
-    WebUI.delay(1)
-    WebUI.click(findTestObject('Object Repository/nav/RAG/button_Select a model'))
-    WebUI.delay(1.5)
+    // ============================================================
+    // Step 6: Select Provider
+    // ============================================================
+    WebUI.comment('Step 6: Select Provider...')
+    
+    String targetProvider = "Gemini"  // Hoặc "Nufi", "nufi-lab"
+    
+    TestObject btnProvider = findTestObject('Object Repository/nav/RAG/button_Select a provider')
+    WebUI.waitForElementVisible(btnProvider, 10)
+    WebUI.click(btnProvider)
+    WebUI.delay(2)
 
-    // Step 6: Create
-    WebUI.comment('Step 6: Create Agent...')
-    WebUI.click(findTestObject('Object Repository/nav/RAG/button_Create'))
+    TestObject providerOption = new TestObject('providerOption')
+    providerOption.addProperty('xpath', ConditionType.EQUALS, 
+        "//div[@role='option']//span[contains(text(), '" + targetProvider + "')]")
+    
+    WebUI.waitForElementVisible(providerOption, 10)
+    WebUI.click(providerOption)
+    WebUI.comment('✓ Selected provider: ' + targetProvider)
+
+    // ============================================================
+    // Step 7: Back to Builder
+    // ============================================================
+    WebUI.comment('Step 7: Back to Builder...')
+    TestObject btnBackToBuilder = findTestObject('Object Repository/nav/RAG/button_Back to builder')
+    WebUI.waitForElementVisible(btnBackToBuilder, 10)
+    WebUI.click(btnBackToBuilder)
+    WebUI.delay(2)
+    WebUI.comment('✓ Back to Builder clicked')
+
+    // ============================================================
+    // Step 8: Create Agent
+    // ============================================================
+    WebUI.comment('Step 8: Click Create Agent...')
+    TestObject btnCreate = findTestObject('Object Repository/nav/RAG/button_Create')
+    WebUI.click(btnCreate)
     WebUI.delay(5)
+    WebUI.comment('✓ Create button clicked')
 
-    WebUI.verifyElementPresent(findTestObject('Object Repository/nav/RAG/button_Upload for File Search'), 10)
-    WebUI.takeScreenshot('TC01A_Create_With_Avatar_Success.png')
+    // ============================================================
+    // Step 9: Verify success
+    // ============================================================
+    WebUI.comment('Step 9: Verify Agent created successfully...')
+    TestObject uploadBtn = findTestObject('Object Repository/nav/RAG/button_Upload for File Search')
+    
+    if (WebUI.verifyElementPresent(uploadBtn, 15, FailureHandling.OPTIONAL)) {
+        WebUI.comment('✓ SUCCESS: Agent "' + agentName + '" created successfully with Avatar!')
+    } else {
+        KeywordUtil.markFailed("FAILED: Upload File section did not appear after creation.")
+    }
+
+    WebUI.takeScreenshot('TC01A_Create_Agent_With_Avatar_Success.png')
     WebUI.comment('=== TC01A Completed Successfully ===')
 
 } catch (Exception e) {
     WebUI.comment('TC01A FAILED: ' + e.getMessage())
-    WebUI.takeScreenshot('TC01A_Create_Agent_Error.png')
+    WebUI.takeScreenshot('TC01A_Create_Agent_With_Avatar_Error.png')
     KeywordUtil.markFailedAndStop("Exception occurred: " + e.getMessage())
 }

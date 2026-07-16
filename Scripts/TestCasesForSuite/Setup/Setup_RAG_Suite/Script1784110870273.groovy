@@ -6,61 +6,51 @@ import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 
 /**
- * Setup_Parameters_Suite
+ * Setup_RAG_Suite
  * 
- * Setup for Parameters test suite.
+ * Setup for RAG (Retrieval-Augmented Generation) test suite.
  * Performs:
  * 1. Open browser
  * 2. Login
- * 3. Switch to Advanced interface (required for Parameters button to display)
- * 4. Open new conversation
- * 5. Select Gemini endpoint + model
- * 6. Open Parameters panel
+ * 3. Switch to Advanced interface (required for Agent Builder button to display)
+ * 4. Navigate to Agent Builder page
  * 
  * This setup runs once before ALL test cases in the suite.
  */
 
-WebUI.comment('=== SETUP: Parameters Suite ===')
+WebUI.comment('=== SETUP: RAG Suite ===')
 
 try {
+    // ================================================================
     // Step 1: Open browser
-    WebUI.comment('Opening browser...')
+    // ================================================================
+    WebUI.comment('Step 1: Opening browser...')
     CustomKeywords.'keywords.ChatKeywords.openBrowser'(
         GlobalVariable.Base_URL
     )
 
+    // ================================================================
     // Step 2: Login
-    WebUI.comment('Logging in...')
+    // ================================================================
+    WebUI.comment('Step 2: Logging in...')
     CustomKeywords.'keywords.ChatKeywords.loginChat'(
         GlobalVariable.email,
         GlobalVariable.password
     )
     WebUI.delay(2)
+    WebUI.comment('✓ Login successful')
 
+    // ================================================================
     // Step 3: Switch to Advanced interface
-    WebUI.comment('Switching to Advanced interface...')
+    // ================================================================
+    WebUI.comment('Step 3: Switching to Advanced interface...')
     CustomKeywords.'keywords.ChatKeywords.switchToAdvancedInterface'()
+    WebUI.comment('✓ Advanced interface enabled')
 
-    // Step 4: Open new conversation
-    WebUI.comment('Opening new conversation...')
-    CustomKeywords.'keywords.ChatKeywords.openNewConversation'(
-        GlobalVariable.Base_URL
-    )
-
-    // Step 5: Select endpoint + model
-    WebUI.comment('Selecting Gemini endpoint and model...')
-    CustomKeywords.'keywords.ChatKeywords.selectEndpointAndModel'(
-        'Gemini',
-        'gemini'
-//		'Nufi',
-//		'Qwen2.5-0.5B'
-//		'sys_test_npu',
-//		'llama-3-1-8b-v1-rngd'
-    )
-    WebUI.delay(2)
-
-    // Step 6: Open Parameters panel
-    WebUI.comment('Opening Parameters panel...')
+    // ================================================================
+    // Step 4: Navigate to Agent Builder
+    // ================================================================
+    WebUI.comment('Step 4: Navigating to Agent Builder...')
     
     // Check screen width - if <= 768, open sidebar first
     String script = "return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;"
@@ -74,23 +64,23 @@ try {
         WebUI.waitForElementClickable(openSidebarButton, 5)
         WebUI.click(openSidebarButton)
         WebUI.delay(1)
-        WebUI.comment('Sidebar opened')
+        WebUI.comment('✓ Sidebar opened')
     }
     
-    // Click Parameters button
+    // Click Agent Builder button
     WebUI.waitForElementClickable(
-        findTestObject('Object Repository/nav/nav_items/button_Parameters'),
+        findTestObject('Object Repository/nav/nav_items/button_Agent Builder'),
         10
     )
-    WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Parameters'))
-    WebUI.delay(2)
-    WebUI.comment('Parameters panel opened')
+    WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Agent Builder'))
+    WebUI.delay(3)
+    WebUI.comment('✓ Agent Builder page opened')
 
-    WebUI.comment('✓ Setup completed - ready for Parameters test cases')
+    WebUI.comment('✓ Setup completed - ready for RAG test cases')
 
 } catch (Exception e) {
     WebUI.comment('✗ SETUP FAILED: ' + e.getMessage())
-    WebUI.takeScreenshot('Setup_Parameters_Suite_Error.png')
+    WebUI.takeScreenshot('Setup_RAG_Suite_Error.png')
     CustomKeywords.'keywords.ChatKeywords.closeBrowser'()
     throw e
 }

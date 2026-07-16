@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Setup_RAG_Suite</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e2e92350-9a2d-44a2-b5ff-4eb901f4bbe2</testCaseGuid>
+</TestCaseEntity>

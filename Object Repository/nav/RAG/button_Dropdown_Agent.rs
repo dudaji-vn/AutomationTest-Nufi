@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Dropdown_Create New Agent</name>
+   <name>button_Dropdown_Agent</name>
    <tag></tag>
    <elementGuidId>546184b3-a5c9-4ec1-aa83-aecea07db27c</elementGuidId>
    <selectorCollection>
@@ -10,7 +10,11 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//button[@type='button'])[10]</value>
+         <value>//div[./div[text()='Agent']]/button[@role='combobox']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'button' and (text() = 'Create New Agent' or . = 'Create New Agent')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -28,7 +32,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>cfb89922-12a5-417b-ba67-f26efecbd08f</webElementGuid>
+      <webElementGuid>4c68648c-5df2-4c6f-87b2-4691e3d526ca</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -36,7 +40,7 @@
       <name>role</name>
       <type>Main</type>
       <value>combobox</value>
-      <webElementGuid>7ec032c8-a05a-472d-8b35-53388b998edc</webElementGuid>
+      <webElementGuid>4938c6c9-d574-407d-b37e-6df71a38101f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -44,7 +48,7 @@
       <name>aria-expanded</name>
       <type>Main</type>
       <value>false</value>
-      <webElementGuid>40cd1746-8065-4126-8e27-f3c14217bb96</webElementGuid>
+      <webElementGuid>38d8308a-ce09-43c6-854d-c3ab8872cc1b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -52,7 +56,7 @@
       <name>aria-haspopup</name>
       <type>Main</type>
       <value>dialog</value>
-      <webElementGuid>c1136c06-3e6f-4653-945d-a88520470580</webElementGuid>
+      <webElementGuid>b5523f95-2d21-43b3-b13f-97c9c3b3b3d1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -60,7 +64,7 @@
       <name>aria-autocomplete</name>
       <type>Main</type>
       <value>none</value>
-      <webElementGuid>6301d140-0465-4403-ad83-6af330eb99d0</webElementGuid>
+      <webElementGuid>d490451e-737e-4cbf-9e6c-5c2cdb2f43d3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -68,7 +72,7 @@
       <name>class</name>
       <type>Main</type>
       <value>gap-2 text-text-primary hover:bg-surface-tertiary border border-border-light px-3 py-2 text-sm z-50 flex h-9 w-full flex-none items-center justify-center truncate rounded-md bg-transparent font-bold</value>
-      <webElementGuid>97232e66-c78c-4cd2-9f62-c2e86b2efaef</webElementGuid>
+      <webElementGuid>2434b23b-42d4-4423-8a5c-63dca8db5103</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -76,7 +80,7 @@
       <name>aria-controls</name>
       <type>Main</type>
       <value>:r1h:</value>
-      <webElementGuid>9659191b-b7f9-4f8c-ae3e-8c88b0cd7150</webElementGuid>
+      <webElementGuid>9eb6a741-7dcd-4267-bbb5-35ae451a8d47</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -84,7 +88,7 @@
       <name>aria-labelledby</name>
       <type>Main</type>
       <value>:r1g:</value>
-      <webElementGuid>109f2f97-c517-4e43-bcad-73014f1202ad</webElementGuid>
+      <webElementGuid>27aad6ce-8f1d-4f52-ac01-222ce5862e5c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -92,7 +96,7 @@
       <name>type</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>08d2bee6-2bae-4e56-836f-5c5ddc556df4</webElementGuid>
+      <webElementGuid>3cbde55c-c12f-4d8e-84b0-97008f04ea73</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -100,7 +104,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Create New Agent</value>
-      <webElementGuid>121bba77-d48c-4c86-84c6-3dd34e57bd43</webElementGuid>
+      <webElementGuid>cc21f5a3-ec36-4f6c-9a86-4abe8fa99f06</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -108,7 +112,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;root&quot;)/div[@class=&quot;flex&quot;]/div[@class=&quot;relative z-0 flex h-full w-full overflow-hidden&quot;]/aside[@class=&quot;relative flex h-full flex-shrink-0 overflow-hidden&quot;]/div[@class=&quot;flex h-full w-full overflow-hidden&quot;]/nav[@class=&quot;min-h-0 flex-1 overflow-hidden bg-surface-primary-alt opacity-100&quot;]/div[@class=&quot;flex h-full min-h-0 flex-col overflow-y-auto overflow-x-hidden text-text-primary&quot;]/form[@class=&quot;scrollbar-gutter-stable flex flex-1 flex-col px-3 pb-3 pt-2&quot;]/div[@class=&quot;flex-1&quot;]/div[@class=&quot;flex w-full flex-wrap gap-2&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;flex w-full items-center justify-center px-0&quot;]/button[@class=&quot;gap-2 text-text-primary hover:bg-surface-tertiary border border-border-light px-3 py-2 text-sm z-50 flex h-9 w-full flex-none items-center justify-center truncate rounded-md bg-transparent font-bold&quot;]</value>
-      <webElementGuid>047d94c7-b11e-461b-b271-b9a90ee29d17</webElementGuid>
+      <webElementGuid>f1312dc8-dd64-47c1-94e5-ae3a6cc9f484</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -116,7 +120,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>(//button[@type='button'])[10]</value>
-      <webElementGuid>fede1762-330b-481b-82ce-58fbb60bec44</webElementGuid>
+      <webElementGuid>8ea44a3f-8ae1-423d-ab97-7746060bc1d0</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -124,7 +128,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='root']/div/div/aside/div/nav/div/form/div/div/div/div/button</value>
-      <webElementGuid>65aa0b32-714f-42f2-98dc-cae789dd7289</webElementGuid>
+      <webElementGuid>8499df0d-9165-42e7-af06-fcec2de2ca64</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -132,7 +136,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Agent'])[1]/following::button[1]</value>
-      <webElementGuid>b60efc40-57f4-43be-9b26-790356b315c0</webElementGuid>
+      <webElementGuid>9900e7f3-aa61-48e8-a507-4d2705a79515</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -140,7 +144,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div/div/div/div/button</value>
-      <webElementGuid>b60aef30-43ba-486e-b0cb-333bd4bdae3f</webElementGuid>
+      <webElementGuid>de897b26-d620-4ed8-958d-3d066bb14160</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -148,6 +152,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//button[@type = 'button' and (text() = 'Create New Agent' or . = 'Create New Agent')]</value>
-      <webElementGuid>4af002b9-7642-43ce-98af-fe65b2385db8</webElementGuid>
+      <webElementGuid>a3c0f11b-9035-4e95-b00b-db46f2a8668c</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

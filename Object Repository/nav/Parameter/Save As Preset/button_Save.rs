@@ -6,6 +6,10 @@
    <elementGuidId>80ac78b2-4ff0-47c8-ace8-9af113a1b348</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'button' and (text() = 'Save' or . = 'Save')]</value>
+      </entry>
+      <entry>
          <key>CSS</key>
       </entry>
       <entry>
@@ -13,7 +17,7 @@
          <value>(//button[@type='button'])[37]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
@@ -28,7 +32,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>e3e5a344-08a3-4524-af01-7e389a482c45</webElementGuid>
+      <webElementGuid>fe7940e7-540f-4d9d-a66c-b2db617f87c9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -36,7 +40,7 @@
       <name>type</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>a874fd8c-c336-4319-8fbf-5eb02af359ef</webElementGuid>
+      <webElementGuid>94863af8-84e1-4728-a54d-31ae0423f791</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -44,7 +48,7 @@
       <name>class</name>
       <type>Main</type>
       <value>bg-surface-submit hover:bg-surface-submit-hover text-white flex h-10 items-center justify-center rounded-lg border-none px-4 py-2 text-sm disabled:opacity-80 max-sm:order-first max-sm:w-full sm:order-none</value>
-      <webElementGuid>edf51bac-31e9-4c38-948d-321126d9d33d</webElementGuid>
+      <webElementGuid>2c92bad8-6400-4cfa-bd77-ae5cd3933707</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -52,7 +56,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Save</value>
-      <webElementGuid>eefdf17b-4f0d-410b-bf7d-5aff2b56b59e</webElementGuid>
+      <webElementGuid>ea94717e-b968-49e0-a5c7-3429fa1e1c42</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -60,7 +64,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;radix-:r1u:&quot;)/div[@class=&quot;flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2&quot;]/button[@class=&quot;bg-surface-submit hover:bg-surface-submit-hover text-white flex h-10 items-center justify-center rounded-lg border-none px-4 py-2 text-sm disabled:opacity-80 max-sm:order-first max-sm:w-full sm:order-none&quot;]</value>
-      <webElementGuid>cd2c9e86-c223-44e2-ade4-ef32d0d76c2a</webElementGuid>
+      <webElementGuid>194b4b68-d295-4ecc-b2e9-cbc6c8a850a1</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -68,7 +72,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>(//button[@type='button'])[37]</value>
-      <webElementGuid>576f743c-eec5-4d81-b841-6d0150348132</webElementGuid>
+      <webElementGuid>a92c6f33-9de8-4079-abca-5fa213008886</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -76,7 +80,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='radix-:r1u:']/div[3]/button[2]</value>
-      <webElementGuid>b7bc0cd3-1340-4910-8e6b-64bb92473ad3</webElementGuid>
+      <webElementGuid>10341179-72d6-4fcf-a615-5d90ec128690</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -84,7 +88,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/following::button[1]</value>
-      <webElementGuid>2398ffc0-407b-4e44-bb31-f5af5db96919</webElementGuid>
+      <webElementGuid>8924deb5-c1ce-4bfc-8869-86be802e72a4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -92,7 +96,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Preset Name'])[1]/following::button[2]</value>
-      <webElementGuid>cdb6f844-3a4f-4e3f-8f84-47f25a980008</webElementGuid>
+      <webElementGuid>ccd10f5e-9a86-4392-832c-ba6efee52c78</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -100,7 +104,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Save']/parent::*</value>
-      <webElementGuid>3c520874-a807-4f9a-88da-f315b863d522</webElementGuid>
+      <webElementGuid>7c6d02c9-fa96-44c7-ba64-bd94afb4e966</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -108,7 +112,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[3]/button[2]</value>
-      <webElementGuid>5095b80a-a36d-4feb-a562-d1c75b8669a9</webElementGuid>
+      <webElementGuid>5b3b8fd2-64d2-4728-a30c-d0bffb2326bf</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -116,6 +120,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//button[@type = 'button' and (text() = 'Save' or . = 'Save')]</value>
-      <webElementGuid>3468e669-7875-411b-a10a-19171246cea7</webElementGuid>
+      <webElementGuid>fa7bea79-77fb-4bed-90dc-8317191a0fd6</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

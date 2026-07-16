@@ -6,6 +6,10 @@
    <elementGuidId>821b153c-ecb6-4bc1-8500-9233deeea7b4</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'button' and (text() = 'Select a provider' or . = 'Select a provider')]</value>
+      </entry>
+      <entry>
          <key>CSS</key>
       </entry>
       <entry>
@@ -13,7 +17,7 @@
          <value>(//button[@type='button'])[12]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
@@ -28,7 +32,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>b5aa41ec-ddae-4f15-af3d-3edd4f4fb817</webElementGuid>
+      <webElementGuid>bd7f7ac0-0103-49aa-8ef6-df9059abc2ec</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -36,7 +40,7 @@
       <name>role</name>
       <type>Main</type>
       <value>combobox</value>
-      <webElementGuid>1c3a7449-d49b-4249-9fc8-27c916dca37e</webElementGuid>
+      <webElementGuid>96fb468b-552e-4d77-a6a5-02be3416b775</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -44,7 +48,7 @@
       <name>aria-expanded</name>
       <type>Main</type>
       <value>false</value>
-      <webElementGuid>239f2973-4e52-480d-ba0e-af0254583923</webElementGuid>
+      <webElementGuid>575008ab-3969-449e-bf79-f746e0e9ce7e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -52,7 +56,7 @@
       <name>aria-haspopup</name>
       <type>Main</type>
       <value>dialog</value>
-      <webElementGuid>082be0bb-1c97-483d-a19d-a9d9d5105e14</webElementGuid>
+      <webElementGuid>a90739d2-699d-4a3f-ac39-53bc9e7afb30</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -60,7 +64,7 @@
       <name>aria-autocomplete</name>
       <type>Main</type>
       <value>none</value>
-      <webElementGuid>a6328a4a-3c3c-4402-9b24-d45d7a37a1da</webElementGuid>
+      <webElementGuid>1401d486-5230-4d27-8beb-e1ec39e28b8c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -68,7 +72,7 @@
       <name>class</name>
       <type>Main</type>
       <value>flex items-center justify-center gap-2 bg-surface-secondary text-text-primary hover:bg-surface-tertiary border border-border-light h-9 w-full rounded-xl px-3 py-2 text-sm</value>
-      <webElementGuid>8f29492b-fa68-4d8e-bfa1-d61ac43e040a</webElementGuid>
+      <webElementGuid>873e5bbb-1a54-4f46-96e8-855ced440b5d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -76,7 +80,7 @@
       <name>aria-controls</name>
       <type>Main</type>
       <value>:r83:</value>
-      <webElementGuid>b2e0a38d-a7bd-481c-9c4d-716a2d225a47</webElementGuid>
+      <webElementGuid>896b65c0-c9e6-41c4-b743-2e2f57d7d6ee</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -84,7 +88,7 @@
       <name>aria-labelledby</name>
       <type>Main</type>
       <value>:r82:</value>
-      <webElementGuid>223cca32-2e5f-4799-91a9-ef71eedb3bd6</webElementGuid>
+      <webElementGuid>31849bee-28e3-4276-8af9-75e160693182</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -92,7 +96,7 @@
       <name>type</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>a5625e64-296c-4faa-a08c-6cdc7790a7b6</webElementGuid>
+      <webElementGuid>88fffe0a-cb31-4196-acab-410d81e2bf36</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -100,7 +104,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Select a provider</value>
-      <webElementGuid>597b21a4-b329-483d-b672-1ddcf6a88b75</webElementGuid>
+      <webElementGuid>264deb05-85cb-4d2d-a7ff-11648f7fd332</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -108,7 +112,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;root&quot;)/div[@class=&quot;flex&quot;]/div[@class=&quot;relative z-0 flex h-full w-full overflow-hidden&quot;]/div[@class=&quot;fixed left-0 top-0 z-[110] flex h-full bg-surface-primary-alt translate-x-0&quot;]/nav[@class=&quot;min-h-0 flex-1 overflow-hidden bg-surface-primary-alt&quot;]/div[@class=&quot;flex h-full min-h-0 flex-col overflow-y-auto overflow-x-hidden text-text-primary&quot;]/form[@class=&quot;scrollbar-gutter-stable flex flex-1 flex-col px-3 pb-3 pt-2&quot;]/div[@class=&quot;flex-1&quot;]/div[@class=&quot;mb-1 flex w-full flex-col gap-2 text-sm&quot;]/div[2]/div[@class=&quot;mb-4&quot;]/div[@class=&quot;flex w-full items-center justify-center px-1&quot;]/button[@class=&quot;flex items-center justify-center gap-2 bg-surface-secondary text-text-primary hover:bg-surface-tertiary border border-border-light h-9 w-full rounded-xl px-3 py-2 text-sm&quot;]</value>
-      <webElementGuid>05b65d61-bb7b-4d23-9459-d5f79533fea5</webElementGuid>
+      <webElementGuid>94fd967c-a8b2-4247-b451-9325b9a3223d</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -116,7 +120,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>(//button[@type='button'])[12]</value>
-      <webElementGuid>41498ce8-83e6-403c-8aab-da5af55ef310</webElementGuid>
+      <webElementGuid>455ade6f-0a36-4d94-82a6-d9582a7ee763</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -124,7 +128,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='root']/div/div/div/nav/div/form/div/div[2]/div[2]/div/div/button</value>
-      <webElementGuid>4d6cfe9c-05b3-4c45-99c8-e6b9a9d6f162</webElementGuid>
+      <webElementGuid>03c311ce-35de-448a-b08b-86b2ff500bac</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -132,7 +136,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Provider'])[1]/following::button[1]</value>
-      <webElementGuid>e86242d9-707a-415b-8acf-2ecdfa429aaf</webElementGuid>
+      <webElementGuid>bff5e771-2b74-44cf-92fb-071dc8723456</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -140,7 +144,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='*'])[1]/following::button[1]</value>
-      <webElementGuid>b0539d58-0cfe-4151-abc6-d341d240b92b</webElementGuid>
+      <webElementGuid>420bc114-3e09-44df-adb7-9e7c4d9d306c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -148,7 +152,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div[2]/div/div/button</value>
-      <webElementGuid>f46558b1-6466-462d-898b-fa32225ae9ae</webElementGuid>
+      <webElementGuid>1768ba9d-b29d-47e8-bcfc-d133f7149507</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -156,6 +160,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//button[@type = 'button' and (text() = 'Select a provider' or . = 'Select a provider')]</value>
-      <webElementGuid>6a26d975-aa6e-4a4a-9f81-fc09f2222160</webElementGuid>
+      <webElementGuid>2ecedd47-2c62-4a0b-bca2-24230ee2eab8</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

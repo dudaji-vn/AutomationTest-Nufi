@@ -35,7 +35,7 @@ import com.kms.katalon.core.annotation.TearDownTestCase
 def setUp() {
 	// Put your code here.
 	WebUI.comment('=== SUITE SETUP: Parameters Suite ===')
-	WebUI.callTestCase(findTestCase('Test Cases/TestCasesForSuite/Setup/Setup_Parameters_Suite'), [:], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Test Cases/TestCasesForSuite/Setup/Setup_RAG_Suite'), [:], FailureHandling.STOP_ON_FAILURE)
 	WebUI.comment('✓ Suite setup completed')
 }
 
