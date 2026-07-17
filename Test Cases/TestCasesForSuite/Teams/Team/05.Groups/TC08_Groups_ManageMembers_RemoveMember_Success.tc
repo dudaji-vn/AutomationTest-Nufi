@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC08_Groups_ManageMembers_RemoveMember_Success</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8cd5978a-2836-47f4-bab5-be714ed59662</testCaseGuid>
+</TestCaseEntity>

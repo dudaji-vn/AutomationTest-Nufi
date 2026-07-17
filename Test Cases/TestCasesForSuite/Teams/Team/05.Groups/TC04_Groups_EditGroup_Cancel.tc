@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC04_Groups_EditGroup_Cancel</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bedb2a63-bd68-43e0-914d-185925f3f369</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC06_Groups_DeleteGroup_Cancel</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1cab2079-fd56-4874-bc22-786392364413</testCaseGuid>
+</TestCaseEntity>

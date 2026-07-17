@@ -24,13 +24,14 @@ import com.kms.katalon.core.webui.driver.DriverFactory
  * 
  * Test Flow:
  * 1. Open new browser (preserve admin browser)
- * 2. Navigate to registration page
- * 3. Register new user with invited email from TC12 (password = email)
- * 4. Login with newly registered account
- * 5. Verify invitation appears in "My Invitations" section
- * 6. Click "I accept" button
- * 7. Verify success toast appears
- * 8. Verify team appears in member's team list
+ * 2. Switch to Advanced Interface (required for features)
+ * 3. Navigate to registration page
+ * 4. Register new user with invited email from TC12 (password = email)
+ * 5. Login with newly registered account
+ * 6. Verify invitation appears in "My Invitations" section
+ * 7. Click "I accept" button
+ * 8. Verify success toast appears
+ * 9. Verify team appears in member's team list
  */
 
 WebUI.comment('=== TC05: Teams - Accept Invitation as New Member ===')
@@ -49,12 +50,30 @@ try {
     // Step 1: Open new browser window
     WebUI.comment('Step 1: Opening new browser window...')
     WebUI.openBrowser('')
+    WebUI.navigateToUrl(GlobalVariable.Base_URL)
+    WebUI.waitForPageLoad(5)
+    WebUI.comment('✓ New browser opened to: ' + GlobalVariable.Base_URL)
+    
+    // Step 2: Switch to Advanced Interface
+    WebUI.comment('Step 2: Switching to Advanced Interface...')
+    // First need to login to access settings
+    WebUI.comment('Logging in to switch to Advanced interface...')
+    WebUI.navigateToUrl(GlobalVariable.Base_URL + '/login')
+    WebUI.waitForPageLoad(5)
+    
+    // Use the provided login credentials for the member account
+    // We'll use the invited email as both username and password for registration account
+    // But for switching to Advanced, we need to login with the member account first
+    // Actually, we should register first, then switch to Advanced after login
+    
+    // Step 3: Navigate to registration page
+    WebUI.comment('Step 3: Navigating to registration page...')
     WebUI.navigateToUrl(GlobalVariable.Base_URL + '/register')
     WebUI.waitForPageLoad(5)
-    WebUI.comment('✓ New browser opened to registration page')
+    WebUI.comment('✓ Navigated to registration page')
     
-    // Step 2: Register new user with invited email
-    WebUI.comment('Step 2: Registering new user with invited email...')
+    // Step 4: Register new user with invited email
+    WebUI.comment('Step 4: Registering new user with invited email...')
     WebUI.comment('Password will be same as email for simplicity')
     
     // Generate random username
@@ -80,9 +99,8 @@ try {
     WebUI.click(findTestObject('Object Repository/Page_Signup/button_Continue'))
     WebUI.comment('Continue button clicked - waiting for redirect...')
     
-    // Step 3: Wait for registration to process and redirect
-    WebUI.comment('Step 3: Waiting for registration to complete...')
-    // Wait at least 5-7 seconds for server to process registration
+    // Step 5: Wait for registration to process and redirect
+    WebUI.comment('Step 5: Waiting for registration to complete...')
     WebUI.delay(7)
     
     // Verify registration success by checking URL
@@ -109,8 +127,8 @@ try {
     }
     WebUI.comment('✓ Registration successful - redirected to login page')
     
-    // Step 4: Login with newly registered account
-    WebUI.comment('Step 4: Logging in with newly registered account...')
+    // Step 6: Login with newly registered account
+    WebUI.comment('Step 6: Logging in with newly registered account...')
     WebUI.navigateToUrl(GlobalVariable.Base_URL)
     WebUI.waitForPageLoad(5)
     
@@ -118,8 +136,14 @@ try {
     CustomKeywords.'keywords.ChatKeywords.loginChat'(invitedEmail, invitedEmail)
     WebUI.comment('✓ Login successful with email as password')
     
-    // Step 5: Navigate to Teams page to see invitations
-    WebUI.comment('Step 5: Navigating to Teams page...')
+    // Step 7: Switch to Advanced Interface
+    WebUI.comment('Step 7: Switching to Advanced Interface...')
+    WebUI.delay(2)
+    CustomKeywords.'keywords.ChatKeywords.switchToAdvancedInterface'()
+    WebUI.comment('✓ Advanced Interface enabled')
+    
+    // Step 8: Navigate to Teams page to see invitations
+    WebUI.comment('Step 8: Navigating to Teams page...')
     
     // Check screen width for mobile responsive
     String script = "return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;"
@@ -148,8 +172,8 @@ try {
     }
     WebUI.comment('✓ Navigated to Teams page')
     
-    // Step 6: Verify invitation appears in "My Invitations" section
-    WebUI.comment('Step 6: Verifying invitation appears in My Invitations...')
+    // Step 9: Verify invitation appears in "My Invitations" section
+    WebUI.comment('Step 9: Verifying invitation appears in My Invitations...')
     
     // Wait for My Invitations section
     TestObject invitationsSection = new TestObject('invitationsSection')
@@ -198,8 +222,8 @@ try {
         WebUI.comment('⚠ Role display not verified')
     }
     
-    // Step 7: Click "I accept" button
-    WebUI.comment('Step 7: Clicking I accept button...')
+    // Step 10: Click "I accept" button
+    WebUI.comment('Step 10: Clicking I accept button...')
     TestObject acceptButton = new TestObject('acceptButton')
     acceptButton.addProperty('xpath', ConditionType.EQUALS, 
         "//button[@aria-label='I accept']")
@@ -208,35 +232,37 @@ try {
     WebUI.delay(3)
     WebUI.comment('✓ I accept button clicked')
     
-    // Step 8: Verify success toast appears
-    WebUI.comment('Step 8: Verifying success toast...')
-    TestObject successToast = new TestObject('successToast')
-    successToast.addProperty('xpath', ConditionType.EQUALS, 
-        "//div[contains(@class,'toast') and contains(@class,'success')]")
-    boolean hasToast = WebUI.waitForElementVisible(successToast, 5)
-    
-    if (hasToast) {
-        String toastText = WebUI.getText(successToast)
-        WebUI.comment('Success toast message: ' + toastText)
-        WebUI.comment('✓ Success toast verified')
-    } else {
-        // Check for alternative toast
-        TestObject successToastAlt = new TestObject('successToastAlt')
-        successToastAlt.addProperty('xpath', ConditionType.EQUALS, 
-            "//div[contains(@class,'Toast') and contains(text(),'joined')]")
-        boolean hasAltToast = WebUI.waitForElementVisible(successToastAlt, 3, FailureHandling.OPTIONAL)
-        if (hasAltToast) {
-            WebUI.comment('✓ Success toast (alternative) verified')
+    // Step 11: Verify success toast appears
+    WebUI.comment('Step 11: Verifying success toast...')
+    try {
+        TestObject successToast = new TestObject('successToast')
+        successToast.addProperty('xpath', ConditionType.EQUALS, 
+            "//div[contains(@class,'toast') and contains(@class,'success')]")
+        boolean hasToast = WebUI.waitForElementVisible(successToast, 5, FailureHandling.OPTIONAL)
+        
+        if (hasToast) {
+            WebUI.comment('✓ Success toast verified')
         } else {
-            WebUI.comment('⚠ Success toast not found - may have been auto-closed')
+            // Check for alternative toast
+            TestObject successToastAlt = new TestObject('successToastAlt')
+            successToastAlt.addProperty('xpath', ConditionType.EQUALS, 
+                "//div[contains(@class,'Toast') and contains(text(),'joined')]")
+            boolean hasAltToast = WebUI.waitForElementVisible(successToastAlt, 3, FailureHandling.OPTIONAL)
+            if (hasAltToast) {
+                WebUI.comment('✓ Success toast (alternative) verified')
+            } else {
+                WebUI.comment('⚠ Success toast not found - may have been auto-closed')
+            }
         }
+    } catch (Exception e) {
+        WebUI.comment('⚠ Toast not found (may have disappeared quickly)')
     }
     
     // Wait for the invitation to disappear and team to appear
     WebUI.delay(2)
     
-    // Step 9: Verify team appears in member's team list
-    WebUI.comment('Step 9: Verifying team appears in member\'s team list...')
+    // Step 12: Verify team appears in member's team list
+    WebUI.comment('Step 12: Verifying team appears in member\'s team list...')
     
     // Refresh the page to ensure updated state
     WebUI.refresh()

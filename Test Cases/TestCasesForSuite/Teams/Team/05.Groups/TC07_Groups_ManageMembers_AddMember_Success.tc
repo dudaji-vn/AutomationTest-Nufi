@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC07_Groups_ManageMembers_AddMember_Success</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1588689a-ebb6-4487-a063-aa9383fe1a03</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC01_Groups_AddNewGroup_Success</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>02953e9e-5e1e-4ed7-886b-c38b04ed3bb2</testCaseGuid>
+</TestCaseEntity>

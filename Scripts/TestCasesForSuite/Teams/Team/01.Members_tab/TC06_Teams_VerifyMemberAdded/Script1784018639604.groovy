@@ -25,11 +25,12 @@ import com.kms.katalon.core.webui.driver.DriverFactory
  * Test Flow:
  * 1. Open a NEW browser window (clean state, no old token)
  * 2. Login as Owner with existing account
- * 3. Navigate to Teams page
- * 4. Select the team that was used for invitation
- * 5. Navigate to Members tab
- * 6. Verify the invited member appears in member list
- * 7. Verify member has correct role (Member/Admin)
+ * 3. Switch to Advanced Interface
+ * 4. Navigate to Teams page
+ * 5. Select the team that was used for invitation
+ * 6. Navigate to Members tab
+ * 7. Verify the invited member appears in member list
+ * 8. Verify member has correct role (Member/Admin)
  * 
  * Prerequisites:
  * - TC12 must be run first (invite member)
@@ -74,9 +75,17 @@ try {
     WebUI.comment('✓ Owner login successful')
     
     // ============================================================
-    // STEP 2: Navigate to Teams page
+    // STEP 2: Switch to Advanced Interface
     // ============================================================
-    WebUI.comment('Step 2: Navigating to Teams page...')
+    WebUI.comment('Step 2: Switching to Advanced Interface...')
+    WebUI.delay(2)
+    CustomKeywords.'keywords.ChatKeywords.switchToAdvancedInterface'()
+    WebUI.comment('✓ Advanced Interface enabled')
+    
+    // ============================================================
+    // STEP 3: Navigate to Teams page
+    // ============================================================
+    WebUI.comment('Step 3: Navigating to Teams page...')
     
     // Check screen width for mobile responsive
     String script = "return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;"
@@ -106,9 +115,9 @@ try {
     WebUI.comment('✓ Navigated to Teams page')
     
     // ============================================================
-    // STEP 3: Select the team
+    // STEP 4: Select the team
     // ============================================================
-    WebUI.comment('Step 3: Selecting team: ' + teamName)
+    WebUI.comment('Step 4: Selecting team: ' + teamName)
     
     // Based on HTML: team name is inside h3 with class "text-sm font-semibold text-text-primary"
     // The button has aria-label containing team name
@@ -163,9 +172,9 @@ try {
     WebUI.comment('✓ Team selected: ' + teamName)
     
     // ============================================================
-    // STEP 4: Navigate to Members tab
+    // STEP 5: Navigate to Members tab
     // ============================================================
-    WebUI.comment('Step 4: Navigating to Members tab...')
+    WebUI.comment('Step 5: Navigating to Members tab...')
     
     // Try to find Members tab by text
     TestObject membersTab = new TestObject('membersTab')
@@ -205,9 +214,9 @@ try {
     WebUI.delay(3)
     
     // ============================================================
-    // STEP 5: Verify member appears in list
+    // STEP 6: Verify member appears in list
     // ============================================================
-    WebUI.comment('Step 5: Verifying member "' + invitedEmail + '" appears in list...')
+    WebUI.comment('Step 6: Verifying member "' + invitedEmail + '" appears in list...')
     
     // Wait for member list to load - look for any member item
     TestObject memberListItem = new TestObject('memberListItem')
@@ -244,9 +253,9 @@ try {
     WebUI.comment('✓ Member "' + invitedEmail + '" found in member list')
     
     // ============================================================
-    // STEP 6: Verify member role
+    // STEP 7: Verify member role
     // ============================================================
-    WebUI.comment('Step 6: Verifying member role is "' + expectedRole + '"...')
+    WebUI.comment('Step 7: Verifying member role is "' + expectedRole + '"...')
     
     // Find the role text for the invited member
     // Based on HTML: role is in span with class "text-xs font-medium text-text-secondary"
@@ -299,9 +308,9 @@ try {
     }
     
     // ============================================================
-    // STEP 7: Additional verification - get member count
+    // STEP 8: Additional verification - get member count
     // ============================================================
-    WebUI.comment('Step 7: Getting member count for verification...')
+    WebUI.comment('Step 8: Getting member count for verification...')
     
     List<TestObject> allMemberItems = WebUI.findWebElements(
         new TestObject('allMemberItems').addProperty('xpath', ConditionType.EQUALS, 
@@ -319,9 +328,9 @@ try {
     }
     
     // ============================================================
-    // STEP 8: Take screenshot and verify UI elements
+    // STEP 9: Take screenshot and verify UI elements
     // ============================================================
-    WebUI.comment('Step 8: Verifying member UI elements...')
+    WebUI.comment('Step 9: Verifying member UI elements...')
     
     // Check if member has avatar/icon
     TestObject memberAvatar = new TestObject('memberAvatar')
@@ -340,7 +349,7 @@ try {
     WebUI.comment('✓ Screenshot taken: TC06_MemberList_Verification.png')
     
     // ============================================================
-    // STEP 9: Summary
+    // STEP 10: Summary
     // ============================================================
     WebUI.comment('=== TC06 SUMMARY ===')
     WebUI.comment('✓ Team: ' + teamName)

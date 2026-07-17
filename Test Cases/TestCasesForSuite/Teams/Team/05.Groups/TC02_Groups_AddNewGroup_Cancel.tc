@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_Groups_AddNewGroup_Cancel</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>382b00e9-f044-439f-a78a-7d57d977d755</testCaseGuid>
+</TestCaseEntity>

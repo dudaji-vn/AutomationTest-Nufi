@@ -63,21 +63,46 @@ try {
     // ================================================================
     WebUI.comment('Step 4: Selecting first existing prompt from popup...')
     
-    // Get prompt name of first prompt in popup
+    // Wait for popup to appear
+    TestObject popupDialog = new TestObject('popupDialog')
+    popupDialog.addProperty('xpath', ConditionType.EQUALS, 
+        "//div[@role='dialog' and contains(., 'Share a prompt with this team')]")
+    WebUI.waitForElementVisible(popupDialog, 10)
+    WebUI.comment('✓ Popup appeared')
+    
+    // Get prompt name of first prompt in popup - based on actual HTML
+    // The prompt name is in p tag with class "text-sm font-medium text-text-primary"
     TestObject firstPromptName = new TestObject('firstPromptName')
     firstPromptName.addProperty('xpath', ConditionType.EQUALS, 
         "(//div[@role='dialog']//ul//li//p[contains(@class, 'text-text-primary')])[1]")
+    
+    // Check if there are prompts in the list
+    boolean hasPrompts = WebUI.waitForElementPresent(firstPromptName, 5, FailureHandling.OPTIONAL)
+    if (!hasPrompts) {
+        throw new Exception('No prompts available to add in the popup')
+    }
     
     String promptName = WebUI.getText(firstPromptName)
     WebUI.comment('Selected existing prompt: ' + promptName)
     
     // Click Add button for first prompt in popup
+    // Based on actual HTML: Add button is inside li with aria-label="Add"
     TestObject firstAddPromptInPopup = new TestObject('firstAddPromptInPopup')
     firstAddPromptInPopup.addProperty('xpath', ConditionType.EQUALS, 
-        "(//div[@role='dialog']//ul//li//button[contains(text(), 'Add')])[1]")
+        "(//div[@role='dialog']//ul//li//button[@aria-label='Add'])[1]")
     
-    WebUI.waitForElementClickable(firstAddPromptInPopup, 10)
-    WebUI.click(firstAddPromptInPopup)
+    // Alternative if aria-label doesn't work
+    if (!WebUI.waitForElementClickable(firstAddPromptInPopup, 5, FailureHandling.OPTIONAL)) {
+        WebUI.comment('Trying alternative selector for Add button...')
+        TestObject firstAddPromptAlt = new TestObject('firstAddPromptAlt')
+        firstAddPromptAlt.addProperty('xpath', ConditionType.EQUALS, 
+            "(//div[@role='dialog']//ul//li//button[contains(text(), 'Add')])[1]")
+        WebUI.waitForElementClickable(firstAddPromptAlt, 10)
+        WebUI.click(firstAddPromptAlt)
+    } else {
+        WebUI.click(firstAddPromptInPopup)
+    }
+    
     WebUI.delay(2)
     WebUI.comment('✓ Added existing prompt: ' + promptName)
 
@@ -86,14 +111,17 @@ try {
     // ================================================================
     WebUI.comment('Step 5: Verifying toast success...')
     
-    TestObject toastSuccess = findTestObject('Object Repository/Toast/Toast_Success')
-    boolean hasToast = WebUI.waitForElementVisible(toastSuccess, 5, FailureHandling.OPTIONAL)
-    
-    if (hasToast) {
-        String toastText = WebUI.getText(toastSuccess)
-        WebUI.comment('✓ Toast success: ' + toastText)
-    } else {
-        WebUI.comment('⚠ Toast success not found, but prompt may still be added')
+    try {
+        TestObject toastSuccess = findTestObject('Object Repository/Toast/Toast_Success')
+        boolean hasToast = WebUI.waitForElementVisible(toastSuccess, 5, FailureHandling.OPTIONAL)
+        
+        if (hasToast) {
+            WebUI.comment('✓ Toast success appeared')
+        } else {
+            WebUI.comment('⚠ Toast success not visible (may have disappeared)')
+        }
+    } catch (Exception e) {
+        WebUI.comment('⚠ Toast not found (may have disappeared quickly)')
     }
     
     WebUI.takeScreenshot('TC03_Shared_AddExistingPrompt_Success.png')

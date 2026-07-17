@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Back-to-teams</name>
+   <tag></tag>
+   <elementGuidId>3cc40f54-af46-4d3e-8440-96c02c52099d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'button']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@aria-label=&quot;Teams&quot; and .//*[local-name()='svg' and contains(@class, 'lucide-arrow-left')]]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>f1fd2551-2e0f-43b0-8952-0c3d1c72f719</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>3dad83b4-6c3a-48a1-836a-560cad2a8741</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary border border-border-light bg-transparent hover:bg-accent hover:text-accent-foreground h-9 rounded-lg px-3</value>
+      <webElementGuid>b0023214-34d3-41aa-b6cf-342d49f0be78</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-label</name>
+      <type>Main</type>
+      <value>Teams</value>
+      <webElementGuid>023fbdc2-ca42-4a92-9825-cf2e90b642d8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;flex&quot;]/div[@class=&quot;relative z-0 flex h-full w-full overflow-hidden&quot;]/div[@class=&quot;relative flex h-full max-w-full flex-1 flex-col overflow-hidden&quot;]/div[@class=&quot;flex h-full w-full flex-col overflow-y-auto bg-presentation&quot;]/div[@class=&quot;mx-auto w-full max-w-5xl px-4 py-6 sm:px-6&quot;]/div[@class=&quot;flex flex-col gap-6&quot;]/div[@class=&quot;flex items-center gap-3&quot;]/button[@class=&quot;inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-text-primary border border-border-light bg-transparent hover:bg-accent hover:text-accent-foreground h-9 rounded-lg px-3&quot;]</value>
+      <webElementGuid>45b65906-f003-4a3c-82dd-7674dd84833e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[14]</value>
+      <webElementGuid>5162be7e-cc0f-4691-81ba-71c7419abd5b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div[2]/div/div/div/div/div/div/button</value>
+      <webElementGuid>80bbe703-46d2-44ce-aac2-1793801ac971</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Basic Computer Interaction'])[1]/following::button[1]</value>
+      <webElementGuid>6c449e81-7b64-4f0b-bfbf-695264b732ae</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='New Chat'])[11]/following::button[1]</value>
+      <webElementGuid>bab181dc-60d9-4cfd-9275-a465224a3e94</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Test Team 1783478184618'])[1]/preceding::button[1]</value>
+      <webElementGuid>21d10459-5b8c-4ff2-a80e-121bf6657c57</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Owner'])[1]/preceding::button[1]</value>
+      <webElementGuid>1d1a7151-ae69-4dab-bad5-c8b5372d299f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/div/div/div/div/button</value>
+      <webElementGuid>d7d91a68-84cc-417e-b24d-787d9d8ed299</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'button']</value>
+      <webElementGuid>a93354fe-3f66-4a9a-ac88-36243c24e6a0</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

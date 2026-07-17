@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC03_Groups_EditGroup_Success</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>da1bfd8a-5638-474c-99d4-9a09aacac9dd</testCaseGuid>
+</TestCaseEntity>

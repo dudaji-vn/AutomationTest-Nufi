@@ -28,7 +28,7 @@
    <testCaseLink>
       <guid>8a87828d-181c-4e9c-8ce4-aadd0902b886</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Teams/01.Teams_CreateTeam/TC03_Teams_CreateTeam_Modal</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
@@ -42,7 +42,7 @@
    <testCaseLink>
       <guid>15583189-d150-4ec4-b939-cc6c9c03a1dd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Teams/01.Teams_CreateTeam/TC05_Teams_CreateTeam_Success</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
@@ -77,7 +77,7 @@
    <testCaseLink>
       <guid>1e5f5716-cc37-4c4c-8759-af907fb352c9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/01.Members_tab/TC02_Teams_InviteMember_Validation</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
@@ -91,21 +91,21 @@
    <testCaseLink>
       <guid>d8aea447-7410-4a86-91ae-03fa9a89e8cc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/01.Members_tab/TC04_Teams_InviteMember_Cancel</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>2d8cff5d-a59e-41c8-ba19-05f8e24badac</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/01.Members_tab/TC05_Teams_AcceptInvite</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>f4ceffce-695b-44b4-9344-ae110e6c71bd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/01.Members_tab/TC06_Teams_VerifyMemberAdded</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
@@ -175,29 +175,85 @@
    <testCaseLink>
       <guid>14005e20-aaa3-4543-858a-645bd4dff9d7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/04.Shared/TC01_Shared_AddExistingAgent</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>52b76048-c98b-4208-ba57-e4b72686c43d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/04.Shared/TC02_Shared_UnsharedAgent</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>03b0c9e8-f0a5-44ec-a8e4-f24af73931f0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/04.Shared/TC03_Shared_AddExistingPrompt</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>97934d3d-9b80-4ac9-ae6a-2b1bb64db1c5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/04.Shared/TC04_Shared_UnsharedPrompt</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>51dc87a6-242a-40a7-8f42-802b4bf0afd5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/05.Groups/TC01_Groups_AddNewGroup_Success</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>83abffcc-d91d-4c74-8a68-9c74de8c3aad</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/05.Groups/TC02_Groups_AddNewGroup_Cancel</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7a6c563b-23b3-42dd-984d-aa2be5b32eb6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/05.Groups/TC03_Groups_EditGroup_Success</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c24ff709-f55c-461f-898e-7e2748e462a7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/05.Groups/TC04_Groups_EditGroup_Cancel</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>282d86c4-61d4-4968-b812-ba19d63ba97b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/05.Groups/TC08_Groups_ManageMembers_RemoveMember_Success</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>bab893d4-0c24-406e-aa50-8007220829b1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/05.Groups/TC07_Groups_ManageMembers_AddMember_Success</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>dc7115e6-78f2-44b2-9ad1-dd5bd01ca820</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/05.Groups/TC06_Groups_DeleteGroup_Cancel</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>5c2a568c-6393-4cd1-8490-cab1a1756d98</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/TestCasesForSuite/Teams/Team/05.Groups/TC05_Groups_DeleteGroup_Success</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
