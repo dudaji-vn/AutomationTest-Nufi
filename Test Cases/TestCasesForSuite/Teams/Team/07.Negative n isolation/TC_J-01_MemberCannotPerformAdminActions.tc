@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_J-01_MemberCannotPerformAdminActions</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0aad3712-6a77-4cea-aa5e-3e80e727c97d</testCaseGuid>
+</TestCaseEntity>

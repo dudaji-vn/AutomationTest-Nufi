@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_J-02_NonMemberCannotAccessTeam</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>48da2687-9231-405a-881d-1278a14e78f6</testCaseGuid>
+</TestCaseEntity>

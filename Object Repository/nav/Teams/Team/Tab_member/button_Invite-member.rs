@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Invite member</name>
+   <name>button_Invite-member</name>
    <tag></tag>
    <elementGuidId>1c185e63-d263-40ae-ad0f-aac0226304ae</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@type = 'button' and (text() = 'Invite member' or . = 'Invite member')]</value>
+         <key>CSS</key>
       </entry>
       <entry>
          <key>XPATH</key>
          <value>//button[@aria-haspopup=&quot;dialog&quot; and contains(text(), &quot;Invite&quot;)]</value>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>BASIC</key>
+         <value>//*[@type = 'button' and (text() = 'Invite member' or . = 'Invite member')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

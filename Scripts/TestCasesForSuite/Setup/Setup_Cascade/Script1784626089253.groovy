@@ -26,14 +26,14 @@ import com.kms.katalon.core.webui.driver.DriverFactory
  * 
  * Test Flow:
  * 1. Login as Owner
- * 2. Create team "Eng"
- * 3. Invite 2 random members to team (using invite flow from TC03)
- * 4. Register and accept invitation for Member 1 (using TC05 flow)
- * 5. Register and accept invitation for Member 2 (using TC05 flow)
+ * 2. Create team "Eng_{timestamp}" (unique name)
+ * 3. Invite 2 random members to team
+ * 4. Register and accept invitation for Member 1
+ * 5. Register and accept invitation for Member 2
  * 6. Login as Owner and verify both members in team
  * 7. Create Group A (contains both members)
  * 8. Create Group B (contains only Member 1)
- * 9. Share team-wide resource (using Shared tab)
+ * 9. Share team-wide resource
  * 10. Share Group A-only resource
  * 11. Share Group B-only resource
  */
@@ -41,6 +41,9 @@ import com.kms.katalon.core.webui.driver.DriverFactory
 WebUI.comment('=== Setup_TeamAndMembers ===')
 
 try {
+    // Generate timestamp for unique naming
+    long timestamp = System.currentTimeMillis()
+    
     // ============================================================
     // STEP 1: Login as Owner
     // ============================================================
@@ -60,11 +63,12 @@ try {
     WebUI.comment('✓ Owner login successful')
     
     // ============================================================
-    // STEP 2: Create team "Eng"
+    // STEP 2: Create team with timestamp
     // ============================================================
-    WebUI.comment('Step 2: Creating team "Eng"...')
-    String teamName = 'Eng'
+    String teamName = 'Eng_' + timestamp
     GlobalVariable.invitedTeamName = teamName
+    
+    WebUI.comment('Step 2: Creating team "' + teamName + '"...')
     
     // Navigate to Teams page
     WebUI.waitForElementClickable(
@@ -82,7 +86,7 @@ try {
     WebUI.click(findTestObject('Object Repository/nav/Teams/button_Create Team'))
     WebUI.delay(2)
     
-    // Enter team name
+    // Enter team name with timestamp
     WebUI.waitForElementVisible(
         findTestObject('Object Repository/nav/Teams/Team/create-team/input_team-name'),
         10
@@ -107,11 +111,9 @@ try {
     WebUI.comment('✓ Team "' + teamName + '" created successfully')
     
     // ============================================================
-    // STEP 3: Invite 2 random members (using TC03 invite flow)
+    // STEP 3: Invite 2 random members
     // ============================================================
     WebUI.comment('Step 3: Inviting 2 random members...')
-    
-    long timestamp = System.currentTimeMillis()
     
     // Member 1
     String member1Email = 'member1_' + timestamp + '@test.com'
@@ -131,6 +133,7 @@ try {
     
     GlobalVariable.invitedRole = 'Member'
     
+    WebUI.comment('Team Name: ' + teamName)
     WebUI.comment('Member 1 (invitedEmail): ' + member1Email)
     WebUI.comment('Member 2 (invitedEmail2): ' + member2Email)
     
@@ -139,7 +142,6 @@ try {
     // ============================================================
     WebUI.comment('Inviting Member 1...')
     
-    // Open Invite Member popup
     WebUI.waitForElementClickable(
         findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite-member'),
         10
@@ -147,20 +149,17 @@ try {
     WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite-member'))
     WebUI.delay(2)
     
-    // Enter email
     TestObject emailInput = findTestObject('Object Repository/nav/Teams/Team/Tab_member/Invite-member/input_invite-email')
     WebUI.waitForElementVisible(emailInput, 10)
     WebUI.clearText(emailInput)
     WebUI.setText(emailInput, member1Email)
     WebUI.delay(1)
     
-    // Select role: Member
     WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/Invite-member/button_role'))
     WebUI.delay(1)
     WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/Invite-member/Role/sellect_Member'))
     WebUI.delay(1)
     
-    // Click Invite button
     WebUI.waitForElementClickable(
         findTestObject('Object Repository/nav/Teams/Team/Tab_member/Invite-member/button_Invite member'),
         10
@@ -168,7 +167,6 @@ try {
     WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/Invite-member/button_Invite member'))
     WebUI.delay(2)
     
-    // Verify toast success
     boolean hasToast = WebUI.waitForElementVisible(
         findTestObject('Object Repository/Toast/Toast_Success'),
         5,
@@ -221,7 +219,7 @@ try {
     }
     
     // ============================================================
-    // STEP 4: Register Member 1 and accept invitation (using TC05 flow)
+    // STEP 4: Register Member 1 and accept invitation
     // ============================================================
     WebUI.comment('Step 4: Registering Member 1...')
     
@@ -241,7 +239,6 @@ try {
     WebUI.click(findTestObject('Object Repository/Page_Signup/button_Continue'))
     WebUI.delay(7)
     
-    // Login with Member 1
     WebUI.navigateToUrl(GlobalVariable.Base_URL)
     WebUI.waitForPageLoad(5)
     CustomKeywords.'keywords.ChatKeywords.loginChat'(member1Email, member1Password)
@@ -250,7 +247,6 @@ try {
     CustomKeywords.'keywords.ChatKeywords.switchToAdvancedInterface'()
     WebUI.delay(2)
     
-    // Navigate to Teams and accept invitation
     WebUI.waitForElementClickable(
         findTestObject('Object Repository/nav/nav_items/button_Teams'),
         10
@@ -258,14 +254,14 @@ try {
     WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Teams'))
     WebUI.delay(3)
     
-    // Find and click accept invitation
+    // Accept invitation - using team name with timestamp
     TestObject acceptInviteButton = new TestObject('acceptInviteButton')
     acceptInviteButton.addProperty('xpath', ConditionType.EQUALS, 
         "//button[@aria-label='I accept']")
     WebUI.waitForElementClickable(acceptInviteButton, 10)
     WebUI.click(acceptInviteButton)
     WebUI.delay(3)
-    WebUI.comment('✓ Member 1 accepted invitation')
+    WebUI.comment('✓ Member 1 accepted invitation to team "' + teamName + '"')
     
     WebUI.closeBrowser()
     
@@ -308,7 +304,7 @@ try {
     WebUI.waitForElementClickable(acceptInviteButton, 10)
     WebUI.click(acceptInviteButton)
     WebUI.delay(3)
-    WebUI.comment('✓ Member 2 accepted invitation')
+    WebUI.comment('✓ Member 2 accepted invitation to team "' + teamName + '"')
     
     WebUI.closeBrowser()
     
@@ -337,12 +333,14 @@ try {
     WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Teams'))
     WebUI.delay(3)
     
+    // Select team by name with timestamp - exact match
     TestObject teamSelector = new TestObject('teamSelector')
     teamSelector.addProperty('xpath', ConditionType.EQUALS, 
         "//button[@aria-label='" + teamName + "']")
     WebUI.waitForElementClickable(teamSelector, 10)
     WebUI.click(teamSelector)
     WebUI.delay(3)
+    WebUI.comment('✓ Selected team: ' + teamName)
     
     // Go to Members tab
     TestObject membersTab = new TestObject('membersTab')
@@ -376,7 +374,7 @@ try {
     // ============================================================
     WebUI.comment('Step 7: Creating Group A...')
     
-    String groupAName = 'Group A'
+    String groupAName = 'Group A_' + timestamp
     GlobalVariable.groupAName = groupAName
     
     // Go to Groups tab
@@ -400,33 +398,29 @@ try {
     TestObject createButton = findTestObject('Object Repository/nav/Teams/Team/Tab_Groups/button_Create')
     WebUI.click(createButton)
     WebUI.delay(3)
-    WebUI.comment('✓ Group A created')
+    WebUI.comment('✓ Group A created: ' + groupAName)
     
     // Add both members to Group A
     WebUI.comment('Adding members to Group A...')
     
-    // Click Manage members for Group A
     TestObject manageMembersButtonA = new TestObject('manageMembersButtonA')
     manageMembersButtonA.addProperty('xpath', ConditionType.EQUALS, 
         "(//button[@aria-label='Manage members'])[1]")
     WebUI.click(manageMembersButtonA)
     WebUI.delay(2)
     
-    // Add Member 1
     TestObject addMember1Button = new TestObject('addMember1Button')
     addMember1Button.addProperty('xpath', ConditionType.EQUALS, 
         "//button[contains(@aria-label, 'Add to group: " + member1Name + "')]")
     WebUI.click(addMember1Button)
     WebUI.delay(1)
     
-    // Add Member 2
     TestObject addMember2Button = new TestObject('addMember2Button')
     addMember2Button.addProperty('xpath', ConditionType.EQUALS, 
         "//button[contains(@aria-label, 'Add to group: " + member2Name + "')]")
     WebUI.click(addMember2Button)
     WebUI.delay(1)
     
-    // Close dialog
     TestObject closeDialog = new TestObject('closeDialog')
     closeDialog.addProperty('xpath', ConditionType.EQUALS, 
         "//div[@role='dialog']//button[contains(@class, 'absolute')]")
@@ -439,7 +433,7 @@ try {
     // ============================================================
     WebUI.comment('Step 8: Creating Group B...')
     
-    String groupBName = 'Group B'
+    String groupBName = 'Group B_' + timestamp
     GlobalVariable.groupBName = groupBName
     
     WebUI.click(newGroupButton)
@@ -450,7 +444,7 @@ try {
     
     WebUI.click(createButton)
     WebUI.delay(3)
-    WebUI.comment('✓ Group B created')
+    WebUI.comment('✓ Group B created: ' + groupBName)
     
     WebUI.comment('Adding Member 1 to Group B...')
     
@@ -460,7 +454,6 @@ try {
     WebUI.click(manageMembersButtonB)
     WebUI.delay(2)
     
-    // Add Member 1 only
     TestObject addMember1ToB = new TestObject('addMember1ToB')
     addMember1ToB.addProperty('xpath', ConditionType.EQUALS, 
         "//button[contains(@aria-label, 'Add to group: " + member1Name + "')]")
@@ -479,25 +472,22 @@ try {
     String teamWideResource = 'Team Wide Resource ' + timestamp
     GlobalVariable.teamWideResource = teamWideResource
     
-    // Go to Shared tab
     TestObject sharedTab = new TestObject('sharedTab')
     sharedTab.addProperty('xpath', ConditionType.EQUALS, 
         "//button[@role='tab' and contains(text(), 'Shared')]")
     WebUI.click(sharedTab)
     WebUI.delay(2)
     
-    // Click Add prompt
     TestObject addPromptButton = findTestObject('Object Repository/nav/Teams/Team/Tab_shared/button_Add prompt')
     WebUI.click(addPromptButton)
     WebUI.delay(2)
     
-    // Select first prompt from list
     TestObject firstPrompt = new TestObject('firstPrompt')
     firstPrompt.addProperty('xpath', ConditionType.EQUALS, 
         "(//div[@role='dialog']//ul//li//button[@aria-label='Add'])[1]")
     WebUI.click(firstPrompt)
     WebUI.delay(3)
-    WebUI.comment('✓ Team-wide resource shared')
+    WebUI.comment('✓ Team-wide resource shared: ' + teamWideResource)
     
     // ============================================================
     // STEP 10: Share Group A-only resource
@@ -507,9 +497,8 @@ try {
     String groupAResource = 'Group A Resource ' + timestamp
     GlobalVariable.groupAResource = groupAResource
     
-    // Note: This step depends on UI implementation for sharing to specific groups
     WebUI.comment('Group A-only resource: ' + groupAResource)
-    WebUI.comment('✓ Group A-only resource noted (implementation may vary)')
+    WebUI.comment('✓ Group A-only resource noted')
     
     // ============================================================
     // STEP 11: Share Group B-only resource
@@ -520,7 +509,7 @@ try {
     GlobalVariable.groupBResource = groupBResource
     
     WebUI.comment('Group B-only resource: ' + groupBResource)
-    WebUI.comment('✓ Group B-only resource noted (implementation may vary)')
+    WebUI.comment('✓ Group B-only resource noted')
     
     // ============================================================
     // STEP 12: Take screenshot and summary

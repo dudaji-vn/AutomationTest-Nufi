@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_I-03_OwnerDeleteTeam_AllResourcesGone</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1cf19742-81d6-4c34-a111-0c787096801f</testCaseGuid>
+</TestCaseEntity>

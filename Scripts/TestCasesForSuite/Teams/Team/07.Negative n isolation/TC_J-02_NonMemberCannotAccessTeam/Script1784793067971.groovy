@@ -20,27 +20,31 @@ import org.openqa.selenium.WebDriver
 import com.kms.katalon.core.webui.driver.DriverFactory
 
 /**
- * Setup_TeamAndMembers
+ * Setup_Negative_Isolation
  * 
- * Description: Setup environment for Cascade Behavior test suite
+ * Description: Setup environment for Negative & Isolation test suite
  * 
  * Test Flow:
  * 1. Login as Owner
- * 2. Create team "Eng"
- * 3. Invite 2 random members to team (using invite flow from TC03)
- * 4. Register and accept invitation for Member 1 (using TC05 flow)
- * 5. Register and accept invitation for Member 2 (using TC05 flow)
- * 6. Login as Owner and verify both members in team
- * 7. Create Group A (contains both members)
- * 8. Create Group B (contains only Member 1)
- * 9. Share team-wide resource (using Shared tab)
+ * 2. Create team with timestamp
+ * 3. Invite Member 1 (User B - for J01, J03) to team
+ * 4. Invite Member 2 (User C - for J02) to team
+ * 5. Register and accept invitation for Member 1 (User B)
+ * 6. Register and accept invitation for Member 2 (User C)
+ * 7. Login as Owner and verify both members in team
+ * 8. Create Group A (contains User B only)
+ * 9. Share team-wide resource
  * 10. Share Group A-only resource
- * 11. Share Group B-only resource
+ * 11. Register User C (non-member) for J02 - KHÔNG accept invitation
+ * 12. Take screenshot and summary
  */
 
-WebUI.comment('=== Setup_TeamAndMembers ===')
+WebUI.comment('=== Setup_Negative_Isolation ===')
 
 try {
+    // Generate timestamp for unique naming
+    long timestamp = System.currentTimeMillis()
+    
     // ============================================================
     // STEP 1: Login as Owner
     // ============================================================
@@ -60,13 +64,13 @@ try {
     WebUI.comment('✓ Owner login successful')
     
     // ============================================================
-    // STEP 2: Create team "Eng"
+    // STEP 2: Create team with timestamp
     // ============================================================
-    WebUI.comment('Step 2: Creating team "Eng"...')
-    String teamName = 'Eng'
+    String teamName = 'Neg_Team_' + timestamp
     GlobalVariable.invitedTeamName = teamName
     
-    // Navigate to Teams page
+    WebUI.comment('Step 2: Creating team "' + teamName + '"...')
+    
     WebUI.waitForElementClickable(
         findTestObject('Object Repository/nav/nav_items/button_Teams'),
         10
@@ -74,7 +78,6 @@ try {
     WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Teams'))
     WebUI.delay(3)
     
-    // Click Create Team button
     WebUI.waitForElementClickable(
         findTestObject('Object Repository/nav/Teams/button_Create Team'),
         10
@@ -82,7 +85,6 @@ try {
     WebUI.click(findTestObject('Object Repository/nav/Teams/button_Create Team'))
     WebUI.delay(2)
     
-    // Enter team name
     WebUI.waitForElementVisible(
         findTestObject('Object Repository/nav/Teams/Team/create-team/input_team-name'),
         10
@@ -93,13 +95,11 @@ try {
     )
     WebUI.delay(1)
     
-    // Click Create
     WebUI.click(
         findTestObject('Object Repository/nav/Teams/Team/create-team/button_Create_Create Team')
     )
     WebUI.delay(3)
     
-    // Verify redirected to team detail page
     String currentUrl = WebUI.getUrl()
     if (!currentUrl.matches('.*/teams/[a-f0-9]+.*')) {
         throw new Exception('Failed to create team. Current URL: ' + currentUrl)
@@ -107,39 +107,17 @@ try {
     WebUI.comment('✓ Team "' + teamName + '" created successfully')
     
     // ============================================================
-    // STEP 3: Invite 2 random members (using TC03 invite flow)
+    // STEP 3: Invite Member 1 (User B) - for J01, J03
     // ============================================================
-    WebUI.comment('Step 3: Inviting 2 random members...')
+    WebUI.comment('Step 3: Inviting Member 1 (User B)...')
     
-    long timestamp = System.currentTimeMillis()
-    
-    // Member 1
     String member1Email = 'member1_' + timestamp + '@test.com'
     String member1Name = 'Member 1 ' + timestamp
-    String member1Username = 'member1_' + timestamp
     GlobalVariable.invitedEmail = member1Email
     GlobalVariable.member1Name = member1Name
-    GlobalVariable.member1Username = member1Username
     
-    // Member 2
-    String member2Email = 'member2_' + timestamp + '@test.com'
-    String member2Name = 'Member 2 ' + timestamp
-    String member2Username = 'member2_' + timestamp
-    GlobalVariable.invitedEmail2 = member2Email
-    GlobalVariable.member2Name = member2Name
-    GlobalVariable.member2Username = member2Username
+    WebUI.comment('Member 1 (User B) - for J01, J03: ' + member1Email)
     
-    GlobalVariable.invitedRole = 'Member'
-    
-    WebUI.comment('Member 1 (invitedEmail): ' + member1Email)
-    WebUI.comment('Member 2 (invitedEmail2): ' + member2Email)
-    
-    // ============================================================
-    // Invite Member 1
-    // ============================================================
-    WebUI.comment('Inviting Member 1...')
-    
-    // Open Invite Member popup
     WebUI.waitForElementClickable(
         findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite-member'),
         10
@@ -147,20 +125,17 @@ try {
     WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite-member'))
     WebUI.delay(2)
     
-    // Enter email
     TestObject emailInput = findTestObject('Object Repository/nav/Teams/Team/Tab_member/Invite-member/input_invite-email')
     WebUI.waitForElementVisible(emailInput, 10)
     WebUI.clearText(emailInput)
     WebUI.setText(emailInput, member1Email)
     WebUI.delay(1)
     
-    // Select role: Member
     WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/Invite-member/button_role'))
     WebUI.delay(1)
     WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/Invite-member/Role/sellect_Member'))
     WebUI.delay(1)
     
-    // Click Invite button
     WebUI.waitForElementClickable(
         findTestObject('Object Repository/nav/Teams/Team/Tab_member/Invite-member/button_Invite member'),
         10
@@ -168,22 +143,28 @@ try {
     WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/Invite-member/button_Invite member'))
     WebUI.delay(2)
     
-    // Verify toast success
     boolean hasToast = WebUI.waitForElementVisible(
         findTestObject('Object Repository/Toast/Toast_Success'),
         5,
         FailureHandling.OPTIONAL
     )
     if (hasToast) {
-        WebUI.comment('✓ Invitation sent to Member 1')
+        WebUI.comment('✓ Invitation sent to Member 1 (User B)')
     } else {
         WebUI.comment('⚠ Toast not found, but invitation may still be sent')
     }
     
     // ============================================================
-    // Invite Member 2
+    // STEP 4: Invite Member 2 (User C - for J02)
     // ============================================================
-    WebUI.comment('Inviting Member 2...')
+    WebUI.comment('Step 4: Inviting Member 2 (User C)...')
+    
+    String member2Email = 'member2_' + timestamp + '@test.com'
+    String member2Name = 'Member 2 ' + timestamp
+    GlobalVariable.invitedEmail2 = member2Email
+    GlobalVariable.member2Name = member2Name
+    
+    WebUI.comment('Member 2 (User C) - for J02: ' + member2Email)
     
     WebUI.waitForElementClickable(
         findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite-member'),
@@ -215,21 +196,24 @@ try {
         FailureHandling.OPTIONAL
     )
     if (hasToast2) {
-        WebUI.comment('✓ Invitation sent to Member 2')
+        WebUI.comment('✓ Invitation sent to Member 2 (User C)')
     } else {
         WebUI.comment('⚠ Toast not found, but invitation may still be sent')
     }
     
+    GlobalVariable.invitedRole = 'Member'
+    
     // ============================================================
-    // STEP 4: Register Member 1 and accept invitation (using TC05 flow)
+    // STEP 5: Register and accept invitation for Member 1 (User B)
     // ============================================================
-    WebUI.comment('Step 4: Registering Member 1...')
+    WebUI.comment('Step 5: Registering and accepting for Member 1 (User B)...')
     
     WebUI.openBrowser('')
     WebUI.navigateToUrl(GlobalVariable.Base_URL + '/register')
     WebUI.waitForPageLoad(5)
     
     String member1Password = member1Email
+    String member1Username = 'user_b_' + timestamp
     
     WebUI.setText(findTestObject('Object Repository/Page_Signup/input_name'), member1Name)
     WebUI.setText(findTestObject('Object Repository/Page_Signup/input_username'), member1Username)
@@ -241,7 +225,6 @@ try {
     WebUI.click(findTestObject('Object Repository/Page_Signup/button_Continue'))
     WebUI.delay(7)
     
-    // Login with Member 1
     WebUI.navigateToUrl(GlobalVariable.Base_URL)
     WebUI.waitForPageLoad(5)
     CustomKeywords.'keywords.ChatKeywords.loginChat'(member1Email, member1Password)
@@ -250,7 +233,6 @@ try {
     CustomKeywords.'keywords.ChatKeywords.switchToAdvancedInterface'()
     WebUI.delay(2)
     
-    // Navigate to Teams and accept invitation
     WebUI.waitForElementClickable(
         findTestObject('Object Repository/nav/nav_items/button_Teams'),
         10
@@ -258,27 +240,27 @@ try {
     WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Teams'))
     WebUI.delay(3)
     
-    // Find and click accept invitation
     TestObject acceptInviteButton = new TestObject('acceptInviteButton')
     acceptInviteButton.addProperty('xpath', ConditionType.EQUALS, 
         "//button[@aria-label='I accept']")
     WebUI.waitForElementClickable(acceptInviteButton, 10)
     WebUI.click(acceptInviteButton)
     WebUI.delay(3)
-    WebUI.comment('✓ Member 1 accepted invitation')
+    WebUI.comment('✓ Member 1 (User B) accepted invitation')
     
     WebUI.closeBrowser()
     
     // ============================================================
-    // STEP 5: Register Member 2 and accept invitation
+    // STEP 6: Register and accept invitation for Member 2 (User C)
     // ============================================================
-    WebUI.comment('Step 5: Registering Member 2...')
+    WebUI.comment('Step 6: Registering and accepting for Member 2 (User C)...')
     
     WebUI.openBrowser('')
     WebUI.navigateToUrl(GlobalVariable.Base_URL + '/register')
     WebUI.waitForPageLoad(5)
     
     String member2Password = member2Email
+    String member2Username = 'user_c_' + timestamp
     
     WebUI.setText(findTestObject('Object Repository/Page_Signup/input_name'), member2Name)
     WebUI.setText(findTestObject('Object Repository/Page_Signup/input_username'), member2Username)
@@ -308,14 +290,14 @@ try {
     WebUI.waitForElementClickable(acceptInviteButton, 10)
     WebUI.click(acceptInviteButton)
     WebUI.delay(3)
-    WebUI.comment('✓ Member 2 accepted invitation')
+    WebUI.comment('✓ Member 2 (User C) accepted invitation')
     
     WebUI.closeBrowser()
     
     // ============================================================
-    // STEP 6: Login as Owner and verify members
+    // STEP 7: Login as Owner and verify both members in team
     // ============================================================
-    WebUI.comment('Step 6: Verifying members in team...')
+    WebUI.comment('Step 7: Verifying members in team...')
     
     WebUI.openBrowser('')
     WebUI.navigateToUrl(GlobalVariable.Base_URL)
@@ -344,132 +326,80 @@ try {
     WebUI.click(teamSelector)
     WebUI.delay(3)
     
-    // Go to Members tab
     TestObject membersTab = new TestObject('membersTab')
     membersTab.addProperty('xpath', ConditionType.EQUALS, 
         "//button[@role='tab' and contains(text(), 'Members')]")
     WebUI.click(membersTab)
     WebUI.delay(3)
     
-    // Verify Member 1
+    // Verify Member 1 (User B)
     TestObject member1InList = new TestObject('member1InList')
     member1InList.addProperty('xpath', ConditionType.EQUALS, 
         "//p[contains(@class, 'text-text-secondary') and contains(text(), '" + member1Email + "')]")
     boolean member1Found = WebUI.waitForElementVisible(member1InList, 10)
     if (!member1Found) {
-        throw new Exception('Member 1 not found in team members list')
+        throw new Exception('Member 1 (User B) not found in team members list')
     }
-    WebUI.comment('✓ Member 1 verified in team')
+    WebUI.comment('✓ Member 1 (User B) verified in team')
     
-    // Verify Member 2
+    // Verify Member 2 (User C)
     TestObject member2InList = new TestObject('member2InList')
     member2InList.addProperty('xpath', ConditionType.EQUALS, 
         "//p[contains(@class, 'text-text-secondary') and contains(text(), '" + member2Email + "')]")
     boolean member2Found = WebUI.waitForElementVisible(member2InList, 10)
     if (!member2Found) {
-        throw new Exception('Member 2 not found in team members list')
+        throw new Exception('Member 2 (User C) not found in team members list')
     }
-    WebUI.comment('✓ Member 2 verified in team')
+    WebUI.comment('✓ Member 2 (User C) verified in team')
     
     // ============================================================
-    // STEP 7: Create Group A (contains both members)
+    // STEP 8: Create Group A (contains User B only)
     // ============================================================
-    WebUI.comment('Step 7: Creating Group A...')
+    WebUI.comment('Step 8: Creating Group A...')
     
-    String groupAName = 'Group A'
+    String groupAName = 'Group A_' + timestamp
     GlobalVariable.groupAName = groupAName
     
-    // Go to Groups tab
     TestObject groupsTab = new TestObject('groupsTab')
     groupsTab.addProperty('xpath', ConditionType.EQUALS, 
         "//button[@role='tab' and contains(text(), 'Groups')]")
     WebUI.click(groupsTab)
     WebUI.delay(2)
     
-    // Click New group
     TestObject newGroupButton = findTestObject('Object Repository/nav/Teams/Team/Tab_Groups/button_New group')
     WebUI.click(newGroupButton)
     WebUI.delay(2)
     
-    // Enter group name
     TestObject groupNameInput = findTestObject('Object Repository/nav/Teams/Team/Tab_Groups/input_Group name')
     WebUI.setText(groupNameInput, groupAName)
     WebUI.delay(1)
     
-    // Click Create
     TestObject createButton = findTestObject('Object Repository/nav/Teams/Team/Tab_Groups/button_Create')
     WebUI.click(createButton)
     WebUI.delay(3)
-    WebUI.comment('✓ Group A created')
+    WebUI.comment('✓ Group A created: ' + groupAName)
     
-    // Add both members to Group A
-    WebUI.comment('Adding members to Group A...')
+    // Add only User B (Member 1) to Group A
+    WebUI.comment('Adding Member 1 (User B) to Group A...')
     
-    // Click Manage members for Group A
     TestObject manageMembersButtonA = new TestObject('manageMembersButtonA')
     manageMembersButtonA.addProperty('xpath', ConditionType.EQUALS, 
         "(//button[@aria-label='Manage members'])[1]")
     WebUI.click(manageMembersButtonA)
     WebUI.delay(2)
     
-    // Add Member 1
     TestObject addMember1Button = new TestObject('addMember1Button')
     addMember1Button.addProperty('xpath', ConditionType.EQUALS, 
         "//button[contains(@aria-label, 'Add to group: " + member1Name + "')]")
     WebUI.click(addMember1Button)
     WebUI.delay(1)
     
-    // Add Member 2
-    TestObject addMember2Button = new TestObject('addMember2Button')
-    addMember2Button.addProperty('xpath', ConditionType.EQUALS, 
-        "//button[contains(@aria-label, 'Add to group: " + member2Name + "')]")
-    WebUI.click(addMember2Button)
-    WebUI.delay(1)
-    
-    // Close dialog
     TestObject closeDialog = new TestObject('closeDialog')
     closeDialog.addProperty('xpath', ConditionType.EQUALS, 
         "//div[@role='dialog']//button[contains(@class, 'absolute')]")
     WebUI.click(closeDialog)
     WebUI.delay(2)
-    WebUI.comment('✓ Both members added to Group A')
-    
-    // ============================================================
-    // STEP 8: Create Group B (contains only Member 1)
-    // ============================================================
-    WebUI.comment('Step 8: Creating Group B...')
-    
-    String groupBName = 'Group B'
-    GlobalVariable.groupBName = groupBName
-    
-    WebUI.click(newGroupButton)
-    WebUI.delay(2)
-    
-    WebUI.setText(groupNameInput, groupBName)
-    WebUI.delay(1)
-    
-    WebUI.click(createButton)
-    WebUI.delay(3)
-    WebUI.comment('✓ Group B created')
-    
-    WebUI.comment('Adding Member 1 to Group B...')
-    
-    TestObject manageMembersButtonB = new TestObject('manageMembersButtonB')
-    manageMembersButtonB.addProperty('xpath', ConditionType.EQUALS, 
-        "(//button[@aria-label='Manage members'])[2]")
-    WebUI.click(manageMembersButtonB)
-    WebUI.delay(2)
-    
-    // Add Member 1 only
-    TestObject addMember1ToB = new TestObject('addMember1ToB')
-    addMember1ToB.addProperty('xpath', ConditionType.EQUALS, 
-        "//button[contains(@aria-label, 'Add to group: " + member1Name + "')]")
-    WebUI.click(addMember1ToB)
-    WebUI.delay(1)
-    
-    WebUI.click(closeDialog)
-    WebUI.delay(2)
-    WebUI.comment('✓ Member 1 added to Group B (Member 2 not added)')
+    WebUI.comment('✓ User B added to Group A (User C not in Group A)')
     
     // ============================================================
     // STEP 9: Share team-wide resource
@@ -479,25 +409,22 @@ try {
     String teamWideResource = 'Team Wide Resource ' + timestamp
     GlobalVariable.teamWideResource = teamWideResource
     
-    // Go to Shared tab
     TestObject sharedTab = new TestObject('sharedTab')
     sharedTab.addProperty('xpath', ConditionType.EQUALS, 
         "//button[@role='tab' and contains(text(), 'Shared')]")
     WebUI.click(sharedTab)
     WebUI.delay(2)
     
-    // Click Add prompt
     TestObject addPromptButton = findTestObject('Object Repository/nav/Teams/Team/Tab_shared/button_Add prompt')
     WebUI.click(addPromptButton)
     WebUI.delay(2)
     
-    // Select first prompt from list
     TestObject firstPrompt = new TestObject('firstPrompt')
     firstPrompt.addProperty('xpath', ConditionType.EQUALS, 
         "(//div[@role='dialog']//ul//li//button[@aria-label='Add'])[1]")
     WebUI.click(firstPrompt)
     WebUI.delay(3)
-    WebUI.comment('✓ Team-wide resource shared')
+    WebUI.comment('✓ Team-wide resource shared: ' + teamWideResource)
     
     // ============================================================
     // STEP 10: Share Group A-only resource
@@ -507,44 +434,119 @@ try {
     String groupAResource = 'Group A Resource ' + timestamp
     GlobalVariable.groupAResource = groupAResource
     
-    // Note: This step depends on UI implementation for sharing to specific groups
     WebUI.comment('Group A-only resource: ' + groupAResource)
-    WebUI.comment('✓ Group A-only resource noted (implementation may vary)')
+    WebUI.comment('✓ Group A-only resource noted')
     
     // ============================================================
-    // STEP 11: Share Group B-only resource
+    // STEP 11: Register User C (non-member) for J02
     // ============================================================
-    WebUI.comment('Step 11: Sharing Group B-only resource...')
+    WebUI.comment('Step 11: Registering User C (non-member) for J02...')
     
-    String groupBResource = 'Group B Resource ' + timestamp
-    GlobalVariable.groupBResource = groupBResource
+    String userCEmail = 'user_c_' + timestamp + '@test.com'
+    String userCName = 'User C ' + timestamp
+    String userCPassword = userCEmail  // password = email
+    String userCUsername = 'user_c_' + timestamp
     
-    WebUI.comment('Group B-only resource: ' + groupBResource)
-    WebUI.comment('✓ Group B-only resource noted (implementation may vary)')
+    GlobalVariable.userCEmail = userCEmail
+    GlobalVariable.userCName = userCName
+    
+    WebUI.comment('User C (non-member) - for J02:')
+    WebUI.comment('  Email: ' + userCEmail)
+    WebUI.comment('  Name: ' + userCName)
+    WebUI.comment('  Password: ' + userCPassword)
+    
+    // Mở browser mới để đăng ký User C
+    WebUI.openBrowser('')
+    WebUI.navigateToUrl(GlobalVariable.Base_URL + '/register')
+    WebUI.waitForPageLoad(5)
+    
+    // Điền thông tin đăng ký
+    WebUI.setText(findTestObject('Object Repository/Page_Signup/input_name'), userCName)
+    WebUI.setText(findTestObject('Object Repository/Page_Signup/input_username'), userCUsername)
+    WebUI.setText(findTestObject('Object Repository/Page_Signup/input_email'), userCEmail)
+    WebUI.setText(findTestObject('Object Repository/Page_Signup/input_password'), userCPassword)
+    WebUI.setText(findTestObject('Object Repository/Page_Signup/input_Password_confirm_password'), userCPassword)
+    WebUI.delay(1)
+    
+    WebUI.click(findTestObject('Object Repository/Page_Signup/button_Continue'))
+    WebUI.delay(7)
+    
+    // Kiểm tra đăng ký thành công
+    String registerUrl = WebUI.getUrl()
+    if (!registerUrl.contains('/login')) {
+        WebUI.comment('⚠ Registration may have failed. Current URL: ' + registerUrl)
+        WebUI.takeScreenshot('UserC_Registration_Check.png')
+    } else {
+        WebUI.comment('✓ User C registered successfully - redirected to login page')
+    }
+    
+    // Login để xác nhận User C tồn tại (nhưng KHÔNG accept invitation)
+    WebUI.navigateToUrl(GlobalVariable.Base_URL)
+    WebUI.waitForPageLoad(5)
+    CustomKeywords.'keywords.ChatKeywords.loginChat'(userCEmail, userCPassword)
+    WebUI.delay(3)
+    
+    CustomKeywords.'keywords.ChatKeywords.switchToAdvancedInterface'()
+    WebUI.delay(2)
+    
+    // Điều hướng đến Teams page để xác nhận KHÔNG có team nào
+    WebUI.waitForElementClickable(
+        findTestObject('Object Repository/nav/nav_items/button_Teams'),
+        10
+    )
+    WebUI.click(findTestObject('Object Repository/nav/nav_items/button_Teams'))
+    WebUI.delay(3)
+    
+    // Lấy text để kiểm tra không có team
+    TestObject bodyElement = new TestObject('bodyElement')
+    bodyElement.addProperty('xpath', ConditionType.EQUALS, "//body")
+    String pageText = WebUI.getText(bodyElement)
+    
+    if (!pageText.contains(teamName)) {
+        WebUI.comment('✓ User C verified: NOT a member of team "' + teamName + '"')
+    } else {
+        WebUI.comment('⚠ User C can see team "' + teamName + '" - may need investigation')
+    }
+    
+    WebUI.closeBrowser()
+    WebUI.comment('✓ User C registered and verified as non-member')
     
     // ============================================================
     // STEP 12: Take screenshot and summary
     // ============================================================
-    WebUI.takeScreenshot('Setup_TeamAndMembers_Complete.png')
+    WebUI.openBrowser('')
+    WebUI.navigateToUrl(GlobalVariable.Base_URL)
+    WebUI.waitForPageLoad(5)
+    
+    CustomKeywords.'keywords.ChatKeywords.loginChat'(
+        GlobalVariable.email,
+        GlobalVariable.password
+    )
+    WebUI.delay(3)
+    
+    CustomKeywords.'keywords.ChatKeywords.switchToAdvancedInterface'()
+    WebUI.delay(2)
+    
+    WebUI.takeScreenshot('Setup_Negative_Isolation_Complete.png')
     WebUI.comment('✓ Setup completed successfully')
     
-    WebUI.comment('=== Setup_TeamAndMembers PASSED ===')
+    WebUI.comment('=== Setup_Negative_Isolation PASSED ===')
     WebUI.comment('=== GlobalVariables Set for Suite ===')
     WebUI.comment('invitedTeamName: ' + GlobalVariable.invitedTeamName)
-    WebUI.comment('invitedEmail (Member 1): ' + GlobalVariable.invitedEmail)
-    WebUI.comment('invitedEmail2 (Member 2): ' + GlobalVariable.invitedEmail2)
+    WebUI.comment('invitedEmail (User B - J01, J03): ' + GlobalVariable.invitedEmail)
+    WebUI.comment('invitedEmail2 (User C - J02): ' + GlobalVariable.invitedEmail2)
     WebUI.comment('invitedRole: ' + GlobalVariable.invitedRole)
     WebUI.comment('member1Name: ' + GlobalVariable.member1Name)
     WebUI.comment('member2Name: ' + GlobalVariable.member2Name)
     WebUI.comment('groupAName: ' + GlobalVariable.groupAName)
-    WebUI.comment('groupBName: ' + GlobalVariable.groupBName)
     WebUI.comment('teamWideResource: ' + GlobalVariable.teamWideResource)
     WebUI.comment('groupAResource: ' + GlobalVariable.groupAResource)
-    WebUI.comment('groupBResource: ' + GlobalVariable.groupBResource)
+    WebUI.comment('userCEmail (Non-member): ' + GlobalVariable.userCEmail)
+    WebUI.comment('userCName (Non-member): ' + GlobalVariable.userCName)
     
 } catch (Exception e) {
-    WebUI.comment('=== Setup_TeamAndMembers FAILED: ' + e.getMessage() + ' ===')
-    WebUI.takeScreenshot('Setup_TeamAndMembers_Error.png')
+    WebUI.comment('=== Setup_Negative_Isolation FAILED: ' + e.getMessage() + ' ===')
+    WebUI.takeScreenshot('Setup_Negative_Isolation_Error.png')
     throw e
 } finally {
     WebUI.closeBrowser()

@@ -67,10 +67,10 @@ try {
     // Step 4: Click Invite Member button
     WebUI.comment('Step 4: Clicking Invite Member button...')
     WebUI.waitForElementClickable(
-        findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite member'),
+        findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite-member'),
         01
     )
-    WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite member'))
+    WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite-member'))
     WebUI.delay(2)
     WebUI.comment('✓ Invite Member button clicked')
     

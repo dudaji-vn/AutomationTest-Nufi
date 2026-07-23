@@ -44,10 +44,10 @@ try {
     // Step 2: Open Invite Member popup
     WebUI.comment('Step 2: Opening Invite Member popup...')
     WebUI.waitForElementClickable(
-        findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite member'),
+        findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite-member'),
         10
     )
-    WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite member'))
+    WebUI.click(findTestObject('Object Repository/nav/Teams/Team/Tab_member/button_Invite-member'))
     WebUI.delay(2)
     WebUI.comment('✓ Invite Member popup opened')
     

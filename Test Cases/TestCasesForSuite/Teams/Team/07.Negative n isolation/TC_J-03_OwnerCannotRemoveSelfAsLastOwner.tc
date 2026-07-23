@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_J-03_OwnerCannotRemoveSelfAsLastOwner</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b789a232-9351-441c-9936-1a9e553e7569</testCaseGuid>
+</TestCaseEntity>

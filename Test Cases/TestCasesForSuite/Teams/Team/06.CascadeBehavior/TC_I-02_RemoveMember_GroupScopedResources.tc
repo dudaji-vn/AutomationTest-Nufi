@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_I-02_RemoveMember_GroupScopedResources</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0b838851-0279-407b-9b42-90a4c99b0e63</testCaseGuid>
+</TestCaseEntity>

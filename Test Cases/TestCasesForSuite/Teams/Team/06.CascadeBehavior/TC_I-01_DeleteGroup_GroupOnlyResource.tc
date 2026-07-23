@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_I-01_DeleteGroup_GroupOnlyResource</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c0cf40a4-b280-4952-b241-acb436e4cd67</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Setup_Negative_Isolation</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4c22e413-456e-413b-9e5c-89a1a466de31</testCaseGuid>
+</TestCaseEntity>
